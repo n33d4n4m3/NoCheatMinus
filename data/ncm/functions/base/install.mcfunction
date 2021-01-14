@@ -103,9 +103,21 @@ scoreboard objectives add ncmc_ap_sn_4 dummy
 scoreboard objectives add ncmc_ap_sn_5 dummy
 
 
-# ----------------
-# Check objectives
-# ----------------
+# Appropriate (FastConsume)
+# How many items the player is allowed to eat until the counter is resetted? 1
+scoreboard objectives add ncmc_ap_fc_1 dummy
+
+# Counter max length. 43
+scoreboard objectives add ncmc_ap_fc_2 dummy
+
+
+
+
+
+
+# -------------------------
+# Movement check objectives
+# -------------------------
 
 # Appropriate (NoFall/FallDamage)
 scoreboard objectives add noFallField1 dummy
@@ -150,6 +162,19 @@ scoreboard objectives add stOnIceC dummy
 # Appropriate (Speed (SneakSpeed))
 scoreboard objectives add speedResetCSn dummy
 scoreboard objectives add lostWalkFP dummy
+
+
+# -------------------------
+# Movement check objectives
+# -------------------------
+
+# Appropriate (FastConsume)
+scoreboard objectives add ncmConsume dummy
+scoreboard objectives add ncmConsumeC dummy
+
+
+
+
 
 # Playground
 scoreboard objectives add hasArmorStand dummy
