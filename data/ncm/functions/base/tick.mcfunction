@@ -9,3 +9,4 @@ function ncm:base/uuid
 # Running checks
 function ncm:checks/movement/appropriate
 function ncm:checks/inventory/appropriate
+function ncm:checks/net/unfittingpacket

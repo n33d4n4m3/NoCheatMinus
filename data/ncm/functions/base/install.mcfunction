@@ -111,8 +111,12 @@ scoreboard objectives add ncmc_ap_fc_1 dummy
 scoreboard objectives add ncmc_ap_fc_2 dummy
 
 
+# --------------------
+# Net check objectives
+# --------------------
 
-
+# UnfittingPacket (PlayerMoveC2SPacket/OffGround)
+scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
 
 
 # -------------------------
@@ -164,9 +168,9 @@ scoreboard objectives add speedResetCSn dummy
 scoreboard objectives add lostWalkFP dummy
 
 
-# -------------------------
-# Movement check objectives
-# -------------------------
+# --------------------------
+# Inventory check objectives
+# --------------------------
 
 # Appropriate (FastConsume)
 scoreboard objectives add ncmConsume dummy

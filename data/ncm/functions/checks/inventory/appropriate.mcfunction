@@ -7,6 +7,12 @@
 
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
+
+
+# ---------------------
+# Subcheck: FastConsume
+# ---------------------
+
 execute as @e[type=minecraft:player,advancements={ncm:consume_item=true}] run scoreboard players add @s ncmConsume 1
 execute as @e[type=minecraft:player] if score @s ncmConsume matches 1.. run scoreboard players add @s ncmConsumeC 1
 execute as @e[type=minecraft:player] if score @s ncmConsume matches 1.. if score @s ncmConsumeC matches 0 run scoreboard players set @s ncmConsume 0
