@@ -31,3 +31,10 @@ scoreboard players set DataHolder ncmc_ap_fc_1 1
 scoreboard players set DataHolder ncmc_ap_fc_2 66
 
 scoreboard players set DataHolder ncmc_ap_go_1 23
+
+
+scoreboard players set DataHolder ncmc_vm_gr_1 -78401
+scoreboard players set DataHolder ncmc_vm_gr_2 -5000
+scoreboard players set DataHolder ncmc_vm_gr_3 -20000
+scoreboard players set DataHolder ncmc_vm_gr_4 5
+scoreboard players set DataHolder ncmc_vm_gr_5 10

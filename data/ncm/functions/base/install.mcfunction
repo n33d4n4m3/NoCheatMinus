@@ -113,6 +113,19 @@ scoreboard objectives add ncmc_ap_fc_2 dummy
 # Appropriate (GameOverGUI)
 scoreboard objectives add ncmc_ap_go_1 dummy
 
+# VerticalMotion (Gravity)
+# Y-Motion value on ground -78401
+scoreboard objectives add ncmc_vm_gr_1 dummy
+# Y-Motion value in Water -5000
+scoreboard objectives add ncmc_vm_gr_2 dummy
+# Y-Motion value in Lava -20000
+scoreboard objectives add ncmc_vm_gr_3 dummy
+# Maxiumum ivl value to increase lvl 5
+scoreboard objectives add ncmc_vm_gr_4 dummy
+# Ticks after the lvl gets resetted 10
+scoreboard objectives add ncmc_vm_gr_5 dummy
+
+
 # --------------------
 # Net check objectives
 # --------------------
@@ -135,6 +148,11 @@ scoreboard objectives add ncmUPIR_ivl dummy
 # -------------------------
 # Movement check objectives
 # -------------------------
+
+# VerticalMotion (Gravity)
+scoreboard objectives add ncmYMotion dummy
+scoreboard objectives add ncmVMGR_ivl dummy
+scoreboard objectives add ncmVMGR_irc dummy
 
 # Appropriate (NoFall/FallDamage)
 scoreboard objectives add noFallField1 dummy
