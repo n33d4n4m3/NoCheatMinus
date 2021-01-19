@@ -38,7 +38,6 @@ scoreboard objectives add UUID dummy
 scoreboard objectives add ncmCC dummy
 
 
-# Appropriate
 # Appropriate (NoFall/FallDamage)
 scoreboard objectives add ncmc_ap_nf_1 dummy
 
@@ -111,9 +110,17 @@ scoreboard objectives add ncmc_ap_fc_1 dummy
 scoreboard objectives add ncmc_ap_fc_2 dummy
 
 
+# Appropriate (GameOverGUI)
+scoreboard objectives add ncmc_ap_go_1 dummy
+
 # --------------------
 # Net check objectives
 # --------------------
+
+
+# Appropriate (GameOverGUI)
+scoreboard objectives add ncmGameOverScr dummy
+scoreboard objectives add ncmDeaths minecraft.custom:minecraft.deaths
 
 # UnfittingPacket (PlayerMoveC2SPacket/OffGround)
 scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
@@ -122,6 +129,9 @@ scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add ncmPlayerDeath minecraft.custom:minecraft.deaths
 scoreboard objectives add timeInRespawnScr dummy
 scoreboard objectives add ncmUPIR_ivl dummy
+
+
+
 # -------------------------
 # Movement check objectives
 # -------------------------

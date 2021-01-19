@@ -10,3 +10,4 @@ function ncm:base/uuid
 function ncm:checks/movement/appropriate
 function ncm:checks/inventory/appropriate
 function ncm:checks/net/unfittingpacket
+function ncm:checks/net/appropriate

@@ -22,7 +22,7 @@ execute as @e[type=minecraft:player] if score @s ncmFallPackets matches 1.. run 
 # ---------------------------------------
 scoreboard players add @a timeInRespawnScr 1
 execute as @e[type=minecraft:player] at @s run scoreboard players set @s timeInRespawnScr 0
-execute as @e if score @s ncmCommandRunner matches 1 run scoreboard players add @a[scores={timeInRespawnScr=1..,ncmPlayerDeath=0}] ncmUPIR_ivl 1
+scoreboard players add @a[scores={timeInRespawnScr=1..,ncmPlayerDeath=0}] ncmUPIR_ivl 1
 execute as @e[type=minecraft:player] if score @s ncmPlayerDeath matches 1.. run scoreboard players set @s ncmPlayerDeath 0
 
 execute as @e[type=minecraft:player] if score @s ncmUPIR_ivl matches 1.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"received a packet (PlayerRespawnS2CPacket), which doesn't fit the player's current state (Alive)","color":"white"}]
