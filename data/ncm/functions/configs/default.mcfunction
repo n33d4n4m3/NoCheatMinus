@@ -28,4 +28,4 @@ scoreboard players set DataHolder ncmc_ap_sn_4 220
 scoreboard players set DataHolder ncmc_ap_sn_5 260
 
 scoreboard players set DataHolder ncmc_ap_fc_1 1
-scoreboard players set DataHolder ncmc_ap_fc_2 43
+scoreboard players set DataHolder ncmc_ap_fc_2 66

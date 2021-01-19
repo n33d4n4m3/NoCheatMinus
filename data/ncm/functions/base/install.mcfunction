@@ -118,7 +118,10 @@ scoreboard objectives add ncmc_ap_fc_2 dummy
 # UnfittingPacket (PlayerMoveC2SPacket/OffGround)
 scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
 
-
+# UnfittingPacket (PlayerRespawnS2CPacket/Alive)
+scoreboard objectives add ncmPlayerDeath minecraft.custom:minecraft.deaths
+scoreboard objectives add timeInRespawnScr dummy
+scoreboard objectives add ncmUPIR_ivl dummy
 # -------------------------
 # Movement check objectives
 # -------------------------
