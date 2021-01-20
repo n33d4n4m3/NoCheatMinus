@@ -8,7 +8,7 @@ function ncm:base/uuid
 
 # Running checks
 function ncm:checks/movement/appropriate
-function ncm:checks/movement/verticalmotion
+function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate
 function ncm:checks/net/unfittingpacket
 function ncm:checks/net/appropriate

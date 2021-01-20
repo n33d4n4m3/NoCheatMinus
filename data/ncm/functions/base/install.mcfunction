@@ -113,17 +113,22 @@ scoreboard objectives add ncmc_ap_fc_2 dummy
 # Appropriate (GameOverGUI)
 scoreboard objectives add ncmc_ap_go_1 dummy
 
-# VerticalMotion (Gravity)
-# Y-Motion value on ground -78401
-scoreboard objectives add ncmc_vm_gr_1 dummy
-# Y-Motion value in Water -5000
-scoreboard objectives add ncmc_vm_gr_2 dummy
-# Y-Motion value in Lava -20000
-scoreboard objectives add ncmc_vm_gr_3 dummy
-# Maxiumum ivl value to increase lvl 5
-scoreboard objectives add ncmc_vm_gr_4 dummy
+
+
+
+# SurvivalFly (Distance)
+# Maximum ivl value to increase lvl 1
+scoreboard objectives add ncmc_sf_ds_1 dummy
+# Ticks after the lvl gets resetted 1
+scoreboard objectives add ncmc_sf_ds_2 dummy
+
+# SurvivalFly (LostGround)
+# Maxiumum ivl value to increase lvl 20
+scoreboard objectives add ncmc_sf_lg_1 dummy
 # Ticks after the lvl gets resetted 10
-scoreboard objectives add ncmc_vm_gr_5 dummy
+scoreboard objectives add ncmc_sf_lg_2 dummy
+
+
 
 
 # --------------------
@@ -149,10 +154,18 @@ scoreboard objectives add ncmUPIR_ivl dummy
 # Movement check objectives
 # -------------------------
 
-# VerticalMotion (Gravity)
-scoreboard objectives add ncmYMotion dummy
-scoreboard objectives add ncmVMGR_ivl dummy
-scoreboard objectives add ncmVMGR_irc dummy
+# SurvivalFly (Distance)
+scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
+scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add ncmDecent dummy
+scoreboard objectives add ncmPlayerY dummy
+scoreboard objectives add ncmLastPlayerY dummy
+scoreboard objectives add ncmSFDS_ivl dummy
+scoreboard objectives add ncmSFDS_ivlrc dummy
+
+# SurvivalFly (LostGround)
+scoreboard objectives add ncmSFLG_ivl dummy
+scoreboard objectives add ncmSFLG_ivlrc dummy
 
 # Appropriate (NoFall/FallDamage)
 scoreboard objectives add noFallField1 dummy
@@ -207,13 +220,6 @@ scoreboard objectives add lostWalkFP dummy
 scoreboard objectives add ncmConsume dummy
 scoreboard objectives add ncmConsumeC dummy
 
-
-
-
-
-# Playground
-scoreboard objectives add hasArmorStand dummy
-scoreboard objectives add leave minecraft.custom:minecraft.leave_game
 
 
 # Load up default config
