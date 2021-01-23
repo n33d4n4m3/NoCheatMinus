@@ -42,6 +42,7 @@ scoreboard players set DataHolder ncmChar 0
 
 # UUID
 scoreboard objectives add globalUUID dummy
+scoreboard players set DataHolder globalUUID 0
 scoreboard objectives add hasUUID dummy
 scoreboard objectives add UUID dummy
 
@@ -143,6 +144,11 @@ scoreboard objectives add ncmc_sf_lg_1 dummy
 scoreboard objectives add ncmc_sf_lg_2 dummy
 
 
+# ----------------------
+# Fight check objectives
+# ----------------------
+scoreboard objectives add ncmAttackedUUID dummy
+scoreboard objectives add ncmAttackerUUID dummy
 
 
 # --------------------
@@ -176,6 +182,7 @@ scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
 scoreboard objectives add ncmSFDS_ivl dummy
 scoreboard objectives add ncmSFDS_ivlrc dummy
+scoreboard objectives add isSetback dummy
 
 # SurvivalFly (LostGround)
 scoreboard objectives add ncmSFLG_ivl dummy

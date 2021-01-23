@@ -18,11 +18,13 @@
 # ...
 
 # Running system routines
-function ncm:base/uuid
+function ncm:base/uuid/uuid
 
 # Running checks
+function ncm:checks/fight/missingentity
 function ncm:checks/movement/appropriate
 function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate
 function ncm:checks/net/unfittingpacket
 function ncm:checks/net/appropriate
+
