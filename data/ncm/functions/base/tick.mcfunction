@@ -27,4 +27,5 @@ function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate
 function ncm:checks/net/unfittingpacket
 function ncm:checks/net/appropriate
-
+function ncm:checks/blockinteract/missingblock
+function ncm:checks/blockplace/missingblock
