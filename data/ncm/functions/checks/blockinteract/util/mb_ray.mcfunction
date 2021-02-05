@@ -44,3 +44,11 @@ scoreboard players add @s ncmBIMBRange 1
 execute if entity @s[gamemode=creative] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_1 if block ~ ~ ~ minecraft:air positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
 execute if entity @s[gamemode=survival] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:air positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
 execute if entity @s[gamemode=adventure] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:air positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+
+execute if entity @s[gamemode=creative] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_1 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+execute if entity @s[gamemode=survival] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+execute if entity @s[gamemode=adventure] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+
+execute if entity @s[gamemode=creative] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_1 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+execute if entity @s[gamemode=survival] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray
+execute if entity @s[gamemode=adventure] unless score @s ncmBIMBRange >= DataHolder ncmc_mb_2 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockinteract/util/mb_ray

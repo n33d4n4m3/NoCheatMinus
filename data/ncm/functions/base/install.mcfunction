@@ -138,26 +138,32 @@ scoreboard objectives add ncmc_sf_ds_1 dummy
 scoreboard objectives add ncmc_sf_ds_2 dummy
 
 # SurvivalFly (LostGround)
-# Maxiumum ivl value to increase lvl 20
+# Maxiumum ivl value to increase lvl 10
 scoreboard objectives add ncmc_sf_lg_1 dummy
 # Ticks after the lvl gets resetted 10
 scoreboard objectives add ncmc_sf_lg_2 dummy
 
 
 
-# BlockInteract/BlockPlace >> MissingBlock
 
-# BlockInteract
+# BlockInteract (MissingBlock)
 # Maxiumum interaction distance in creative mode 11
 scoreboard objectives add ncmc_mb_1 dummy
 # Maximum interaction distance in survival/adventure mode 10
 scoreboard objectives add ncmc_mb_2 dummy
 
-#BlockPlace
+# BlockPlace (MissingBlock)
 # Maxiumum blockplace distance in creative mode 11
 scoreboard objectives add ncmc_mb_3 dummy
 # Maximum blockplace distance in survival/adventure mode 10
 scoreboard objectives add ncmc_mb_4 dummy
+
+# BlockPlace (Appropriate)
+# Placable number of blocks in the timeframe 3
+scoreboard objectives add ncmc_ap_bp_1 dummy
+
+# The timeframe 3
+scoreboard objectives add ncmc_ap_bp_2 dummy
 
 
 
@@ -166,6 +172,10 @@ scoreboard objectives add ncmc_mb_4 dummy
 # ---------------------------
 # BlockPlace check objectives
 # ---------------------------
+
+# Appropriate
+scoreboard objectives add ncmBlocksPlaced dummy
+scoreboard objectives add ncmBlocksPlacedC dummy
 
 # MissingBlock
 scoreboard objectives add ncmBPMBFire dummy
@@ -975,6 +985,12 @@ scoreboard objectives add ncmAttackerUUID dummy
 # Appropriate (GameOverGUI)
 scoreboard objectives add ncmGameOverScr dummy
 scoreboard objectives add ncmDeaths minecraft.custom:minecraft.deaths
+
+
+# Appropriate (DeathTime)
+scoreboard objectives add ncmDeathTime dummy
+scoreboard objectives add ncmDeathTimeC dummy
+
 
 # UnfittingPacket (PlayerMoveC2SPacket/OffGround)
 scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm

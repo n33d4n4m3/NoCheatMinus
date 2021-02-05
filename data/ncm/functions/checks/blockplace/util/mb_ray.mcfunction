@@ -17,6 +17,11 @@
 # Author:       n33d4n4m3
 # ...
 
+
+execute unless block ~ ~ ~ minecraft:air run scoreboard players add @s ncmBlocksPlaced 1
+execute if block ~ ~ ~ minecraft:water run scoreboard players remove @s ncmBlocksPlaced 1
+execute if block ~ ~ ~ minecraft:lava run scoreboard players remove @s ncmBlocksPlaced 1
+
 execute if block ~ ~ ~ minecraft:acacia_button run scoreboard players set @s ncmBPMB0 0
 execute if block ~ ~ ~ minecraft:acacia_door run scoreboard players set @s ncmBPMB1 0
 execute if block ~ ~ ~ minecraft:acacia_fence_gate run scoreboard players set @s ncmBPMB2 0
@@ -681,6 +686,13 @@ execute if entity @s[gamemode=creative] unless score @s ncmBPMBRange >= DataHold
 execute if entity @s[gamemode=survival] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:air positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
 execute if entity @s[gamemode=adventure] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:air positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
 
+execute if entity @s[gamemode=creative] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_3 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
+execute if entity @s[gamemode=survival] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
+execute if entity @s[gamemode=adventure] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:water positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
+
+execute if entity @s[gamemode=creative] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_3 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
+execute if entity @s[gamemode=survival] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
+execute if entity @s[gamemode=adventure] unless score @s ncmBPMBRange >= DataHolder ncmc_mb_4 if block ~ ~ ~ minecraft:lava positioned ^ ^ ^0.5 run function ncm:checks/blockplace/util/mb_ray
 
 
 

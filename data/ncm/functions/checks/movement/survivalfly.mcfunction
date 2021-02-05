@@ -63,10 +63,8 @@ execute as @e[type=minecraft:player,scores={ncmLeaveGame=1}] run scoreboard play
 # --------------------
 # Subcheck: LostGround
 # --------------------
-
 execute as @e[type=minecraft:player] store result score @s ncmYMotion run data get entity @s Motion[1] 1
-
-execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmYMotion matches -1 run scoreboard players add @s ncmSFLG_ivl 1
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] unless score @s ncmYMotion matches -1 run scoreboard players add @s ncmSFLG_ivl 1
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl matches 1.. run scoreboard players add @s ncmSFLG_ivlrc 1
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_sf_lg_1 run tellraw @a ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LostGround","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotion"},"color":"gray"},{"text":"}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivlrc >= DataHolder ncmc_sf_lg_2 run scoreboard players set @s ncmSFLG_ivl 0

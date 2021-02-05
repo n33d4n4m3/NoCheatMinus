@@ -29,3 +29,4 @@ function ncm:checks/net/unfittingpacket
 function ncm:checks/net/appropriate
 function ncm:checks/blockinteract/missingblock
 function ncm:checks/blockplace/missingblock
+function ncm:checks/blockplace/appropriate
