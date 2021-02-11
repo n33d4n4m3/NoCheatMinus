@@ -17,6 +17,18 @@
 # Author:       n33d4n4m3
 # ...
 
+scoreboard players enable @a input
+
+execute as @a if score @s input matches 0 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"No flag messages will be displayed.","color":"white"}]
+execute as @a if score @s input matches 1 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Only your flag messages will be displayed.","color":"white"}]
+execute as @a if score @s input matches 2 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"All flag messages will be displayed.","color":"white"}]
+execute as @a if score @s input matches 0 run scoreboard players set @s inputR 0
+execute as @a if score @s input matches 1 run scoreboard players set @s inputR 1
+execute as @a if score @s input matches 2 run scoreboard players set @s inputR 2
+execute as @a if score @s input matches 0 run scoreboard players set @s input -1
+execute as @a if score @s input matches 1 run scoreboard players set @s input -1
+execute as @a if score @s input matches 2 run scoreboard players set @s input -1
+
 # Running system routines
 function ncm:base/uuid/uuid
 

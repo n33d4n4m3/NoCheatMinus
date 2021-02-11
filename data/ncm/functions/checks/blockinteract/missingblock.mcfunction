@@ -82,7 +82,9 @@ execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run function
 execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 
-execute as @a if score @s ncmBIMBFire matches 1 run tellraw @a ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBIMBFire matches 1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBIMBFire matches 1 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+
 scoreboard players set @a ncmBIMBFire 0
 scoreboard players set @a ncmBIMBRange 0
 

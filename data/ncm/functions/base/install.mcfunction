@@ -21,6 +21,9 @@
 # -----------------
 # NoCheatMinus base
 # -----------------
+scoreboard objectives add input trigger
+scoreboard objectives add inputR dummy
+
 
 scoreboard objectives add ncmMainVersion dummy
 scoreboard objectives add ncmSubVersion dummy
@@ -35,10 +38,10 @@ scoreboard objectives add ncmYear dummy
 scoreboard objectives add ncmWeek dummy
 scoreboard objectives add ncmChar dummy
 
-scoreboard players set DataHolder ncmIsSnapshot 0
-scoreboard players set DataHolder ncmYear 0
-scoreboard players set DataHolder ncmWeek 0
-scoreboard players set DataHolder ncmChar 0
+scoreboard players set DataHolder ncmIsSnapshot 1
+scoreboard players set DataHolder ncmYear 21
+scoreboard players set DataHolder ncmWeek 7
+scoreboard players set DataHolder ncmChar 1
 
 # UUID
 scoreboard objectives add globalUUID dummy
@@ -144,6 +147,25 @@ scoreboard objectives add ncmc_sf_lg_1 dummy
 scoreboard objectives add ncmc_sf_lg_2 dummy
 
 
+# SurvivalFly (OffGroundTicks)
+# Maxiumum off ground ticks to increase lvl 6
+scoreboard objectives add ncmc_sf_og_1 dummy
+# Ticks after the off ground ticks get resetted 10
+scoreboard objectives add ncmc_sf_og_2 dummy
+# Jump FP cooldown 10
+scoreboard objectives add ncmc_sf_og_3 dummy
+
+# SurvivalFly (MonitoredMotionX)
+# Failing horizontal (x) motion of the player 2
+scoreboard objectives add ncmc_sf_xm_1 dummy
+
+# SurvivalFly (MonitoredMotionY)
+# Failing vertical motion of the player 2
+scoreboard objectives add ncmc_sf_ym_1 dummy
+
+# SurvivalFly (MonitoredMotionZ)
+# Failing horizontal (z) motion of the player 2
+scoreboard objectives add ncmc_sf_zm_1 dummy
 
 
 # BlockInteract (MissingBlock)
@@ -1017,8 +1039,24 @@ scoreboard objectives add ncmSFDS_ivlrc dummy
 scoreboard objectives add isSetback dummy
 
 # SurvivalFly (LostGround)
+scoreboard objectives add ncmYMotion dummy
 scoreboard objectives add ncmSFLG_ivl dummy
 scoreboard objectives add ncmSFLG_ivlrc dummy
+
+# SurvivalFly (OffGroundTicks)
+scoreboard objectives add ncmOffGrTicks dummy
+scoreboard objectives add ncmOffGrTicksC dummy
+scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
+
+# SurvivalFly (MonitorMotionX)
+scoreboard objectives add ncmXMotionM dummy
+
+# SurvivalFly (MonitorMotionY)
+scoreboard objectives add ncmYMotionM dummy
+
+
+# SurvivalFly (MonitorMotionZ)
+scoreboard objectives add ncmZMotionM dummy
 
 # Appropriate (NoFall/FallDamage)
 scoreboard objectives add noFallField1 dummy

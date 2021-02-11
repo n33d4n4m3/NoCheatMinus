@@ -28,4 +28,4 @@ tag @e[type=minecraft:boat] add noUUID
 tag @e[type=minecraft:hopper_minecart] add noUUID
 tag @e[type=minecraft:tnt] add noUUID
 
-execute as @e[tag=!noUUID] unless score @s UUID matches 1.. run function ncm:base/uuid/assignuuid
+execute as @a[tag=!noUUID] unless score @s UUID matches 1.. run function ncm:base/uuid/assignuuid
