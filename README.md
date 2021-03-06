@@ -21,4 +21,4 @@
 | Fight.MissingEntity | This check observes the player's combat behavior. If the attacked player is out of range or not in sight, the check will fail. If the attacking player doesn't aim properly or tries to attack through walls, this check will fail also. |
 | Inventory.Appropriate | When the player consumes an Item, NCM will check the speed of consuming and compare it with the configurated appropriate values. |
 
-This AntiCheat Datapck doesn't come with any player punishment functions, it just logs the violations into the chat. See **Setup** to configure logging.
+This AntiCheat Datapack doesn't come with any player punishment functions, it just logs the violations into the chat. See **Setup** to configure logging.
