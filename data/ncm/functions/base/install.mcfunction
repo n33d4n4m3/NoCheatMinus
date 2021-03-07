@@ -21,6 +21,9 @@
 # -----------------
 # NoCheatMinus base
 # -----------------
+
+scoreboard objectives add ncmInstalled dummy
+
 scoreboard objectives add input trigger
 scoreboard objectives add inputR dummy
 
@@ -45,12 +48,13 @@ scoreboard players set DataHolder ncmChar 1
 
 # UUID
 scoreboard objectives add globalUUID dummy
-scoreboard players set DataHolder globalUUID 0
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalUUID 0
 scoreboard objectives add UUID dummy
 
 scoreboard objectives add globalFightID dummy
-scoreboard players set DataHolder globalFightID 0
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalFightID 0
 scoreboard objectives add fightID dummy
+scoreboard players set DataHolder ncmInstalled 1
 
 # --------------------
 # Configuration values

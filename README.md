@@ -1,13 +1,23 @@
 # NoCheatMinus
- This is a recode/port of an AntiCheat in Vanilla Minecraft, that existed back in 2016,  as a Datapack for Minecraft 1.16.4. Its purpose is the detection of generic game modifications by checking and tracking movement, fight and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior. 
+ This is a recode/port of an AntiCheat in Vanilla Minecraft, that existed back in 2016,  as a Datapack for Minecraft 1.16.4. Its purpose is the detection of generic game modifications by checking and tracking movement, fight and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
  - You can view a demonstration [here](https://www.youtube.com/watch?v=2KCD2lIC0bc).
  - If you have questions, suggestions, or feedback, join our Discord server [here](https://discord.gg/n7yT4MnbmR).
 
 ## Setup
 1. Download this project as a .zip file and place it in your world's datapack folder.
 2. Restart your server or use `/reload` to reload the datapacks.
-3. Join your server as an operator and run `/function ncm:base/install`.
-4. Use `/trigger input set 0/1/2` to see no logs (`0`), only your logs (`1`), or all logs (`2`).
+3. Use `/trigger input set 0/1/2` to see no logs (`0`), only your logs (`1`), or all logs (`2`).
+
+## Apply values from configuration files
+1. Paste your configuration files into the directory **NoCheatMinus/data/ncm/functions/user/configs/**
+2. Edit the file **NoCheatMinus/data/ncm/functions/user/currentconfig.mcfunction/** and assign a configuration file to each configuration slot.
+3. Run the command `/scoreboard players set DataHolder ncmCC <slot>` to specify the slot in which the desired configuration file is located.
+4. Restart your server or use `/reload` to reload the datapacks.
+
+## Update to a newer version of this Datapack
+1. Run the command `/scoreboard players set DataHolder ncmAddObj 0`
+2. Replace the outdated directory "data" with the updated one.
+3. Restart your server or use `/reload` to reload the datapacks.
 
 ## Checks
 | Check category and name | Description |
