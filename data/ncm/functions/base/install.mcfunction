@@ -46,8 +46,11 @@ scoreboard players set DataHolder ncmChar 1
 # UUID
 scoreboard objectives add globalUUID dummy
 scoreboard players set DataHolder globalUUID 0
-scoreboard objectives add hasUUID dummy
 scoreboard objectives add UUID dummy
+
+scoreboard objectives add globalFightID dummy
+scoreboard players set DataHolder globalFightID 0
+scoreboard objectives add fightID dummy
 
 # --------------------
 # Configuration values
@@ -995,8 +998,8 @@ scoreboard objectives add ncmStoneC minecraft.custom:minecraft.interact_with_sto
 # ----------------------
 
 # MissingEntity
-scoreboard objectives add ncmAttackedUUID dummy
-scoreboard objectives add ncmAttackerUUID dummy
+scoreboard objectives add ncmAttackedFID dummy
+scoreboard objectives add ncmAttackerFID dummy
 
 
 # --------------------
