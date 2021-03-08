@@ -462,7 +462,7 @@ scoreboard objectives add ncmBPMB248 minecraft.used:minecraft.granite_slab
 scoreboard objectives add ncmBPMB249 minecraft.used:minecraft.granite_stairs
 scoreboard objectives add ncmBPMB250 minecraft.used:minecraft.granite_wall
 scoreboard objectives add ncmBPMB251 minecraft.used:minecraft.grass_block
-scoreboard objectives add ncmBPMB252 minecraft.used:minecraft.dirt_path
+scoreboard objectives add ncmBPMB252 minecraft.used:minecraft.grass_path
 scoreboard objectives add ncmBPMB253 minecraft.used:minecraft.grass
 scoreboard objectives add ncmBPMB254 minecraft.used:minecraft.gravel
 scoreboard objectives add ncmBPMB255 minecraft.used:minecraft.gray_banner

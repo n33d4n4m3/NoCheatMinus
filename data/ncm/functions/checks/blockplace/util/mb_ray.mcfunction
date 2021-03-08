@@ -241,7 +241,7 @@ execute if block ~ ~ ~ minecraft:granite_slab run scoreboard players set @s ncmB
 execute if block ~ ~ ~ minecraft:granite_stairs run scoreboard players set @s ncmBPMB249 0
 execute if block ~ ~ ~ minecraft:granite_wall run scoreboard players set @s ncmBPMB250 0
 execute if block ~ ~ ~ minecraft:grass_block run scoreboard players set @s ncmBPMB251 0
-execute if block ~ ~ ~ minecraft:dirt_path run scoreboard players set @s ncmBPMB252 0
+execute if block ~ ~ ~ minecraft:grass_path run scoreboard players set @s ncmBPMB252 0
 execute if block ~ ~ ~ minecraft:grass run scoreboard players set @s ncmBPMB253 0
 execute if block ~ ~ ~ minecraft:gravel run scoreboard players set @s ncmBPMB254 0
 execute if block ~ ~ ~ minecraft:gray_banner run scoreboard players set @s ncmBPMB255 0
