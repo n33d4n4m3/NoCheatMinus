@@ -975,6 +975,17 @@ scoreboard objectives add ncmBPMB756 minecraft.used:minecraft.chain
 scoreboard objectives add ncmBIMBFire dummy
 scoreboard objectives add ncmBIMBRange dummy
 
+scoreboard objectives add ncmBIMBLastF_x dummy
+scoreboard objectives add ncmBIMBLastF_y dummy
+scoreboard objectives add ncmBIMBLastF_z dummy
+
+scoreboard objectives add ncmBIMBThisF_x dummy
+scoreboard objectives add ncmBIMBThisF_y dummy
+scoreboard objectives add ncmBIMBThisF_z dummy
+
+scoreboard objectives add ncmBIMBxyzEqual dummy
+
+
 # TODO: Use numeric item identifiers
 scoreboard objectives add ncmChest minecraft.custom:minecraft.open_chest
 scoreboard objectives add ncmEChest minecraft.custom:minecraft.open_enderchest
