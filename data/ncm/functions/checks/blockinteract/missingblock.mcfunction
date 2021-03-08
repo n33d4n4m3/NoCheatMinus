@@ -82,9 +82,28 @@ execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run function
 execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 
-execute as @a if score @s ncmBIMBFire matches 1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
-execute as @a if score @s ncmBIMBFire matches 1 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBIMBFire matches 1 store result score @s ncmBIMBThisF_x run data get entity @s Pos[0]
+execute as @a if score @s ncmBIMBFire matches 1 store result score @s ncmBIMBThisF_y run data get entity @s Pos[1]
+execute as @a if score @s ncmBIMBFire matches 1 store result score @s ncmBIMBThisF_z run data get entity @s Pos[2]
 
+execute as @a if score @s ncmBIMBFire matches 1 if score @s ncmBIMBLastF_x = @s ncmBIMBThisF_x run scoreboard players add @s ncmBIMBxyzEqual 1
+execute as @a if score @s ncmBIMBFire matches 1 if score @s ncmBIMBLastF_y = @s ncmBIMBThisF_y run scoreboard players add @s ncmBIMBxyzEqual 1
+execute as @a if score @s ncmBIMBFire matches 1 if score @s ncmBIMBLastF_y = @s ncmBIMBThisF_y run scoreboard players add @s ncmBIMBxyzEqual 1
+
+
+
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+
+
+
+
+
+
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 store result score @s ncmBIMBLastF_x run data get entity @s Pos[0]
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 store result score @s ncmBIMBLastF_y run data get entity @s Pos[1]
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 store result score @s ncmBIMBLastF_z run data get entity @s Pos[2]
+execute as @a if score @s ncmBIMBFire matches 1 run scoreboard players set @s ncmBIMBxyzEqual 0
 scoreboard players set @a ncmBIMBFire 0
 scoreboard players set @a ncmBIMBRange 0
 
