@@ -1023,6 +1023,7 @@ scoreboard objectives add ncmAttackerFID dummy
 
 
 # Appropriate (GameOverGUI)
+scoreboard objectives add ncmAllowImmResp dummy
 scoreboard objectives add ncmGameOverScr dummy
 scoreboard objectives add ncmDeaths minecraft.custom:minecraft.deaths
 
