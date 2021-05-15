@@ -170,12 +170,6 @@ scoreboard objectives add ncmc_sf_xm_1 dummy
 # Failing vertical motion of the player 4201
 scoreboard objectives add ncmc_sf_ym_1 dummy
 
-# Failing vertical motion of the player with Jump Boost I status effect 5201
-scoreboard objectives add ncmc_sf_ym_2 dummy
-
-# Failing vertical motion of the player with Jump Boost II status effect 6201
-scoreboard objectives add ncmc_sf_ym_3 dummy
-
 # SurvivalFly (MonitorMotionZ)
 # Failing horizontal (z) motion of the player 2
 scoreboard objectives add ncmc_sf_zm_1 dummy
@@ -1076,8 +1070,7 @@ scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
 scoreboard objectives add ncmXMotionM dummy
 
 # SurvivalFly (MonitorMotionY)
-scoreboard objectives add ncmJumpBoostI dummy
-scoreboard objectives add ncmJumpBoostII dummy
+scoreboard objectives add ncmJumpBoostOffs dummy
 scoreboard objectives add ncmYMotionM dummy
 
 
