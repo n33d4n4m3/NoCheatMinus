@@ -56,6 +56,15 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 scoreboard objectives add fightID dummy
 scoreboard players set DataHolder ncmInstalled 1
 
+
+# --------------------
+# False positives
+# --------------------
+
+# Disable some checks for a moment after respawn
+scoreboard objectives add ncmFPdeathTime minecraft.custom:minecraft.time_since_death
+
+
 # --------------------
 # Configuration values
 # --------------------
