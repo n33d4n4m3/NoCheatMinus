@@ -1079,6 +1079,7 @@ scoreboard objectives add ncmYMotionM dummy
 scoreboard objectives add ncmZMotionM dummy
 
 # Appropriate (NoFall/FallDamage)
+scoreboard objectives add ncmApplyFallDmg dummy
 scoreboard objectives add noFallField1 dummy
 scoreboard objectives add noFallDebug dummy
 scoreboard objectives add noFallReset dummy
