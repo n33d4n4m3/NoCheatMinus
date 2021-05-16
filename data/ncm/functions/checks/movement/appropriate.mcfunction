@@ -30,6 +30,7 @@
 # ---------------------------
 execute store result score DataHolder ncmApplyFallDmg run gamerule fallDamage
 execute as @e[type=minecraft:player] if score DataHolder ncmApplyFallDmg matches 0 run scoreboard players set @s fall 0
+execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s fall 0
 execute as @e[type=minecraft:player] run scoreboard players add @s noFallReset 1
 #execute as @e[type=minecraft:player] if score @s fall matches 1.. if score @s noFallDebug matches 0 run tellraw @a ["",{"selector":"@s","color":"gray"},{"text":" has been fallen ","color":"gray"},{"score":{"name":"@s","objective":"fall"},"color":"red"},{"text":" cm","color":"red"},{"text":".","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s fall matches 1.. run scoreboard players set @s noFallDebug 1
