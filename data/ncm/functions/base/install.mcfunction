@@ -1025,6 +1025,8 @@ scoreboard objectives add ncmStoneC minecraft.custom:minecraft.interact_with_sto
 scoreboard objectives add ncmAttackedFID dummy
 scoreboard objectives add ncmAttackerFID dummy
 
+scoreboard objectives add ncmKillCount totalKillCount
+
 
 # --------------------
 # Net check objectives

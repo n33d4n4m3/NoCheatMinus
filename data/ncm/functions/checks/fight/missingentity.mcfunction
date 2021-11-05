@@ -23,7 +23,7 @@
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 
-execute as @a[advancements={ncm:player_hurt_entity=true}] run tag @s add ncmHit
+execute as @a[advancements={ncm:player_hurt_entity=true}] if score @s ncmKillCount matches 0 run tag @s add ncmHit
 execute as @e[nbt={HurtTime:10s}] run tag @s add ncmGotHit
 advancement revoke @a only ncm:player_hurt_entity
 # Survival/Adventure gamemode maximum range= 4.4
@@ -46,3 +46,4 @@ execute as @a[tag=ncmHit] run tag @s remove ncmHit
 execute as @e[tag=ncmGotHit] run tag @s remove ncmGotHit
 scoreboard players set @a ncmAttackedFID 0
 scoreboard players set @e ncmAttackerFID 0
+scoreboard players set @a ncmKillCount 0
