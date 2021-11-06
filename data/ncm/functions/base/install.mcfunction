@@ -1058,10 +1058,16 @@ scoreboard objectives add ncmUPIR_ivl dummy
 # Movement check objectives
 # -------------------------
 
+# SurvivalFly General
+
+scoreboard objectives add ncmAngryIGNearby dummy
+scoreboard objectives add ncmDecent dummy
+scoreboard objectives add ncmClimb dummy
+
+
 # SurvivalFly (Distance)
 scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_one_minute
-scoreboard objectives add ncmDecent dummy
 scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
 scoreboard objectives add ncmSFDS_ivl dummy
@@ -1079,7 +1085,6 @@ scoreboard objectives add ncmOffGrTicksC dummy
 scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
 
 # SurvivalFly (Climb)
-scoreboard objectives add ncmClimb dummy
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
 
 

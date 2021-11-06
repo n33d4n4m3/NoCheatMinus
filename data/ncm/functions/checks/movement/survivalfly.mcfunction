@@ -489,8 +489,13 @@ execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_
 # ------------------------
 # Subcheck: OffGroundTicks
 # ------------------------
+
+# Iron Golem FP fix
+execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearby run data get entity @e[type=minecraft:iron_golem,limit=1,distance=..5] AngerTime 1
+
+
 execute as @a if score @s ncmOGJump matches 1.. run scoreboard players add @s ncmOGJump 1
-execute as @a[gamemode=!creative] at @s unless block ~ ~ ~ cobweb if score @s ncmYMotion matches 0.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. run scoreboard players add @s ncmOffGrTicks 1
+execute as @a[gamemode=!creative] at @s unless block ~ ~ ~ cobweb if score @s ncmYMotion matches 0.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. run scoreboard players add @s ncmOffGrTicks 1
 execute as @a if score @s ncmOGJump >= DataHolder ncmc_sf_og_3 run scoreboard players set @s ncmOGJump 0
 execute as @a if score @s ncmOffGrTicks matches 1.. run scoreboard players add @s ncmOffGrTicksC 1
 execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"OffGroundTicks","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_3"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicks"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicksC"},"color":"gray"},{"text":"}","color":"gray"}]
@@ -793,8 +798,12 @@ execute as @e[type=minecraft:player] store result score @s ncmXMotion run data g
 execute as @e[type=minecraft:player] store result score @s ncmYMotionM run data get entity @s Motion[1] 10000
 execute as @a if score @s ncmYMotionM > @s ncmYMotionMax run scoreboard players operation @s ncmYMotionMax = @s ncmYMotionM
 execute as @e[type=minecraft:player] run scoreboard players operation @s ncmYMotionM -= @s ncmJumpBoostOffs
-execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
-execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 run tellraw @s[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
+
+
+
+
+execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. run tellraw @s[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
 
 
 
