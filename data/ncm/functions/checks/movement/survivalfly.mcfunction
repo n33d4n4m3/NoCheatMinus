@@ -47,7 +47,7 @@ execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s UUID mat
 
 execute as @e[type=minecraft:player] store result score @s ncmPlayerY run data get entity @s Pos[1]
 execute as @e[type=minecraft:player] if score @s ncmPlayerY < @s ncmLastPlayerY run scoreboard players set @s ncmDecent 1
-
+execute as @e[type=minecraft:player] if score @s ncmPlayerY > @s ncmLastPlayerY run scoreboard players set @s ncmClimb 1
 
 execute as @e[scores={isSetback=1,UUID=1}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=1},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
 execute as @e[scores={isSetback=1,UUID=1}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=1}] ncmSFDS_ivl 1
@@ -500,6 +500,18 @@ execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 run scoreboar
 execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboard players set @s ncmOffGrTicks 0
 execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboard players set @s ncmOffGrTicksC 0
 
+
+# ------------------------
+# Subcheck: Climb
+# ------------------------
+
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
+scoreboard players set @a ncmClimb 0
+
+
+
 # ------------------------
 # Subcheck: MonitorMotionX
 # ------------------------
@@ -777,7 +789,7 @@ scoreboard players set @e[type=minecraft:player,nbt={ActiveEffects:[{Id:8b,Ampli
 
 
 
-
+execute as @e[type=minecraft:player] store result score @s ncmXMotion run data get entity @s Motion[0] 10000
 execute as @e[type=minecraft:player] store result score @s ncmYMotionM run data get entity @s Motion[1] 10000
 execute as @a if score @s ncmYMotionM > @s ncmYMotionMax run scoreboard players operation @s ncmYMotionMax = @s ncmYMotionM
 execute as @e[type=minecraft:player] run scoreboard players operation @s ncmYMotionM -= @s ncmJumpBoostOffs

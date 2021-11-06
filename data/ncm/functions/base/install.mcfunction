@@ -1078,8 +1078,14 @@ scoreboard objectives add ncmOffGrTicks dummy
 scoreboard objectives add ncmOffGrTicksC dummy
 scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
 
+# SurvivalFly (Climb)
+scoreboard objectives add ncmClimb dummy
+scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
+
+
 # SurvivalFly (MonitorMotionX)
 scoreboard objectives add ncmXMotionM dummy
+scoreboard objectives add ncmXMotion dummy
 
 # SurvivalFly (MonitorMotionY)
 scoreboard objectives add ncmJumpBoostOffs dummy
@@ -1133,6 +1139,8 @@ scoreboard objectives add stOnIceC dummy
 # Appropriate (Speed (SneakSpeed))
 scoreboard objectives add speedResetCSn dummy
 scoreboard objectives add lostWalkFP dummy
+
+
 
 
 # --------------------------
