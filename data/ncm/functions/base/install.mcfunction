@@ -150,6 +150,10 @@ scoreboard objectives add ncmc_ap_go_1 dummy
 
 
 
+# SurvivalFly (False Positives)
+# Cooldown after using an elytra 10
+scoreboard objectives add ncmc_sf_fp_1 dummy
+
 # SurvivalFly (Distance)
 # Maximum ivl value to increase lvl 1
 scoreboard objectives add ncmc_sf_ds_1 dummy
@@ -1060,6 +1064,8 @@ scoreboard objectives add ncmUPIR_ivl dummy
 
 # SurvivalFly General
 
+scoreboard objectives add ncmAviate minecraft.custom:minecraft.aviate_one_cm
+scoreboard objectives add ncmAviateRC dummy
 scoreboard objectives add ncmAngryIGNearby dummy
 scoreboard objectives add ncmDecent dummy
 scoreboard objectives add ncmClimb dummy
