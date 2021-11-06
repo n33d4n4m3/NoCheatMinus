@@ -167,6 +167,12 @@ scoreboard objectives add ncmc_sf_lg_1 dummy
 scoreboard objectives add ncmc_sf_lg_2 dummy
 
 
+# SurvivalFly (ConstantClimbRate)
+# Ticks between first and second read (Y-Coord) 3
+scoreboard objectives add ncmc_sf_cr_1 dummy
+# Ticks between first and second read (Y-Rate) 5
+scoreboard objectives add ncmc_sf_cr_2 dummy
+
 # SurvivalFly (OffGroundTicks)
 # Maxiumum off ground ticks to increase lvl 6
 scoreboard objectives add ncmc_sf_og_1 dummy
@@ -1067,7 +1073,9 @@ scoreboard objectives add ncmUPIR_ivl dummy
 scoreboard objectives add ncmAviate minecraft.custom:minecraft.aviate_one_cm
 scoreboard objectives add ncmAviateRC dummy
 scoreboard objectives add ncmAngryIGNearby dummy
+scoreboard objectives add ncmCobwebNearby dummy
 scoreboard objectives add ncmDecent dummy
+scoreboard objectives add ncmMaintain dummy
 scoreboard objectives add ncmClimb dummy
 
 
@@ -1093,6 +1101,14 @@ scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
 # SurvivalFly (Climb)
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
 
+# SurvivalFly (MaintainClimbRate)
+scoreboard objectives add ncmMaintainY dummy
+scoreboard objectives add ncmLastMaintainY dummy
+scoreboard objectives add ncmMaintainRC dummy
+scoreboard objectives add ncmYSpMaintainRC dummy
+scoreboard objectives add ncmLadder minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add ncmLastYSpeed dummy
+scoreboard objectives add ncmYSpeed dummy
 
 # SurvivalFly (MonitorMotionX)
 scoreboard objectives add ncmXMotionM dummy
