@@ -35,6 +35,9 @@ scoreboard players set DataHolder ncmc_ap_go_1 23
 
 scoreboard players set DataHolder ncmc_sf_fp_1 10
 
+scoreboard players set DataHolder ncmc_sf_cr_1 3
+scoreboard players set DataHolder ncmc_sf_cr_2 5
+
 scoreboard players set DataHolder ncmc_sf_ds_1 1
 scoreboard players set DataHolder ncmc_sf_ds_2 1
 

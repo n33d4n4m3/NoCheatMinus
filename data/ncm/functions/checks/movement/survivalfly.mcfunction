@@ -40,7 +40,37 @@ execute as @e[type=minecraft:player] if score @s ncmAviateRC matches 1.. run sco
 execute as @e[type=minecraft:player] if score @s ncmAviateRC >= DataHolder ncmc_sf_fp_1 run scoreboard players set @s ncmAviate 0
 execute as @e[type=minecraft:player] if score @s ncmAviateRC >= DataHolder ncmc_sf_fp_1 run scoreboard players set @s ncmAviateRC 0
 
+# Cobweb fix
 
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players add @s ncmCobwebNearby 1
+execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 10.. run scoreboard players set @s ncmCobwebNearby 0
 
 # ------------------
 # Subcheck: Distance
@@ -66,6 +96,7 @@ execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s UUID mat
 
 execute as @e[type=minecraft:player] store result score @s ncmPlayerY run data get entity @s Pos[1]
 execute as @e[type=minecraft:player] if score @s ncmPlayerY < @s ncmLastPlayerY run scoreboard players set @s ncmDecent 1
+execute as @e[type=minecraft:player] if score @s ncmPlayerY = @s ncmLastPlayerY run scoreboard players set @s ncmMaintain 1
 execute as @e[type=minecraft:player] if score @s ncmPlayerY > @s ncmLastPlayerY run scoreboard players set @s ncmClimb 1
 
 execute as @e[scores={isSetback=1,UUID=1}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=1},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
@@ -531,8 +562,53 @@ execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboa
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
-scoreboard players set @a ncmClimb 0
 
+
+# ---------------------------
+# Subcheck: ConstantClimbRate
+# ---------------------------
+
+
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] run scoreboard players add @s ncmMaintainRC 1
+execute as @e[type=minecraft:player] if score @s ncmMaintainRC matches 1 store result score @s ncmLastMaintainY run data get entity @s Pos[1] 100000
+execute as @e[type=minecraft:player] if score @s ncmMaintainRC matches 3 store result score @s ncmMaintainY run data get entity @s Pos[1] 100000
+
+#execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY = @s ncmMaintainY run say Maintain whilst offground.
+#execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY < @s ncmMaintainY run say Climb whilst offground.
+#execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY > @s ncmMaintainY run say Decent whilst offground.
+
+execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players operation @s ncmYSpeed = @s ncmMaintainY
+execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players operation @s ncmYSpeed -= @s ncmLastMaintainY
+
+execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players set @s ncmMaintainRC 0
+
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] run scoreboard players add @s ncmYSpMaintainRC 1
+execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run scoreboard players operation @s ncmLastYSpeed = @s ncmYSpeed
+execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ water run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
+
+
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 run scoreboard players set @s ncmYSpMaintainRC 0
+
+
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmLastMaintainY -1
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmMaintainY 0
+
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmMaintainRC 0
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmLastYSpeed 0
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmYSpeed 0
+
+
+
+
+scoreboard players set @a ncmClimb 0
+scoreboard players set @a ncmMaintain 0
 
 
 # ------------------------
