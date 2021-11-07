@@ -481,7 +481,7 @@ scoreboard objectives add ncmBPMB248 minecraft.used:minecraft.granite_slab
 scoreboard objectives add ncmBPMB249 minecraft.used:minecraft.granite_stairs
 scoreboard objectives add ncmBPMB250 minecraft.used:minecraft.granite_wall
 scoreboard objectives add ncmBPMB251 minecraft.used:minecraft.grass_block
-scoreboard objectives add ncmBPMB252 minecraft.used:minecraft.grass_path
+scoreboard objectives add ncmBPMB252 minecraft.used:minecraft.dirt_path
 scoreboard objectives add ncmBPMB253 minecraft.used:minecraft.grass
 scoreboard objectives add ncmBPMB254 minecraft.used:minecraft.gravel
 scoreboard objectives add ncmBPMB255 minecraft.used:minecraft.gray_banner
@@ -1081,7 +1081,7 @@ scoreboard objectives add ncmClimb dummy
 
 # SurvivalFly (Distance)
 scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
-scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
 scoreboard objectives add ncmSFDS_ivl dummy
