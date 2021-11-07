@@ -1081,7 +1081,7 @@ scoreboard objectives add ncmClimb dummy
 
 # SurvivalFly (Distance)
 scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
-scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_one_minute
+scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
 scoreboard objectives add ncmSFDS_ivl dummy
