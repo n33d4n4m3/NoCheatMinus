@@ -29,9 +29,13 @@ execute as @a if score @s input matches 0 run scoreboard players set @s input -1
 execute as @a if score @s input matches 1 run scoreboard players set @s input -1
 execute as @a if score @s input matches 2 run scoreboard players set @s input -1
 
+
+
 # Running system routines
 function ncm:base/identification/uuid
 function ncm:base/identification/fightid
+
+
 
 # Running checks
 function ncm:checks/fight/missingentity
@@ -43,3 +47,6 @@ function ncm:checks/net/appropriate
 function ncm:checks/blockinteract/missingblock
 function ncm:checks/blockplace/missingblock
 function ncm:checks/blockplace/appropriate
+
+# Running util functions
+function ncm:checks/movement/util/sf_util
