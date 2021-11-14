@@ -1254,7 +1254,6 @@ scoreboard objectives add ncmUPIR_ivl dummy
 # SurvivalFly General
 
 scoreboard objectives add ncmAviate minecraft.custom:minecraft.aviate_one_cm
-scoreboard objectives add ncmAviateRC dummy
 scoreboard objectives add ncmAngryIGNearby dummy
 scoreboard objectives add ncmCobwebNearby dummy
 scoreboard objectives add ncmDecent dummy

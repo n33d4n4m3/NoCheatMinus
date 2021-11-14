@@ -79,7 +79,7 @@ scoreboard players set DataHolder ncmc_ap_sn_5 260
 scoreboard players set DataHolder ncmc_ap_fc_1 1
 scoreboard players set DataHolder ncmc_ap_fc_2 66
 
-scoreboard players set DataHolder ncmc_ap_go_1 23
+scoreboard players set DataHolder ncmc_ap_go_1 21
 
 
 scoreboard players set DataHolder ncmc_sf_fp_1 10
