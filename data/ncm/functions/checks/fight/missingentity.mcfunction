@@ -38,8 +38,10 @@ execute as @a[tag=ncmHit,gamemode=creative] at @s anchored eyes as @e[distance=.
 execute as @a[tag=ncmHit,gamemode=creative] at @s anchored eyes as @e[distance=..6,tag=ncmGotHit] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^-1 if entity @p[distance=..1,tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^1 run scoreboard players operation @s ncmAttackerFID = @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] fightID
 # Bypassable: execute as @a if entity @s[nbt={SelectedItem:{"id":"minecraft:bow"}}] run scoreboard players set @s ncmAttackedFID 1
 # Bypassable: execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:bow"}]}] run scoreboard players set @s ncmAttackedFID 1
+execute as @a[scores={ncmAttackedFID=0},tag=ncmHit] run scoreboard players set @s ncmFailedFME 1
 execute as @a[scores={ncmAttackedFID=0},tag=ncmHit] run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingEntity","color":"light_purple"},{"text":" {...}","color":"gray"}]
 execute as @a[scores={ncmAttackedFID=0},tag=ncmHit] run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingEntity","color":"light_purple"},{"text":" {...}","color":"gray"}]
+#execute as @a[tag=ncmHit] if score @s ncmAttackedFID matches 1.. run function checks/combined/pass
 
 
 execute as @a[tag=ncmHit] run tag @s remove ncmHit

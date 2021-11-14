@@ -24,7 +24,7 @@
 
 scoreboard objectives add ncmInstalled dummy
 
-scoreboard objectives add input trigger
+
 scoreboard objectives add inputR dummy
 
 
@@ -43,7 +43,7 @@ scoreboard objectives add ncmChar dummy
 
 scoreboard players set DataHolder ncmIsSnapshot 1
 scoreboard players set DataHolder ncmYear 21
-scoreboard players set DataHolder ncmWeek 7
+scoreboard players set DataHolder ncmWeek 45
 scoreboard players set DataHolder ncmChar 1
 
 # UUID
@@ -57,6 +57,24 @@ scoreboard objectives add fightID dummy
 scoreboard players set DataHolder ncmInstalled 1
 
 
+
+# -----------------
+# Commands
+# -----------------
+# Command: input
+scoreboard objectives add ncmInput trigger
+
+# Command: report
+scoreboard objectives add ncmReport trigger
+scoreboard objectives add ncmPLNotifyC dummy
+
+
+
+
+
+
+
+
 # --------------------
 # False positives
 # --------------------
@@ -66,13 +84,179 @@ scoreboard objectives add ncmFPdeathTime minecraft.custom:minecraft.time_since_d
 
 
 # --------------------
+# Repuation
+# --------------------
+
+scoreboard objectives add ncmRep dummy
+scoreboard objectives add ncmAddRep dummy
+scoreboard objectives add ncmLowerRep dummy
+
+scoreboard objectives add ncmGainRepClDwn dummy
+scoreboard objectives add ncmLowerRepClDwn dummy
+scoreboard objectives add ncmGainRepCount dummy
+scoreboard objectives add ncmLowerRepCount dummy
+scoreboard objectives add ncmRepGainTotal dummy
+scoreboard objectives add ncmRepLowerTotal dummy
+scoreboard objectives add ncmRpGainTotal dummy
+scoreboard objectives add ncmRpLowerTotal dummy
+
+scoreboard objectives add ncmTotalTime minecraft.custom:minecraft.play_time
+
+scoreboard objectives add ncmPL dummy
+
+scoreboard objectives add ncmPLSuspectHLCT dummy
+scoreboard objectives add ncmPLObserveT dummy
+scoreboard objectives add ncmPLHighT dummy
+
+
+
+
+
+# --------------------
+# Fail
+# --------------------
+scoreboard objectives add ncmFailedBIMB dummy
+scoreboard objectives add ncmFailedBPMB dummy
+scoreboard objectives add ncmFailedBPAP dummy
+scoreboard objectives add ncmFailedFME dummy
+scoreboard objectives add ncmFailedINVAP dummy
+scoreboard objectives add ncmFailedMVMAP dummy
+scoreboard objectives add ncmFailedMVMSF dummy
+scoreboard objectives add ncmFailedNETAP dummy
+scoreboard objectives add ncmFailedNETUP dummy
+
+# --------------------
+# Pass
+# --------------------
+scoreboard objectives add ncmPassedBIMB dummy
+scoreboard objectives add ncmPassedBPMB dummy
+scoreboard objectives add ncmPassedBPAP dummy
+scoreboard objectives add ncmPassedFME dummy
+scoreboard objectives add ncmPassedINVAP dummy
+scoreboard objectives add ncmPassedMVMAP dummy
+scoreboard objectives add ncmPassedMVMSF dummy
+scoreboard objectives add ncmPassedNETAP dummy
+scoreboard objectives add ncmPassedNETUP dummy
+
+scoreboard objectives add ncmRepRegCounter minecraft.custom:minecraft.play_time
+scoreboard objectives add ncmRepRegTotal dummy
+
+
+# --------------------
 # Configuration values
 # --------------------
 
 scoreboard objectives add ncmCC dummy
 
 
-# Appropriate (NoFall/FallDamage)
+# Reputation
+# Initial reputation 0
+scoreboard objectives add ncmc_bs_rp_1 dummy
+# Lowest reputation -500
+scoreboard objectives add ncmc_bs_rp_2 dummy
+# Hightest reputation 100
+scoreboard objectives add ncmc_bs_rp_3 dummy
+# Reputation limit for probability level "Suspect/HLC" -250
+scoreboard objectives add ncmc_bs_rp_4 dummy
+# Reputation limit for probability level "Observe" -350
+scoreboard objectives add ncmc_bs_rp_5 dummy
+# Reputation limit for probability level "High" -450
+scoreboard objectives add ncmc_bs_rp_6 dummy
+
+# Maximum reputation gain (ncmc_bs_rp_7 / 50) in (ncmc_bs_rp_8 / 3600) ticks
+scoreboard objectives add ncmc_bs_rp_7 dummy
+scoreboard objectives add ncmc_bs_rp_8 dummy
+
+# Maximum reputation loss (ncmc_bs_rp_9 / 200) in (ncmc_bs_rp_10 / 1200) ticks
+scoreboard objectives add ncmc_bs_rp_9 dummy
+scoreboard objectives add ncmc_bs_rp_10 dummy
+
+# Ticks between two "Check report" warnings, 0 to turn off. 36000
+scoreboard objectives add ncmc_bs_rp_11 dummy
+
+
+
+# Pass
+# Regeneration of (ncmc_bs_ps_1 / 1) reputation every (ncmc_bs_ps_2 / 600) ticks
+scoreboard objectives add ncmc_bs_ps_1 dummy
+scoreboard objectives add ncmc_bs_ps_2 dummy
+
+# Fail
+# BlockInteract.MissingBlock
+# Reputation loss for failing BlockInteract.MissingBlock (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_1 dummy
+# Reputation loss for failing BlockInteract.MissingBlock (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_2 dummy
+# Reputation loss for failing BlockInteract.MissingBlock (Rage) 100
+scoreboard objectives add ncmc_bs_fl_3 dummy
+
+# BlockPlace.Appropriate
+# Reputation loss for failing BlockPlace.Appropriate (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_4 dummy
+# Reputation loss for failing BlockPlace.Appropriate (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_5 dummy
+# Reputation loss for failing BlockPlace.Appropriate (Rage) 100
+scoreboard objectives add ncmc_bs_fl_6 dummy
+
+# BlockPlace.MissingBlock
+# Reputation loss for failing BlockPlace.MissingBlock (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_7 dummy
+# Reputation loss for failing BlockPlace.MissingBlock (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_8 dummy
+# Reputation loss for failing BlockPlace.MissingBlock (Rage) 100
+scoreboard objectives add ncmc_bs_fl_9 dummy
+
+# Fight.MissingEntity
+# Reputation loss for failing Fight.MissingEntity (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_10 dummy
+# Reputation loss for failing Fight.MissingEntity (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_11 dummy
+# Reputation loss for failing Fight.MissingEntity (Rage) 100
+scoreboard objectives add ncmc_bs_fl_12 dummy
+
+# Inventory.Appropriate
+# Reputation loss for failing Inventory.Appropriate (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_13 dummy
+# Reputation loss for failing Inventory.Appropriate (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_14 dummy
+# Reputation loss for failing Inventory.Appropriate (Rage) 100
+scoreboard objectives add ncmc_bs_fl_15 dummy
+
+# Movement.Appropriate
+# Reputation loss for failing Movement.Appropriate (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_16 dummy
+# Reputation loss for failing Movement.Appropriate (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_17 dummy
+# Reputation loss for failing Movement.Appropriate (Rage) 100
+scoreboard objectives add ncmc_bs_fl_18 dummy
+
+# Movement.SurvivalFly
+# Reputation loss for failing Movement.SurvivalFly (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_19 dummy
+# Reputation loss for failing Movement.SurvivalFly (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_20 dummy
+# Reputation loss for failing Movement.SurvivalFly (Rage) 100
+scoreboard objectives add ncmc_bs_fl_21 dummy
+
+# Network.Appropriate
+# Reputation loss for failing Network.Appropriate (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_22 dummy
+# Reputation loss for failing Network.Appropriate (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_23 dummy
+# Reputation loss for failing Network.Appropriate (Rage) 100
+scoreboard objectives add ncmc_bs_fl_24 dummy
+
+# Network.UnfittingPacket
+# Reputation loss for failing Network.UnfittingPacket (Common/HLC) 1
+scoreboard objectives add ncmc_bs_fl_25 dummy
+# Reputation loss for failing Network.UnfittingPacket (Suspect) 10
+scoreboard objectives add ncmc_bs_fl_26 dummy
+# Reputation loss for failing Network.UnfittingPacket (Rage) 100
+scoreboard objectives add ncmc_bs_fl_27 dummy
+
+
+
+# Appropriate (NoFall/FallDamage) 269
 scoreboard objectives add ncmc_ap_nf_1 dummy
 
 # Appropriate (Speed (WalkSpeed))
@@ -212,7 +396,6 @@ scoreboard objectives add ncmc_ap_bp_1 dummy
 
 # The timeframe 3
 scoreboard objectives add ncmc_ap_bp_2 dummy
-
 
 
 

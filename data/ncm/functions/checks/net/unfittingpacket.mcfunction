@@ -28,6 +28,7 @@
 # Subcheck: PlayerMoveC2SPacket/OffGround
 # ---------------------------------------
 
+execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if block ~ ~-1 ~ air if block ~ ~-2 ~ air run scoreboard players set @s ncmFailedNETUP 5
 execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if block ~ ~-1 ~ air if block ~ ~-2 ~ air run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"sent a packet (PlayerMoveC2SPacket), which doesn't fit the player's current state (OffGround)","color":"white"}]
 execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if block ~ ~-1 ~ air if block ~ ~-2 ~ air run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"sent a packet (PlayerMoveC2SPacket), which doesn't fit the player's current state (OffGround)","color":"white"}]
 
@@ -40,7 +41,7 @@ scoreboard players add @a timeInRespawnScr 1
 execute as @e[type=minecraft:player] at @s run scoreboard players set @s timeInRespawnScr 0
 scoreboard players add @a[scores={timeInRespawnScr=1..,ncmPlayerDeath=0}] ncmUPIR_ivl 1
 execute as @e[type=minecraft:player] if score @s ncmPlayerDeath matches 1.. run scoreboard players set @s ncmPlayerDeath 0
-
+execute as @e[type=minecraft:player] if score @s ncmUPIR_ivl matches 1.. run scoreboard players set @s ncmFailedNETUP 10
 execute as @e[type=minecraft:player] if score @s ncmUPIR_ivl matches 1.. run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"received a packet (PlayerRespawnS2CPacket), which doesn't fit the player's current state (Alive)","color":"white"}]
 execute as @e[type=minecraft:player] if score @s ncmUPIR_ivl matches 1.. run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"received a packet (PlayerRespawnS2CPacket), which doesn't fit the player's current state (Alive)","color":"white"}]
 
