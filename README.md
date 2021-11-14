@@ -6,7 +6,7 @@
 ## Setup
 1. Download this project as a .zip file and place it in your world's datapack folder.
 2. Restart your server or use `/reload` to reload the datapacks.
-3. Use `/trigger input set 0/1/2` to see no logs (`0`), only your logs (`1`), or all logs (`2`).
+3. Use `/trigger ncmInput set 0/1/2` to see no logs (`0`), only your logs (`1`), or all logs (`2`).
 
 ## Apply values from configuration files
 1. Paste your configuration files into the directory **NoCheatMinus/data/ncm/functions/user/configs/**
@@ -22,6 +22,7 @@
 ## Checks
 | Check category and name | Description |
 | ----------------------- | ----------- |
+| BlockPlace.Appropriate | NCM monitors the amount of blocks placed in a configurable time window. |
 | BlockPlace.MissingBlock | When the player places a block, NCM will check if the player looks at a block, which blocktype equals the blocktype of the block he placed last, and if this block is within the max blockplace range. (Raytracing). |
 | BlockInteract.MissingBlock | When the player interacts with a block, NCM will check if the player looks at a block, which blocktype equals the blocktype of the block he interacted with last, and if this block is within the max interaction range. (Raytracing). |
 | Net.UnfittingPacket | NCM checks if the player spoofs to be on-ground whilst being mid-air/off-ground. Another subcheck of this check monitors if the player sends a RespawnPacket whilst being alive or stops receiving certain packets without being dead (Godmode patch). |
