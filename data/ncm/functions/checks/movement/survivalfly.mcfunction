@@ -156,6 +156,8 @@ execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run 
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ water run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard players set @s ncmYSpMaintainRC 0
+
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 
 execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. run scoreboard players set @s ncmFailedMVMSF 10
