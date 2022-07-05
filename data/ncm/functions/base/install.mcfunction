@@ -335,7 +335,7 @@ scoreboard objectives add ncmc_ap_go_1 dummy
 
 
 # SurvivalFly (False Positives)
-# Cooldown after using an elytra 10
+# Cooldown after aviate / levitate 10
 scoreboard objectives add ncmc_sf_fp_1 dummy
 
 # SurvivalFly (Distance)
@@ -362,7 +362,7 @@ scoreboard objectives add ncmc_sf_cr_2 dummy
 scoreboard objectives add ncmc_sf_og_1 dummy
 # Ticks after the off ground ticks get resetted 10
 scoreboard objectives add ncmc_sf_og_2 dummy
-# Jump FP cooldown 10
+# Jump FP cooldown 20
 scoreboard objectives add ncmc_sf_og_3 dummy
 
 # SurvivalFly (MonitorMotionX)
@@ -1254,11 +1254,15 @@ scoreboard objectives add ncmUPIR_ivl dummy
 # SurvivalFly General
 
 scoreboard objectives add ncmAviate minecraft.custom:minecraft.aviate_one_cm
+scoreboard objectives add ncmAviateRC dummy
+scoreboard objectives add ncmLevitate dummy
 scoreboard objectives add ncmAngryIGNearby dummy
 scoreboard objectives add ncmCobwebNearby dummy
+scoreboard objectives add ncmLiquidNearby dummy
 scoreboard objectives add ncmDecent dummy
 scoreboard objectives add ncmMaintain dummy
 scoreboard objectives add ncmClimb dummy
+scoreboard objectives add ncmFPDecent dummy
 
 
 # SurvivalFly (Distance)
@@ -1279,6 +1283,7 @@ scoreboard objectives add ncmSFLG_ivlrc dummy
 scoreboard objectives add ncmOffGrTicks dummy
 scoreboard objectives add ncmOffGrTicksC dummy
 scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
+scoreboard objectives add ncmOGJumpR minecraft.custom:minecraft.jump
 
 # SurvivalFly (Climb)
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm

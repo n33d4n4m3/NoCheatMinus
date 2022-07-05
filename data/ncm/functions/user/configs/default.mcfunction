@@ -98,7 +98,7 @@ scoreboard players set DataHolder ncmc_sf_lg_2 10
 
 scoreboard players set DataHolder ncmc_sf_og_1 6
 scoreboard players set DataHolder ncmc_sf_og_2 10
-scoreboard players set DataHolder ncmc_sf_og_3 10
+scoreboard players set DataHolder ncmc_sf_og_3 30
 
 
 scoreboard players set DataHolder ncmc_sf_ym_1 4201

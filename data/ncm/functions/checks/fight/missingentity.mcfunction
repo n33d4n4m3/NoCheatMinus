@@ -44,6 +44,12 @@ execute as @a[scores={ncmAttackedFID=0},tag=ncmHit] run tellraw @a[scores={input
 #execute as @a[tag=ncmHit] if score @s ncmAttackedFID matches 1.. run function checks/combined/pass
 
 
+
+
+
+
+
+
 execute as @a[tag=ncmHit] run tag @s remove ncmHit
 execute as @e[tag=ncmGotHit] run tag @s remove ncmGotHit
 scoreboard players set @a ncmAttackedFID 0
