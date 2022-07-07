@@ -45,6 +45,9 @@ scoreboard players set DataHolder ncmc_bs_fl_24 100
 scoreboard players set DataHolder ncmc_bs_fl_25 1
 scoreboard players set DataHolder ncmc_bs_fl_26 10
 scoreboard players set DataHolder ncmc_bs_fl_27 100
+scoreboard players set DataHolder ncmc_bs_fl_28 15
+scoreboard players set DataHolder ncmc_bs_fl_29 100
+scoreboard players set DataHolder ncmc_bs_fl_30 150
 
 
 

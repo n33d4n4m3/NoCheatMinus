@@ -119,6 +119,7 @@ scoreboard objectives add ncmFailedBIMB dummy
 scoreboard objectives add ncmFailedBPMB dummy
 scoreboard objectives add ncmFailedBPAP dummy
 scoreboard objectives add ncmFailedFME dummy
+scoreboard objectives add ncmFailedFCC dummy
 scoreboard objectives add ncmFailedINVAP dummy
 scoreboard objectives add ncmFailedMVMAP dummy
 scoreboard objectives add ncmFailedMVMSF dummy
@@ -213,6 +214,14 @@ scoreboard objectives add ncmc_bs_fl_10 dummy
 scoreboard objectives add ncmc_bs_fl_11 dummy
 # Reputation loss for failing Fight.MissingEntity (Rage) 100
 scoreboard objectives add ncmc_bs_fl_12 dummy
+
+# Fight.Criticals
+# Reputation loss for failing Fight.Criticals (Common/HLC) 15
+scoreboard objectives add ncmc_bs_fl_28 dummy
+# Reputation loss for failing Fight.Criticals (Suspect) 100
+scoreboard objectives add ncmc_bs_fl_29 dummy
+# Reputation loss for failing Fight.Criticals (Rage) 150
+scoreboard objectives add ncmc_bs_fl_30 dummy
 
 # Inventory.Appropriate
 # Reputation loss for failing Inventory.Appropriate (Common/HLC) 1
@@ -1219,6 +1228,15 @@ scoreboard objectives add ncmAttackedFID dummy
 scoreboard objectives add ncmAttackerFID dummy
 
 scoreboard objectives add ncmKillCount totalKillCount
+
+# Criticals
+scoreboard objectives add ncmFCCDmgDealt minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add ncmFCCFall dummy
+scoreboard objectives add ncmFCCADmg dummy
+scoreboard objectives add ncmMadeCritical dummy
+
+scoreboard objectives add ncmFCCMissingReq dummy
+
 
 
 # --------------------

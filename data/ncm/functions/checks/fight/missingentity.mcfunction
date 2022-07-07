@@ -25,7 +25,7 @@
 
 execute as @a[advancements={ncm:player_hurt_entity=true}] if score @s ncmKillCount matches 0 run tag @s add ncmHit
 execute as @e[nbt={HurtTime:10s}] run tag @s add ncmGotHit
-advancement revoke @a only ncm:player_hurt_entity
+advancement revoke @a[advancements={ncm:player_hurt_entity=true}] only ncm:player_hurt_entity
 # Survival/Adventure gamemode maximum range= 4.4
 execute as @a[tag=ncmHit,gamemode=survival] at @s anchored eyes as @e[distance=..4.40,tag=ncmGotHit] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^-1 if entity @p[distance=..1,tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^1 run scoreboard players operation @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] ncmAttackedFID = @s fightID
 execute as @a[tag=ncmHit,gamemode=survival] at @s anchored eyes as @e[distance=..4.40,tag=ncmGotHit] facing entity @s eyes anchored feet positioned ^ ^ ^1 rotated as @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^-1 if entity @p[distance=..1,tag=ncmHit,tag=!ncmGotHit,sort=nearest] positioned ^ ^ ^1 run scoreboard players operation @s ncmAttackerFID = @p[tag=ncmHit,tag=!ncmGotHit,sort=nearest] fightID

@@ -30,6 +30,7 @@
 | Movement.Appropriate | When the player touches the ground, NCM will start calculating the estimated fall damage, depending on the current health and the fall distance. If the taken fall damage differs from the calculated fall damage, this check fails. This check also monitors the movement speed of the player in different movement states (Walk, Sprint, Sneak...) and takes legacy status effects (speed...), icy grounds and laggy movement transitions (Sprint->Walk for example) into account. |
 | Movement.SurvivalFly | NCM monitors the vertical motion of the player, the off-ground-behavior, unexpected movements, the player's gravity, and lost-ground-situations. |
 | Fight.MissingEntity | This check observes the player's combat behavior. If the attacked player is out of range or not in sight, the check will fail. If the attacking player doesn't aim properly or tries to attack through walls, this check will fail also. |
+| Fight.Criticals | When a player makes a critical hit, this check verifies that the hit was made under legitimate conditions. |
 | Inventory.Appropriate | When the player consumes an Item, NCM will check the speed of consuming and compare it with the configurated appropriate values. |
 
 This AntiCheat Datapack doesn't come with any player punishment functions, it just logs the violations into the chat. See **Setup** to configure logging.

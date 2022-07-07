@@ -43,6 +43,12 @@ execute as @e[type=minecraft:player] if score @s ncmFailedFME matches 5..8 run s
 execute as @e[type=minecraft:player] if score @s ncmFailedFME matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_12
 execute as @e[type=minecraft:player] if score @s ncmFailedFME matches 1.. run scoreboard players set @s ncmFailedFME 0
 
+# Fight.Criticals
+execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_28
+execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_29
+execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_30
+execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1.. run scoreboard players set @s ncmFailedFCC 0
+
 # Inventory.Appropriate
 execute as @e[type=minecraft:player] if score @s ncmFailedINVAP matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_13
 execute as @e[type=minecraft:player] if score @s ncmFailedINVAP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_14

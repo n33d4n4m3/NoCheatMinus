@@ -37,6 +37,7 @@ function ncm:base/evaluation/pass
 
 # Running checks
 function ncm:checks/fight/missingentity
+function ncm:checks/fight/criticals
 function ncm:checks/movement/appropriate
 function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate
