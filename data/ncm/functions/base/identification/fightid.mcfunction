@@ -13,19 +13,19 @@
 #
 #
 # ...
-# Description:  This function is responsible for excluding generic -not living- entity types from the FightID-system.
+# Description:  This function is responsible for excluding generic -not living- entity types from the ncmFightID-system.
 # Author:       n33d4n4m3
 # ...
-tag @e[type=minecraft:item] add noFightID
-tag @e[type=minecraft:item_frame] add noFightID
-tag @e[type=minecraft:area_effect_cloud] add noFightID
-tag @e[type=minecraft:arrow] add noFightID
-tag @e[type=minecraft:armor_stand] add noFightID
-tag @e[type=minecraft:minecart] add noFightID
-tag @e[type=minecraft:tnt_minecart] add noFightID
-tag @e[type=minecraft:chest_minecart] add noFightID
-tag @e[type=minecraft:boat] add noFightID
-tag @e[type=minecraft:hopper_minecart] add noFightID
-tag @e[type=minecraft:tnt] add noFightID
+tag @e[type=minecraft:item] add noncmFightID
+tag @e[type=minecraft:item_frame] add noncmFightID
+tag @e[type=minecraft:area_effect_cloud] add noncmFightID
+tag @e[type=minecraft:arrow] add noncmFightID
+tag @e[type=minecraft:armor_stand] add noncmFightID
+tag @e[type=minecraft:minecart] add noncmFightID
+tag @e[type=minecraft:tnt_minecart] add noncmFightID
+tag @e[type=minecraft:chest_minecart] add noncmFightID
+tag @e[type=minecraft:boat] add noncmFightID
+tag @e[type=minecraft:hopper_minecart] add noncmFightID
+tag @e[type=minecraft:tnt] add noncmFightID
 
-execute as @e[tag=!noFightID] unless score @s fightID matches 1.. run function ncm:base/identification/assignfightid
+execute as @e[tag=!noncmFightID] unless score @s ncmFightID matches 1.. run function ncm:base/identification/assignfightid

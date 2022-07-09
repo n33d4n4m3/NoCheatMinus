@@ -293,106 +293,106 @@ execute as @e[type=minecraft:player,scores={ncmLeaveGame=1..}] run scoreboard pl
 
 
 
-execute as @e[type=minecraft:player,scores={UUID=1}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=1}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=2}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=2}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=3}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=3}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=4}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=4}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=5}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=5}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=6}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=6}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=7}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=7}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=8}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=8}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=9}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=9}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=10}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=10}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=11}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=11}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=12}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=12}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=13}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=13}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=14}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=14}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=15}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=15}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=16}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=16}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=17}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=17}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=18}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=18}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=19}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=19}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=20}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=20}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=21}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=21}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=22}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=22}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=23}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=23}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=24}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=24}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=25}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=25}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=26}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=26}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=27}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=27}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=28}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=28}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=29}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=29}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=30}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=30}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=31}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=31}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=32}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=32}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=33}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=33}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=34}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=34}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=35}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=35}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=36}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=36}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=37}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=37}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=38}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=38}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=39}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=39}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=40}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=40}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=41}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=41}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=42}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=42}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=43}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=43}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=44}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=44}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=45}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=45}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=46}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=46}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=47}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=47}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=48}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=48}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=49}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=49}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=50}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=50}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=51}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=51}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=52}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=52}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=53}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=53}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=54}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=54}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=55}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=55}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=56}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=56}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=57}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=57}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=58}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=58}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=59}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=59}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=60}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=60}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=61}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=61}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=62}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=62}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=63}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=63}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=64}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=64}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=65}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=65}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=66}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=66}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=67}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=67}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=68}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=68}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=69}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=69}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=70}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=70}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=71}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=71}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=72}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=72}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=73}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=73}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=74}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=74}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=75}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=75}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=76}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=76}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=77}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=77}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=78}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=78}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=79}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=79}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=80}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=80}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=81}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=81}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=82}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=82}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=83}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=83}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=84}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=84}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=85}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=85}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=86}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=86}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=87}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=87}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=88}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=88}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=89}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=89}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=90}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=90}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=91}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=91}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=92}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=92}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=93}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=93}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=94}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=94}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=95}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=95}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=96}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=96}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=97}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=97}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=98}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=98}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=99}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=99}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
-execute as @e[type=minecraft:player,scores={UUID=100}] at @s unless entity @e[type=armor_stand,scores={isSetback=1,UUID=100}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=1}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=1}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=2}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=2}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=3}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=3}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=4}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=4}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=5}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=5}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=6}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=6}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=7}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=7}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=8}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=8}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=9}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=9}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=10}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=10}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=11}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=11}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=12}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=12}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=13}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=13}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=14}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=14}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=15}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=15}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=16}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=16}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=17}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=17}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=18}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=18}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=19}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=19}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=20}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=20}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=21}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=21}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=22}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=22}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=23}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=23}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=24}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=24}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=25}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=25}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=26}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=26}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=27}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=27}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=28}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=28}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=29}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=29}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=30}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=30}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=31}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=31}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=32}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=32}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=33}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=33}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=34}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=34}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=35}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=35}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=36}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=36}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=37}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=37}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=38}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=38}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=39}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=39}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=40}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=40}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=41}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=41}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=42}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=42}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=43}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=43}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=44}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=44}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=45}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=45}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=46}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=46}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=47}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=47}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=48}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=48}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=49}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=49}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=50}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=50}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=51}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=51}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=52}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=52}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=53}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=53}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=54}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=54}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=55}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=55}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=56}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=56}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=57}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=57}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=58}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=58}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=59}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=59}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=60}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=60}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=61}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=61}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=62}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=62}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=63}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=63}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=64}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=64}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=65}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=65}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=66}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=66}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=67}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=67}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=68}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=68}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=69}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=69}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=70}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=70}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=71}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=71}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=72}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=72}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=73}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=73}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=74}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=74}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=75}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=75}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=76}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=76}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=77}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=77}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=78}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=78}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=79}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=79}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=80}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=80}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=81}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=81}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=82}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=82}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=83}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=83}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=84}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=84}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=85}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=85}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=86}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=86}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=87}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=87}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=88}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=88}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=89}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=89}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=90}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=90}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=91}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=91}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=92}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=92}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=93}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=93}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=94}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=94}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=95}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=95}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=96}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=96}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=97}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=97}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=98}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=98}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=99}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=99}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
+execute as @e[type=minecraft:player,scores={ncmUUID=100}] at @s unless entity @e[type=armor_stand,scores={ncmIsSetback=1,ncmUUID=100}] if score @s ncmJoinGame matches 20.. run summon armor_stand ~ ~ ~ {CustomName:"\"SurvivalFlyA\"",CustomNameVisible:0b,NoGravity:1b,Marker:1b,Invisible:1,Invulnerable:1,NoBasePlate:1}
 
 
 
@@ -410,17 +410,17 @@ execute as @e[type=minecraft:player,scores={UUID=100}] at @s unless entity @e[ty
 
 
 
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s hasSpeedEffI 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s hasSpeedEffII 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s sprintJumpFP 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s sprintJumpFPII 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s stOnIceC 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s inputR 2
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSpeedEffI 0
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSpeedEffII 0
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSprJmp 0
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSprJmpII 0
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmStOnIceC 0
+execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmInputR 2
 
 
 execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches 20.. run scoreboard players set @s ncmJoinGame 41
-execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s UUID matches 1.. run scoreboard players set @s isSetback 1
-execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s UUID matches 1.. run scoreboard players operation @s UUID = @p[sort=nearest] UUID
+execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s ncmUUID matches 1.. run scoreboard players set @s ncmIsSetback 1
+execute as @e[type=armor_stand,name=SurvivalFlyA] at @s unless score @s ncmUUID matches 1.. run scoreboard players operation @s ncmUUID = @p[sort=nearest] ncmUUID
 
 
 # SF.Distance Task: Check violations
@@ -430,210 +430,210 @@ execute as @e[type=minecraft:player] if score @s ncmPlayerY < @s ncmLastPlayerY 
 execute as @e[type=minecraft:player] if score @s ncmPlayerY = @s ncmLastPlayerY run scoreboard players set @s ncmMaintain 1
 execute as @e[type=minecraft:player] if score @s ncmPlayerY > @s ncmLastPlayerY run scoreboard players set @s ncmClimb 1
 
-execute as @e[scores={isSetback=1,UUID=1}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=1},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=1}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=1}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=2}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=2},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=2}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=2}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=3}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=3},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=3}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=3}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=4}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=4},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=4}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=4}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=5}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=5},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=5}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=5}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=6}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=6},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=6}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=6}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=7}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=7},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=7}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=7}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=8}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=8},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=8}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=8}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=9}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=9},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=9}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=9}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=10}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=10},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=10}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=10}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=11}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=11},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=11}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=11}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=12}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=12},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=12}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=12}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=13}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=13},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=13}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=13}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=14}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=14},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=14}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=14}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=15}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=15},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=15}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=15}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=16}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=16},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=16}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=16}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=17}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=17},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=17}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=17}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=18}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=18},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=18}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=18}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=19}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=19},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=19}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=19}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=20}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=20},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=20}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=20}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=21}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=21},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=21}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=21}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=22}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=22},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=22}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=22}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=23}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=23},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=23}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=23}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=24}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=24},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=24}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=24}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=25}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=25},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=25}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=25}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=26}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=26},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=26}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=26}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=27}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=27},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=27}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=27}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=28}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=28},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=28}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=28}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=29}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=29},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=29}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=29}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=30}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=30},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=30}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=30}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=31}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=31},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=31}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=31}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=32}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=32},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=32}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=32}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=33}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=33},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=33}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=33}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=34}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=34},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=34}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=34}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=35}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=35},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=35}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=35}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=36}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=36},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=36}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=36}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=37}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=37},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=37}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=37}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=38}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=38},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=38}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=38}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=39}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=39},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=39}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=39}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=40}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=40},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=40}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=40}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=41}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=41},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=41}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=41}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=42}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=42},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=42}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=42}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=43}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=43},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=43}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=43}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=44}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=44},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=44}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=44}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=45}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=45},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=45}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=45}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=46}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=46},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=46}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=46}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=47}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=47},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=47}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=47}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=48}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=48},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=48}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=48}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=49}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=49},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=49}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=49}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=50}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=50},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=50}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=50}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=51}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=51},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=51}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=51}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=52}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=52},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=52}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=52}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=53}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=53},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=53}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=53}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=54}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=54},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=54}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=54}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=55}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=55},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=55}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=55}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=56}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=56},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=56}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=56}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=57}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=57},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=57}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=57}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=58}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=58},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=58}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=58}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=59}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=59},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=59}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=59}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=60}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=60},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=60}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=60}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=61}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=61},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=61}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=61}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=62}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=62},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=62}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=62}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=63}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=63},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=63}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=63}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=64}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=64},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=64}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=64}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=65}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=65},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=65}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=65}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=66}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=66},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=66}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=66}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=67}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=67},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=67}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=67}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=68}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=68},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=68}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=68}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=69}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=69},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=69}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=69}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=70}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=70},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=70}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=70}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=71}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=71},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=71}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=71}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=72}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=72},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=72}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=72}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=73}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=73},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=73}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=73}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=74}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=74},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=74}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=74}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=75}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=75},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=75}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=75}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=76}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=76},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=76}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=76}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=77}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=77},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=77}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=77}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=78}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=78},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=78}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=78}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=79}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=79},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=79}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=79}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=80}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=80},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=80}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=80}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=81}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=81},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=81}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=81}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=82}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=82},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=82}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=82}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=83}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=83},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=83}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=83}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=84}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=84},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=84}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=84}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=85}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=85},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=85}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=85}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=86}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=86},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=86}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=86}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=87}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=87},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=87}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=87}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=88}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=88},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=88}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=88}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=89}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=89},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=89}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=89}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=90}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=90},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=90}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=90}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=91}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=91},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=91}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=91}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=92}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=92},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=92}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=92}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=93}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=93},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=93}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=93}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=94}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=94},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=94}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=94}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=95}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=95},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=95}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=95}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=96}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=96},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=96}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=96}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=97}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=97},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=97}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=97}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=98}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=98},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=98}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=98}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=99}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=99},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=99}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=99}] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=100}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,UUID=100},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
-execute as @e[scores={isSetback=1,UUID=100}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,UUID=100}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=1}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=1},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=1}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=1}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=2}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=2},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=2}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=2}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=3}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=3},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=3}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=3}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=4}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=4},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=4}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=4}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=5}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=5},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=5}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=5}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=6}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=6},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=6}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=6}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=7}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=7},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=7}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=7}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=8}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=8},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=8}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=8}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=9}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=9},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=9}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=9}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=10}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=10},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=10}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=10}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=11}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=11},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=11}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=11}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=12}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=12},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=12}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=12}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=13}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=13},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=13}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=13}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=14}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=14},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=14}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=14}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=15}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=15},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=15}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=15}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=16}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=16},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=16}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=16}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=17}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=17},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=17}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=17}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=18}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=18},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=18}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=18}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=19}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=19},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=19}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=19}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=20}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=20},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=20}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=20}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=21}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=21},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=21}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=21}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=22}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=22},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=22}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=22}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=23}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=23},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=23}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=23}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=24}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=24},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=24}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=24}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=25}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=25},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=25}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=25}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=26}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=26},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=26}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=26}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=27}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=27},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=27}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=27}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=28}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=28},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=28}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=28}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=29}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=29},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=29}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=29}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=30}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=30},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=30}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=30}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=31}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=31},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=31}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=31}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=32}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=32},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=32}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=32}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=33}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=33},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=33}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=33}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=34}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=34},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=34}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=34}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=35}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=35},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=35}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=35}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=36}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=36},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=36}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=36}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=37}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=37},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=37}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=37}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=38}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=38},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=38}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=38}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=39}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=39},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=39}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=39}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=40}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=40},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=40}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=40}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=41}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=41},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=41}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=41}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=42}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=42},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=42}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=42}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=43}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=43},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=43}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=43}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=44}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=44},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=44}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=44}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=45}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=45},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=45}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=45}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=46}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=46},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=46}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=46}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=47}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=47},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=47}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=47}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=48}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=48},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=48}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=48}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=49}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=49},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=49}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=49}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=50}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=50},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=50}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=50}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=51}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=51},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=51}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=51}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=52}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=52},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=52}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=52}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=53}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=53},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=53}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=53}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=54}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=54},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=54}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=54}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=55}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=55},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=55}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=55}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=56}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=56},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=56}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=56}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=57}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=57},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=57}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=57}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=58}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=58},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=58}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=58}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=59}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=59},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=59}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=59}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=60}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=60},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=60}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=60}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=61}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=61},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=61}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=61}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=62}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=62},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=62}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=62}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=63}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=63},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=63}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=63}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=64}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=64},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=64}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=64}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=65}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=65},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=65}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=65}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=66}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=66},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=66}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=66}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=67}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=67},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=67}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=67}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=68}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=68},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=68}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=68}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=69}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=69},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=69}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=69}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=70}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=70},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=70}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=70}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=71}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=71},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=71}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=71}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=72}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=72},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=72}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=72}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=73}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=73},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=73}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=73}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=74}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=74},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=74}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=74}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=75}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=75},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=75}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=75}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=76}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=76},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=76}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=76}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=77}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=77},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=77}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=77}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=78}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=78},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=78}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=78}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=79}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=79},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=79}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=79}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=80}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=80},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=80}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=80}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=81}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=81},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=81}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=81}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=82}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=82},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=82}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=82}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=83}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=83},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=83}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=83}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=84}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=84},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=84}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=84}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=85}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=85},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=85}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=85}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=86}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=86},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=86}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=86}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=87}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=87},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=87}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=87}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=88}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=88},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=88}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=88}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=89}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=89},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=89}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=89}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=90}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=90},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=90}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=90}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=91}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=91},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=91}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=91}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=92}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=92},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=92}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=92}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=93}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=93},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=93}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=93}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=94}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=94},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=94}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=94}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=95}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=95},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=95}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=95}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=96}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=96},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=96}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=96}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=97}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=97},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=97}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=97}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=98}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=98},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=98}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=98}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=99}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=99},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=99}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=99}] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=100}] at @s run scoreboard players add @a[distance=1.01..1.99,scores={ncmDecent=0,ncmUUID=100},predicate=!ncm:is_sprinting] ncmSFDS_ivl 1
+execute as @e[scores={ncmIsSetback=1,ncmUUID=100}] at @s run scoreboard players add @a[distance=2..,scores={ncmDecent=0,ncmUUID=100}] ncmSFDS_ivl 1
 
 execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 unless score @s ncmAviate matches 1.. run scoreboard players set @s ncmFailedMVMSF 0
-execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 unless score @s ncmAviate matches 1.. run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Distance","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDecent"},"color":"gray"},{"text":"}","color":"gray"}]
-execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 unless score @s ncmAviate matches 1.. run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Distance","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDecent"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 unless score @s ncmAviate matches 1.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Distance","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDecent"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 unless score @s ncmAviate matches 1.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Distance","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ds_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDecent"},"color":"gray"},{"text":"}","color":"gray"}]
 
 
 
@@ -641,106 +641,106 @@ scoreboard players set @a ncmDecent 0
 # SF.Distance Task: Teleport ArmorStand
 
 
-execute as @e[type=minecraft:player,scores={UUID=1}] at @s run tp @e[scores={isSetback=1,UUID=1}] @s
-execute as @e[type=minecraft:player,scores={UUID=2}] at @s run tp @e[scores={isSetback=1,UUID=2}] @s
-execute as @e[type=minecraft:player,scores={UUID=3}] at @s run tp @e[scores={isSetback=1,UUID=3}] @s
-execute as @e[type=minecraft:player,scores={UUID=4}] at @s run tp @e[scores={isSetback=1,UUID=4}] @s
-execute as @e[type=minecraft:player,scores={UUID=5}] at @s run tp @e[scores={isSetback=1,UUID=5}] @s
-execute as @e[type=minecraft:player,scores={UUID=6}] at @s run tp @e[scores={isSetback=1,UUID=6}] @s
-execute as @e[type=minecraft:player,scores={UUID=7}] at @s run tp @e[scores={isSetback=1,UUID=7}] @s
-execute as @e[type=minecraft:player,scores={UUID=8}] at @s run tp @e[scores={isSetback=1,UUID=8}] @s
-execute as @e[type=minecraft:player,scores={UUID=9}] at @s run tp @e[scores={isSetback=1,UUID=9}] @s
-execute as @e[type=minecraft:player,scores={UUID=10}] at @s run tp @e[scores={isSetback=1,UUID=10}] @s
-execute as @e[type=minecraft:player,scores={UUID=11}] at @s run tp @e[scores={isSetback=1,UUID=11}] @s
-execute as @e[type=minecraft:player,scores={UUID=12}] at @s run tp @e[scores={isSetback=1,UUID=12}] @s
-execute as @e[type=minecraft:player,scores={UUID=13}] at @s run tp @e[scores={isSetback=1,UUID=13}] @s
-execute as @e[type=minecraft:player,scores={UUID=14}] at @s run tp @e[scores={isSetback=1,UUID=14}] @s
-execute as @e[type=minecraft:player,scores={UUID=15}] at @s run tp @e[scores={isSetback=1,UUID=15}] @s
-execute as @e[type=minecraft:player,scores={UUID=16}] at @s run tp @e[scores={isSetback=1,UUID=16}] @s
-execute as @e[type=minecraft:player,scores={UUID=17}] at @s run tp @e[scores={isSetback=1,UUID=17}] @s
-execute as @e[type=minecraft:player,scores={UUID=18}] at @s run tp @e[scores={isSetback=1,UUID=18}] @s
-execute as @e[type=minecraft:player,scores={UUID=19}] at @s run tp @e[scores={isSetback=1,UUID=19}] @s
-execute as @e[type=minecraft:player,scores={UUID=20}] at @s run tp @e[scores={isSetback=1,UUID=20}] @s
-execute as @e[type=minecraft:player,scores={UUID=21}] at @s run tp @e[scores={isSetback=1,UUID=21}] @s
-execute as @e[type=minecraft:player,scores={UUID=22}] at @s run tp @e[scores={isSetback=1,UUID=22}] @s
-execute as @e[type=minecraft:player,scores={UUID=23}] at @s run tp @e[scores={isSetback=1,UUID=23}] @s
-execute as @e[type=minecraft:player,scores={UUID=24}] at @s run tp @e[scores={isSetback=1,UUID=24}] @s
-execute as @e[type=minecraft:player,scores={UUID=25}] at @s run tp @e[scores={isSetback=1,UUID=25}] @s
-execute as @e[type=minecraft:player,scores={UUID=26}] at @s run tp @e[scores={isSetback=1,UUID=26}] @s
-execute as @e[type=minecraft:player,scores={UUID=27}] at @s run tp @e[scores={isSetback=1,UUID=27}] @s
-execute as @e[type=minecraft:player,scores={UUID=28}] at @s run tp @e[scores={isSetback=1,UUID=28}] @s
-execute as @e[type=minecraft:player,scores={UUID=29}] at @s run tp @e[scores={isSetback=1,UUID=29}] @s
-execute as @e[type=minecraft:player,scores={UUID=30}] at @s run tp @e[scores={isSetback=1,UUID=30}] @s
-execute as @e[type=minecraft:player,scores={UUID=31}] at @s run tp @e[scores={isSetback=1,UUID=31}] @s
-execute as @e[type=minecraft:player,scores={UUID=32}] at @s run tp @e[scores={isSetback=1,UUID=32}] @s
-execute as @e[type=minecraft:player,scores={UUID=33}] at @s run tp @e[scores={isSetback=1,UUID=33}] @s
-execute as @e[type=minecraft:player,scores={UUID=34}] at @s run tp @e[scores={isSetback=1,UUID=34}] @s
-execute as @e[type=minecraft:player,scores={UUID=35}] at @s run tp @e[scores={isSetback=1,UUID=35}] @s
-execute as @e[type=minecraft:player,scores={UUID=36}] at @s run tp @e[scores={isSetback=1,UUID=36}] @s
-execute as @e[type=minecraft:player,scores={UUID=37}] at @s run tp @e[scores={isSetback=1,UUID=37}] @s
-execute as @e[type=minecraft:player,scores={UUID=38}] at @s run tp @e[scores={isSetback=1,UUID=38}] @s
-execute as @e[type=minecraft:player,scores={UUID=39}] at @s run tp @e[scores={isSetback=1,UUID=39}] @s
-execute as @e[type=minecraft:player,scores={UUID=40}] at @s run tp @e[scores={isSetback=1,UUID=40}] @s
-execute as @e[type=minecraft:player,scores={UUID=41}] at @s run tp @e[scores={isSetback=1,UUID=41}] @s
-execute as @e[type=minecraft:player,scores={UUID=42}] at @s run tp @e[scores={isSetback=1,UUID=42}] @s
-execute as @e[type=minecraft:player,scores={UUID=43}] at @s run tp @e[scores={isSetback=1,UUID=43}] @s
-execute as @e[type=minecraft:player,scores={UUID=44}] at @s run tp @e[scores={isSetback=1,UUID=44}] @s
-execute as @e[type=minecraft:player,scores={UUID=45}] at @s run tp @e[scores={isSetback=1,UUID=45}] @s
-execute as @e[type=minecraft:player,scores={UUID=46}] at @s run tp @e[scores={isSetback=1,UUID=46}] @s
-execute as @e[type=minecraft:player,scores={UUID=47}] at @s run tp @e[scores={isSetback=1,UUID=47}] @s
-execute as @e[type=minecraft:player,scores={UUID=48}] at @s run tp @e[scores={isSetback=1,UUID=48}] @s
-execute as @e[type=minecraft:player,scores={UUID=49}] at @s run tp @e[scores={isSetback=1,UUID=49}] @s
-execute as @e[type=minecraft:player,scores={UUID=50}] at @s run tp @e[scores={isSetback=1,UUID=50}] @s
-execute as @e[type=minecraft:player,scores={UUID=51}] at @s run tp @e[scores={isSetback=1,UUID=51}] @s
-execute as @e[type=minecraft:player,scores={UUID=52}] at @s run tp @e[scores={isSetback=1,UUID=52}] @s
-execute as @e[type=minecraft:player,scores={UUID=53}] at @s run tp @e[scores={isSetback=1,UUID=53}] @s
-execute as @e[type=minecraft:player,scores={UUID=54}] at @s run tp @e[scores={isSetback=1,UUID=54}] @s
-execute as @e[type=minecraft:player,scores={UUID=55}] at @s run tp @e[scores={isSetback=1,UUID=55}] @s
-execute as @e[type=minecraft:player,scores={UUID=56}] at @s run tp @e[scores={isSetback=1,UUID=56}] @s
-execute as @e[type=minecraft:player,scores={UUID=57}] at @s run tp @e[scores={isSetback=1,UUID=57}] @s
-execute as @e[type=minecraft:player,scores={UUID=58}] at @s run tp @e[scores={isSetback=1,UUID=58}] @s
-execute as @e[type=minecraft:player,scores={UUID=59}] at @s run tp @e[scores={isSetback=1,UUID=59}] @s
-execute as @e[type=minecraft:player,scores={UUID=60}] at @s run tp @e[scores={isSetback=1,UUID=60}] @s
-execute as @e[type=minecraft:player,scores={UUID=61}] at @s run tp @e[scores={isSetback=1,UUID=61}] @s
-execute as @e[type=minecraft:player,scores={UUID=62}] at @s run tp @e[scores={isSetback=1,UUID=62}] @s
-execute as @e[type=minecraft:player,scores={UUID=63}] at @s run tp @e[scores={isSetback=1,UUID=63}] @s
-execute as @e[type=minecraft:player,scores={UUID=64}] at @s run tp @e[scores={isSetback=1,UUID=64}] @s
-execute as @e[type=minecraft:player,scores={UUID=65}] at @s run tp @e[scores={isSetback=1,UUID=65}] @s
-execute as @e[type=minecraft:player,scores={UUID=66}] at @s run tp @e[scores={isSetback=1,UUID=66}] @s
-execute as @e[type=minecraft:player,scores={UUID=67}] at @s run tp @e[scores={isSetback=1,UUID=67}] @s
-execute as @e[type=minecraft:player,scores={UUID=68}] at @s run tp @e[scores={isSetback=1,UUID=68}] @s
-execute as @e[type=minecraft:player,scores={UUID=69}] at @s run tp @e[scores={isSetback=1,UUID=69}] @s
-execute as @e[type=minecraft:player,scores={UUID=70}] at @s run tp @e[scores={isSetback=1,UUID=70}] @s
-execute as @e[type=minecraft:player,scores={UUID=71}] at @s run tp @e[scores={isSetback=1,UUID=71}] @s
-execute as @e[type=minecraft:player,scores={UUID=72}] at @s run tp @e[scores={isSetback=1,UUID=72}] @s
-execute as @e[type=minecraft:player,scores={UUID=73}] at @s run tp @e[scores={isSetback=1,UUID=73}] @s
-execute as @e[type=minecraft:player,scores={UUID=74}] at @s run tp @e[scores={isSetback=1,UUID=74}] @s
-execute as @e[type=minecraft:player,scores={UUID=75}] at @s run tp @e[scores={isSetback=1,UUID=75}] @s
-execute as @e[type=minecraft:player,scores={UUID=76}] at @s run tp @e[scores={isSetback=1,UUID=76}] @s
-execute as @e[type=minecraft:player,scores={UUID=77}] at @s run tp @e[scores={isSetback=1,UUID=77}] @s
-execute as @e[type=minecraft:player,scores={UUID=78}] at @s run tp @e[scores={isSetback=1,UUID=78}] @s
-execute as @e[type=minecraft:player,scores={UUID=79}] at @s run tp @e[scores={isSetback=1,UUID=79}] @s
-execute as @e[type=minecraft:player,scores={UUID=80}] at @s run tp @e[scores={isSetback=1,UUID=80}] @s
-execute as @e[type=minecraft:player,scores={UUID=81}] at @s run tp @e[scores={isSetback=1,UUID=81}] @s
-execute as @e[type=minecraft:player,scores={UUID=82}] at @s run tp @e[scores={isSetback=1,UUID=82}] @s
-execute as @e[type=minecraft:player,scores={UUID=83}] at @s run tp @e[scores={isSetback=1,UUID=83}] @s
-execute as @e[type=minecraft:player,scores={UUID=84}] at @s run tp @e[scores={isSetback=1,UUID=84}] @s
-execute as @e[type=minecraft:player,scores={UUID=85}] at @s run tp @e[scores={isSetback=1,UUID=85}] @s
-execute as @e[type=minecraft:player,scores={UUID=86}] at @s run tp @e[scores={isSetback=1,UUID=86}] @s
-execute as @e[type=minecraft:player,scores={UUID=87}] at @s run tp @e[scores={isSetback=1,UUID=87}] @s
-execute as @e[type=minecraft:player,scores={UUID=88}] at @s run tp @e[scores={isSetback=1,UUID=88}] @s
-execute as @e[type=minecraft:player,scores={UUID=89}] at @s run tp @e[scores={isSetback=1,UUID=89}] @s
-execute as @e[type=minecraft:player,scores={UUID=90}] at @s run tp @e[scores={isSetback=1,UUID=90}] @s
-execute as @e[type=minecraft:player,scores={UUID=91}] at @s run tp @e[scores={isSetback=1,UUID=91}] @s
-execute as @e[type=minecraft:player,scores={UUID=92}] at @s run tp @e[scores={isSetback=1,UUID=92}] @s
-execute as @e[type=minecraft:player,scores={UUID=93}] at @s run tp @e[scores={isSetback=1,UUID=93}] @s
-execute as @e[type=minecraft:player,scores={UUID=94}] at @s run tp @e[scores={isSetback=1,UUID=94}] @s
-execute as @e[type=minecraft:player,scores={UUID=95}] at @s run tp @e[scores={isSetback=1,UUID=95}] @s
-execute as @e[type=minecraft:player,scores={UUID=96}] at @s run tp @e[scores={isSetback=1,UUID=96}] @s
-execute as @e[type=minecraft:player,scores={UUID=97}] at @s run tp @e[scores={isSetback=1,UUID=97}] @s
-execute as @e[type=minecraft:player,scores={UUID=98}] at @s run tp @e[scores={isSetback=1,UUID=98}] @s
-execute as @e[type=minecraft:player,scores={UUID=99}] at @s run tp @e[scores={isSetback=1,UUID=99}] @s
-execute as @e[type=minecraft:player,scores={UUID=100}] at @s run tp @e[scores={isSetback=1,UUID=100}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=1}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=1}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=2}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=2}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=3}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=3}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=4}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=4}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=5}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=5}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=6}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=6}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=7}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=7}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=8}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=8}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=9}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=9}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=10}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=10}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=11}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=11}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=12}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=12}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=13}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=13}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=14}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=14}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=15}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=15}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=16}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=16}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=17}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=17}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=18}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=18}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=19}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=19}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=20}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=20}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=21}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=21}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=22}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=22}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=23}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=23}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=24}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=24}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=25}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=25}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=26}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=26}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=27}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=27}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=28}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=28}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=29}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=29}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=30}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=30}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=31}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=31}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=32}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=32}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=33}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=33}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=34}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=34}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=35}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=35}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=36}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=36}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=37}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=37}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=38}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=38}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=39}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=39}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=40}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=40}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=41}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=41}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=42}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=42}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=43}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=43}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=44}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=44}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=45}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=45}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=46}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=46}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=47}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=47}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=48}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=48}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=49}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=49}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=50}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=50}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=51}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=51}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=52}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=52}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=53}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=53}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=54}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=54}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=55}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=55}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=56}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=56}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=57}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=57}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=58}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=58}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=59}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=59}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=60}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=60}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=61}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=61}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=62}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=62}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=63}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=63}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=64}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=64}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=65}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=65}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=66}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=66}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=67}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=67}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=68}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=68}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=69}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=69}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=70}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=70}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=71}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=71}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=72}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=72}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=73}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=73}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=74}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=74}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=75}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=75}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=76}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=76}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=77}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=77}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=78}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=78}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=79}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=79}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=80}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=80}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=81}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=81}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=82}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=82}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=83}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=83}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=84}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=84}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=85}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=85}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=86}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=86}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=87}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=87}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=88}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=88}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=89}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=89}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=90}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=90}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=91}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=91}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=92}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=92}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=93}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=93}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=94}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=94}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=95}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=95}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=96}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=96}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=97}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=97}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=98}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=98}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=99}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=99}] @s
+execute as @e[type=minecraft:player,scores={ncmUUID=100}] at @s run tp @e[scores={ncmIsSetback=1,ncmUUID=100}] @s
 
 
 

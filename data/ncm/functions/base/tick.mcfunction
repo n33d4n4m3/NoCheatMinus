@@ -18,17 +18,19 @@
 # ...
 
 
-
-
-
-
-
+# Running command functions
+function ncm:base/command/input
+function ncm:base/command/report
 
 # Running system routines
 function ncm:base/identification/uuid
+
 function ncm:base/identification/fightid
+
 function ncm:base/reputation
+
 function ncm:base/evaluation/fail
+
 function ncm:base/evaluation/pass
 
 
@@ -50,8 +52,3 @@ function ncm:checks/blockplace/appropriate
 
 # Running util functions
 function ncm:checks/movement/util/sf_util
-
-
-# Running command functions
-function ncm:base/command/input
-function ncm:base/command/report

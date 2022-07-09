@@ -31,9 +31,9 @@ execute as @a unless data entity @s SelectedItem.tag.Enchantments if score @s nc
 
 # Part 2: Check the circumstances under which the critical hit was made. Store the number of missing requirements for a critical hit in ncmFCCMissingReq.
 
-# Did the player fall while making the critical hit? ncmFCCFall > 1 = True.
-execute as @a store result score @s ncmFCCFall run data get entity @s FallDistance 10
-execute as @a unless score @s ncmFCCFall matches 1.. run scoreboard players add @s ncmFCCMissingReq 1
+# Did the player fall while making the critical hit? ncmFCCfall > 1 = True.
+execute as @a store result score @s ncmFCCfall run data get entity @s FallDistance 10
+execute as @a unless score @s ncmFCCfall matches 1.. run scoreboard players add @s ncmFCCMissingReq 1
 
 # Did the player sprint while making the critical hit?
 execute as @a if predicate ncm:is_sprinting run scoreboard players add @s ncmFCCMissingReq 1
@@ -46,12 +46,12 @@ execute as @a[nbt={OnGround:1b}] run scoreboard players add @s ncmFCCMissingReq 
 
 # Combine Part 1 & 2 - If the player has made a critical hit, even though at least one requirement has not been met: Violation.
 execute as @a if score @s ncmMadeCritical matches 1 if score @s ncmFCCMissingReq matches 1.. run scoreboard players set @s ncmFailedFCC 1
-execute as @a if score @s ncmMadeCritical matches 1 if score @s ncmFCCMissingReq matches 1.. run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Criticals","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCDmgDealt"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCMissingReq"},"color":"gray"},{"text":"}","color":"gray"}]
-execute as @a if score @s ncmMadeCritical matches 1 if score @s ncmFCCMissingReq matches 1.. run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Criticals","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCDmgDealt"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCMissingReq"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a if score @s ncmMadeCritical matches 1 if score @s ncmFCCMissingReq matches 1.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Criticals","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCDmgDealt"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCMissingReq"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a if score @s ncmMadeCritical matches 1 if score @s ncmFCCMissingReq matches 1.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Criticals","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCDmgDealt"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmFCCMissingReq"},"color":"gray"},{"text":"}","color":"gray"}]
 
 # Reset the required values.
 execute as @a run scoreboard players set @s ncmFCCADmg 0
 execute as @a run scoreboard players set @s ncmFCCDmgDealt 0
 execute as @a run scoreboard players set @s ncmMadeCritical 0
-execute as @a run scoreboard players set @s ncmFCCFall 0
+execute as @a run scoreboard players set @s ncmFCCfall 0
 execute as @a run scoreboard players set @s ncmFCCMissingReq 0

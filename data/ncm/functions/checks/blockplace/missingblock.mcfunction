@@ -1443,8 +1443,8 @@ execute as @a at @s if score @s ncmBPMB756 matches 1.. run scoreboard players se
 
 
 execute as @a if score @s ncmBPMBFire matches 1 run scoreboard players set @s ncmFailedBPMB 0
-execute as @a if score @s ncmBPMBFire matches 1 run tellraw @s[scores={inputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockPlace","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
-execute as @a if score @s ncmBPMBFire matches 1 run tellraw @a[scores={inputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockPlace","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBPMBFire matches 1 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockPlace","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBPMBFire matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockPlace","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
 
 
 

@@ -13,9 +13,9 @@
 #
 #
 # ...
-# Description:  This function is responsible for assigning an UUID to each player.
+# Description:  This function is responsible for assigning an ncmUUID to each player.
 # Author:       n33d4n4m3
 # ...
 
 
-execute as @a unless score @s UUID matches 1.. run function ncm:base/identification/assignuuid
+execute as @a unless score @s ncmUUID matches 1.. run function ncm:base/identification/assignuuid

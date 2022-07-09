@@ -18,5 +18,5 @@
 # ...
 
 
-scoreboard players operation @s fightID = DataHolder globalFightID
-scoreboard players add DataHolder globalFightID 1
+scoreboard players operation @s ncmFightID = DataHolder globalncmFightID
+scoreboard players add DataHolder globalncmFightID 1

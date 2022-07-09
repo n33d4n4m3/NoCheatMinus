@@ -25,7 +25,7 @@
 scoreboard objectives add ncmInstalled dummy
 
 
-scoreboard objectives add inputR dummy
+scoreboard objectives add ncmInputR dummy
 
 
 scoreboard objectives add ncmMainVersion dummy
@@ -46,14 +46,14 @@ scoreboard players set DataHolder ncmYear 21
 scoreboard players set DataHolder ncmWeek 45
 scoreboard players set DataHolder ncmChar 1
 
-# UUID
-scoreboard objectives add globalUUID dummy
-execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalUUID 0
-scoreboard objectives add UUID dummy
+# ncmUUID
+scoreboard objectives add globalncmUUID dummy
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmUUID 0
+scoreboard objectives add ncmUUID dummy
 
-scoreboard objectives add globalFightID dummy
-execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalFightID 0
-scoreboard objectives add fightID dummy
+scoreboard objectives add globalncmFightID dummy
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmFightID 0
+scoreboard objectives add ncmFightID dummy
 scoreboard players set DataHolder ncmInstalled 1
 
 
@@ -1260,7 +1260,7 @@ scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
 
 # UnfittingPacket (PlayerRespawnS2CPacket/Alive)
 scoreboard objectives add ncmPlayerDeath minecraft.custom:minecraft.deaths
-scoreboard objectives add timeInRespawnScr dummy
+scoreboard objectives add ncmUPIRRspwnScr dummy
 scoreboard objectives add ncmUPIR_ivl dummy
 
 
@@ -1290,7 +1290,7 @@ scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
 scoreboard objectives add ncmSFDS_ivl dummy
 scoreboard objectives add ncmSFDS_ivlrc dummy
-scoreboard objectives add isSetback dummy
+scoreboard objectives add ncmIsSetback dummy
 
 # SurvivalFly (LostGround)
 scoreboard objectives add ncmYMotion dummy
@@ -1328,49 +1328,49 @@ scoreboard objectives add ncmYMotionM dummy
 scoreboard objectives add ncmZMotionM dummy
 
 # Appropriate (NoFall/FallDamage)
-scoreboard objectives add ncmApplyFallDmg dummy
-scoreboard objectives add noFallField1 dummy
-scoreboard objectives add noFallDebug dummy
-scoreboard objectives add noFallReset dummy
-scoreboard objectives add calcFall dummy
-scoreboard objectives add calcHealth dummy
-scoreboard objectives add storeHealth dummy
-scoreboard objectives add const_100 dummy
-scoreboard players set DataHolder const_100 100
-scoreboard objectives add const_n1 dummy
-scoreboard players set DataHolder const_n1 -1
-scoreboard objectives add playerHealth health
-scoreboard objectives add fall minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add ncmAPNFApplyFDmg dummy
+scoreboard objectives add ncmAPNFField1 dummy
+scoreboard objectives add ncmAPNFDebug dummy
+scoreboard objectives add ncmAPNFReset dummy
+scoreboard objectives add ncmAPNFCalcFall dummy
+scoreboard objectives add ncmAPNFCalcHlth dummy
+scoreboard objectives add ncmAPNFStoreHlth dummy
+scoreboard objectives add ncm.100 dummy
+scoreboard players set DataHolder ncm.100 100
+scoreboard objectives add ncm.-1 dummy
+scoreboard players set DataHolder ncm.-1 -1
+scoreboard objectives add ncmPlayerHealth health
+scoreboard objectives add ncmAPNFFall minecraft.custom:minecraft.fall_one_cm
 
 
 # Appropriate (Speed (General))
-scoreboard objectives add walkOneCm minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add sprintOneCm minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add sneakOneCm minecraft.custom:minecraft.crouch_one_cm
-scoreboard objectives add ladderOneCm minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add ncmAPSWalk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add ncmAPSSprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ncmAPSSneak minecraft.custom:minecraft.crouch_one_cm
+scoreboard objectives add ncmAPSLadder minecraft.custom:minecraft.climb_one_cm
 
-scoreboard objectives add hasSpeedEffI dummy
-scoreboard objectives add hasSpeedEffII dummy
+scoreboard objectives add ncmAPSSpeedEffI dummy
+scoreboard objectives add ncmAPSSpeedEffII dummy
 
 
 # Appropriate (Speed (WalkSpeed))
-scoreboard objectives add speedResetC dummy
-scoreboard objectives add lostSprintA minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add lostSprintB minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add lostSprintIgn dummy
-scoreboard objectives add standsOnIce dummy
+scoreboard objectives add ncmAPSResetC dummy
+scoreboard objectives add ncmAPSLostSprA minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ncmAPSLostSprB minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add ncmAPSlostSprIgn dummy
+scoreboard objectives add ncmAPSIce dummy
 
 # Appropriate (Speed (SprintSpeed))
-scoreboard objectives add speedResetCS dummy
-scoreboard objectives add sprintJumpFP minecraft.custom:minecraft.jump
-scoreboard objectives add sprintJumpFPII minecraft.custom:minecraft.jump
-scoreboard objectives add invVLSprint dummy
-scoreboard objectives add invVLSprRC dummy
-scoreboard objectives add stOnIceC dummy
+scoreboard objectives add ncmAPSResetCS dummy
+scoreboard objectives add ncmAPSSprJmp minecraft.custom:minecraft.jump
+scoreboard objectives add ncmAPSSprJmpII minecraft.custom:minecraft.jump
+scoreboard objectives add ncmAPSinvVLSpr dummy
+scoreboard objectives add ncmAPSInvVLSprRC dummy
+scoreboard objectives add ncmStOnIceC dummy
 
 # Appropriate (Speed (SneakSpeed))
-scoreboard objectives add speedResetCSn dummy
-scoreboard objectives add lostWalkFP dummy
+scoreboard objectives add ncmAPSResetCSn dummy
+scoreboard objectives add ncmAPSLostWalkFP dummy
 
 
 

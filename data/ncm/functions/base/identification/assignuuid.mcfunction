@@ -18,5 +18,5 @@
 # ...
 
 
-scoreboard players operation @s UUID = DataHolder globalUUID
-scoreboard players add DataHolder globalUUID 1
+scoreboard players operation @s ncmUUID = DataHolder globalncmUUID
+scoreboard players add DataHolder globalncmUUID 1

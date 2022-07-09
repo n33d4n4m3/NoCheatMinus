@@ -26,9 +26,9 @@ scoreboard players enable @a ncmInput
 execute as @a if score @s ncmInput matches 0 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Logging disabled.","color":"white"}]
 execute as @a if score @s ncmInput matches 1 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Logging enabled. (Self-failed checks)","color":"white"}]
 execute as @a if score @s ncmInput matches 2 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Logging enabled. (All failed checks)","color":"white"}]
-execute as @a if score @s ncmInput matches 0 run scoreboard players set @s inputR 0
-execute as @a if score @s ncmInput matches 1 run scoreboard players set @s inputR 1
-execute as @a if score @s ncmInput matches 2 run scoreboard players set @s inputR 2
+execute as @a if score @s ncmInput matches 0 run scoreboard players set @s ncmInputR 0
+execute as @a if score @s ncmInput matches 1 run scoreboard players set @s ncmInputR 1
+execute as @a if score @s ncmInput matches 2 run scoreboard players set @s ncmInputR 2
 execute as @a if score @s ncmInput matches 0 run scoreboard players set @s ncmInput -1
 execute as @a if score @s ncmInput matches 1 run scoreboard players set @s ncmInput -1
 execute as @a if score @s ncmInput matches 2 run scoreboard players set @s ncmInput -1
