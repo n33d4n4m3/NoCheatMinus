@@ -18,6 +18,8 @@
 # Subchecks:    /
 # Author:       n33d4n4m3
 # ...
+
+
 execute as @a store result score @s ncmYMotionBed run data get entity @s Motion[1] 1000000
 # TODO (Code): Add many comments, which are explaining the subroutines.
 

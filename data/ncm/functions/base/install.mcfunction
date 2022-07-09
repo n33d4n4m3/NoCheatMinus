@@ -22,6 +22,7 @@
 # NoCheatMinus base
 # -----------------
 
+
 scoreboard objectives add ncmInstalled dummy
 
 
@@ -55,6 +56,28 @@ scoreboard objectives add globalncmFightID dummy
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmFightID 0
 scoreboard objectives add ncmFightID dummy
 scoreboard players set DataHolder ncmInstalled 1
+
+scoreboard objectives add ncm.5 dummy
+scoreboard players set DataHolder ncm.5 5
+
+scoreboard objectives add ncm.25 dummy
+scoreboard players set DataHolder ncm.25 25
+
+# -----------------
+# Event data
+# -----------------
+
+# PlayerAttacksEntityEvent
+scoreboard objectives add ncmePAEE.AtckDmg dummy
+scoreboard objectives add ncmePAEE.RealDmg minecraft.custom:minecraft.damage_dealt
+
+# -----------------
+# Event temp
+# -----------------
+scoreboard objectives add ncmeTmp.SharpLvl dummy
+scoreboard objectives add ncmeTmp.BaneLvl dummy
+scoreboard objectives add ncmeTmp.SmiteLvl dummy
+
 
 
 
@@ -1230,11 +1253,7 @@ scoreboard objectives add ncmAttackerFID dummy
 scoreboard objectives add ncmKillCount totalKillCount
 
 # Criticals
-scoreboard objectives add ncmFCCDmgDealt minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add ncmFCCFall dummy
-scoreboard objectives add ncmFCCADmg dummy
-scoreboard objectives add ncmMadeCritical dummy
-
 scoreboard objectives add ncmFCCMissingReq dummy
 
 

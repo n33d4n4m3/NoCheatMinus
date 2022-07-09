@@ -34,12 +34,16 @@ function ncm:base/evaluation/fail
 function ncm:base/evaluation/pass
 
 
+# Running listeners
+function ncm:checks/fight/fightlistener
 
 
 
 # Running checks
 function ncm:checks/fight/missingentity
-function ncm:checks/fight/criticals
+
+# Only run Fight.Criticals-check when the player makes a critical hit.
+execute as @a[nbt={Tags:["ncmPlayerAttacksEntityEvent","ncmPlayerAttacksEntityEvent.criticalHit"]}] run function ncm:checks/fight/criticals
 function ncm:checks/movement/appropriate
 function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate
@@ -52,3 +56,6 @@ function ncm:checks/blockplace/appropriate
 
 # Running util functions
 function ncm:checks/movement/util/sf_util
+
+# Reset all fired events
+function ncm:base/resetevents
