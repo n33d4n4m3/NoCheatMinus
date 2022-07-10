@@ -47,11 +47,9 @@ scoreboard players set DataHolder ncmYear 21
 scoreboard players set DataHolder ncmWeek 45
 scoreboard players set DataHolder ncmChar 1
 
-# ncmUUID
-scoreboard objectives add globalncmUUID dummy
-execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmUUID 0
-scoreboard objectives add ncmUUID dummy
 
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmUUID 0
+# FightID
 scoreboard objectives add globalncmFightID dummy
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmFightID 0
 scoreboard objectives add ncmFightID dummy
@@ -62,6 +60,22 @@ scoreboard players set DataHolder ncm.5 5
 
 scoreboard objectives add ncm.25 dummy
 scoreboard players set DataHolder ncm.25 25
+
+# -----------------
+# Listeners
+# -----------------
+scoreboard objectives add ncmLastXOnGrd dummy
+scoreboard objectives add ncmLastYOnGrd dummy
+scoreboard objectives add ncmLastZOnGrd dummy
+scoreboard objectives add ncmLastRotXOnGrd dummy
+scoreboard objectives add ncmLastRotYOnGrd dummy
+
+
+# -----------------
+# Event cancel
+# -----------------
+scoreboard objectives add ncmOffGrCnclBusy dummy
+
 
 # -----------------
 # Event data
@@ -143,6 +157,7 @@ scoreboard objectives add ncmFailedBPMB dummy
 scoreboard objectives add ncmFailedBPAP dummy
 scoreboard objectives add ncmFailedFME dummy
 scoreboard objectives add ncmFailedFCC dummy
+scoreboard objectives add ncmFailedFRNG dummy
 scoreboard objectives add ncmFailedINVAP dummy
 scoreboard objectives add ncmFailedMVMAP dummy
 scoreboard objectives add ncmFailedMVMSF dummy
@@ -246,6 +261,14 @@ scoreboard objectives add ncmc_bs_fl_29 dummy
 # Reputation loss for failing Fight.Criticals (Rage) 150
 scoreboard objectives add ncmc_bs_fl_30 dummy
 
+# Fight.Reach
+# Reputation loss for failing Fight.Reach (Common/HLC) 15
+scoreboard objectives add ncmc_bs_fl_31 dummy
+# Reputation loss for failing Fight.Reach (Suspect) 100
+scoreboard objectives add ncmc_bs_fl_32 dummy
+# Reputation loss for failing Fight.Reach (Rage) 150
+scoreboard objectives add ncmc_bs_fl_33 dummy
+
 # Inventory.Appropriate
 # Reputation loss for failing Inventory.Appropriate (Common/HLC) 1
 scoreboard objectives add ncmc_bs_fl_13 dummy
@@ -269,6 +292,8 @@ scoreboard objectives add ncmc_bs_fl_19 dummy
 scoreboard objectives add ncmc_bs_fl_20 dummy
 # Reputation loss for failing Movement.SurvivalFly (Rage) 100
 scoreboard objectives add ncmc_bs_fl_21 dummy
+# Penalize failed checks by resetting? 1
+scoreboard objectives add ncmc_bs_fl_34 dummy
 
 # Network.Appropriate
 # Reputation loss for failing Network.Appropriate (Common/HLC) 1
@@ -1307,9 +1332,6 @@ scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
 scoreboard objectives add ncmJoinGame minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmPlayerY dummy
 scoreboard objectives add ncmLastPlayerY dummy
-scoreboard objectives add ncmSFDS_ivl dummy
-scoreboard objectives add ncmSFDS_ivlrc dummy
-scoreboard objectives add ncmIsSetback dummy
 
 # SurvivalFly (LostGround)
 scoreboard objectives add ncmYMotion dummy

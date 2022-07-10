@@ -15,8 +15,7 @@
 # ...
 # Description:  This check monitors the player's motion.
 # Fail:         This check fails if the player's motion differs from the expected motion in Subcheck-defined situations.
-# Subchecks:    - Distance
-#               - LostGround
+# Subchecks:    - LostGround
 #               - OffGroundTicks
 #               - Climb
 #               - ConstantClimbRate
@@ -164,19 +163,6 @@ execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. ru
 
 
 
-# ------------------
-# Subcheck: Distance
-# ------------------
-
-
-
-
-execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s ncmSFDS_ivl 0
-execute as @e[type=minecraft:player] if score @s ncmSFDS_ivl >= DataHolder ncmc_sf_ds_1 run scoreboard players add @s ncmSFDS_ivlrc 1
-
-
-execute as @e[type=minecraft:player] if score @s ncmSFDS_ivlrc >= DataHolder ncmc_sf_ds_2 run scoreboard players set @s ncmSFDS_ivl 0
-execute as @e[type=minecraft:player] if score @s ncmSFDS_ivlrc >= DataHolder ncmc_sf_ds_2 run scoreboard players set @s ncmSFDS_ivlrc 0
 
 
 

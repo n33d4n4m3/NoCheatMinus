@@ -19,5 +19,6 @@
 # ...
 
 # PlayerAttacksEntityEvent
+
 execute as @a[advancements={ncm:player_hurt_entity=true}] run function ncm:event/playerattacksentityevent
 execute as @a[advancements={ncm:player_hurt_entity=true}] run advancement revoke @s only ncm:player_hurt_entity

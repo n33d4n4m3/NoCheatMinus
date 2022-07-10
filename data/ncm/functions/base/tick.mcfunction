@@ -36,6 +36,7 @@ function ncm:base/evaluation/pass
 
 # Running listeners
 function ncm:checks/fight/fightlistener
+function ncm:checks/movement/movementlistener
 
 
 
@@ -44,6 +45,7 @@ function ncm:checks/fight/missingentity
 
 # Only run Fight.Criticals-check when the player makes a critical hit.
 execute as @a[nbt={Tags:["ncmPlayerAttacksEntityEvent","ncmPlayerAttacksEntityEvent.criticalHit"]}] run function ncm:checks/fight/criticals
+# Fight.Reach check is triggered by conditional player_hurt_entity advancements.
 function ncm:checks/movement/appropriate
 function ncm:checks/movement/survivalfly
 function ncm:checks/inventory/appropriate

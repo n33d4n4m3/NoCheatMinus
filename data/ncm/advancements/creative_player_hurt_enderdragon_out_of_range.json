@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "nbt": "{playerGameType:0}"
+        },
+        "damage": {
+          "type": {
+            "is_explosion": false,
+            "is_fire": false,
+            "is_magic": false,
+            "is_projectile": false,
+            "is_lightning": false,
+            "bypasses_invulnerability": false,
+            "bypasses_magic": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ender_dragon",
+              "distance": {
+                "absolute": {
+                  "min": 13.0
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "ncm:checks/fight/reach"
+  }
+}
