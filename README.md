@@ -32,4 +32,6 @@
 | Fight.MissingEntity | This check observes the player's combat behavior. If the attacked player is out of range or not in sight, the check will fail. If the attacking player doesn't aim properly or tries to attack through walls, this check will fail also. |
 | Fight.Criticals | When a player makes a critical hit, this check verifies that the hit was made under legitimate conditions. |
 | Fight.Reach | NCM checks if the player has hit an entity that is out of his legitimate range. |
+| Combined.BedLeave | NCM checks if the player sends BedLeave packets without being in a bed first. The small teleport after leaving a bed can be used by players with a cheat client for flying or speeding. |
+| Combined.Munchhausen | According to the legend of Baron Munchausen's tall tales, players can pull themselves out of the swamp by their own hair. NCM checks if cheat-clients use this ability for flying/speeding. |
 | Inventory.Appropriate | When the player consumes an Item, NCM will check the speed of consuming and compare it with the configurated appropriate values. |

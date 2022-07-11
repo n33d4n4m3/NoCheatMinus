@@ -54,6 +54,7 @@ function ncm:checks/net/appropriate
 function ncm:checks/blockinteract/missingblock
 function ncm:checks/blockplace/missingblock
 function ncm:checks/blockplace/appropriate
+function ncm:checks/combined/bedleave
 
 
 # Running util functions

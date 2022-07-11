@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:fishing_rod_hooked",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player",
+          "distance": {
+            "absolute": 0
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "ncm:checks/combined/munchhausen"
+  }
+}

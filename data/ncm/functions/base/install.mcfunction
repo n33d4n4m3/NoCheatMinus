@@ -69,6 +69,7 @@ scoreboard objectives add ncmLastYOnGrd dummy
 scoreboard objectives add ncmLastZOnGrd dummy
 scoreboard objectives add ncmLastRotXOnGrd dummy
 scoreboard objectives add ncmLastRotYOnGrd dummy
+scoreboard objectives add ncmPlayerIsInBed dummy
 
 
 # -----------------
@@ -163,6 +164,8 @@ scoreboard objectives add ncmFailedMVMAP dummy
 scoreboard objectives add ncmFailedMVMSF dummy
 scoreboard objectives add ncmFailedNETAP dummy
 scoreboard objectives add ncmFailedNETUP dummy
+scoreboard objectives add ncmFailedCMnchsn dummy
+scoreboard objectives add ncmFailedCBedLv dummy
 
 # --------------------
 # Pass
@@ -310,6 +313,22 @@ scoreboard objectives add ncmc_bs_fl_25 dummy
 scoreboard objectives add ncmc_bs_fl_26 dummy
 # Reputation loss for failing Network.UnfittingPacket (Rage) 100
 scoreboard objectives add ncmc_bs_fl_27 dummy
+
+# Combined.Munchhausen
+# Reputation loss for failing Combined.Munchhausen (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_35 dummy
+# Reputation loss for failing Combined.Munchhausen (Suspect) 0
+scoreboard objectives add ncmc_bs_fl_36 dummy
+# Reputation loss for failing Combined.Munchhausen (Rage) 0
+scoreboard objectives add ncmc_bs_fl_37 dummy
+
+# Combined.BedLeave
+# Reputation loss for failing Combined.BedLeave (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_38 dummy
+# Reputation loss for failing Combined.BedLeave (Suspect) 0
+scoreboard objectives add ncmc_bs_fl_39 dummy
+# Reputation loss for failing Combined.BedLeave (Rage) 0
+scoreboard objectives add ncmc_bs_fl_40 dummy
 
 
 
@@ -1281,7 +1300,11 @@ scoreboard objectives add ncmKillCount totalKillCount
 scoreboard objectives add ncmFCCFall dummy
 scoreboard objectives add ncmFCCMissingReq dummy
 
-
+# ---------------------------
+# Combined check objectives
+# ---------------------------
+# BedLeave
+scoreboard objectives add ncmIsBedNearby dummy
 
 # --------------------
 # Net check objectives

@@ -42,6 +42,7 @@ scoreboard objectives remove ncmLastYOnGrd
 scoreboard objectives remove ncmLastZOnGrd
 scoreboard objectives remove ncmLastRotXOnGrd
 scoreboard objectives remove ncmLastRotYOnGrd
+scoreboard objectives remove ncmPlayerIsInBed
 scoreboard objectives remove ncmOffGrCnclBusy
 scoreboard objectives remove ncmePAEE.AtckDmg
 scoreboard objectives remove ncmePAEE.RealDmg
@@ -79,6 +80,8 @@ scoreboard objectives remove ncmFailedMVMAP
 scoreboard objectives remove ncmFailedMVMSF
 scoreboard objectives remove ncmFailedNETAP
 scoreboard objectives remove ncmFailedNETUP
+scoreboard objectives remove ncmFailedCMnchsn
+scoreboard objectives remove ncmFailedCBedLv
 scoreboard objectives remove ncmPassedBIMB
 scoreboard objectives remove ncmPassedBPMB
 scoreboard objectives remove ncmPassedBPAP
@@ -138,6 +141,12 @@ scoreboard objectives remove ncmc_bs_fl_24
 scoreboard objectives remove ncmc_bs_fl_25
 scoreboard objectives remove ncmc_bs_fl_26
 scoreboard objectives remove ncmc_bs_fl_27
+scoreboard objectives remove ncmc_bs_fl_35
+scoreboard objectives remove ncmc_bs_fl_36
+scoreboard objectives remove ncmc_bs_fl_37
+scoreboard objectives remove ncmc_bs_fl_38
+scoreboard objectives remove ncmc_bs_fl_39
+scoreboard objectives remove ncmc_bs_fl_40
 scoreboard objectives remove ncmc_ap_nf_1
 scoreboard objectives remove ncmc_ap_ws_1
 scoreboard objectives remove ncmc_ap_ws_2
@@ -877,6 +886,7 @@ scoreboard objectives remove ncmAttackerFID
 scoreboard objectives remove ncmKillCount
 scoreboard objectives remove ncmFCCFall
 scoreboard objectives remove ncmFCCMissingReq
+scoreboard objectives remove ncmIsBedNearby
 scoreboard objectives remove ncmAllowImmResp
 scoreboard objectives remove ncmGameOverScr
 scoreboard objectives remove ncmDeaths

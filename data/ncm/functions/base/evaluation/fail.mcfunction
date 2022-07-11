@@ -85,3 +85,15 @@ execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1..4 run
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_26
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_27
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run scoreboard players set @s ncmFailedNETUP 0
+
+# Combined.Munchhausen
+execute as @e[type=minecraft:player] if score @s ncmFailedCMnchsn matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_35
+execute as @e[type=minecraft:player] if score @s ncmFailedCMnchsn matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_36
+execute as @e[type=minecraft:player] if score @s ncmFailedCMnchsn matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_37
+execute as @e[type=minecraft:player] if score @s ncmFailedCMnchsn matches 1.. run scoreboard players set @s ncmFailedCMnchsn 0
+
+# Combined.BedLeave
+execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_38
+execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_39
+execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_40
+execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 1.. run scoreboard players set @s ncmFailedCBedLv 0

@@ -19,6 +19,9 @@
 # ...
 
 # Determine the last location where the player was onground.
+execute as @a if data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 1
+
+
 execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
 execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
 execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastZOnGrd run data get entity @s Pos[2]
