@@ -18,6 +18,4 @@
 # ...
 
 # Check if NoCheatMinus is installed already. If it isn't, set up essential objectives.
-scoreboard objectives add ncmAddObj dummy
 schedule function ncm:base/preloader 5s
-execute as @e[type=minecraft:player] if score DataHolder ncmAddObj matches 1 run function ncm:user/currentconfig

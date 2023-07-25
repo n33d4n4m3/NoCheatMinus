@@ -963,6 +963,9 @@ scoreboard objectives remove ncmAPSLostWalkFP
 scoreboard objectives remove ncmConsume
 scoreboard objectives remove ncmConsumeC
 scoreboard objectives remove ncmAddObj
+scoreboard objectives remove ncmVEPlayerAttackEventRegistered
+scoreboard objectives remove ncmRequiredVEBuild
+scoreboard objectives remove ncmTickReady
 
 # Send goodbye message
 tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},"The NoCheatMinus datapack was successfully uninstalled. The developer would be very happy about feedback!"]

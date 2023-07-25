@@ -17,6 +17,21 @@
 # Author:   n33d4n4m3
 # ...
 
+# Check for VanillaEvents installation and compatability, register events
+scoreboard objectives add ncmVEPlayerAttackEventRegistered dummy
+scoreboard objectives add ncmRequiredVEBuild dummy
+scoreboard objectives add ncmTickReady dummy
+scoreboard objectives add VESys.Build dummy
+scoreboard players set DataHolder ncmRequiredVEBuild 10
+execute if score $ VESys.Build matches 1.. if score $ VESys.Build >= DataHolder ncmRequiredVEBuild run function ncm:base/registerevents
 
-execute as @e[type=minecraft:player] unless score DataHolder ncmAddObj matches 1 run schedule function ncm:user/currentconfig 5s
-execute as @e[type=minecraft:player] unless score DataHolder ncmAddObj matches 1 run function ncm:base/install
+execute if score $ VESys.Build matches 1.. if score $ VESys.Build < DataHolder ncmRequiredVEBuild run tellraw @a ["",{"text":"NCM","color":"red"},": The installation/update has been aborted. You currently have VanillaEvents ",{"text":"Build ","color":"yellow"},{"score":{"name":"$","objective":"VESys.Build"},"color":"yellow"}," installed, while NoCheatMinus requires VanillaEvents ",{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmRequiredVEBuild"},"color":"yellow"}," (or higher) to function properly. Please download the latest build of the VanillaEvents Datapack ",{"text":"here","color":"yellow","clickEvent":{"action":"open_url","value":"https://github.com/n33d4n4m3/VanillaEvents"},"hoverEvent":{"action":"show_text","contents":["https://github.com/n33d4n4m3/VanillaEvents"]}},", replace the outdated one and run ",{"text":"/reload","clickEvent":{"action":"suggest_command","value":"/reload"},"hoverEvent":{"action":"show_text","contents":["/reload"]}},"."]
+execute if score $ VESys.Build matches 1.. if score $ VESys.Build < DataHolder ncmRequiredVEBuild run scoreboard players set DataHolder ncmTickReady 0
+execute if score $ VESys.Build matches 1.. if score $ VESys.Build < DataHolder ncmRequiredVEBuild run return 0
+
+execute unless score $ VESys.Build matches 1.. run tellraw @a ["",{"text":"NCM","color":"red"},": The installation/update has been aborted. NoCheatMinus requires VanillaEvents to function properly. Please download the latest build of the VanillaEvents Datapack ",{"text":"here","color":"yellow","clickEvent":{"action":"open_url","value":"https://github.com/n33d4n4m3/VanillaEvents"},"hoverEvent":{"action":"show_text","contents":["https://github.com/n33d4n4m3/VanillaEvents"]}},", move it in the /datapacks folder and run ",{"text":"/reload","clickEvent":{"action":"suggest_command","value":"/reload"},"hoverEvent":{"action":"show_text","contents":["/reload"]}},"."]
+execute unless score $ VESys.Build matches 1.. run scoreboard players set DataHolder ncmTickReady 0
+execute unless score $ VESys.Build matches 1.. run return 0
+
+schedule function ncm:user/currentconfig 5s
+function ncm:base/install

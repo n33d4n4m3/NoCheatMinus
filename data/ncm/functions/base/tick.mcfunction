@@ -17,48 +17,4 @@
 # Author:       n33d4n4m3
 # ...
 
-
-# Running command functions
-function ncm:base/command/input
-function ncm:base/command/report
-
-# Running system routines
-function ncm:base/identification/uuid
-
-function ncm:base/identification/fightid
-
-function ncm:base/reputation
-
-function ncm:base/evaluation/fail
-
-function ncm:base/evaluation/pass
-
-
-# Running listeners
-function ncm:checks/fight/fightlistener
-function ncm:checks/movement/movementlistener
-
-
-
-# Running checks
-function ncm:checks/fight/missingentity
-
-# Only run Fight.Criticals-check when the player makes a critical hit.
-execute as @a[nbt={Tags:["ncmPlayerAttacksEntityEvent","ncmPlayerAttacksEntityEvent.criticalHit"]}] run function ncm:checks/fight/criticals
-# Fight.Reach check is triggered by conditional player_hurt_entity advancements.
-function ncm:checks/movement/appropriate
-function ncm:checks/movement/survivalfly
-function ncm:checks/inventory/appropriate
-function ncm:checks/net/unfittingpacket
-function ncm:checks/net/appropriate
-function ncm:checks/blockinteract/missingblock
-function ncm:checks/blockplace/missingblock
-function ncm:checks/blockplace/appropriate
-function ncm:checks/combined/bedleave
-
-
-# Running util functions
-function ncm:checks/movement/util/sf_util
-
-# Reset all fired events
-function ncm:base/resetevents
+execute if score DataHolder ncmTickReady matches 1 run function ncm:base/subtick

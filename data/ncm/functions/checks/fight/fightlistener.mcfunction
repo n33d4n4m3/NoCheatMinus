@@ -13,12 +13,10 @@
 #
 #
 # ...
-# For:      This listener waits for combat-related events and fires the associated functions.
-# Fires:    - PlayerAttacksEntityEvent
+# For:      This listener waits for combat-related events and calls the associated functions.
+# Listens to / Calls: VE.PlayerAttackEvent / Fight.Criticals
 # Author:   n33d4n4m3
 # ...
 
-# PlayerAttacksEntityEvent
-
-execute as @a[advancements={ncm:player_hurt_entity=true}] run function ncm:event/playerattacksentityevent
-execute as @a[advancements={ncm:player_hurt_entity=true}] run advancement revoke @s only ncm:player_hurt_entity
+# PlayerAttackEvent
+execute as @a[tag=VE.PlayerAttackEvent] if score @s VE.PlayerAttackEvent.criticalHit matches 1 run function ncm:checks/fight/criticals
