@@ -1,12 +1,13 @@
 # NoCheatMinus
- This is a recode/port of an AntiCheat in Vanilla Minecraft, that existed back in 2016,  as a Datapack for Minecraft 1.17. Its purpose is the detection of generic game modifications by checking and tracking movement, fight and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
+ This is a recode/port of an "Commandblock"-AntiCheat in Vanilla Minecraft, that existed back in 2016, as a Datapack for Minecraft 1.20+. Its purpose is the detection of generic game modifications by checking and tracking movement, fight and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
  - You can view a demonstration [here](https://www.youtube.com/watch?v=2KCD2lIC0bc).
  - If you have questions, suggestions, or feedback, join our Discord server [here](https://discord.gg/n7yT4MnbmR).
 
 ## Setup
-1. Download this project as a .zip file and place it in your world's datapack folder.
+0. First, you need to install the latest version of *VanillaEvents* in your world. *VanillaEvents* is installed in the same way as NoCheatMinus and can be downloaded [here](https://github.com/n33d4n4m3/VanillaEvents).
+1. Download the NoCheatMinus project as a .zip file, un-zip it and place the folder (which contains the "data"-folder) in your world's datapack folder.
 2. Restart your server or use `/reload` to reload the datapacks.
-3. Use `/trigger ncmInput set 0/1/2` to see no logs (`0`), only your logs (`1`), or all logs (`2`).
+3. Use the command `/scoreboard players set @s ncmOperator 1` to obtain operator rights in NoCheatMinus, which will allow you to execute commands that start with `/trigger ncm...`.
 
 ## Apply values from configuration files
 1. Paste your configuration files into the directory **NoCheatMinus/data/ncm/functions/user/configs/**
@@ -15,9 +16,8 @@
 4. Restart your server or use `/reload` to reload the datapacks.
 
 ## Update to a newer version of this Datapack
-1. Run the command `/scoreboard players set DataHolder ncmAddObj 0`
-2. Replace the outdated directory "data" with the updated one.
-3. Restart your server or use `/reload` to reload the datapacks.
+1. Replace the outdated directory "data" with the updated one.
+2. Restart your server or use `/reload` to reload the datapacks.
 
 ## Checks
 | Check category and name | Description |
