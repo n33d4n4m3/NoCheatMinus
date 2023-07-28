@@ -18,7 +18,8 @@
 # Author:       n33d4n4m3
 # ...
 
-scoreboard players enable @a ncmReport
+execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @a ncmReport
+execute as @a unless score @s ncmOperator matches 2 run trigger ncmReport set 0
 
 scoreboard players set DataHolder ncmPLSuspectHLCT 0
 scoreboard players set DataHolder ncmPLObserveT 0

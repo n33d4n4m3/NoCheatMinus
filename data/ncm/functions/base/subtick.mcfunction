@@ -19,20 +19,23 @@
 
 
 # Running command functions
-function ncm:base/command/input
-function ncm:base/command/report
+function ncm:command/input
+function ncm:command/report
+function ncm:command/checks
+
 
 # Running system routines
-function ncm:base/identification/uuid
+function ncm:identification/uuid
 
-function ncm:base/identification/fightid
+function ncm:identification/fightid
 
-function ncm:base/reputation
+function ncm:evaluation/reputation
 
-function ncm:base/evaluation/fail
+function ncm:evaluation/fail
 
-function ncm:base/evaluation/pass
+function ncm:evaluation/pass
 
+function ncm:base/permission
 
 # Running listeners
 function ncm:checks/fight/fightlistener
@@ -41,18 +44,22 @@ function ncm:checks/movement/movementlistener
 
 
 # Running checks
-function ncm:checks/fight/missingentity
 
+function ncm:checks/checkmanager
+
+execute if score DataHolder ncmcm_FME matches 1 run function ncm:checks/fight/missingentity
+# Fight.Criticals check is triggered by VE's PlayerAttackEvents.
+# Combined.Munchhausen check is triggered by conditional player_fished_himself advancements.
 # Fight.Reach check is triggered by conditional player_hurt_entity advancements.
-function ncm:checks/movement/appropriate
-function ncm:checks/movement/survivalfly
-function ncm:checks/inventory/appropriate
-function ncm:checks/net/unfittingpacket
-function ncm:checks/net/appropriate
-function ncm:checks/blockinteract/missingblock
-function ncm:checks/blockplace/missingblock
-function ncm:checks/blockplace/appropriate
-function ncm:checks/combined/bedleave
+execute if score DataHolder ncmcm_MVMAP matches 1 run function ncm:checks/movement/appropriate
+execute if score DataHolder ncmcm_MVMSF matches 1 run function ncm:checks/movement/survivalfly
+execute if score DataHolder ncmcm_INVAP matches 1 run function ncm:checks/inventory/appropriate
+execute if score DataHolder ncmcm_NETUP matches 1 run function ncm:checks/net/unfittingpacket
+execute if score DataHolder ncmcm_NETAP matches 1 run function ncm:checks/net/appropriate
+execute if score DataHolder ncmcm_BIMP matches 1 run function ncm:checks/blockinteract/missingblock
+execute if score DataHolder ncmcm_BPMB matches 1 run function ncm:checks/blockplace/missingblock
+execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockplace/appropriate
+execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
 
 
 # Running util functions

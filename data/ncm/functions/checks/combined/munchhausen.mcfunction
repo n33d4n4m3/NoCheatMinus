@@ -21,7 +21,8 @@
 # ...
 
 # Info: The basic mechanic of this check is the conditional granting of the "ncm:player_fished_himself" advancement.
-
+execute unless score DataHolder ncmcm_COMMUN matches 1 run advancement revoke @s only ncm:player_fished_himself
+execute unless score DataHolder ncmcm_COMMUN matches 1 run return 0
 scoreboard players set @s ncmFailedCMnchsn 1
 tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Munchhausen","color":"light_purple"}]
 tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Munchhausen","color":"light_purple"}]

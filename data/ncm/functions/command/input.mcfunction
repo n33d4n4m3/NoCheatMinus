@@ -21,7 +21,8 @@
 # Author:       n33d4n4m3
 # ...
 
-scoreboard players enable @a ncmInput
+execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @a ncmInput
+execute as @a unless score @s ncmOperator matches 2 run trigger ncmInput set 0
 
 execute as @a if score @s ncmInput matches 0 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Logging disabled.","color":"white"}]
 execute as @a if score @s ncmInput matches 1 run tellraw @s ["",{"text":"[TestNCM] ","color":"yellow"},{"text":"Logging enabled. (Self-failed checks)","color":"white"}]

@@ -27,6 +27,7 @@
 
 scoreboard objectives add ncmInstalled dummy
 
+scoreboard objectives add ncmOperator dummy
 
 scoreboard objectives add ncmInputR dummy
 
@@ -55,7 +56,6 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 scoreboard objectives add globalncmFightID dummy
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmFightID 0
 scoreboard objectives add ncmFightID dummy
-scoreboard players set DataHolder ncmInstalled 1
 
 scoreboard objectives add ncm.5 dummy
 scoreboard players set DataHolder ncm.5 5
@@ -92,6 +92,9 @@ scoreboard objectives add ncmInput trigger
 # Command: report
 scoreboard objectives add ncmReport trigger
 scoreboard objectives add ncmPLNotifyC dummy
+
+# Command: checks
+scoreboard objectives add ncmChecks trigger
 
 
 
@@ -169,6 +172,39 @@ scoreboard objectives add ncmPassedNETUP dummy
 
 scoreboard objectives add ncmRepRegCounter minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmRepRegTotal dummy
+
+
+# --------------------
+# Check Manager
+# --------------------
+scoreboard objectives add ncmcm_toggle_BIMB dummy
+scoreboard objectives add ncmcm_BIMB dummy
+scoreboard objectives add ncmcm_toggle_BPMB dummy
+scoreboard objectives add ncmcm_BPMB dummy
+scoreboard objectives add ncmcm_toggle_BPAP dummy
+scoreboard objectives add ncmcm_BPAP dummy
+scoreboard objectives add ncmcm_toggle_FME dummy
+scoreboard objectives add ncmcm_FME dummy
+scoreboard objectives add ncmcm_toggle_FCR dummy
+scoreboard objectives add ncmcm_FCR dummy
+scoreboard objectives add ncmcm_toggle_FRC dummy
+scoreboard objectives add ncmcm_FRC dummy
+scoreboard objectives add ncmcm_toggle_INVAP dummy
+scoreboard objectives add ncmcm_INVAP dummy
+scoreboard objectives add ncmcm_toggle_MVMAP dummy
+scoreboard objectives add ncmcm_MVMAP dummy
+scoreboard objectives add ncmcm_toggle_MVMSF dummy
+scoreboard objectives add ncmcm_MVMSF dummy
+scoreboard objectives add ncmcm_toggle_NETAP dummy
+scoreboard objectives add ncmcm_NETAP dummy
+scoreboard objectives add ncmcm_toggle_NETUP dummy
+scoreboard objectives add ncmcm_NETUP dummy
+scoreboard objectives add ncmcm_toggle_COMBL dummy
+scoreboard objectives add ncmcm_COMBL dummy
+scoreboard objectives add ncmcm_toggle_COMMUN dummy
+scoreboard objectives add ncmcm_COMMUN dummy
+
+
 
 
 # --------------------
@@ -1437,8 +1473,11 @@ scoreboard objectives add ncmConsumeC dummy
 
 # Load up default config
 scoreboard players set DataHolder ncmCC 1
-
 scoreboard players set DataHolder ncmAddObj 1
+
+# Send install notfication
+
+
 execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 0 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus v"},{"score":{"name":"DataHolder","objective":"ncmMainVersion"}},{"text":".","color":"white"},{"score":{"name":"DataHolder","objective":"ncmSubVersion"}},{"text":"."},{"score":{"name":"DataHolder","objective":"ncmRevVersion"}},{"text":" has been installed/updated successfully."}]
 
 execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 1 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"a","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
@@ -1458,3 +1497,22 @@ execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1
 execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 6 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"f","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
 execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 7 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"g","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
 execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 8 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"h","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
+
+# First install actions
+
+# Auto-enable checks
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_BIMB 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_BPMB 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_BPAP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_COMBL 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_COMMUN 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FCR 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FME 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FRC 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_INVAP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMAP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMSF 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETAP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETUP 1
+execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

@@ -966,6 +966,37 @@ scoreboard objectives remove ncmAddObj
 scoreboard objectives remove ncmVEPlayerAttackEventRegistered
 scoreboard objectives remove ncmRequiredVEBuild
 scoreboard objectives remove ncmTickReady
+scoreboard objectives remove ncmOperator
+scoreboard objectives remove ncmChecks
+scoreboard objectives remove ncmcm_toggle_BIMB
+scoreboard objectives remove ncmcm_BIMB
+scoreboard objectives remove ncmcm_toggle_BPMB
+scoreboard objectives remove ncmcm_BPMB
+scoreboard objectives remove ncmcm_toggle_BPAP
+scoreboard objectives remove ncmcm_BPAP
+scoreboard objectives remove ncmcm_toggle_FME
+scoreboard objectives remove ncmcm_FME
+scoreboard objectives remove ncmcm_toggle_FCR
+scoreboard objectives remove ncmcm_FCR
+scoreboard objectives remove ncmcm_toggle_FRC
+scoreboard objectives remove ncmcm_FRC
+scoreboard objectives remove ncmcm_toggle_INVAP
+scoreboard objectives remove ncmcm_INVAP
+scoreboard objectives remove ncmcm_toggle_MVMAP
+scoreboard objectives remove ncmcm_MVMAP
+scoreboard objectives remove ncmcm_toggle_MVMSF
+scoreboard objectives remove ncmcm_MVMSF
+scoreboard objectives remove ncmcm_toggle_NETAP
+scoreboard objectives remove ncmcm_NETAP
+scoreboard objectives remove ncmcm_toggle_NETUP
+scoreboard objectives remove ncmcm_NETUP
+scoreboard objectives remove ncmcm_toggle_COMBL
+scoreboard objectives remove ncmcm_COMBL
+scoreboard objectives remove ncmcm_toggle_COMMUN
+scoreboard objectives remove ncmcm_COMMUN
+
+
+
 
 # Send goodbye message
 tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},"The NoCheatMinus datapack was successfully uninstalled. The developer would be very happy about feedback!"]

@@ -20,6 +20,18 @@
 # ...
 
 # Info: The basic mechanic of this check is the conditional granting of player_hurt_entity advancements. Note gamemode dependency. Note also that attacking Giants and EnderDragons allow higher ranges.
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:survival_player_hurt_entity_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:creative_player_hurt_entity_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:adventure_player_hurt_entity_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:survival_player_hurt_enderdragon_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:creative_player_hurt_enderdragon_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:adventure_player_hurt_enderdragon_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:survival_player_hurt_giant_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:creative_player_hurt_giant_out_of_range
+execute unless score DataHolder ncmcm_FRC matches 1 run advancement revoke @s only ncm:adventure_player_hurt_giant_out_of_range
+
+
+
 
 execute if entity @s[advancements={ncm:survival_player_hurt_entity_out_of_range=true}] run scoreboard players set @s ncmFailedFRNG 1
 execute if entity @s[advancements={ncm:survival_player_hurt_entity_out_of_range=true}] run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Reach","color":"light_purple"},{"text":" {","color":"gray"},{"text":"0}","color":"gray"}]

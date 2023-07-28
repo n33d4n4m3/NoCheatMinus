@@ -19,4 +19,4 @@
 # ...
 
 # PlayerAttackEvent
-execute as @a[tag=VE.PlayerAttackEvent] if score @s VE.PlayerAttackEvent.criticalHit matches 1 run function ncm:checks/fight/criticals
+execute if score DataHolder ncmcm_FCR matches 1 as @a[tag=VE.PlayerAttackEvent] if score @s VE.PlayerAttackEvent.criticalHit matches 1 run function ncm:checks/fight/criticals

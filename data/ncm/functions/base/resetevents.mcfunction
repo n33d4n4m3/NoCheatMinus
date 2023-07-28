@@ -17,13 +17,5 @@
 # Author:      n33d4n4m3
 # ...
 
-# PlayerAttacksEntityEvent
-tag @a[tag=ncmPlayerAttacksEntityEvent] remove ncmPlayerAttacksEntityEvent
-
-tag @a[tag=ncmPlayerAttacksEntityEvent.opponentSurvived] remove ncmPlayerAttacksEntityEvent.opponentSurvived
-tag @a[tag=ncmPlayerAttacksEntityEvent.criticalHit] remove ncmPlayerAttacksEntityEvent.criticalHit
-scoreboard players set @a ncmePAEE.AtckDmg 0
-scoreboard players set @a ncmePAEE.RealDmg 0
-
 # MovementListener
 execute as @a unless data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 0
