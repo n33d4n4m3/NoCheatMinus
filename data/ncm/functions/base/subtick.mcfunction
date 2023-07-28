@@ -56,7 +56,7 @@ execute if score DataHolder ncmcm_MVMSF matches 1 run function ncm:checks/moveme
 execute if score DataHolder ncmcm_INVAP matches 1 run function ncm:checks/inventory/appropriate
 execute if score DataHolder ncmcm_NETUP matches 1 run function ncm:checks/net/unfittingpacket
 execute if score DataHolder ncmcm_NETAP matches 1 run function ncm:checks/net/appropriate
-execute if score DataHolder ncmcm_BIMP matches 1 run function ncm:checks/blockinteract/missingblock
+execute if score DataHolder ncmcm_BIMB matches 1 run function ncm:checks/blockinteract/missingblock
 execute if score DataHolder ncmcm_BPMB matches 1 run function ncm:checks/blockplace/missingblock
 execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockplace/appropriate
 execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
