@@ -50,6 +50,12 @@ scoreboard players set DataHolder ncmYear 21
 scoreboard players set DataHolder ncmWeek 45
 scoreboard players set DataHolder ncmChar 1
 
+scoreboard objectives add ncm.100 dummy
+scoreboard players set DataHolder ncm.100 100
+scoreboard objectives add ncm.-1 dummy
+scoreboard players set DataHolder ncm.-1 -1
+scoreboard objectives add ncmPlayerHealth health
+
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder globalncmUUID 0
 # FightID
@@ -1415,19 +1421,15 @@ scoreboard objectives add ncmYMotionM dummy
 scoreboard objectives add ncmZMotionM dummy
 
 # Appropriate (NoFall/FallDamage)
-scoreboard objectives add ncmAPNFApplyFDmg dummy
-scoreboard objectives add ncmAPNFField1 dummy
-scoreboard objectives add ncmAPNFDebug dummy
-scoreboard objectives add ncmAPNFReset dummy
-scoreboard objectives add ncmAPNFCalcFall dummy
-scoreboard objectives add ncmAPNFCalcHlth dummy
-scoreboard objectives add ncmAPNFStoreHlth dummy
-scoreboard objectives add ncm.100 dummy
-scoreboard players set DataHolder ncm.100 100
-scoreboard objectives add ncm.-1 dummy
-scoreboard players set DataHolder ncm.-1 -1
-scoreboard objectives add ncmPlayerHealth health
-scoreboard objectives add ncmAPNFFall minecraft.custom:minecraft.fall_one_cm
+# Ready to remove.
+#scoreboard objectives add ncmAPNFApplyFDmg dummy
+#scoreboard objectives add ncmAPNFField1 dummy
+#scoreboard objectives add ncmAPNFDebug dummy
+#scoreboard objectives add ncmAPNFReset dummy
+#scoreboard objectives add ncmAPNFCalcFall dummy
+#scoreboard objectives add ncmAPNFCalcHlth dummy
+#scoreboard objectives add ncmAPNFStoreHlth dummy
+#scoreboard objectives add ncmAPNFFall minecraft.custom:minecraft.fall_one_cm
 
 
 # Appropriate (Speed (General))

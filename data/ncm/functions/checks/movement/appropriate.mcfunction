@@ -15,8 +15,7 @@
 # ...
 # Description:  This check monitors generic movement stats of the player by counting certain movements and resetting these counters after a certain amount of time.
 # Fail:         This check fails if a player exceeds a configurable movement stat before it gets reset by a configurable timer.
-# Subchecks:    - Nofall/fallDamage
-#               - Speed (WalkSpeed)
+# Subchecks:    - Speed (WalkSpeed)
 #               - Speed (SprintSpeed)
 #               - Speed (SneakSpeed)
 # Author:        n33d4n4m3
@@ -28,39 +27,38 @@
 # ---------------------------
 # Subcheck: Nofall/fallDamage
 # ---------------------------
-execute store result score DataHolder ncmAPNFApplyFDmg run gamerule fallDamage
-execute as @e[type=minecraft:player] if score DataHolder ncmAPNFApplyFDmg matches 0 run scoreboard players set @s ncmAPNFFall 0
-execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s ncmAPNFFall 0
-execute as @e[type=minecraft:player] run scoreboard players add @s ncmAPNFReset 1
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 1.. run scoreboard players set @s ncmAPNFDebug 1
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. run scoreboard players add @s ncmAPNFField1 1
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 3 run scoreboard players operation @s ncmAPNFCalcHlth -= @s ncmPlayerHealth
-execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMAP 0
-execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"AppropriateMovement"},{"text":": "},{"text":"received less ("},{"score":{"name":"@s","objective":"ncmAPNFCalcHlth"}},{"text":" HP)"},{"text":" damage after falling "},{"score":{"name":"@s","objective":"ncmAPNFFall"}},{"text":" cm than appropiate ("},{"score":{"name":"@s","objective":"ncmAPNFStoreHlth"}},{"text":" HP)."}]
-execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"AppropriateMovement"},{"text":": "},{"text":"received less ("},{"score":{"name":"@s","objective":"ncmAPNFCalcHlth"}},{"text":" HP)"},{"text":" damage after falling "},{"score":{"name":"@s","objective":"ncmAPNFFall"}},{"text":" cm than appropiate ("},{"score":{"name":"@s","objective":"ncmAPNFStoreHlth"}},{"text":" HP)."}]
+#    
+# Ready to remove. \/
+
+#execute store result score DataHolder ncmAPNFApplyFDmg run gamerule fallDamage
+#execute as @e[type=minecraft:player] if score DataHolder ncmAPNFApplyFDmg matches 0 run scoreboard players set @s ncmAPNFFall 0
+#execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s ncmAPNFFall 0
+#execute as @e[type=minecraft:player] run scoreboard players add @s ncmAPNFReset 1
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 1.. run scoreboard players set @s ncmAPNFDebug 1
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. run scoreboard players add @s ncmAPNFField1 1
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 3 run scoreboard players operation @s ncmAPNFCalcHlth -= @s ncmPlayerHealth
+#execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMAP 0
+#execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"AppropriateMovement"},{"text":": "},{"text":"received less ("},{"score":{"name":"@s","objective":"ncmAPNFCalcHlth"}},{"text":" HP)"},{"text":" damage after falling "},{"score":{"name":"@s","objective":"ncmAPNFFall"}},{"text":" cm than appropiate ("},{"score":{"name":"@s","objective":"ncmAPNFStoreHlth"}},{"text":" HP)."}]
+#execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmAPNFCalcFall if score @s ncmAPNFField1 matches 3.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"AppropriateMovement"},{"text":": "},{"text":"received less ("},{"score":{"name":"@s","objective":"ncmAPNFCalcHlth"}},{"text":" HP)"},{"text":" damage after falling "},{"score":{"name":"@s","objective":"ncmAPNFFall"}},{"text":" cm than appropiate ("},{"score":{"name":"@s","objective":"ncmAPNFStoreHlth"}},{"text":" HP)."}]
 
 # Calculating expected health drop
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall = @s ncmAPNFFall
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcHlth = @s ncmPlayerHealth
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall -= DataHolder ncmc_ap_nf_1
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall /= DataHolder ncm.100
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFStoreHlth = @s ncmAPNFCalcFall
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall -= @s ncmAPNFCalcHlth
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall *= DataHolder ncm.-1
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall = @s ncmAPNFFall
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcHlth = @s ncmPlayerHealth
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall -= DataHolder ncmc_ap_nf_1
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall /= DataHolder ncm.100
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFStoreHlth = @s ncmAPNFCalcFall
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall -= @s ncmAPNFCalcHlth
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 335.. if score @s ncmAPNFField1 matches 1 run scoreboard players operation @s ncmAPNFCalcFall *= DataHolder ncm.-1
 
 
 
-execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFFall 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFField1 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFCalcFall 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 1.. if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmAPNFFall 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 0 run scoreboard players set @s ncmAPNFDebug 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmAPNFField1 0
-execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. run scoreboard players set @s ncmAPNFReset 0
-
-
-
-
+#execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFFall 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFField1 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. if score @s ncmAPNFFall matches ..335 run scoreboard players set @s ncmAPNFCalcFall 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 1.. if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmAPNFFall 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFFall matches 0 run scoreboard players set @s ncmAPNFDebug 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFField1 matches 3.. run scoreboard players set @s ncmAPNFField1 0
+#execute as @e[type=minecraft:player] if score @s ncmAPNFReset matches 5.. run scoreboard players set @s ncmAPNFReset 0
 
 
 # -------------------------
