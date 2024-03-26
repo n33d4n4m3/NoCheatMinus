@@ -298,7 +298,6 @@ execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 
 execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSprJmp 0
 execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmAPSSprJmpII 0
 execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmStOnIceC 0
-execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches ..20 run scoreboard players set @s ncmInputR 0
 
 execute as @e[type=minecraft:player] at @s if score @s ncmJoinGame matches 20.. run scoreboard players set @s ncmJoinGame 41
 

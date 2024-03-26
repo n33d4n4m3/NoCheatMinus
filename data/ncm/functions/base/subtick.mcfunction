@@ -37,6 +37,8 @@ function ncm:evaluation/pass
 
 function ncm:base/permission
 
+function ncm:lag/lagmanager
+
 # Running listeners
 function ncm:checks/fight/fightlistener
 function ncm:checks/movement/movementlistener
@@ -60,6 +62,7 @@ execute if score DataHolder ncmcm_BIMB matches 1 run function ncm:checks/blockin
 execute if score DataHolder ncmcm_BPMB matches 1 run function ncm:checks/blockplace/missingblock
 execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockplace/appropriate
 execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
+execute if score DataHolder ncmcm_MVMTS matches 1 run function ncm:checks/movement/tickstride
 
 
 # Running util functions

@@ -1,3 +1,6 @@
+scoreboard players set DataHolder ncmc_bs_lg_1 40
+scoreboard players set DataHolder ncmc_bs_lg_2 20
+
 scoreboard players set DataHolder ncmc_bs_rp_1 0
 scoreboard players set DataHolder ncmc_bs_rp_2 -500
 scoreboard players set DataHolder ncmc_bs_rp_3 100
@@ -119,6 +122,27 @@ scoreboard players set DataHolder ncmc_sf_ym_2 5201
 scoreboard players set DataHolder ncmc_sf_ym_3 6201
 scoreboard players set DataHolder ncmc_sf_xm_1 2
 scoreboard players set DataHolder ncmc_sf_zm_1 2
+
+
+
+scoreboard players set DataHolder ncmc_ts_31 2
+scoreboard players set DataHolder ncmc_ts_32 0
+scoreboard players set DataHolder ncmc_ts_33 200
+scoreboard players set DataHolder ncmc_ts_34 3
+scoreboard players set DataHolder ncmc_ts_35 100
+scoreboard players set DataHolder ncmc_ts_36 1
+scoreboard players set DataHolder ncmc_ts_37 10
+scoreboard players set DataHolder ncmc_ts_38 40
+
+scoreboard players set DataHolder ncmc_ts_1 23
+scoreboard players set DataHolder ncmc_ts_2 50
+scoreboard players set DataHolder ncmc_ts_3 29
+scoreboard players set DataHolder ncmc_ts_4 50
+scoreboard players set DataHolder ncmc_ts_5 10
+scoreboard players set DataHolder ncmc_ts_6 20
+scoreboard players set DataHolder ncmc_ts_9 16
+scoreboard players set DataHolder ncmc_ts_10 24
+
 
 
 

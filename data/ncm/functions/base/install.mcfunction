@@ -81,6 +81,19 @@ scoreboard objectives add ncmPlayerIsInBed dummy
 
 
 # -----------------
+# Lag
+# -----------------
+scoreboard objectives add ncmTPS dummy
+scoreboard players set #10 ncmTPS 1
+
+scoreboard objectives add ncmMVMTSLagTimeout dummy
+
+
+# Start TPS checker
+function ncm:lag/tps/start
+
+
+# -----------------
 # Event cancel
 # -----------------
 scoreboard objectives add ncmOffGrCnclBusy dummy
@@ -162,6 +175,8 @@ scoreboard objectives add ncmFailedNETAP dummy
 scoreboard objectives add ncmFailedNETUP dummy
 scoreboard objectives add ncmFailedCMnchsn dummy
 scoreboard objectives add ncmFailedCBedLv dummy
+scoreboard objectives add ncmFailedMVMTS dummy
+
 
 # --------------------
 # Pass
@@ -209,6 +224,8 @@ scoreboard objectives add ncmcm_toggle_COMBL dummy
 scoreboard objectives add ncmcm_COMBL dummy
 scoreboard objectives add ncmcm_toggle_COMMUN dummy
 scoreboard objectives add ncmcm_COMMUN dummy
+scoreboard objectives add ncmcm_toggle_MVMTS dummy
+scoreboard objectives add ncmcm_MVMTS dummy
 
 
 
@@ -218,6 +235,13 @@ scoreboard objectives add ncmcm_COMMUN dummy
 # --------------------
 
 scoreboard objectives add ncmCC dummy
+
+
+# Lag
+# The number of ticks that must pass before a check is reactivated after the TPS value stabilizes. 40
+scoreboard objectives add ncmc_bs_lg_1 dummy
+# The minimum TPS value to ensure the functionality of the Movement.TickStride check 20
+scoreboard objectives add ncmc_bs_lg_2 dummy
 
 
 # Reputation
@@ -358,6 +382,14 @@ scoreboard objectives add ncmc_bs_fl_38 dummy
 scoreboard objectives add ncmc_bs_fl_39 dummy
 # Reputation loss for failing Combined.BedLeave (Rage) 0
 scoreboard objectives add ncmc_bs_fl_40 dummy
+
+# Movement.TickStride
+# Reputation loss for failing Movement.TickStride (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_41 dummy
+# Reputation loss for failing Movement.TickStride (Suspect) 0
+scoreboard objectives add ncmc_bs_fl_42 dummy
+# Reputation loss for failing Movement.TickStride (Rage) 0
+scoreboard objectives add ncmc_bs_fl_43 dummy
 
 
 
@@ -501,6 +533,108 @@ scoreboard objectives add ncmc_ap_bp_1 dummy
 
 # The timeframe 3
 scoreboard objectives add ncmc_ap_bp_2 dummy
+
+
+# TickStride
+
+# The number of exceedances of the maximum stride values ​​required for the check to fail 2
+scoreboard objectives add ncmc_ts_31 dummy
+
+# If a legitimate value is measured after measuring a value that is too high, should the measurement start from the beginning? (0 -> No, 1 -> Yes) 0
+scoreboard objectives add ncmc_ts_32 dummy
+
+# After how many ticks should the check forget illegitimate measurements? (-1 -> never) 200
+scoreboard objectives add ncmc_ts_33 dummy
+
+# Amount of internal log-only fails required for the check to result in an external log-only fail (1 -> internal log-only fail = external log-only fail) 3
+scoreboard objectives add ncmc_ts_34 dummy
+
+# Amount of ticks to wait for the next internal log-only fail after an internal log-only fail (-1 -> forever) 100
+scoreboard objectives add ncmc_ts_35 dummy
+
+# A player-side lag / motion stop triggers the reset of the measurement. Should the reset of the count of internal log-only fails also be triggered additionally? (0 -> No, 1 -> Yes) 1
+scoreboard objectives add ncmc_ts_36 dummy
+
+# The duration of the timeout in ticks after a movement state transition. (-1 -> off) 10
+scoreboard objectives add ncmc_ts_37 dummy
+
+# The duration of the timeout in ticks after a contact with ice. (-1 -> off) 40
+scoreboard objectives add ncmc_ts_38 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 1 -> WALKING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_1 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 1 -> WALKING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_2 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 2 -> SPRINTING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_3 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 2 -> SPRINTING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_4 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 3 -> SNEAKING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_5 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 3 -> SNEAKING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_6 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 4 -> SWIMMING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_7 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 4 -> SWIMMING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_8 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 5 -> CLIMBING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_9 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 5 -> CLIMBING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_10 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_11 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_12 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Survival/Adventure Mode) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_13 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Survival/Adventure Mode) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_14 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 7 -> MINECART (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_15 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 7 -> MINECART (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_16 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_17 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_18 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_19 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_20 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 10 -> AVIATING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_21 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 10 -> AVIATING (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_22 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_23 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_24 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 12 -> STRIDER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_25 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 12 -> STRIDER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_26 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 13 -> WALKING ON WATER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_27 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 13 -> WALKING ON WATER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_28 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 14 -> WALKING UNDER WATER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_29 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 14 -> WALKING UNDER WATER (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_30 dummy
 
 
 
@@ -770,7 +904,6 @@ scoreboard objectives add ncmBPMB249 minecraft.used:minecraft.granite_stairs
 scoreboard objectives add ncmBPMB250 minecraft.used:minecraft.granite_wall
 scoreboard objectives add ncmBPMB251 minecraft.used:minecraft.grass_block
 scoreboard objectives add ncmBPMB252 minecraft.used:minecraft.dirt_path
-scoreboard objectives add ncmBPMB253 minecraft.used:minecraft.grass
 scoreboard objectives add ncmBPMB254 minecraft.used:minecraft.gravel
 scoreboard objectives add ncmBPMB255 minecraft.used:minecraft.gray_banner
 scoreboard objectives add ncmBPMB256 minecraft.used:minecraft.gray_bed
@@ -1461,6 +1594,14 @@ scoreboard objectives add ncmStOnIceC dummy
 scoreboard objectives add ncmAPSResetCSn dummy
 scoreboard objectives add ncmAPSLostWalkFP dummy
 
+# TickStride
+scoreboard objectives add ncmTimesStrideTooHighLog dummy
+scoreboard objectives add ncmTimesStrideTooHighCancel dummy
+scoreboard objectives add ncmTSIceTimeout dummy
+scoreboard objectives add ncmTSTransitionTimeout dummy
+scoreboard objectives add ncmTSResetTimer dummy
+scoreboard objectives add ncmTSInternalLogOnlyFails dummy
+scoreboard objectives add ncmTSInternalLogOnlyFailsResetTimer dummy
 
 
 
@@ -1512,9 +1653,11 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FME 2
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FRC 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_INVAP 1
-execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMAP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMAP 2
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMSF 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETAP 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETUP 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
 execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
+
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

@@ -42,6 +42,15 @@ execute if score DataHolder ncmcm_toggle_MVMSF matches 2 run scoreboard players 
 execute if score DataHolder ncmcm_toggle_MVMSF matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMSF 0
 
 
+# Enable Movement.TickStride
+execute if score DataHolder ncmcm_toggle_MVMTS matches 1 run scoreboard players set DataHolder ncmcm_MVMTS 1
+# Disable Movement.TickStride
+execute if score DataHolder ncmcm_toggle_MVMTS matches 2 run scoreboard players set DataHolder ncmcm_MVMTS 0
+
+execute if score DataHolder ncmcm_toggle_MVMTS matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMTS 0
+
+
+
 # Enable Movement.Appropriate
 execute if score DataHolder ncmcm_toggle_MVMAP matches 1 run scoreboard players set DataHolder ncmcm_MVMAP 1
 # Disable Movement.Appropriate

@@ -39,7 +39,7 @@ execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearb
 # Aviate / Levitate FP fix
 
 
-execute as @e[type=minecraft:player,nbt={ActiveEffects:[{Id:25b}]}] run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
+execute as @e[type=minecraft:player,nbt={ActiveEffects:[{Id:25}]}] run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
 execute as @e[type=minecraft:player] if score @s ncmLevitate matches 1.. run scoreboard players remove @s ncmLevitate 1
 
 execute as @e[type=minecraft:player] if score @s ncmAviate matches 1.. run scoreboard players add @s ncmAviateRC 1
@@ -216,9 +216,21 @@ execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
 
 
+
+
+# ------------------------
+# Subcheck: ClimbState
+# ------------------------
+#execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s VEGbl.thePlayer.currentMovementState matches 6 if score @s VE.PlayerMoveEvent.hasMaintained matches 1 run scoreboard players set @s ncmFailedMVMSF 10
+#execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s VEGbl.thePlayer.currentMovementState matches 6 if score @s VE.PlayerMoveEvent.hasMaintained matches 1 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"State","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+#execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s VEGbl.thePlayer.currentMovementState matches 6 if score @s VE.PlayerMoveEvent.hasMaintained matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"State","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+#execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if score @s VEGbl.thePlayer.currentMovementState matches 6 if score @s VE.PlayerMoveEvent.hasMaintained matches 1 run function ncm:base/cancel_offgroundmovement
+
+
 # ---------------------------
 # Subcheck: ConstantClimbRate
 # ---------------------------
+
 
 
 execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] run scoreboard players add @s ncmMaintainRC 1
