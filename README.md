@@ -23,13 +23,11 @@
 | Check category and name | Description |
 | ----------------------- | ----------- |
 | BlockPlace.Appropriate | NCM monitors the amount of blocks placed in a configurable time window. |
-| BlockPlace.MissingBlock | When the player places a block, NCM will check if the player looks at a block, which blocktype equals the blocktype of the block he placed last, and if this block is within the max blockplace range. (Raytracing). |
 | BlockInteract.MissingBlock | When the player interacts with a block, NCM will check if the player looks at a block, which blocktype equals the blocktype of the block he interacted with last, and if this block is within the max interaction range. (Raytracing). |
 | Net.UnfittingPacket | NCM checks if the player spoofs to be on-ground whilst being mid-air/off-ground. Another subcheck of this check monitors if the player sends a RespawnPacket whilst being alive or stops receiving certain packets without being dead (Godmode patch). |
 | Net.Appropriate | NCM checks if the DeathTime-NBT-Data of the player is appropriate (GodMode patch) and if the player respawns too fast (InstantRespawn). |
-| Movement.Appropriate | When the player touches the ground, NCM will start calculating the estimated fall damage, depending on the current health and the fall distance. If the taken fall damage differs from the calculated fall damage, this check fails. This check also monitors the movement speed of the player in different movement states (Walk, Sprint, Sneak...) and takes legacy status effects (speed...), icy grounds and laggy movement transitions (Sprint->Walk for example) into account. |
+| Movement.TickStride | NCM evaluates player movement events based on distance and logs or cancels events if the configured thresholds are exceeded, aiming to maintain gameplay integrity and prevent unintended movement exploits. |
 | Movement.SurvivalFly | NCM monitors the vertical motion of the player, the off-ground-behavior, unexpected movements, the player's gravity, and lost-ground-situations. |
-| Fight.MissingEntity | This check observes the player's combat behavior. If the attacked player is out of range or not in sight, the check will fail. If the attacking player doesn't aim properly or tries to attack through walls, this check will fail also. |
 | Fight.Criticals | When a player makes a critical hit, this check verifies that the hit was made under legitimate conditions. |
 | Fight.Reach | NCM checks if the player has hit an entity that is out of his legitimate range. |
 | Combined.BedLeave | NCM checks if the player sends BedLeave packets without being in a bed first. The small teleport after leaving a bed can be used by players with a cheat client for flying or speeding. |

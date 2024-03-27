@@ -18,8 +18,9 @@
 # Subchecks:    - LostGround
 #               - OffGroundTicks
 #               - Climb
+#               - ClimbState
 #               - ConstantClimbRate
-#               - MonitorMotionY
+#               - MonitorMotionXYZ
 # Author:        n33d4n4m3
 # ...
 
@@ -288,14 +289,14 @@ scoreboard players set @a ncmMaintain 0
 # Subcheck: MonitorMotionY
 # ------------------------
 
-execute as @e[type=minecraft:player] store result score @s ncmXMotion run data get entity @s Motion[0] 10000
-execute as @e[type=minecraft:player] store result score @s ncmYMotionM run data get entity @s Motion[1] 10000
-execute as @a if score @s ncmYMotionM > @s ncmYMotionMax run scoreboard players operation @s ncmYMotionMax = @s ncmYMotionM
-execute as @e[type=minecraft:player] run scoreboard players operation @s ncmYMotionM -= @s ncmJumpBoostOffs
+#execute as @e[type=minecraft:player] store result score @s ncmXMotion run data get entity @s Motion[0] 10000
+#execute as @e[type=minecraft:player] store result score @s ncmYMotionM run data get entity @s Motion[1] 10000
+#execute as @a if score @s ncmYMotionM > @s ncmYMotionMax run scoreboard players operation @s ncmYMotionMax = @s ncmYMotionM
+#execute as @e[type=minecraft:player] run scoreboard players operation @s ncmYMotionM -= @s ncmJumpBoostOffs
 
-execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players set @s ncmFailedMVMSF 0
-execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
-execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run tellraw @s[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
+#execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players set @s ncmFailedMVMSF 0
+#execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
+#execute as @a if score @s ncmYMotionM >= DataHolder ncmc_sf_ym_1 unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run tellraw @s[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MonitorMotionY","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_ym_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotionM"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmJumpBoostOffs"},"color":"gray"},{"text":"}","color":"gray"}]
 
 
 # ------------------------

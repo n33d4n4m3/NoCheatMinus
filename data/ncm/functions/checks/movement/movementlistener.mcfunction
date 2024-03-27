@@ -13,7 +13,7 @@
 #
 #
 # ...
-# For:      This listener waits for movement-related events, collects data and fires the associated functions.
+# For:      This listener waits for movement-related events, collects data and fires the associated functions. (TODO: Replace this with a VE event)
 # Fires:    /
 # Author:   n33d4n4m3
 # ...

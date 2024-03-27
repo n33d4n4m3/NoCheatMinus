@@ -25,15 +25,6 @@ execute if score DataHolder ncmcm_toggle_BIMB matches 2 run scoreboard players s
 
 execute if score DataHolder ncmcm_toggle_BIMB matches 1.. run scoreboard players set DataHolder ncmcm_toggle_BIMB 0
 
-
-# Enable BlockPlace.MissingBlock
-execute if score DataHolder ncmcm_toggle_BPMB matches 1 run scoreboard players set DataHolder ncmcm_BPMB 1
-# Disable BlockPlace.MissingBlock
-execute if score DataHolder ncmcm_toggle_BPMB matches 2 run scoreboard players set DataHolder ncmcm_BPMB 0
-
-execute if score DataHolder ncmcm_toggle_BPMB matches 1.. run scoreboard players set DataHolder ncmcm_toggle_BPMB 0
-
-
 # Enable Movement.SurvivalFly
 execute if score DataHolder ncmcm_toggle_MVMSF matches 1 run scoreboard players set DataHolder ncmcm_MVMSF 1
 # Disable Movement.SurvivalFly
@@ -48,23 +39,6 @@ execute if score DataHolder ncmcm_toggle_MVMTS matches 1 run scoreboard players 
 execute if score DataHolder ncmcm_toggle_MVMTS matches 2 run scoreboard players set DataHolder ncmcm_MVMTS 0
 
 execute if score DataHolder ncmcm_toggle_MVMTS matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMTS 0
-
-
-
-# Enable Movement.Appropriate
-execute if score DataHolder ncmcm_toggle_MVMAP matches 1 run scoreboard players set DataHolder ncmcm_MVMAP 1
-# Disable Movement.Appropriate
-execute if score DataHolder ncmcm_toggle_MVMAP matches 2 run scoreboard players set DataHolder ncmcm_MVMAP 0
-
-execute if score DataHolder ncmcm_toggle_MVMAP matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMAP 0
-
-
-# Enable Fight.MissingEntity
-execute if score DataHolder ncmcm_toggle_FME matches 1 run scoreboard players set DataHolder ncmcm_FME 1
-# Disable Fight.MissingEntity
-execute if score DataHolder ncmcm_toggle_FME matches 2 run scoreboard players set DataHolder ncmcm_FME 0
-
-execute if score DataHolder ncmcm_toggle_FME matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FME 0
 
 
 # Enable Fight.Criticals

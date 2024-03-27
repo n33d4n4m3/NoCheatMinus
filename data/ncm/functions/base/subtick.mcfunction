@@ -49,17 +49,14 @@ function ncm:checks/movement/movementlistener
 
 function ncm:checks/checkmanager
 
-execute if score DataHolder ncmcm_FME matches 1 run function ncm:checks/fight/missingentity
 # Fight.Criticals check is triggered by VE's PlayerAttackEvents.
 # Combined.Munchhausen check is triggered by conditional player_fished_himself advancements.
 # Fight.Reach check is triggered by conditional player_hurt_entity advancements.
-execute if score DataHolder ncmcm_MVMAP matches 1 run function ncm:checks/movement/appropriate
 execute if score DataHolder ncmcm_MVMSF matches 1 run function ncm:checks/movement/survivalfly
 execute if score DataHolder ncmcm_INVAP matches 1 run function ncm:checks/inventory/appropriate
 execute if score DataHolder ncmcm_NETUP matches 1 run function ncm:checks/net/unfittingpacket
 execute if score DataHolder ncmcm_NETAP matches 1 run function ncm:checks/net/appropriate
 execute if score DataHolder ncmcm_BIMB matches 1 run function ncm:checks/blockinteract/missingblock
-execute if score DataHolder ncmcm_BPMB matches 1 run function ncm:checks/blockplace/missingblock
 execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockplace/appropriate
 execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
 execute if score DataHolder ncmcm_MVMTS matches 1 run function ncm:checks/movement/tickstride
