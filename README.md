@@ -31,6 +31,7 @@
 | Movement.NoFall | When the player touches the ground, NCM will start calculating the estimated fall damage, depending on the current health and the fall distance. If the taken fall damage differs from the calculated fall damage, this check fails. |
 | Fight.Criticals | When a player makes a critical hit, this check verifies that the hit was made under legitimate conditions. |
 | Fight.Reach | NCM checks if the player has hit an entity that is out of his legitimate range. |
+| Fight.WrongTurn | NCM monitors the players pitch-turns. |
 | Combined.BedLeave | NCM checks if the player sends BedLeave packets without being in a bed first. The small teleport after leaving a bed can be used by players with a cheat client for flying or speeding. |
 | Combined.Munchhausen | According to the legend of Baron Munchausen's tall tales, players can pull themselves out of the swamp by their own hair. NCM checks if cheat-clients use this ability for flying/speeding. |
 | Inventory.Appropriate | When the player consumes an Item, NCM will check the speed of consuming and compare it with the configurated appropriate values. |

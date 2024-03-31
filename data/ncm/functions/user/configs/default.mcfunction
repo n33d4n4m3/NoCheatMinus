@@ -67,6 +67,9 @@ scoreboard players set DataHolder ncmc_bs_fl_43 0
 scoreboard players set DataHolder ncmc_bs_fl_44 0
 scoreboard players set DataHolder ncmc_bs_fl_45 0
 scoreboard players set DataHolder ncmc_bs_fl_46 0
+scoreboard players set DataHolder ncmc_bs_fl_47 0
+scoreboard players set DataHolder ncmc_bs_fl_48 0
+scoreboard players set DataHolder ncmc_bs_fl_49 0
 
 scoreboard players set DataHolder ncmc_ap_fc_1 1
 scoreboard players set DataHolder ncmc_ap_fc_2 66

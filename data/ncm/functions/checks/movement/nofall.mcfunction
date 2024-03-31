@@ -20,8 +20,182 @@
 
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
+
+# FP Elimination
+execute as @a run scoreboard players add @s ncmMVMNFTimeAlive 1
+execute as @a if score @s ncmMVMNFTimeAlive matches ..120 run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if score @s ncmMVMNFDeathCount matches 1 run scoreboard players set @s ncmMVMNFTimeAlive 0
+execute as @a if score @s ncmMVMNFDeathCount matches 1 run scoreboard players set @s ncmMVMNFDeathCount 0
+
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+
+
+execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @a[nbt={Inventory:[{Slot:100b,tag:{Enchantments:[{id:"minecraft:feather_falling"}]}}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 1.. run scoreboard players add @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 10.. run scoreboard players set @s ncmMVMNFFPSourceNearby 0
+
+
+
+
+
+
+
+
+
+
+
+
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMNFFall matches 1.. if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallStartYCoord = @s VE.PlayerMoveEvent.fromY
 execute as @a at @s unless score @s ncmMVMNFFall matches 1.. unless block ~ ~-0.1 ~ air unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
+#execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if score @s ncmMVMNFFallEndYCoord matches 0 unless data entity @s {OnGround:0b} unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
 
 execute as @a unless score @s ncmMVMNFFall matches 1.. unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall = @s ncmMVMNFFallStartYCoord
 execute as @a unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall -= @s ncmMVMNFFallEndYCoord
@@ -43,11 +217,11 @@ execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmMVMNFCa
 
 
 
-execute as @e[type=minecraft:player] unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMAP 0
-execute as @e[type=minecraft:player] unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. unless score @s ncmMVMNFCalcHlth matches 0 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to reduce fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
-execute as @e[type=minecraft:player] unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. unless score @s ncmMVMNFCalcHlth matches 0 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to reduce fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
-execute as @e[type=minecraft:player] unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score @s ncmMVMNFCalcHlth matches 0 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to avoid fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
-execute as @e[type=minecraft:player] unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score @s ncmMVMNFCalcHlth matches 0 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to avoid fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMAP 0
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. unless score @s ncmMVMNFCalcHlth matches 0 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to reduce fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. unless score @s ncmMVMNFCalcHlth matches 0 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to reduce fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score @s ncmMVMNFCalcHlth matches 0 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to avoid fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score @s ncmMVMNFCalcHlth matches 0 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to avoid fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]
 
 # Calculating expected health drop
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFall matches 335.. if score @s ncmMVMNFField1 matches 1 run scoreboard players operation @s ncmMVMNFCalcFall = @s ncmMVMNFFall

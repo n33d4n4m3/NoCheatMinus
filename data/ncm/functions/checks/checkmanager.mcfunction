@@ -63,6 +63,15 @@ execute if score DataHolder ncmcm_toggle_FRC matches 2 run scoreboard players se
 execute if score DataHolder ncmcm_toggle_FRC matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FRC 0
 
 
+# Enable Fight.WrongTurn
+execute if score DataHolder ncmcm_toggle_FWT matches 1 run scoreboard players set DataHolder ncmcm_FWT 1
+# Disable Fight.WrongTurn
+execute if score DataHolder ncmcm_toggle_FWT matches 2 run scoreboard players set DataHolder ncmcm_FWT 0
+
+execute if score DataHolder ncmcm_toggle_FWT matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FWT 0
+
+
+
 # Enable BlockPlace.Appropriate
 execute if score DataHolder ncmcm_toggle_BPAP matches 1 run scoreboard players set DataHolder ncmcm_BPAP 1
 # Disable BlockPlace.Appropriate

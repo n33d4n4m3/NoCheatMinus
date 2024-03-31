@@ -27,8 +27,6 @@
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 
-
-
 # ------------------
 # FP elemination
 # ------------------

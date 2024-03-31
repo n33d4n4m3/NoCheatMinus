@@ -168,6 +168,7 @@ scoreboard objectives add ncmFailedNETUP dummy
 scoreboard objectives add ncmFailedCMnchsn dummy
 scoreboard objectives add ncmFailedCBedLv dummy
 scoreboard objectives add ncmFailedMVMTS dummy
+scoreboard objectives add ncmFailedFWT dummy
 
 
 # --------------------
@@ -214,7 +215,8 @@ scoreboard objectives add ncmcm_toggle_COMMUN dummy
 scoreboard objectives add ncmcm_COMMUN dummy
 scoreboard objectives add ncmcm_toggle_MVMTS dummy
 scoreboard objectives add ncmcm_MVMTS dummy
-
+scoreboard objectives add ncmcm_toggle_FWT dummy
+scoreboard objectives add ncmcm_FWT dummy
 
 
 
@@ -362,6 +364,14 @@ scoreboard objectives add ncmc_bs_fl_44 dummy
 scoreboard objectives add ncmc_bs_fl_45 dummy
 # Reputation loss for failing Movement.NoFall (Rage) 0
 scoreboard objectives add ncmc_bs_fl_46 dummy
+
+# Fight.WrongTurn
+# Reputation loss for failing Fight.WrongTurn (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_47 dummy
+# Reputation loss for failing Fight.WrongTurn (Suspect) 0
+scoreboard objectives add ncmc_bs_fl_48 dummy
+# Reputation loss for failing Fight.WrongTurn (Rage) 0
+scoreboard objectives add ncmc_bs_fl_49 dummy
 
 # NoFall 269
 scoreboard objectives add ncmc_nf_1 dummy
@@ -710,7 +720,9 @@ scoreboard objectives add ncmMVMNFBlocksFallDamage dummy
 scoreboard objectives add ncmMVMNFSubblocksFallDamage dummy
 scoreboard objectives add ncmMVMNFFallStartYCoord dummy
 scoreboard objectives add ncmMVMNFFallEndYCoord dummy
-
+scoreboard objectives add ncmMVMNFFPSourceNearby dummy
+scoreboard objectives add ncmMVMNFTimeAlive dummy
+scoreboard objectives add ncmMVMNFDeathCount deathCount
 
 # Appropriate (Speed (General))
 scoreboard objectives add ncmAPSWalk minecraft.custom:minecraft.walk_one_cm
@@ -804,6 +816,7 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETUP 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FWT 1
 execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1
