@@ -202,6 +202,8 @@ scoreboard objectives add ncmcm_toggle_INVAP dummy
 scoreboard objectives add ncmcm_INVAP dummy
 scoreboard objectives add ncmcm_toggle_MVMSF dummy
 scoreboard objectives add ncmcm_MVMSF dummy
+scoreboard objectives add ncmcm_toggle_MVMNF dummy
+scoreboard objectives add ncmcm_MVMNF dummy
 scoreboard objectives add ncmcm_toggle_NETAP dummy
 scoreboard objectives add ncmcm_NETAP dummy
 scoreboard objectives add ncmcm_toggle_NETUP dummy
@@ -353,7 +355,16 @@ scoreboard objectives add ncmc_bs_fl_42 dummy
 # Reputation loss for failing Movement.TickStride (Rage) 0
 scoreboard objectives add ncmc_bs_fl_43 dummy
 
+# Movement.NoFall
+# Reputation loss for failing Movement.NoFall (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_44 dummy
+# Reputation loss for failing Movement.NoFall (Suspect) 0
+scoreboard objectives add ncmc_bs_fl_45 dummy
+# Reputation loss for failing Movement.NoFall (Rage) 0
+scoreboard objectives add ncmc_bs_fl_46 dummy
 
+# NoFall 269
+scoreboard objectives add ncmc_nf_1 dummy
 
 # Appropriate (FastConsume)
 # How many items the player is allowed to eat until the counter is resetted? 1
@@ -452,6 +463,9 @@ scoreboard objectives add ncmc_ts_37 dummy
 
 # The duration of the timeout in ticks after a contact with ice. (-1 -> off) 40
 scoreboard objectives add ncmc_ts_38 dummy
+
+# Should Event Cancel always lead to Reputation loss / Log? (0 -> No, 1 -> Yes) 1
+scoreboard objectives add ncmc_ts_39 dummy
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 1 -> WALKING (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_1 dummy
@@ -683,16 +697,19 @@ scoreboard objectives add ncmYMotionM dummy
 # SurvivalFly (MonitorMotionZ)
 scoreboard objectives add ncmZMotionM dummy
 
-# Appropriate (NoFall/FallDamage)
-# Ready to remove.
-#scoreboard objectives add ncmAPNFApplyFDmg dummy
-#scoreboard objectives add ncmAPNFField1 dummy
-#scoreboard objectives add ncmAPNFDebug dummy
-#scoreboard objectives add ncmAPNFReset dummy
-#scoreboard objectives add ncmAPNFCalcFall dummy
-#scoreboard objectives add ncmAPNFCalcHlth dummy
-#scoreboard objectives add ncmAPNFStoreHlth dummy
-#scoreboard objectives add ncmAPNFFall minecraft.custom:minecraft.fall_one_cm
+# NoFall
+scoreboard objectives add ncmMVMNFApplyFDmg dummy
+scoreboard objectives add ncmMVMNFField1 dummy
+scoreboard objectives add ncmMVMNFDebug dummy
+scoreboard objectives add ncmMVMNFReset dummy
+scoreboard objectives add ncmMVMNFCalcFall dummy
+scoreboard objectives add ncmMVMNFCalcHlth dummy
+scoreboard objectives add ncmMVMNFStoreHlth dummy
+scoreboard objectives add ncmMVMNFFall dummy
+scoreboard objectives add ncmMVMNFBlocksFallDamage dummy
+scoreboard objectives add ncmMVMNFSubblocksFallDamage dummy
+scoreboard objectives add ncmMVMNFFallStartYCoord dummy
+scoreboard objectives add ncmMVMNFFallEndYCoord dummy
 
 
 # Appropriate (Speed (General))
@@ -786,6 +803,7 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETAP 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_NETUP 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 1
 execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

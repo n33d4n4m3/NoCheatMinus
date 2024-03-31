@@ -52,7 +52,10 @@ function ncm:checks/checkmanager
 # Fight.Criticals check is triggered by VE's PlayerAttackEvents.
 # Combined.Munchhausen check is triggered by conditional player_fished_himself advancements.
 # Fight.Reach check is triggered by conditional player_hurt_entity advancements.
+
+
 execute if score DataHolder ncmcm_MVMSF matches 1 run function ncm:checks/movement/survivalfly
+execute if score DataHolder ncmcm_MVMNF matches 1 run function ncm:checks/movement/nofall
 execute if score DataHolder ncmcm_INVAP matches 1 run function ncm:checks/inventory/appropriate
 execute if score DataHolder ncmcm_NETUP matches 1 run function ncm:checks/net/unfittingpacket
 execute if score DataHolder ncmcm_NETAP matches 1 run function ncm:checks/net/appropriate

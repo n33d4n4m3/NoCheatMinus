@@ -169,6 +169,11 @@ execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. ru
 
 
 
+
+
+
+
+
 # --------------------
 # Subcheck: LostGround
 # --------------------

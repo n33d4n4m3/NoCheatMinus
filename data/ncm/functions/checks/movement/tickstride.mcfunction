@@ -87,6 +87,8 @@ execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighLog >= DataHolder ncmc_ts_31 run scoreboard players operation @s ncmTSInternalLogOnlyFailsResetTimer = DataHolder ncmc_ts_35
 execute as @a if score @s ncmTSInternalLogOnlyFailsResetTimer matches 0 run scoreboard players set @s ncmTSInternalLogOnlyFails 0
 
+execute as @e[type=minecraft:player] if score DataHolder ncmc_ts_39 matches 1 unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 run scoreboard players operation @s ncmTSInternalLogOnlyFails = DataHolder ncmc_ts_34
+
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTSInternalLogOnlyFails >= DataHolder ncmc_ts_34 run scoreboard players set @s ncmFailedMVMTS 1
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTSInternalLogOnlyFails >= DataHolder ncmc_ts_34 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"TickStride","color":"light_purple"},{"text":" {...}","color":"gray"}]
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTSInternalLogOnlyFails >= DataHolder ncmc_ts_34 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"TickStride","color":"light_purple"},{"text":" {...}","color":"gray"}]
@@ -94,6 +96,7 @@ execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout 
 
 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
+
 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighLog >= DataHolder ncmc_ts_31 run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 run scoreboard players set @s ncmTimesStrideTooHighCancel 0

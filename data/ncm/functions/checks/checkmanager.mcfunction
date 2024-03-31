@@ -40,6 +40,12 @@ execute if score DataHolder ncmcm_toggle_MVMTS matches 2 run scoreboard players 
 
 execute if score DataHolder ncmcm_toggle_MVMTS matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMTS 0
 
+# Enable Movement.NoFall
+execute if score DataHolder ncmcm_toggle_MVMNF matches 1 run scoreboard players set DataHolder ncmcm_MVMNF 1
+# Disable Movement.NoFall
+execute if score DataHolder ncmcm_toggle_MVMNF matches 2 run scoreboard players set DataHolder ncmcm_MVMNF 0
+
+execute if score DataHolder ncmcm_toggle_MVMNF matches 1.. run scoreboard players set DataHolder ncmcm_toggle_MVMNF 0
 
 # Enable Fight.Criticals
 execute if score DataHolder ncmcm_toggle_FCR matches 1 run scoreboard players set DataHolder ncmcm_FCR 1

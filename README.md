@@ -28,6 +28,7 @@
 | Net.Appropriate | NCM checks if the DeathTime-NBT-Data of the player is appropriate (GodMode patch) and if the player respawns too fast (InstantRespawn). |
 | Movement.TickStride | NCM evaluates player movement events based on distance and logs or cancels events if the configured thresholds are exceeded, aiming to maintain gameplay integrity and prevent unintended movement exploits. |
 | Movement.SurvivalFly | NCM monitors the vertical motion of the player, the off-ground-behavior, unexpected movements, the player's gravity, and lost-ground-situations. |
+| Movement.NoFall | When the player touches the ground, NCM will start calculating the estimated fall damage, depending on the current health and the fall distance. If the taken fall damage differs from the calculated fall damage, this check fails. |
 | Fight.Criticals | When a player makes a critical hit, this check verifies that the hit was made under legitimate conditions. |
 | Fight.Reach | NCM checks if the player has hit an entity that is out of his legitimate range. |
 | Combined.BedLeave | NCM checks if the player sends BedLeave packets without being in a bed first. The small teleport after leaving a bed can be used by players with a cheat client for flying or speeding. |

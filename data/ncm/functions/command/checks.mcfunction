@@ -54,6 +54,9 @@ execute as @a if score @s ncmChecks matches 27 run scoreboard players set DataHo
 execute as @a if score @s ncmChecks matches 28 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 2
 execute as @a if score @s ncmChecks matches 29 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
 
+execute as @a if score @s ncmChecks matches 30 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 2
+execute as @a if score @s ncmChecks matches 31 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 1
+
 execute as @a if score @s ncmChecks matches 2.. run function ncm:checks/checkmanager
 
 
@@ -71,6 +74,9 @@ execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMSF 
 
 execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMTS matches 1 run tellraw @s ["","    -> ",{"text":"TickStride [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 28"}}]
 execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMTS matches 0 run tellraw @s ["","    -> ",{"text":"TickStride [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 29"}}]
+
+execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMNF matches 1 run tellraw @s ["","    -> ",{"text":"NoFall [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 30"}}]
+execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMNF matches 0 run tellraw @s ["","    -> ",{"text":"NoFall [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 31"}}]
 
 execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Net","bold":true}
 
