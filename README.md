@@ -1,7 +1,8 @@
 # NoCheatMinus
  This is a recode/port of an "Commandblock"-AntiCheat in Vanilla Minecraft, that existed back in 2016, as a Datapack for Minecraft 1.20+. Its purpose is the detection of generic game modifications by checking and tracking movement, fight and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
- - You can view a demonstration [here](https://www.youtube.com/watch?v=2KCD2lIC0bc).
- - If you have questions, suggestions, or feedback, join our Discord server [here](https://discord.gg/n7yT4MnbmR).
+ - Visit the NoCheatMinus Test Server: **test.nocheatminus.org**
+ - You can view an (outdated) demonstration [here](https://www.youtube.com/watch?v=2KCD2lIC0bc).
+ - If you have questions, suggestions, or feedback, join our Discord server [here](https://discord.gg/PrW5FH25nn).
 
 ## Setup
 0. First, you need to install the latest version of *VanillaEvents* in your world. *VanillaEvents* is installed in the same way as NoCheatMinus and can be downloaded [here](https://github.com/n33d4n4m3/VanillaEvents).
