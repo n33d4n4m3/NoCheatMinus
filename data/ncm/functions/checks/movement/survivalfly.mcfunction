@@ -141,13 +141,42 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 lava run scorebo
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 lava run scoreboard players set @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 lava run scoreboard players set @s ncmLiquidNearby 1
 
-
-
-
-
-
 execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 1.. run scoreboard players add @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. run scoreboard players set @s ncmLiquidNearby 0
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 10.. run scoreboard players set @s ncmLadderNearby 0
+
+
+
 
 
 
@@ -195,7 +224,7 @@ execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_
 
 execute as @a if score @s ncmFPDecent matches 1.. run scoreboard players add @s ncmFPDecent 1
 execute as @a if score @s ncmOGJump matches 1.. run scoreboard players add @s ncmOGJump 1
-execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless score @s ncmFPDecent matches 1.. unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmDecent matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players add @s ncmOffGrTicks 1
+execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless score @s ncmFPDecent matches 1.. unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmDecent matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 run scoreboard players add @s ncmOffGrTicks 1
 execute as @a if score @s ncmOGJump >= DataHolder ncmc_sf_og_3 run scoreboard players set @s ncmOGJump 0
 execute as @a if score @s ncmOffGrTicks matches 1.. run scoreboard players add @s ncmOffGrTicksC 1
 execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players set @s ncmFailedMVMSF 1
@@ -250,7 +279,7 @@ execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc
 
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players set @s ncmMaintainRC 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] run scoreboard players add @s ncmYSpMaintainRC 1
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
 execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run scoreboard players operation @s ncmLastYSpeed = @s ncmYSpeed
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0

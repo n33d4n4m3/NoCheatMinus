@@ -115,6 +115,34 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 hay_block run sc
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1

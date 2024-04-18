@@ -660,6 +660,7 @@ scoreboard objectives add ncmLevitate dummy
 scoreboard objectives add ncmAngryIGNearby dummy
 scoreboard objectives add ncmCobwebNearby dummy
 scoreboard objectives add ncmLiquidNearby dummy
+scoreboard objectives add ncmLadderNearby dummy
 scoreboard objectives add ncmDecent dummy
 scoreboard objectives add ncmMaintain dummy
 scoreboard objectives add ncmClimb dummy

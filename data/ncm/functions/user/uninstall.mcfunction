@@ -1368,6 +1368,7 @@ scoreboard objectives remove ncmTSInternalLogOnlyFails
 scoreboard objectives remove ncmTSInternalLogOnlyFailsResetTimer
 scoreboard objectives remove ncmConsume
 scoreboard objectives remove ncmConsumeC
+scoreboard objectives remove ncmLadderNearby
 
 
 
