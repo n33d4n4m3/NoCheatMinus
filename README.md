@@ -4,6 +4,9 @@
  - You can view an (outdated) demonstration [here](https://www.youtube.com/watch?v=2KCD2lIC0bc).
  - If you have questions, suggestions, or feedback, join our Discord server [here](https://discord.gg/PrW5FH25nn).
 
+## Development Pause Notice
+Please note that active development of this project will be paused on my part (n33d4n4m3) until November 2024. Even though development is on hold, I warmly welcome contributions. If you have ideas, improvements, or bug fixes, feel free to submit a pull request or an issue.
+
 ## Setup
 0. First, you need to install the latest version of *VanillaEvents* in your world. *VanillaEvents* is installed in the same way as NoCheatMinus and can be downloaded [here](https://github.com/n33d4n4m3/VanillaEvents).
 1. Download the NoCheatMinus project as a .zip file, un-zip it and place the folder (which contains the "data"-folder) in your world's datapack folder.
