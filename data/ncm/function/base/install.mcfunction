@@ -32,23 +32,10 @@ scoreboard objectives add ncmOperator dummy
 scoreboard objectives add ncmInputR dummy
 
 
-scoreboard objectives add ncmMainVersion dummy
-scoreboard objectives add ncmSubVersion dummy
-scoreboard objectives add ncmRevVersion dummy
+scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmMainVersion 0
-scoreboard players set DataHolder ncmSubVersion 0
-scoreboard players set DataHolder ncmRevVersion 0
+scoreboard players set DataHolder ncmBuildNumber 100
 
-scoreboard objectives add ncmIsSnapshot dummy
-scoreboard objectives add ncmYear dummy
-scoreboard objectives add ncmWeek dummy
-scoreboard objectives add ncmChar dummy
-
-scoreboard players set DataHolder ncmIsSnapshot 1
-scoreboard players set DataHolder ncmYear 21
-scoreboard players set DataHolder ncmWeek 45
-scoreboard players set DataHolder ncmChar 1
 
 scoreboard objectives add ncm.100 dummy
 scoreboard players set DataHolder ncm.100 100
@@ -783,26 +770,7 @@ scoreboard players set DataHolder ncmCC 1
 # Send install notfication
 
 
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 0 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus v"},{"score":{"name":"DataHolder","objective":"ncmMainVersion"}},{"text":".","color":"white"},{"score":{"name":"DataHolder","objective":"ncmSubVersion"}},{"text":"."},{"score":{"name":"DataHolder","objective":"ncmRevVersion"}},{"text":" has been installed/updated successfully."}]
-
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 1 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"a","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 2 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"b","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 3 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"c","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 4 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"d","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 5 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"e","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 6 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"f","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 7 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"g","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 8 if score DataHolder ncmWeek matches 10.. run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"h","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 1 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"a","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 2 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"b","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 3 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"c","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 4 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"d","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 5 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"e","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 6 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"f","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 7 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"g","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-execute as @e[type=minecraft:player] if score DataHolder ncmIsSnapshot matches 1 if score DataHolder ncmChar matches 8 if score DataHolder ncmWeek matches 1..9 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Snapshot "},{"score":{"name":"DataHolder","objective":"ncmYear"}},{"text":"w0","color":"white"},{"score":{"name":"DataHolder","objective":"ncmWeek"}},{"text":"h","color":"white"},{"text":" has been installed/updated successfully.","color":"white"}]
-
+tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"NoCheatMinus Build "},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"}},{"text":" has been installed/updated successfully."}]
 # First install actions
 
 # Auto-enable checks
