@@ -36,7 +36,7 @@ execute unless score @s ncmFCCFall matches 1.. run scoreboard players add @s ncm
 execute if predicate ncm:is_sprinting run scoreboard players add @s ncmFCCMissingReq 1
 
 # Did the player have a blindness status effect when he made a critical hit?
-execute if entity @s[nbt={ActiveEffects:[{Id:15b}]}] run scoreboard players add @s ncmFCCMissingReq 1
+execute if predicate ncm:has_blindness_effect run scoreboard players add @s ncmFCCMissingReq 1
 
 # Was the player onground when he made the critical hit?
 execute if entity @s[nbt={OnGround:1b}] run scoreboard players add @s ncmFCCMissingReq 1

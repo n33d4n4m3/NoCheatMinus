@@ -109,6 +109,9 @@ scoreboard objectives add ncmPLNotifyC dummy
 # Command: checks
 scoreboard objectives add ncmChecks trigger
 
+# Command: help
+scoreboard objectives add ncmHelp trigger
+
 
 
 
@@ -163,6 +166,7 @@ scoreboard objectives add ncmFailedFCC dummy
 scoreboard objectives add ncmFailedFRNG dummy
 scoreboard objectives add ncmFailedINVAP dummy
 scoreboard objectives add ncmFailedMVMSF dummy
+scoreboard objectives add ncmFailedMVMNF dummy
 scoreboard objectives add ncmFailedNETAP dummy
 scoreboard objectives add ncmFailedNETUP dummy
 scoreboard objectives add ncmFailedCMnchsn dummy
@@ -776,8 +780,6 @@ scoreboard objectives add ncmConsumeC dummy
 
 # Load up default config
 scoreboard players set DataHolder ncmCC 1
-scoreboard players set DataHolder ncmAddObj 1
-
 # Send install notfication
 
 
@@ -818,6 +820,6 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FWT 1
-execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
+execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

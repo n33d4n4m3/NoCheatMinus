@@ -20,7 +20,6 @@
 # ...
 
 
-execute as @a store result score @s ncmYMotionBed run data get entity @s Motion[1] 1000000
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 execute as @a if score @s ncmBlocksPlaced matches 1.. run scoreboard players add @s ncmBlocksPlacedC 1

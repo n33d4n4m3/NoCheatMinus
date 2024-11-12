@@ -38,7 +38,7 @@ execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearb
 # Aviate / Levitate FP fix
 
 
-execute as @e[type=minecraft:player,nbt={ActiveEffects:[{Id:25}]}] run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
+execute as @e[type=minecraft:player] if predicate ncm:has_levitation_effect run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
 execute as @e[type=minecraft:player] if score @s ncmLevitate matches 1.. run scoreboard players remove @s ncmLevitate 1
 
 execute as @e[type=minecraft:player] if score @s ncmAviate matches 1.. run scoreboard players add @s ncmAviateRC 1

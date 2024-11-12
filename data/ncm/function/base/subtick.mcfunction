@@ -25,9 +25,6 @@ function ncm:command/checks
 
 
 # Running system routines
-function ncm:identification/uuid
-
-function ncm:identification/fightid
 
 function ncm:evaluation/reputation
 

@@ -17,7 +17,7 @@
 # Author:       n33d4n4m3
 # ...
 
-execute as @a if score @s ncmOperator matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You are now a NoCheatMinus operator and have access to commands with the 'ncm'-prefix. Execute ","clickEvent":{"action":"run_command","value":"scoreboard players set @s ncmChecks 2"}},{"text":"/trigger ncmHelp","clickEvent":{"action":"run_command","value":"/trigger ncmHelp"},"hoverEvent":{"action":"show_text","contents":["/trigger ncmHelp"]}}," to get an overview of what you can do."]
+execute as @a if score @s ncmOperator matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You are now a NoCheatMinus operator and have access to commands with the 'ncm'-prefix. Execute ","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}},{"text":"/trigger ncmHelp","clickEvent":{"action":"run_command","value":"/trigger ncmHelp"},"hoverEvent":{"action":"show_text","contents":["/trigger ncmHelp"]}}," to get an overview of what you can do."]
 execute as @a if score @s ncmOperator matches 1 run trigger ncmInput set 2
 execute as @a if score @s ncmOperator matches 1 run scoreboard players set @s ncmOperator 2
 
