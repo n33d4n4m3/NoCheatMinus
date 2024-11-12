@@ -60,10 +60,13 @@ execute as @e[type=minecraft:player] if score @s ncmLowerRepClDwn >= DataHolder 
 # Monitor reputation / propability level limits
 
 
-execute as @e[type=minecraft:player] if score @s ncmRep > DataHolder ncmc_bs_rp_4 run scoreboard players set @s ncmPL 0
-execute as @e[type=minecraft:player] if score @s ncmRep <= DataHolder ncmc_bs_rp_4 if score @s ncmRep > DataHolder ncmc_bs_rp_5 if score @s ncmRep > DataHolder ncmc_bs_rp_6 run scoreboard players set @s ncmPL 1
+execute as @e[type=minecraft:player] if score @s ncmRep > DataHolder ncmc_bs_rp_5 run scoreboard players set @s ncmPL 0
 execute as @e[type=minecraft:player] if score @s ncmRep <= DataHolder ncmc_bs_rp_5 if score @s ncmRep > DataHolder ncmc_bs_rp_6 run scoreboard players set @s ncmPL 2
 execute as @e[type=minecraft:player] if score @s ncmRep <= DataHolder ncmc_bs_rp_6 run scoreboard players set @s ncmPL 3
 
 
-# Notification
+# Verbose
+execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},": ","Verbose logging is now enabled for player ",{"selector":"@a[scores={ncmVerbose=1}]"},"."]
+execute as @a if score @s ncmVerbose matches 1 run scoreboard players set @s ncmVerbose 2
+execute as @a if score @s ncmVerbose matches 0 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},": ","Verbose logging is now disabled for player ",{"selector":"@a[scores={ncmVerbose=0}]"},"."]
+execute as @a if score @s ncmVerbose matches 0 run scoreboard players set @s ncmVerbose -1

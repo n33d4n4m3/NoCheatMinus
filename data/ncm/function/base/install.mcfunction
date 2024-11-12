@@ -139,6 +139,7 @@ scoreboard objectives add ncmPLSuspectHLCT dummy
 scoreboard objectives add ncmPLObserveT dummy
 scoreboard objectives add ncmPLHighT dummy
 
+scoreboard objectives add ncmVerbose dummy
 
 
 
@@ -232,11 +233,9 @@ scoreboard objectives add ncmc_bs_rp_1 dummy
 scoreboard objectives add ncmc_bs_rp_2 dummy
 # Hightest reputation 100
 scoreboard objectives add ncmc_bs_rp_3 dummy
-# Reputation limit for probability level "Suspect/HLC" -250
-scoreboard objectives add ncmc_bs_rp_4 dummy
-# Reputation limit for probability level "Observe" -350
+# Reputation limit for detection level "Observe" -200
 scoreboard objectives add ncmc_bs_rp_5 dummy
-# Reputation limit for probability level "High" -450
+# Reputation limit for detection level "High" -350
 scoreboard objectives add ncmc_bs_rp_6 dummy
 
 # Maximum reputation gain (ncmc_bs_rp_7 / 50) in (ncmc_bs_rp_8 / 3600) ticks
@@ -343,9 +342,9 @@ scoreboard objectives add ncmc_bs_fl_40 dummy
 # Movement.TickStride
 # Reputation loss for failing Movement.TickStride (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_41 dummy
-# Reputation loss for failing Movement.TickStride (Suspect) 0
+# Reputation loss for failing Movement.TickStride (Suspect) 3
 scoreboard objectives add ncmc_bs_fl_42 dummy
-# Reputation loss for failing Movement.TickStride (Rage) 0
+# Reputation loss for failing Movement.TickStride (Rage) 5
 scoreboard objectives add ncmc_bs_fl_43 dummy
 
 # Movement.NoFall

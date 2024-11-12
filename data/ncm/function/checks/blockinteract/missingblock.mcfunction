@@ -92,7 +92,7 @@ execute as @a if score @s ncmBIMBFire matches 1 if score @s ncmBIMBLastF_y = @s 
 
 
 execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 run scoreboard players set @s ncmFailedBIMB 5
-execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 run tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
 execute as @a if score @s ncmBIMBFire matches 1 unless score @s ncmBIMBxyzEqual matches 3 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockInteract","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"MissingBlock","color":"light_purple"},{"text":" {...}","color":"gray"}]
 
 

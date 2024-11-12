@@ -24,7 +24,7 @@
 execute unless score DataHolder ncmcm_COMMUN matches 1 run advancement revoke @s only ncm:player_fished_himself
 execute unless score DataHolder ncmcm_COMMUN matches 1 run return 0
 scoreboard players set @s ncmFailedCMnchsn 1
-tellraw @s[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Munchhausen","color":"light_purple"}]
+execute if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Munchhausen","color":"light_purple"}]
 tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Munchhausen","color":"light_purple"}]
 # If the player has fished himself, put him back to the position where he was onground.
 function ncm:base/cancel_offgroundmovement
