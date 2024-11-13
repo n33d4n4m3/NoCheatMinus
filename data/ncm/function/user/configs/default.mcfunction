@@ -107,7 +107,7 @@ scoreboard players set DataHolder ncmc_ts_1 23
 scoreboard players set DataHolder ncmc_ts_2 50
 scoreboard players set DataHolder ncmc_ts_3 29
 scoreboard players set DataHolder ncmc_ts_4 60
-scoreboard players set DataHolder ncmc_ts_5 10
+scoreboard players set DataHolder ncmc_ts_5 12
 scoreboard players set DataHolder ncmc_ts_6 20
 scoreboard players set DataHolder ncmc_ts_9 16
 scoreboard players set DataHolder ncmc_ts_10 24
