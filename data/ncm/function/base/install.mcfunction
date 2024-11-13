@@ -660,7 +660,7 @@ scoreboard objectives add ncmDecent dummy
 scoreboard objectives add ncmMaintain dummy
 scoreboard objectives add ncmClimb dummy
 scoreboard objectives add ncmFPDecent dummy
-
+scoreboard objectives add ncmFPDamage minecraft.custom:minecraft.damage_taken
 
 # SurvivalFly (Distance)
 scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game

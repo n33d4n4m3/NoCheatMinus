@@ -1376,7 +1376,7 @@ scoreboard objectives remove ncmVerbose
 scoreboard objectives remove ncmHelp
 scoreboard objectives remove ncmFailedMVMNF
 scoreboard objectives remove ncmBuildNumber
-
+scoreboard objectives remove ncmFPDamage
 
 
 
