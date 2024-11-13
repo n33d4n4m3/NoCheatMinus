@@ -248,7 +248,16 @@ execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
 
+# ------------------------
+# Subcheck: SprintFL
+# ------------------------
 
+execute as @a store result score @s ncmFoodLevel run data get entity @s foodLevel
+execute as @a if score @s ncmFoodLevel matches ..6 unless score @s ncmFoodLevelGraceT matches 30 run scoreboard players add @s ncmFoodLevelGraceT 1
+execute as @a if score @s ncmFoodLevel matches 7.. run scoreboard players reset @s ncmFoodLevelGraceT
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
 
 
 # ---------------------------

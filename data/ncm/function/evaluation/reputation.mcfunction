@@ -70,3 +70,12 @@ execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmInputR=
 execute as @a if score @s ncmVerbose matches 1 run scoreboard players set @s ncmVerbose 2
 execute as @a if score @s ncmVerbose matches 0 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},": ","Verbose logging is now disabled for player ",{"selector":"@a[scores={ncmVerbose=0}]"},"."]
 execute as @a if score @s ncmVerbose matches 0 run scoreboard players set @s ncmVerbose -1
+
+# Statistics
+
+execute as @a if score @s ncmStatistics matches 1 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"===========================","color":"yellow"},"\n","NoCheatMinus Statistics","\n",{"text":"===========================","color":"yellow"},"\n","\n",{"text":"Player","color":"yellow"},": ",{"selector":"@s"}]
+execute as @a if score @s ncmStatistics matches 1 if score @s ncmRep > DataHolder ncmc_bs_rp_5 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Reputation","color":"yellow"},": ","\n",{"score":{"name":"@s","objective":"ncmRep"},"color":"green"},{"text":" ✓","color":"green"}]
+execute as @a if score @s ncmStatistics matches 1 if score @s ncmRep <= DataHolder ncmc_bs_rp_5 unless score @s ncmRep <= DataHolder ncmc_bs_rp_6 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Reputation","color":"yellow"},": ",{"score":{"name":"@s","objective":"ncmRep"},"color":"gold"},{"text":" ❗OBSERVE❗","color":"gold"}]
+execute as @a if score @s ncmStatistics matches 1 if score @s ncmRep <= DataHolder ncmc_bs_rp_6 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Reputation","color":"yellow"},": ",{"score":{"name":"@s","objective":"ncmRep"},"color":"red"},{"text":" ❗SUSPICIOUS❗","color":"red"}]
+
+execute as @a if score @s ncmStatistics matches 1 run scoreboard players set @s ncmStatistics 0

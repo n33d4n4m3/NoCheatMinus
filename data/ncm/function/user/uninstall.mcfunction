@@ -1369,6 +1369,15 @@ scoreboard objectives remove ncmTSInternalLogOnlyFailsResetTimer
 scoreboard objectives remove ncmConsume
 scoreboard objectives remove ncmConsumeC
 scoreboard objectives remove ncmLadderNearby
+scoreboard objectives remove ncmStatistics
+scoreboard objectives remove ncmFoodLevel
+scoreboard objectives remove ncmFoodLevelGraceT
+scoreboard objectives remove ncmVerbose
+scoreboard objectives remove ncmHelp
+scoreboard objectives remove ncmFailedMVMNF
+scoreboard objectives remove ncmBuildNumber
+
+
 
 
 

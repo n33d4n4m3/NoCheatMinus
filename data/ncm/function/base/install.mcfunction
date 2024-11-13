@@ -177,6 +177,11 @@ scoreboard objectives add ncmPassedNETUP dummy
 scoreboard objectives add ncmRepRegCounter minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmRepRegTotal dummy
 
+# --------------------
+# Statistics
+# --------------------
+scoreboard objectives add ncmStatistics dummy
+
 
 # --------------------
 # Check Manager
@@ -697,6 +702,10 @@ scoreboard objectives add ncmYMotionM dummy
 
 # SurvivalFly (MonitorMotionZ)
 scoreboard objectives add ncmZMotionM dummy
+
+# SurvivalFly (SprintFL)
+scoreboard objectives add ncmFoodLevel dummy
+scoreboard objectives add ncmFoodLevelGraceT dummy
 
 # NoFall
 scoreboard objectives add ncmMVMNFApplyFDmg dummy
