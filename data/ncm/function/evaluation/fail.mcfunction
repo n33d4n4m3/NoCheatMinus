@@ -37,7 +37,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 5..8 run s
 execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_30
 execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1.. run scoreboard players set @s ncmFailedFCC 0
 
-# Fight.Criticals
+# Fight.Reach
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_31
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_32
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_33
@@ -86,3 +86,15 @@ execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 1..4 ru
 execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_39
 execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_40
 execute as @e[type=minecraft:player] if score @s ncmFailedCBedLv matches 1.. run scoreboard players set @s ncmFailedCBedLv 0
+
+# Movement.NoFall
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMNF matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_44
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMNF matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_45
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMNF matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_46
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMNF matches 1.. run scoreboard players set @s ncmFailedMVMNF 0
+
+# Fight.WrongTurn
+execute as @e[type=minecraft:player] if score @s ncmFailedFWT matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_47
+execute as @e[type=minecraft:player] if score @s ncmFailedFWT matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_48
+execute as @e[type=minecraft:player] if score @s ncmFailedFWT matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_49
+execute as @e[type=minecraft:player] if score @s ncmFailedFWT matches 1.. run scoreboard players set @s ncmFailedFWT 0
