@@ -43,6 +43,7 @@ execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboar
 execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmTSInternalLogOnlyFails 0
 
+
 # Movement State 1 -> WALKING
 execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] unless score @s ncmTSTransitionTimeout matches 1.. unless score @s ncmTSIceTimeout matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s VE.PlayerMoveEvent.distanceHorizontal > DataHolder ncmc_ts_1 run scoreboard players add @s ncmTimesStrideTooHighLog 1
 execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s VE.PlayerMoveEvent.distanceHorizontal <= DataHolder ncmc_ts_1 run scoreboard players set @s ncmTimesStrideTooHighLog 0

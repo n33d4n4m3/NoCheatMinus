@@ -257,75 +257,75 @@ scoreboard objectives add ncmc_bs_rp_11 dummy
 
 
 # Pass
-# Regeneration of (ncmc_bs_ps_1 / 1) reputation every (ncmc_bs_ps_2 / 600) ticks
+# Regeneration of (ncmc_bs_ps_1 / 1) reputation every (ncmc_bs_ps_2 / 1200) ticks
 scoreboard objectives add ncmc_bs_ps_1 dummy
 scoreboard objectives add ncmc_bs_ps_2 dummy
 
 # Fail
 # BlockInteract.MissingBlock
-# Reputation loss for failing BlockInteract.MissingBlock (Common/HLC) 1
+# Reputation loss for failing BlockInteract.MissingBlock (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_1 dummy
-# Reputation loss for failing BlockInteract.MissingBlock (Suspect) 10
+# Reputation loss for failing BlockInteract.MissingBlock (Suspect) 0
 scoreboard objectives add ncmc_bs_fl_2 dummy
-# Reputation loss for failing BlockInteract.MissingBlock (Rage) 100
+# Reputation loss for failing BlockInteract.MissingBlock (Rage) 0
 scoreboard objectives add ncmc_bs_fl_3 dummy
 
 # BlockPlace.Appropriate
-# Reputation loss for failing BlockPlace.Appropriate (Common/HLC) 1
+# Reputation loss for failing BlockPlace.Appropriate (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_4 dummy
-# Reputation loss for failing BlockPlace.Appropriate (Suspect) 10
+# Reputation loss for failing BlockPlace.Appropriate (Suspect) 0
 scoreboard objectives add ncmc_bs_fl_5 dummy
-# Reputation loss for failing BlockPlace.Appropriate (Rage) 100
+# Reputation loss for failing BlockPlace.Appropriate (Rage) 0
 scoreboard objectives add ncmc_bs_fl_6 dummy
 
 # Fight.Criticals
-# Reputation loss for failing Fight.Criticals (Common/HLC) 15
+# Reputation loss for failing Fight.Criticals (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_28 dummy
-# Reputation loss for failing Fight.Criticals (Suspect) 100
+# Reputation loss for failing Fight.Criticals (Suspect) 30
 scoreboard objectives add ncmc_bs_fl_29 dummy
-# Reputation loss for failing Fight.Criticals (Rage) 150
+# Reputation loss for failing Fight.Criticals (Rage) 50
 scoreboard objectives add ncmc_bs_fl_30 dummy
 
 # Fight.Reach
-# Reputation loss for failing Fight.Reach (Common/HLC) 15
+# Reputation loss for failing Fight.Reach (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_31 dummy
-# Reputation loss for failing Fight.Reach (Suspect) 100
+# Reputation loss for failing Fight.Reach (Suspect) 20
 scoreboard objectives add ncmc_bs_fl_32 dummy
-# Reputation loss for failing Fight.Reach (Rage) 150
+# Reputation loss for failing Fight.Reach (Rage) 30
 scoreboard objectives add ncmc_bs_fl_33 dummy
 
 # Inventory.Appropriate
-# Reputation loss for failing Inventory.Appropriate (Common/HLC) 1
+# Reputation loss for failing Inventory.Appropriate (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_13 dummy
-# Reputation loss for failing Inventory.Appropriate (Suspect) 10
+# Reputation loss for failing Inventory.Appropriate (Suspect) 0
 scoreboard objectives add ncmc_bs_fl_14 dummy
-# Reputation loss for failing Inventory.Appropriate (Rage) 100
+# Reputation loss for failing Inventory.Appropriate (Rage) 0
 scoreboard objectives add ncmc_bs_fl_15 dummy
 
 # Movement.SurvivalFly
 # Reputation loss for failing Movement.SurvivalFly (Common/HLC) 1
 scoreboard objectives add ncmc_bs_fl_19 dummy
-# Reputation loss for failing Movement.SurvivalFly (Suspect) 10
+# Reputation loss for failing Movement.SurvivalFly (Suspect) 5
 scoreboard objectives add ncmc_bs_fl_20 dummy
-# Reputation loss for failing Movement.SurvivalFly (Rage) 100
+# Reputation loss for failing Movement.SurvivalFly (Rage) 10
 scoreboard objectives add ncmc_bs_fl_21 dummy
 # Penalize failed checks by resetting? 1
 scoreboard objectives add ncmc_bs_fl_34 dummy
 
 # Network.Appropriate
-# Reputation loss for failing Network.Appropriate (Common/HLC) 1
+# Reputation loss for failing Network.Appropriate (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_22 dummy
 # Reputation loss for failing Network.Appropriate (Suspect) 10
 scoreboard objectives add ncmc_bs_fl_23 dummy
-# Reputation loss for failing Network.Appropriate (Rage) 100
+# Reputation loss for failing Network.Appropriate (Rage) 20
 scoreboard objectives add ncmc_bs_fl_24 dummy
 
 # Network.UnfittingPacket
-# Reputation loss for failing Network.UnfittingPacket (Common/HLC) 1
+# Reputation loss for failing Network.UnfittingPacket (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_25 dummy
-# Reputation loss for failing Network.UnfittingPacket (Suspect) 10
+# Reputation loss for failing Network.UnfittingPacket (Suspect) 0
 scoreboard objectives add ncmc_bs_fl_26 dummy
-# Reputation loss for failing Network.UnfittingPacket (Rage) 100
+# Reputation loss for failing Network.UnfittingPacket (Rage) 0
 scoreboard objectives add ncmc_bs_fl_27 dummy
 
 # Combined.Munchhausen
@@ -347,17 +347,17 @@ scoreboard objectives add ncmc_bs_fl_40 dummy
 # Movement.TickStride
 # Reputation loss for failing Movement.TickStride (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_41 dummy
-# Reputation loss for failing Movement.TickStride (Suspect) 3
+# Reputation loss for failing Movement.TickStride (Suspect) 5
 scoreboard objectives add ncmc_bs_fl_42 dummy
-# Reputation loss for failing Movement.TickStride (Rage) 5
+# Reputation loss for failing Movement.TickStride (Rage) 10
 scoreboard objectives add ncmc_bs_fl_43 dummy
 
 # Movement.NoFall
 # Reputation loss for failing Movement.NoFall (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_44 dummy
-# Reputation loss for failing Movement.NoFall (Suspect) 0
+# Reputation loss for failing Movement.NoFall (Suspect) 10
 scoreboard objectives add ncmc_bs_fl_45 dummy
-# Reputation loss for failing Movement.NoFall (Rage) 0
+# Reputation loss for failing Movement.NoFall (Rage) 20
 scoreboard objectives add ncmc_bs_fl_46 dummy
 
 # Fight.WrongTurn
