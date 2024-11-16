@@ -1377,6 +1377,7 @@ scoreboard objectives remove ncmHelp
 scoreboard objectives remove ncmFailedMVMNF
 scoreboard objectives remove ncmBuildNumber
 scoreboard objectives remove ncmFPDamage
+scoreboard objectives remove ncmSFClimbAviateGrace dummy
 
 
 

@@ -691,6 +691,7 @@ scoreboard objectives add ncmOGJumpR minecraft.custom:minecraft.jump
 
 # SurvivalFly (Climb)
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
+scoreboard objectives add ncmSFClimbAviateGrace dummy
 
 # SurvivalFly (MaintainClimbRate)
 scoreboard objectives add ncmMaintainY dummy

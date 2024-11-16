@@ -1,0 +1,8 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:fall_after_explosion"
+      }
+    }
+  }
+  

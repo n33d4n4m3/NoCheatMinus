@@ -173,8 +173,40 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 ladder run score
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
 
+
+
+# Slime block
+
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+
 execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 10.. run scoreboard players set @s ncmLadderNearby 0
+execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 30.. run scoreboard players set @s ncmLadderNearby 0
 
 
 
@@ -227,7 +259,7 @@ execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players add
 
 execute as @a if score @s ncmFPDecent matches 1.. run scoreboard players add @s ncmFPDecent 1
 execute as @a if score @s ncmOGJump matches 1.. run scoreboard players add @s ncmOGJump 1
-execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless entity @e[type=#minecraft:boat,distance=..2] unless entity @e[type=oak_chest_boat,distance=..2] unless entity @e[type=spruce_chest_boat,distance=..2] unless entity @e[type=cherry_chest_boat,distance=..2] unless entity @e[type=bamboo_chest_raft,distance=..2] unless entity @e[type=mangrove_chest_boat,distance=..2] unless entity @e[type=dark_oak_chest_boat,distance=..2] unless entity @e[type=acacia_chest_boat,distance=..2] unless entity @e[type=jungle_chest_boat,distance=..2] unless entity @e[type=birch_chest_boat,distance=..2] unless score @s ncmFPDecent matches 1.. unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmDecent matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 unless score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmOffGrTicks 1
+execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless entity @e[type=#minecraft:boat,distance=..2] unless entity @e[type=oak_chest_boat,distance=..2] unless entity @e[type=spruce_chest_boat,distance=..2] unless entity @e[type=cherry_chest_boat,distance=..2] unless entity @e[type=bamboo_chest_raft,distance=..2] unless entity @e[type=mangrove_chest_boat,distance=..2] unless entity @e[type=dark_oak_chest_boat,distance=..2] unless entity @e[type=acacia_chest_boat,distance=..2] unless entity @e[type=jungle_chest_boat,distance=..2] unless entity @e[type=birch_chest_boat,distance=..2] unless score @s ncmFPDecent matches 1.. unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmOGJump matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s ncmDecent matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmLadderNearby matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 unless score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmOffGrTicks 1
 execute as @a if score @s ncmOGJump >= DataHolder ncmc_sf_og_3 run scoreboard players set @s ncmOGJump 0
 execute as @a if score @s ncmOffGrTicks matches 1.. run scoreboard players add @s ncmOffGrTicksC 1
 execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players set @s ncmFailedMVMSF 5
@@ -246,10 +278,17 @@ execute as @a if score @s ncmFPDecent matches 10.. run scoreboard players set @s
 # ------------------------
 # Subcheck: Climb
 # ------------------------
-execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run scoreboard players set @s ncmFailedMVMSF 9
-execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
-execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s ncmClimb matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmBoat"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmClimb"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastPlayerY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmPlayerY"},"color":"gray"},{"text":", Boat}","color":"gray"}]
+
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 run scoreboard players set @s ncmFailedMVMSF 9
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Boat}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Boat}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
+
+execute as @e[type=minecraft:player] if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players add @s ncmSFClimbAviateGrace 1
+execute as @e[type=minecraft:player] unless score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmSFClimbAviateGrace 0
+execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 15.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 run scoreboard players set @s ncmFailedMVMSF 9
+execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 15.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Aviate}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 15.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Aviate}","color":"gray"}]
 
 # ------------------------
 # Subcheck: SprintFL
