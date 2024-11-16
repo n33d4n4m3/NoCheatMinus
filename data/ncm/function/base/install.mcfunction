@@ -512,10 +512,20 @@ scoreboard objectives add ncmc_ts_15 dummy
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 7 -> MINECART (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_16 dummy
 
-# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (100 = 1 Block) x
+# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_17 dummy
-# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (100 = 1 Block) x
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_18 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Water) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_40 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Water) (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_41 dummy
+
+# (Reputation loss only) Maximum stride length per tick for Movement State ? -> SPRINT JUMP (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_42 dummy
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State ? -> SPRINT JUMP (100 = 1 Block) x
+scoreboard objectives add ncmc_ts_43 dummy
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_19 dummy
