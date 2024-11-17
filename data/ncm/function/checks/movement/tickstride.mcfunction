@@ -42,6 +42,7 @@ execute as @a[nbt={active_effects:[{id:"minecraft:speed"}]}] run scoreboard play
 execute as @a[nbt={active_effects:[{id:"minecraft:speed"}]}] run scoreboard players set @s ncmTSInternalLogOnlyFails 0
 
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmTSLevitationTimeout 20
+execute as @a at @s if entity @e[type=wind_charge,distance=..9] run scoreboard players set @s ncmTSLevitationTimeout 20
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmTSInternalLogOnlyFails 0
