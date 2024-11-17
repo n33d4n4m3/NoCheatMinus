@@ -143,13 +143,13 @@ scoreboard players set DataHolder ncmc_sf_lg_2 10
 
 # SurvivalFly (OffGroundTicks)
 # Maxiumum off ground ticks to increase lvl 6
-scoreboard players set DataHolder ncmc_sf_og_1 6
+scoreboard players set DataHolder ncmc_sf_og_1 7
 
 # Ticks after the off ground ticks get resetted 10
 scoreboard players set DataHolder ncmc_sf_og_2 10
 
 # Jump FP cooldown 20
-scoreboard players set DataHolder ncmc_sf_og_3 30
+scoreboard players set DataHolder ncmc_sf_og_3 5
 
 # NoFall 269
 scoreboard players set DataHolder ncmc_nf_1 400

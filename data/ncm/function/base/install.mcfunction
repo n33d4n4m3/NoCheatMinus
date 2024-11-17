@@ -772,7 +772,7 @@ scoreboard objectives add ncmTSTransitionTimeout dummy
 scoreboard objectives add ncmTSResetTimer dummy
 scoreboard objectives add ncmTSInternalLogOnlyFails dummy
 scoreboard objectives add ncmTSInternalLogOnlyFailsResetTimer dummy
-
+scoreboard objectives add ncmTSLevitationTimeout dummy
 
 
 # --------------------------

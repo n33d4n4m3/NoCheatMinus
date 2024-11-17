@@ -36,6 +36,7 @@ scoreboard objectives remove ncmWeek
 scoreboard objectives remove ncmChar
 scoreboard objectives remove ncm.100
 scoreboard objectives remove ncm.-1
+scoreboard objectives remove ncmTSLevitationTimeout
 scoreboard objectives remove ncmPlayerHealth
 scoreboard objectives remove globalncmFightID
 scoreboard objectives remove ncmFightID
