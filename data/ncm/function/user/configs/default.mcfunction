@@ -44,10 +44,10 @@ scoreboard players set DataHolder ncmc_bs_fl_1 0
 scoreboard players set DataHolder ncmc_bs_fl_2 0
 scoreboard players set DataHolder ncmc_bs_fl_3 0
 
-# BlockPlace.Appropriate (0 / 0 / 0)
+# BlockPlace.Appropriate (0 / 10 / 20)
 scoreboard players set DataHolder ncmc_bs_fl_4 0
-scoreboard players set DataHolder ncmc_bs_fl_5 0
-scoreboard players set DataHolder ncmc_bs_fl_6 0
+scoreboard players set DataHolder ncmc_bs_fl_5 10
+scoreboard players set DataHolder ncmc_bs_fl_6 20
 
 # Fight.Criticals (0 / 30 / 50)
 scoreboard players set DataHolder ncmc_bs_fl_28 0
@@ -150,6 +150,13 @@ scoreboard players set DataHolder ncmc_sf_og_2 10
 
 # Jump FP cooldown 20
 scoreboard players set DataHolder ncmc_sf_og_3 5
+
+# SurvivalFly (JumpCount)
+# Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (1 / 10)
+scoreboard players set DataHolder ncmc_sf_jc_1 1
+scoreboard players set DataHolder ncmc_sf_jc_2 10
+
+
 
 # NoFall 269
 scoreboard players set DataHolder ncmc_nf_1 400

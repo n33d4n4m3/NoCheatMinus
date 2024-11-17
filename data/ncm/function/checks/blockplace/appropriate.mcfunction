@@ -22,6 +22,8 @@
 
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
+execute as @a[advancements={ncm:placed_block=true}] run scoreboard players add @s ncmBlocksPlaced 1
+execute as @a[advancements={ncm:placed_block=true}] run advancement revoke @s only ncm:placed_block
 execute as @a if score @s ncmBlocksPlaced matches 1.. run scoreboard players add @s ncmBlocksPlacedC 1
 execute as @a if score @s ncmBlocksPlaced >= DataHolder ncmc_ap_bp_1 run scoreboard players set @s ncmFailedBPAP 5
 execute as @a if score @s ncmBlocksPlaced >= DataHolder ncmc_ap_bp_1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"BlockPlace","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Appropriate","color":"light_purple"},{"text":"","color":"light_purple"},{"text":"","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_ap_bp_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_ap_bp_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmBlocksPlaced"},"color":"gray"},{"text":"}","color":"gray"}]

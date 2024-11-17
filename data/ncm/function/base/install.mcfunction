@@ -416,6 +416,11 @@ scoreboard objectives add ncmc_sf_og_2 dummy
 # Jump FP cooldown 20
 scoreboard objectives add ncmc_sf_og_3 dummy
 
+# SurvivalFly (JumpCount)
+# Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (1 / 10)
+scoreboard objectives add ncmc_sf_jc_1 dummy
+scoreboard objectives add ncmc_sf_jc_2 dummy
+
 # SurvivalFly (MonitorMotionX)
 # Failing horizontal (x) motion of the player 2
 scoreboard objectives add ncmc_sf_xm_1 dummy
@@ -692,6 +697,11 @@ scoreboard objectives add ncmOGJumpR minecraft.custom:minecraft.jump
 # SurvivalFly (Climb)
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
 scoreboard objectives add ncmSFClimbAviateGrace dummy
+
+# SurvivalFly (JumpCount)
+scoreboard objectives add ncmSFJC minecraft.custom:minecraft.jump
+scoreboard objectives add ncmSFJCCeilingGrace dummy
+scoreboard objectives add ncmSFJCRC dummy
 
 # SurvivalFly (MaintainClimbRate)
 scoreboard objectives add ncmMaintainY dummy

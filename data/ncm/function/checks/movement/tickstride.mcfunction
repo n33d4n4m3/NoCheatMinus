@@ -97,14 +97,6 @@ execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score @s ncmLiqui
 execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 if score @s VEGbl.thePlayer.currentMovementState matches 8 if score @s VE.PlayerMoveEvent.distanceHorizontal <= DataHolder ncmc_ts_41 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
 
-# Movement State ? -> SPRINT JUMP (Experimental)
-#execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] unless score @s ncmTSIceTimeout matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 unless score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s VE.PlayerMoveEvent.distance3D > DataHolder ncmc_ts_42 run scoreboard players add @s ncmTimesStrideTooHighLog 1
-#execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 unless score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s VE.PlayerMoveEvent.distance3D <= DataHolder ncmc_ts_42 run scoreboard players set @s ncmTimesStrideTooHighLog 0
-#execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] unless score @s ncmTSIceTimeout matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 unless score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s VE.PlayerMoveEvent.distance3D > DataHolder ncmc_ts_43 run scoreboard players add @s ncmTimesStrideTooHighCancel 1
-#execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s VE.PlayerMoveEvent.hasPositionChanged matches 1 unless score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s VE.PlayerMoveEvent.distance3D <= DataHolder ncmc_ts_43 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
-#execute as @e[type=minecraft:player,tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.distance3D > DataHolder ncmc_ts_42 run tellraw @a ["",{"score":{"name":"@s","objective":"VE.PlayerMoveEvent.distance3D"},"color":"green"},">",{"score":{"name":"@s","objective":"VEGbl.thePlayer.currentMovementState"},"color":"red"}]
-
-
 execute as @a if score @s ncmTimesStrideTooHighLog matches 1.. run scoreboard players operation @s ncmTSResetTimer = DataHolder ncmc_ts_33
 execute as @a if score @s ncmTimesStrideTooHighCancel matches 1.. run scoreboard players operation @s ncmTSResetTimer = DataHolder ncmc_ts_33
 

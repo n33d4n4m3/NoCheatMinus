@@ -40,6 +40,9 @@ scoreboard objectives remove ncmTSLevitationTimeout
 scoreboard objectives remove ncmPlayerHealth
 scoreboard objectives remove globalncmFightID
 scoreboard objectives remove ncmFightID
+scoreboard objectives remove ncmSFJC
+scoreboard objectives remove ncmSFJCCeilingGrace
+scoreboard objectives remove ncmSFJCRC
 scoreboard objectives remove ncm.5
 scoreboard objectives remove ncm.25
 scoreboard objectives remove ncmLastXOnGrd
@@ -97,6 +100,12 @@ scoreboard objectives remove ncmPassedNETAP
 scoreboard objectives remove ncmPassedNETUP
 scoreboard objectives remove ncmRepRegCounter
 scoreboard objectives remove ncmRepRegTotal
+scoreboard objectives remove ncmc_sf_jc_1
+scoreboard objectives remove ncmc_sf_jc_2
+scoreboard objectives remove ncmc_ts_41
+scoreboard objectives remove ncmc_ts_40
+scoreboard objectives remove ncmc_ts_43
+scoreboard objectives remove ncmc_ts_42
 scoreboard objectives remove ncmcm_toggle_BIMB
 scoreboard objectives remove ncmcm_BIMB
 scoreboard objectives remove ncmcm_toggle_BPMB
@@ -1378,7 +1387,7 @@ scoreboard objectives remove ncmHelp
 scoreboard objectives remove ncmFailedMVMNF
 scoreboard objectives remove ncmBuildNumber
 scoreboard objectives remove ncmFPDamage
-scoreboard objectives remove ncmSFClimbAviateGrace dummy
+scoreboard objectives remove ncmSFClimbAviateGrace
 
 
 
