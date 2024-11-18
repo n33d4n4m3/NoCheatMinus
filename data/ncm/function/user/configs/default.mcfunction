@@ -121,6 +121,9 @@ scoreboard players set DataHolder ncmc_ap_go_1 21
 # Cooldown after aviate / levitate 10
 scoreboard players set DataHolder ncmc_sf_fp_1 10
 
+# Cooldown after detecting player latency 60
+scoreboard players set DataHolder ncmc_sf_fp_2 60
+
 # SurvivalFly (ConstantClimbRate)
 # Ticks between first and second read (Y-Coord) 3
 scoreboard players set DataHolder ncmc_sf_cr_1 3
@@ -153,8 +156,8 @@ scoreboard players set DataHolder ncmc_sf_og_3 5
 
 # SurvivalFly (JumpCount)
 # Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (1 / 10)
-scoreboard players set DataHolder ncmc_sf_jc_1 1
-scoreboard players set DataHolder ncmc_sf_jc_2 10
+scoreboard players set DataHolder ncmc_sf_jc_1 2
+scoreboard players set DataHolder ncmc_sf_jc_2 19
 
 
 

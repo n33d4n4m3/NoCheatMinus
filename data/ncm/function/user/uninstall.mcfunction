@@ -40,6 +40,9 @@ scoreboard objectives remove ncmTSLevitationTimeout
 scoreboard objectives remove ncmPlayerHealth
 scoreboard objectives remove globalncmFightID
 scoreboard objectives remove ncmFightID
+scoreboard objectives remove ncmSFJCR
+scoreboard objectives remove ncmc_sf_fp_2
+scoreboard objectives remove ncmSFPlayerLatencyFP
 scoreboard objectives remove ncmSFJC
 scoreboard objectives remove ncmSFJCCeilingGrace
 scoreboard objectives remove ncmSFJCRC

@@ -388,6 +388,8 @@ scoreboard objectives add ncmc_ap_go_1 dummy
 # SurvivalFly (False Positives)
 # Cooldown after aviate / levitate 10
 scoreboard objectives add ncmc_sf_fp_1 dummy
+# Cooldown after detecting player latency 60
+scoreboard objectives add ncmc_sf_fp_2 dummy
 
 # SurvivalFly (Distance)
 # Maximum ivl value to increase lvl 1
@@ -676,6 +678,7 @@ scoreboard objectives add ncmMaintain dummy
 scoreboard objectives add ncmClimb dummy
 scoreboard objectives add ncmFPDecent dummy
 scoreboard objectives add ncmFPDamage minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ncmSFPlayerLatencyFP dummy
 
 # SurvivalFly (Distance)
 scoreboard objectives add ncmLeaveGame minecraft.custom:minecraft.leave_game
@@ -702,6 +705,8 @@ scoreboard objectives add ncmSFClimbAviateGrace dummy
 scoreboard objectives add ncmSFJC minecraft.custom:minecraft.jump
 scoreboard objectives add ncmSFJCCeilingGrace dummy
 scoreboard objectives add ncmSFJCRC dummy
+scoreboard objectives add ncmSFJCR dummy
+
 
 # SurvivalFly (MaintainClimbRate)
 scoreboard objectives add ncmMaintainY dummy
