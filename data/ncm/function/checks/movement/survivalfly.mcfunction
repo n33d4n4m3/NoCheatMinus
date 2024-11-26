@@ -114,6 +114,48 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 water run scorebo
 
 
 
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 bubble_column run scoreboard players set @s ncmLiquidNearby 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard players set @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ lava run scoreboard players set @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 lava run scoreboard players set @s ncmLiquidNearby 1
@@ -278,6 +320,21 @@ execute as @a if score @s ncmSFJCRC >= DataHolder ncmc_sf_jc_2 run scoreboard pl
 # ------------------------
 
 
+
+execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmSFOGJoinGrace 601
+execute as @a if score @s[nbt={OnGround:0b}] ncmLeaveGame matches 1.. run scoreboard players set @s ncmSFOGJoinGrace 601
+execute as @a if score @s[nbt={OnGround:1b}] ncmSFOGJoinGrace matches 601 run scoreboard players set @s ncmSFOGJoinGrace 600
+execute as @a if score @s ncmSFOGJoinGrace matches 1..600 run scoreboard players remove @s ncmSFOGJoinGrace 1
+execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmLeaveGame 0
+
+
+execute as @a if score @s ncmLastLatencyLevel matches 0..1 run scoreboard players set @s ncmSFOGFailLatencyBuffer 1
+execute as @a if score @s ncmLastLatencyLevel matches 2..5 run scoreboard players set @s ncmSFOGFailLatencyBuffer 2
+execute as @a if score @s ncmLastLatencyLevel matches 6..10 run scoreboard players set @s ncmSFOGFailLatencyBuffer 3
+execute as @a if score @s ncmLastLatencyLevel matches 11.. run scoreboard players set @s ncmSFOGFailLatencyBuffer 4
+
+
+
 execute as @a if score @s ncmFPDamage matches 1.. run scoreboard players set @s ncmFPDamage -50
 execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmFPDamage 1
 
@@ -286,13 +343,26 @@ execute as @a if score @s ncmOGJump matches 1.. run scoreboard players add @s nc
 execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmOGJump matches 1.. unless entity @e[type=#minecraft:boat,distance=..2] unless entity @e[type=oak_chest_boat,distance=..2] unless entity @e[type=spruce_chest_boat,distance=..2] unless entity @e[type=cherry_chest_boat,distance=..2] unless entity @e[type=bamboo_chest_raft,distance=..2] unless entity @e[type=mangrove_chest_boat,distance=..2] unless entity @e[type=dark_oak_chest_boat,distance=..2] unless entity @e[type=acacia_chest_boat,distance=..2] unless entity @e[type=jungle_chest_boat,distance=..2] unless entity @e[type=birch_chest_boat,distance=..2] unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s VE.PlayerMoveEvent.hasDescended matches 1 unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmLadderNearby matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 unless score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmOffGrTicks 1
 execute as @a if score @s ncmOGJump >= DataHolder ncmc_sf_og_3 run scoreboard players set @s ncmOGJump 0
 execute as @a if score @s ncmOffGrTicks matches 1.. run scoreboard players add @s ncmOffGrTicksC 1
-execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players set @s ncmFailedMVMSF 5
-execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"OffGroundTicks","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_3"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicks"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicksC"},"color":"gray"},{"text":"}","color":"gray"}]
-execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"OffGroundTicks","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_3"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicks"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicksC"},"color":"gray"},{"text":"}","color":"gray"}]
+
+execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmSFOGJoinGrace matches 1.. unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players add @s ncmSFOGFailCountForLatencyBuffer 1
+# Debug: execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 unless score @s ncmSFOGJoinGrace matches 1.. unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. if score @s ncmSFOGFailLatencyBuffer matches 1.. unless score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer run tellraw @a ["",{"text":"[TestNCM] Holding back MVMSFOG-Flag (","color":"gray"},{"score":{"name":"@s","objective":"ncmSFOGFailCountForLatencyBuffer"},"color":"gray"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"ncmSFOGFailLatencyBuffer"},"color":"gray"},{"text":") for player ","color":"gray"},{"selector":"@s","color":"gray"},{"text":" due to their latency (","color":"gray"},{"score":{"name":"@s","objective":"ncmLastLatencyLevel"},"color":"gray"},{"text":")","color":"gray"}]
+
+
+execute as @a if score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer run scoreboard players set @s ncmFailedMVMSF 5
+execute as @a if score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"OffGroundTicks","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_3"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicks"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicksC"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a if score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"OffGroundTicks","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_og_3"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicks"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmOffGrTicksC"},"color":"gray"},{"text":"}","color":"gray"}]
+
+execute as @a if score @s ncmSFOGFailCountForLatencyBuffer matches 1.. unless score @s ncmSFOGFailCountForLatencyBufferR matches 1.. run scoreboard players set @s ncmSFOGFailCountForLatencyBufferR 300
+execute as @a if score @s ncmSFOGFailCountForLatencyBufferR matches 1.. run scoreboard players remove @s ncmSFOGFailCountForLatencyBufferR 1
+execute as @a if score @s ncmSFOGFailCountForLatencyBufferR matches 0 run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
+
+execute as @a if score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
+execute as @a if entity @s[nbt={OnGround:1b}] run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
+execute as @a if entity @s[nbt={OnGround:1b}] run scoreboard players set @s ncmSFOGFailCountForLatencyBufferR 0
+
 
 execute as @a if score @s ncmOGJumpR matches 1.. run scoreboard players set @s ncmOGJump 1
 execute as @a if score @s ncmOGJumpR matches 1.. run scoreboard players set @s ncmOGJumpR 0
-
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmOffGrTicks 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmOffGrTicksC 0
 execute as @a if score @s ncmSFPlayerLatencyFP matches 1.. run scoreboard players set @s ncmOffGrTicks 0
@@ -302,6 +372,7 @@ execute as @a if score @s ncmOffGrTicks >= DataHolder ncmc_sf_og_1 run scoreboar
 execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboard players set @s ncmOffGrTicks 0
 execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboard players set @s ncmOffGrTicksC 0
 
+#execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] if score @s ncmOffGrTicks matches 1.. run tellraw @s {"score":{"name":"@s","objective":"ncmOffGrTicks"}}
 execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players set @s ncmOffGrTicks 0
 execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players set @s ncmOffGrTicksC 0
 execute as @a if score @s ncmFPDecent matches 10.. run scoreboard players set @s ncmFPDecent 0
@@ -332,13 +403,16 @@ execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 1
 # Subcheck: SprintFL
 # ------------------------
 
+execute as @a run scoreboard players set @s ncmIndividualFoodLevelGrace 30
+execute as @a run scoreboard players operation @s ncmIndividualFoodLevelGrace += @s ncmLastLatencyLevel
 execute as @a store result score @s ncmFoodLevel run data get entity @s foodLevel
-execute as @a if score @s ncmFoodLevel matches ..6 unless score @s ncmFoodLevelGraceT matches 30 run scoreboard players add @s ncmFoodLevelGraceT 1
+execute as @a if score @s ncmFoodLevel matches ..6 unless score @s ncmFoodLevelGraceT >= @s ncmIndividualFoodLevelGrace run scoreboard players add @s ncmFoodLevelGraceT 1
 execute as @a if score @s ncmFoodLevel matches 7.. run scoreboard players reset @s ncmFoodLevelGraceT
-execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 run scoreboard players set @s ncmFailedMVMSF 9
-execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
-execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
-execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT matches 30 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT >= @s ncmIndividualFoodLevelGrace run scoreboard players set @s ncmFailedMVMSF 9
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT >= @s ncmIndividualFoodLevelGrace if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT >= @s ncmIndividualFoodLevelGrace run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SprintFL","color":"light_purple"},{"text":" {...}","color":"gray"}]
+execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 2 if score @s ncmFoodLevelGraceT >= @s ncmIndividualFoodLevelGrace run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
+
 
 
 # ---------------------------
@@ -360,7 +434,7 @@ execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc
 
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players set @s ncmMaintainRC 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
+execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmLadderNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
 execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run scoreboard players operation @s ncmLastYSpeed = @s ncmYSpeed
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0

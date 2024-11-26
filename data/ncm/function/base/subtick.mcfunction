@@ -36,6 +36,7 @@ function ncm:base/permission
 
 function ncm:lag/lagmanager
 
+
 # Running listeners
 function ncm:checks/fight/fightlistener
 function ncm:checks/movement/movementlistener

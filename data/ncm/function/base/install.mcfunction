@@ -50,6 +50,8 @@ scoreboard players set DataHolder ncm.5 5
 scoreboard objectives add ncm.25 dummy
 scoreboard players set DataHolder ncm.25 25
 
+scoreboard objectives add ncmCalc dummy
+
 # -----------------
 # Listeners
 # -----------------
@@ -66,8 +68,19 @@ scoreboard objectives add ncmPlayerIsInBed dummy
 # -----------------
 scoreboard objectives add ncmTPS dummy
 scoreboard players set #10 ncmTPS 1
-
 scoreboard objectives add ncmMVMTSLagTimeout dummy
+
+scoreboard objectives add ncmTicksNeededToDecend dummy
+scoreboard objectives add ncmLastLatencyLevel dummy
+scoreboard objectives add ncmLastMinimumPing dummy
+scoreboard objectives add ncmLastMaximumPing dummy
+
+scoreboard objectives add ncmCheckPlayerLatency dummy
+scoreboard objectives add ncmTicksUntilNextLatencyCheck dummy
+scoreboard objectives add ncmTimesLatencyLevelMaintained dummy
+scoreboard objectives add ncmCalc dummy
+scoreboard players set $2 ncmCalc 2
+scoreboard players set $50 ncmCalc 50
 
 
 # Start TPS checker
@@ -229,6 +242,11 @@ scoreboard objectives add ncmCC dummy
 scoreboard objectives add ncmc_bs_lg_1 dummy
 # The minimum TPS value to ensure the functionality of the Movement.TickStride check 20
 scoreboard objectives add ncmc_bs_lg_2 dummy
+
+# Minimum tick count for latency check 1200
+scoreboard objectives add ncmc_bs_lg_3 dummy
+# Maximum tick count for latency check 6000
+scoreboard objectives add ncmc_bs_lg_4 dummy
 
 
 # Reputation
@@ -696,6 +714,10 @@ scoreboard objectives add ncmOffGrTicks dummy
 scoreboard objectives add ncmOffGrTicksC dummy
 scoreboard objectives add ncmOGJump minecraft.custom:minecraft.jump
 scoreboard objectives add ncmOGJumpR minecraft.custom:minecraft.jump
+scoreboard objectives add ncmSFOGFailLatencyBuffer dummy
+scoreboard objectives add ncmSFOGFailCountForLatencyBuffer dummy
+scoreboard objectives add ncmSFOGFailCountForLatencyBufferR dummy
+scoreboard objectives add ncmSFOGJoinGrace dummy
 
 # SurvivalFly (Climb)
 scoreboard objectives add ncmBoat minecraft.custom:minecraft.boat_one_cm
@@ -732,6 +754,7 @@ scoreboard objectives add ncmZMotionM dummy
 # SurvivalFly (SprintFL)
 scoreboard objectives add ncmFoodLevel dummy
 scoreboard objectives add ncmFoodLevelGraceT dummy
+scoreboard objectives add ncmIndividualFoodLevelGrace dummy
 
 # NoFall
 scoreboard objectives add ncmMVMNFApplyFDmg dummy

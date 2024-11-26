@@ -5,6 +5,12 @@ scoreboard players set DataHolder ncmc_bs_lg_1 40
 # The minimum TPS value to ensure the functionality of the Movement.TickStride check 20
 scoreboard players set DataHolder ncmc_bs_lg_2 20
 
+# Minimum tick count for latency check 1200
+scoreboard players set DataHolder ncmc_bs_lg_3 1200
+
+# Maximum tick count for latency check 6000
+scoreboard players set DataHolder ncmc_bs_lg_4 6000
+
 
 # Reputation
 # Initial reputation 0
@@ -155,9 +161,9 @@ scoreboard players set DataHolder ncmc_sf_og_2 10
 scoreboard players set DataHolder ncmc_sf_og_3 5
 
 # SurvivalFly (JumpCount)
-# Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (1 / 10)
+# Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (2 / 17)
 scoreboard players set DataHolder ncmc_sf_jc_1 2
-scoreboard players set DataHolder ncmc_sf_jc_2 19
+scoreboard players set DataHolder ncmc_sf_jc_2 17
 
 
 
