@@ -28,9 +28,11 @@ scoreboard objectives remove ncmInstalled
 scoreboard objectives remove ncmOperator
 scoreboard objectives remove ncmInputR
 scoreboard objectives remove ncmMainVersion
+scoreboard objectives remove ncmAirAround
 scoreboard objectives remove ncmSubVersion
 scoreboard objectives remove ncmRevVersion
 scoreboard objectives remove ncmIsSnapshot
+scoreboard objectives remove ncmIndivudialRepRegAddition
 scoreboard objectives remove ncmYear
 scoreboard objectives remove ncmWeek
 scoreboard objectives remove ncmChar

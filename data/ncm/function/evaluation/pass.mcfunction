@@ -20,8 +20,11 @@
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 # Regenerate the cofingured amount of reputation
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players operation @s ncmIndivudialRepRegAddition = DataHolder ncmc_bs_ps_1
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players operation @s ncmIndivudialRepRegAddition += @s ncmLastLatencyLevel
 execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players operation @s ncmRepRegTotal = @s ncmRep
-execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players operation @s ncmRepRegTotal += DataHolder ncmc_bs_ps_1
-execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 if score @s ncmRepRegTotal <= DataHolder ncmc_bs_rp_1 run scoreboard players operation @s ncmRep += DataHolder ncmc_bs_ps_1
-execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 if score @s ncmRepRegTotal <= DataHolder ncmc_bs_rp_1 run scoreboard players set @s ncmRepRegCounter 0
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players operation @s ncmRepRegTotal += @s ncmIndivudialRepRegAddition
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 if score @s ncmRepRegTotal matches ..0 run scoreboard players operation @s ncmRep += @s ncmIndivudialRepRegAddition
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 if score @s ncmRepRegTotal matches 1.. run scoreboard players set @s ncmRep 0
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run scoreboard players set @s ncmRepRegCounter 0
 scoreboard players set @a ncmRepRegTotal 0

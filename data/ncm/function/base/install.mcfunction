@@ -187,6 +187,7 @@ scoreboard objectives add ncmPassedMVMSF dummy
 scoreboard objectives add ncmPassedNETAP dummy
 scoreboard objectives add ncmPassedNETUP dummy
 
+scoreboard objectives add ncmIndivudialRepRegAddition dummy
 scoreboard objectives add ncmRepRegCounter minecraft.custom:minecraft.play_time
 scoreboard objectives add ncmRepRegTotal dummy
 
@@ -670,6 +671,7 @@ scoreboard objectives add ncmDeathTimeC dummy
 
 # UnfittingPacket (PlayerMoveC2SPacket/OffGround)
 scoreboard objectives add ncmFallPackets minecraft.custom:minecraft.fall_one_cm
+scoreboard objectives add ncmAirAround dummy
 
 # UnfittingPacket (PlayerRespawnS2CPacket/Alive)
 scoreboard objectives add ncmPlayerDeath minecraft.custom:minecraft.deaths
