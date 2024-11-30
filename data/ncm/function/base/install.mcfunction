@@ -79,6 +79,7 @@ scoreboard objectives add ncmCheckPlayerLatency dummy
 scoreboard objectives add ncmTicksUntilNextLatencyCheck dummy
 scoreboard objectives add ncmTimesLatencyLevelMaintained dummy
 scoreboard objectives add ncmCalc dummy
+scoreboard players set $1 ncmCalc 1
 scoreboard players set $2 ncmCalc 2
 scoreboard players set $50 ncmCalc 50
 
@@ -813,6 +814,11 @@ scoreboard objectives add ncmTSResetTimer dummy
 scoreboard objectives add ncmTSInternalLogOnlyFails dummy
 scoreboard objectives add ncmTSInternalLogOnlyFailsResetTimer dummy
 scoreboard objectives add ncmTSLevitationTimeout dummy
+scoreboard objectives add ncmTicksNoMovementPacketsProcessed dummy
+scoreboard objectives add ncmAllowedDistanceByPackets dummy
+scoreboard objectives add ncmDistanceDifference dummy
+scoreboard objectives add ncmTimesStrideTooHighWithLatency dummy
+scoreboard objectives add ncmTSResetLatencyTimer dummy
 
 
 # --------------------------

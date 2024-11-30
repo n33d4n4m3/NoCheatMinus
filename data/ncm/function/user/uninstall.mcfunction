@@ -24,6 +24,11 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmTicksNoMovementPacketsProcessed
+scoreboard objectives remove ncmAllowedDistanceByPackets
+scoreboard objectives remove ncmDistanceDifference
+scoreboard objectives remove ncmTimesStrideTooHighWithLatency
+scoreboard objectives remove ncmTSResetLatencyTimer
 scoreboard objectives remove ncmInstalled
 scoreboard objectives remove ncmOperator
 scoreboard objectives remove ncmInputR

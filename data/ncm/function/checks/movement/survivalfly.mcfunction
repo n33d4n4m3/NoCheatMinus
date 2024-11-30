@@ -187,33 +187,33 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 lava run scoreboa
 execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 1.. run scoreboard players add @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. run scoreboard players set @s ncmLiquidNearby 0
 
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
 
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
 
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 ladder run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 ladder run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #climbable run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #climbable run scoreboard players set @s ncmLadderNearby 1
 
 
 
