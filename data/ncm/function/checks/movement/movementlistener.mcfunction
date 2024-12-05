@@ -21,9 +21,36 @@
 # Determine the last location where the player was onground.
 execute as @a if data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 1
 
+execute as @e[type=minecraft:player] run scoreboard players set @s ncmAirAround 1
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
 
-execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
-execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
-execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastZOnGrd run data get entity @s Pos[2]
-execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastRotYOnGrd run data get entity @s Rotation[0]
-execute as @a[nbt={OnGround:1b}] at @s store result score @s ncmLastRotXOnGrd run data get entity @s Rotation[1]
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
+
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmLastZOnGrd run data get entity @s Pos[2]
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmLastRotYOnGrd run data get entity @s Rotation[0]
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmLastRotXOnGrd run data get entity @s Rotation[1]

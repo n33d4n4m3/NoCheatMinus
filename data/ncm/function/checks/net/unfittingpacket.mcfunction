@@ -24,57 +24,7 @@
 
 
 
-# ---------------------------------------
-# Subcheck: PlayerMoveC2SPacket/OffGround
-# ---------------------------------------
 
-execute as @e[type=minecraft:player] run scoreboard players set @s ncmAirAround 1
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
-
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
-
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-#execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if score @s ncmAirAround matches 1 run scoreboard players set @s ncmFailedNETUP 5
-#execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if score @s ncmAirAround matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"sent a packet (PlayerMoveC2SPacket), which doesn't fit the player's current state (OffGround)","color":"white"}]
-#execute as @e[type=minecraft:player] at @s if score @s ncmFallPackets matches 1.. if score @s ncmAirAround matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed ","color":"white"},{"text":"UnfittingPacket: ","color":"white"},{"text":"sent a packet (PlayerMoveC2SPacket), which doesn't fit the player's current state (OffGround)","color":"white"}]
-
-execute as @e[type=minecraft:player] if score @s ncmAirAround matches 1 run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] if score @s ncmFallPackets matches 1.. run scoreboard players set @s ncmFallPackets 0
 
 # ---------------------------------------
 # Subcheck: PlayerRespawnS2CPacket/Alive

@@ -24,6 +24,19 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmWasOnGround
+scoreboard objectives remove ncmClimbedWaitForLegitimation
+scoreboard objectives remove ncmIgnoreFurtherClimb
+scoreboard objectives remove ncmLastXBeforeClimb
+scoreboard objectives remove ncmLastYBeforeClimb
+scoreboard objectives remove ncmLastZBeforeClimb
+scoreboard objectives remove ncmLastYawBeforeClimb
+scoreboard objectives remove ncmLastPitchBeforeClimb
+scoreboard objectives remove ncmStepableNearby
+scoreboard objectives remove ncmFlagLastClimb
+scoreboard objectives remove ncmClimbFlagCount
+scoreboard objectives remove ncmClimbFlagCountRC
+scoreboard objectives remove ncmClimbFlagCountRCMax
 scoreboard objectives remove ncmTicksNoMovementPacketsProcessed
 scoreboard objectives remove ncmAllowedDistanceByPackets
 scoreboard objectives remove ncmDistanceDifference

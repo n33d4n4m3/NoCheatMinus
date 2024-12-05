@@ -41,7 +41,8 @@ function ncm:lag/lagmanager
 function ncm:checks/fight/fightlistener
 function ncm:checks/movement/movementlistener
 
-
+# Running utils
+function ncm:checks/movement/util/falsepositive
 
 # Running checks
 

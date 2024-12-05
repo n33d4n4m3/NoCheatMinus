@@ -1,0 +1,16 @@
+{
+    "values": [
+      "minecraft:lily_pad",
+      "#minecraft:slabs",
+      "#minecraft:snow",
+      "#minecraft:stairs",
+      "#minecraft:trapdoors",
+      "#minecraft:beds",
+      "#minecraft:wool_carpets",
+      "minecraft:daylight_detector",
+      "minecraft:moving_piston",
+      "minecraft:piston",
+      "minecraft:piston_head",
+      "minecraft:sticky_piston"
+    ]
+  }

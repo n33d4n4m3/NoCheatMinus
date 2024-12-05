@@ -157,8 +157,8 @@ scoreboard players set DataHolder ncmc_sf_og_1 7
 # Ticks after the off ground ticks get resetted 10
 scoreboard players set DataHolder ncmc_sf_og_2 10
 
-# Jump FP cooldown 20
-scoreboard players set DataHolder ncmc_sf_og_3 5
+# Jump FP cooldown 10
+scoreboard players set DataHolder ncmc_sf_og_3 10
 
 # SurvivalFly (JumpCount)
 # Maxiumum jumps (ncmc_sf_jc_1) in timeframe (ncmc_sf_jc_2) (2 / 17)

@@ -63,6 +63,12 @@ scoreboard objectives add ncmLastRotYOnGrd dummy
 scoreboard objectives add ncmPlayerIsInBed dummy
 
 
+
+# --------------
+# False Positves
+# --------------
+scoreboard objectives add ncmWasOnGround dummy
+
 # -----------------
 # Lag
 # -----------------
@@ -733,7 +739,7 @@ scoreboard objectives add ncmSFJCRC dummy
 scoreboard objectives add ncmSFJCR dummy
 
 
-# SurvivalFly (MaintainClimbRate)
+# SurvivalFly (ConstantClimbRate)
 scoreboard objectives add ncmMaintainY dummy
 scoreboard objectives add ncmLastMaintainY dummy
 scoreboard objectives add ncmMaintainRC dummy
@@ -758,6 +764,22 @@ scoreboard objectives add ncmZMotionM dummy
 scoreboard objectives add ncmFoodLevel dummy
 scoreboard objectives add ncmFoodLevelGraceT dummy
 scoreboard objectives add ncmIndividualFoodLevelGrace dummy
+
+# SurvivalFly (UnexpectedClimb)
+scoreboard objectives add ncmClimbedWaitForLegitimation dummy
+scoreboard objectives add ncmIgnoreFurtherClimb dummy
+scoreboard objectives add ncmLastXBeforeClimb dummy
+scoreboard objectives add ncmLastYBeforeClimb dummy
+scoreboard objectives add ncmLastZBeforeClimb dummy
+scoreboard objectives add ncmLastYawBeforeClimb dummy
+scoreboard objectives add ncmLastPitchBeforeClimb dummy
+scoreboard objectives add ncmStepableNearby dummy
+scoreboard objectives add ncmFlagLastClimb dummy
+scoreboard objectives add ncmClimbFlagCount dummy
+scoreboard objectives add ncmClimbFlagCountRC dummy
+scoreboard objectives add ncmClimbFlagCountRCMax dummy
+
+
 
 # NoFall
 scoreboard objectives add ncmMVMNFApplyFDmg dummy
