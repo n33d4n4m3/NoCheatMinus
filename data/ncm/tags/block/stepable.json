@@ -11,6 +11,7 @@
       "minecraft:moving_piston",
       "minecraft:piston",
       "minecraft:piston_head",
-      "minecraft:sticky_piston"
+      "minecraft:sticky_piston",
+      "minecraft:player_head"
     ]
   }
