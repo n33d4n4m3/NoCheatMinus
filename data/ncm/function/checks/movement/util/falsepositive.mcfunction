@@ -236,6 +236,10 @@ execute as @a at @s if block ~2 ~2 ~2 #ncm:stepable run scoreboard players set @
 
 execute as @a if score @s ncmStepableNearby matches 1.. run scoreboard players remove @s ncmStepableNearby 1
 
+
+
+
+
 # Cobweb fix
 
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1

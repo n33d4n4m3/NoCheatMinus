@@ -200,6 +200,17 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #fall_damage_rese
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #fall_damage_resetting run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 
+execute as @e[type=minecraft:player] at @s if entity @e[type=#minecraft:boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=oak_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=spruce_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=cherry_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=bamboo_chest_raft,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=mangrove_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=dark_oak_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=acacia_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=jungle_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=birch_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:minecarts,distance=..4] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
@@ -219,17 +230,23 @@ execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 
 
 
 
+execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmNFLastYOnGrd run data get entity @s Pos[1] 100
 
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmAirAround matches 1 unless score @s ncmMVMNFFall matches 1.. if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallStartYCoord = @s ncmNFLastYOnGrd
 
-execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMNFFall matches 1.. if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallStartYCoord = @s VE.PlayerMoveEvent.fromY
+execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallStartYCoord 0
+execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallEndYCoord 0
+
 execute as @a at @s unless score @s ncmMVMNFFall matches 1.. unless block ~ ~-0.1 ~ air unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
 #execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if score @s ncmMVMNFFallEndYCoord matches 0 unless data entity @s {OnGround:0b} unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
+
+
+
 
 execute as @a unless score @s ncmMVMNFFall matches 1.. unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall = @s ncmMVMNFFallStartYCoord
 execute as @a unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall -= @s ncmMVMNFFallEndYCoord
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallEndYCoord 0
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallStartYCoord 0
-
 execute store result score DataHolder ncmMVMNFApplyFDmg run gamerule fallDamage
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMNFApplyFDmg matches 0 run scoreboard players set @s ncmMVMNFFall 0
 execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s ncmMVMNFFall 0

@@ -782,6 +782,7 @@ scoreboard objectives add ncmClimbFlagCountRCMax dummy
 
 
 # NoFall
+scoreboard objectives add ncmNFLastYOnGrd dummy
 scoreboard objectives add ncmMVMNFApplyFDmg dummy
 scoreboard objectives add ncmMVMNFField1 dummy
 scoreboard objectives add ncmMVMNFDebug dummy

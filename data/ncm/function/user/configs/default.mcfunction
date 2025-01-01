@@ -252,19 +252,15 @@ scoreboard players set DataHolder ncmc_ts_15 100
 scoreboard players set DataHolder ncmc_ts_16 120
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_17 12
+scoreboard players set DataHolder ncmc_ts_17 40
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_18 50
 
-# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
+# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Water) (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_40 43
-# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Water) (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_41 80
 
-# (Reputation loss only) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_42 75
-# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 8 -> BOAT (Ground) (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_43 75
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_19 1000
