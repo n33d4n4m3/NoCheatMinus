@@ -47,6 +47,7 @@ execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearb
 
 
 execute as @e[type=minecraft:player] if predicate ncm:has_levitation_effect run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
+execute as @e[type=minecraft:player,nbt={active_effects:[{id:"minecraft:jump_boost"}]}] run scoreboard players operation @s ncmLevitate = DataHolder ncmc_sf_fp_1
 execute as @e[type=minecraft:player] at @s if entity @e[type=wind_charge,distance=..9] run scoreboard players set @s ncmLevitate 40
 execute as @e[type=minecraft:player] at @s if entity @e[type=creeper,distance=..9] run scoreboard players set @s ncmLevitate 40
 execute as @e[type=minecraft:player] at @s if entity @e[type=tnt,distance=..9] run scoreboard players set @s ncmLevitate 40

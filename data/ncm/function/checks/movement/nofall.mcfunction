@@ -215,8 +215,12 @@ execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:minecarts,dist
 execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if predicate ncm:has_featherfalling_boots run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
+execute as @a[nbt={active_effects:[{id:"minecraft:slow_falling"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a at @s if entity @e[type=minecraft:skeleton_horse,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a at @s if entity @e[type=minecraft:horse,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a at @s if entity @e[type=minecraft:pig,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
 
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 1.. run scoreboard players add @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 10.. run scoreboard players set @s ncmMVMNFFPSourceNearby 0

@@ -124,8 +124,8 @@ scoreboard players set DataHolder ncmc_ap_fc_2 66
 scoreboard players set DataHolder ncmc_ap_go_1 21
 
 # SurvivalFly (False Positives)
-# Cooldown after aviate / levitate 10
-scoreboard players set DataHolder ncmc_sf_fp_1 10
+# Cooldown after aviate / levitate 100
+scoreboard players set DataHolder ncmc_sf_fp_1 100
 
 # Cooldown after detecting player latency 60
 scoreboard players set DataHolder ncmc_sf_fp_2 60
@@ -263,9 +263,9 @@ scoreboard players set DataHolder ncmc_ts_41 80
 
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_19 1000
+scoreboard players set DataHolder ncmc_ts_19 30
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 9 -> PIG (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_20 1000
+scoreboard players set DataHolder ncmc_ts_20 35
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 10 -> AVIATING (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_21 1000
@@ -273,9 +273,9 @@ scoreboard players set DataHolder ncmc_ts_21 1000
 scoreboard players set DataHolder ncmc_ts_22 1000
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_23 1000
+scoreboard players set DataHolder ncmc_ts_23 100
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_24 1000
+scoreboard players set DataHolder ncmc_ts_24 120
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 12 -> STRIDER (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_25 1000
