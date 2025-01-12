@@ -38,14 +38,26 @@
 
 
 # -----------------------------
-# CONCEPT Subcheck: SpoofGround
+# Subcheck: SpoofGround
 # -----------------------------
 
+scoreboard objectives add ncmSpoofWaitLatencyTicks dummy
+scoreboard objectives add ncmSpoofIsWaiting dummy
+
+execute as @a if score @s ncmSpoofWaitLatencyTicks matches -1 run scoreboard players set @s ncmSpoofIsWaiting 0
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofWaitLatencyTicks 3
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players operation @s ncmSpoofWaitLatencyTicks += @s ncmLastLatencyLevel
+execute as @e[type=minecraft:player,nbt={OnGround:1b}] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofIsWaiting 1
 
 
-#execute as @e[type=minecraft:player,nbt={OnGround:1b}] at @s if score @s ncmAirAround matches 1 run scoreboard players set @s ncmFailedMVMSF 9
-#execute as @e[type=minecraft:player,nbt={OnGround:1b}] at @s if score @s ncmAirAround matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SpoofGround","color":"light_purple"},{"text":" {...","color":"gray"},{"text":"}","color":"gray"}]
-#execute as @e[type=minecraft:player,nbt={OnGround:1b}] at @s if score @s ncmAirAround matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SpoofGround","color":"light_purple"},{"text":" {...","color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player] if score @s ncmSpoofWaitLatencyTicks matches 0.. run scoreboard players remove @s ncmSpoofWaitLatencyTicks 1
+
+execute as @e[type=minecraft:player] at @s unless score @s ncmOGJump matches 1.. if score @s ncmSpoofWaitLatencyTicks matches 0 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmFailedMVMSF 2
+execute as @e[type=minecraft:player] at @s unless score @s ncmOGJump matches 1.. if score @s ncmSpoofWaitLatencyTicks matches 0 if score @s ncmAirAround matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SpoofGround","color":"light_purple"},{"text":" {...","color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player] at @s unless score @s ncmOGJump matches 1.. if score @s ncmSpoofWaitLatencyTicks matches 0 if score @s ncmAirAround matches 1 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SpoofGround","color":"light_purple"},{"text":" {...","color":"gray"},{"text":"}","color":"gray"}]
+
+
+
 
 #execute as @e[type=minecraft:player] if score @s ncmAirAround matches 1 run scoreboard players set @s ncmAirAround 0
 

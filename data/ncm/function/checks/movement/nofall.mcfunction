@@ -233,7 +233,6 @@ execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 
 
 
 
-
 execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmNFLastYOnGrd run data get entity @s Pos[1] 100
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmAirAround matches 1 unless score @s ncmMVMNFFall matches 1.. if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallStartYCoord = @s ncmNFLastYOnGrd
@@ -241,14 +240,16 @@ execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmAirAround matches 1 unless 
 execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallStartYCoord 0
 execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallEndYCoord 0
 
-execute as @a at @s unless score @s ncmMVMNFFall matches 1.. unless block ~ ~-0.1 ~ air unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
+execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if data entity @s {OnGround:1b} unless score @s ncmAirAround matches 1 unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
 #execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if score @s ncmMVMNFFallEndYCoord matches 0 unless data entity @s {OnGround:0b} unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
+#execute  at @s unless score @s ncmAirAround matches 1 run scoreboard players set @s ncmMVMNFFallStartYCoord 0
 
 
 
 
 execute as @a unless score @s ncmMVMNFFall matches 1.. unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall = @s ncmMVMNFFallStartYCoord
 execute as @a unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard players operation @s ncmMVMNFFall -= @s ncmMVMNFFallEndYCoord
+#execute as @a if score @s ncmMVMNFFallEndYCoord matches 1.. if score @s ncmMVMNFFallStartYCoord matches 1.. if score @s ncmMVMNFFall matches 1.. run tellraw @s ["","[DEBUG] Start: ",{"score":{"name":"@s","objective":"ncmMVMNFFallStartYCoord"}}," End: ",{"score":{"name":"@s","objective":"ncmMVMNFFallEndYCoord"}}," Distance: ",{"score":{"name":"@s","objective":"ncmMVMNFFall"}}]
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallEndYCoord 0
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallStartYCoord 0
 execute store result score DataHolder ncmMVMNFApplyFDmg run gamerule fallDamage
@@ -265,6 +266,7 @@ execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmMVMNFCa
 execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run scoreboard players operation @s ncmMVMNFSubblocksFallDamage %= DataHolder ncm.100
 
 
+#execute as @a run tellraw @s ["","[DEBUG] Health: ",{"score":{"name":"@s","objective":"ncmPlayerHealth"}}]
 
 execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMNF 5
 execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. unless score @s ncmMVMNFCalcHlth matches 0 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"selector":"@s","color":"white"},{"text":" failed "},{"text":"NoFall"},{"text":": "},{"text":"tried to reduce fall damage after falling ~"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"}},{"text":"."},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"}},{"text":" blocks. Expected "},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"}},{"text":" HP but got "},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"}},{"text":" HP."}]

@@ -7,6 +7,7 @@ execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescende
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmLastLatencyLevel = @s ncmTicksNeededToDecend run scoreboard players add @s ncmTimesLatencyLevelMaintained 1
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 unless score @s ncmLastLatencyLevel = @s ncmTicksNeededToDecend run scoreboard players set @s ncmTimesLatencyLevelMaintained 0
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players operation @s ncmLastLatencyLevel = @s ncmTicksNeededToDecend
+execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmLastLatencyLevel matches 21.. run scoreboard players set @s ncmLastLatencyLevel 20
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players operation @s ncmTicksNeededToDecend *= $50 ncmCalc
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players operation @s ncmLastMinimumPing = @s ncmTicksNeededToDecend
 execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players operation @s ncmLastMaximumPing = @s ncmLastMinimumPing
