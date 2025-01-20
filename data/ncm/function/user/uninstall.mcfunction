@@ -62,6 +62,10 @@ scoreboard objectives remove ncmPlayerHealth
 scoreboard objectives remove globalncmFightID
 scoreboard objectives remove ncmFightID
 scoreboard objectives remove ncmSFJCR
+scoreboard objectives remove ncmFPDamageReset
+scoreboard objectives remove ncmMightStillSprinting
+scoreboard objectives remove ncmSpoofWaitLatencyTicks
+scoreboard objectives remove ncmSpoofIsWaiting
 scoreboard objectives remove ncmc_sf_fp_2
 scoreboard objectives remove ncmSFPlayerLatencyFP
 scoreboard objectives remove ncmSFJC

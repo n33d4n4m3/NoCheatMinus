@@ -41,8 +41,7 @@
 # Subcheck: SpoofGround
 # -----------------------------
 
-scoreboard objectives add ncmSpoofWaitLatencyTicks dummy
-scoreboard objectives add ncmSpoofIsWaiting dummy
+
 
 execute as @a if score @s ncmSpoofWaitLatencyTicks matches -1 run scoreboard players set @s ncmSpoofIsWaiting 0
 execute as @e[type=minecraft:player,nbt={OnGround:1b}] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofWaitLatencyTicks 3

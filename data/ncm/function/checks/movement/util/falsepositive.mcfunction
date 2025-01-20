@@ -37,8 +37,6 @@ execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scorebo
 
 
 
-
-
 # Iron Golem FP fix
 
 execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearby run data get entity @e[type=minecraft:iron_golem,limit=1,distance=..5] AngerTime 1
@@ -450,6 +448,9 @@ execute as @a if score @s ncmSFPlayerLatencyFP matches 1.. run scoreboard player
 execute as @a if score @s ncmSFJC matches 2.. run scoreboard players operation @s ncmSFPlayerLatencyFP = DataHolder ncmc_sf_fp_2
 
 # Damage
+
+execute as @a if score @s ncmFPDamageReset matches 1.. run scoreboard players set @s ncmFPDamage -50
+execute as @a if score @s ncmFPDamageReset matches 1.. run scoreboard players set @s ncmFPDamageReset 0
 execute as @a if score @s ncmFPDamage matches 1.. run scoreboard players set @s ncmFPDamage -50
 execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmFPDamage 1
 

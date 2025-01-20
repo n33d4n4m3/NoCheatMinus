@@ -25,6 +25,7 @@
 
 
 
+
 scoreboard objectives add ncmInstalled dummy
 
 scoreboard objectives add ncmOperator dummy
@@ -68,6 +69,7 @@ scoreboard objectives add ncmPlayerIsInBed dummy
 # False Positves
 # --------------
 scoreboard objectives add ncmWasOnGround dummy
+scoreboard objectives add ncmFPDamageReset minecraft.custom:minecraft.damage_taken
 
 # -----------------
 # Lag
@@ -739,6 +741,11 @@ scoreboard objectives add ncmSFJCRC dummy
 scoreboard objectives add ncmSFJCR dummy
 
 
+# SurvivalFly (SpoofGround)
+scoreboard objectives add ncmSpoofWaitLatencyTicks dummy
+scoreboard objectives add ncmSpoofIsWaiting dummy
+
+
 # SurvivalFly (ConstantClimbRate)
 scoreboard objectives add ncmMaintainY dummy
 scoreboard objectives add ncmLastMaintainY dummy
@@ -842,6 +849,7 @@ scoreboard objectives add ncmAllowedDistanceByPackets dummy
 scoreboard objectives add ncmDistanceDifference dummy
 scoreboard objectives add ncmTimesStrideTooHighWithLatency dummy
 scoreboard objectives add ncmTSResetLatencyTimer dummy
+scoreboard objectives add ncmMightStillSprinting dummy
 
 
 # --------------------------
