@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "consume_item": {
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "rewards": {
+
+  }
+}

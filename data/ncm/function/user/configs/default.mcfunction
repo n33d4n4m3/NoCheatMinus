@@ -110,12 +110,36 @@ scoreboard players set DataHolder ncmc_bs_fl_47 0
 scoreboard players set DataHolder ncmc_bs_fl_48 0
 scoreboard players set DataHolder ncmc_bs_fl_49 0
 
+# Fight.CompliantVelocity (0 / 30 / 50)
+scoreboard players set DataHolder ncmc_bs_fl_50 0
+scoreboard players set DataHolder ncmc_bs_fl_51 30
+scoreboard players set DataHolder ncmc_bs_fl_52 50
+
+# Inventory.InstantBow (0 / 15 / 15)
+scoreboard players set DataHolder ncmc_bs_fl_53 0
+scoreboard players set DataHolder ncmc_bs_fl_54 15
+scoreboard players set DataHolder ncmc_bs_fl_55 15
+
 # Penalize failed checks by resetting? 1
 scoreboard players set DataHolder ncmc_bs_fl_34 1
+
+
+# Fight.CompliantVelocity
+# x Ticks + latency level to wait for velocity application after being hit 5
+scoreboard players set DataHolder ncmc_cv_1 5
+
+# Should an additional latency check be performed before the actual check fail? Note: If yes, players with a latency level > 0 will no longer be able to fail the check. 1 
+scoreboard players set DataHolder ncmc_cv_2 1
+
 
 # Appropriate (FastConsume)
 # How many items the player is allowed to eat until the counter is resetted? 1
 scoreboard players set DataHolder ncmc_ap_fc_1 1
+
+# Inventory.InstantBow
+# How many ticks must pass between two bow shots? 4
+scoreboard players set DataHolder ncmc_ib_1 4
+
 
 # Counter max length. 43
 scoreboard players set DataHolder ncmc_ap_fc_2 66

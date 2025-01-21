@@ -24,6 +24,29 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmTicksUntilVelocityMustBeUsed
+scoreboard objectives remove ncmc_bs_fl_54
+scoreboard objectives remove ncmc_bs_fl_55
+scoreboard objectives remove ncmc_bs_fl_53
+scoreboard objectives remove ncmc_cv_2
+scoreboard objectives remove ncmc_cv_1
+scoreboard objectives remove ncmc_ib_1
+scoreboard objectives remove ncmcm_FCV
+scoreboard objectives remove ncmcm_toggle_IIB
+scoreboard objectives remove ncmcm_currentPage
+scoreboard objectives remove ncmUsedBow
+scoreboard objectives remove ncmTicksUntilVelocityUsed
+scoreboard objectives remove ncmc_bs_fl_50
+scoreboard objectives remove ncmFailedFCV
+scoreboard objectives remove ncmc_bs_fl_51
+scoreboard objectives remove ncmUsedBowTimer
+scoreboard objectives remove ncmVelocityStackingTest
+scoreboard objectives remove ncmc_bs_fl_52
+scoreboard objectives remove ncmPlayerIsCollisionFree
+scoreboard objectives remove ncmcm_toggle_FCV
+scoreboard objectives remove ncmFailedIIB
+scoreboard objectives remove ncmcm_IIB
+
 scoreboard objectives remove ncmWasOnGround
 scoreboard objectives remove ncmNFLastYOnGrd
 scoreboard objectives remove ncmClimbedWaitForLegitimation

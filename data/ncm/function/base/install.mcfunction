@@ -183,6 +183,8 @@ scoreboard objectives add ncmFailedCMnchsn dummy
 scoreboard objectives add ncmFailedCBedLv dummy
 scoreboard objectives add ncmFailedMVMTS dummy
 scoreboard objectives add ncmFailedFWT dummy
+scoreboard objectives add ncmFailedFCV dummy
+scoreboard objectives add ncmFailedIIB dummy
 
 
 # --------------------
@@ -237,7 +239,12 @@ scoreboard objectives add ncmcm_toggle_MVMTS dummy
 scoreboard objectives add ncmcm_MVMTS dummy
 scoreboard objectives add ncmcm_toggle_FWT dummy
 scoreboard objectives add ncmcm_FWT dummy
+scoreboard objectives add ncmcm_toggle_FCV dummy
+scoreboard objectives add ncmcm_FCV dummy
+scoreboard objectives add ncmcm_toggle_IIB dummy
+scoreboard objectives add ncmcm_IIB dummy
 
+scoreboard objectives add ncmcm_currentPage dummy
 
 
 # --------------------
@@ -313,6 +320,25 @@ scoreboard objectives add ncmc_bs_fl_28 dummy
 scoreboard objectives add ncmc_bs_fl_29 dummy
 # Reputation loss for failing Fight.Criticals (Rage) 50
 scoreboard objectives add ncmc_bs_fl_30 dummy
+
+
+# Fight.CompliantVelocity
+# Reputation loss for failing Fight.CompliantVelocity (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_50 dummy
+# Reputation loss for failing Fight.CompliantVelocity (Suspect) 30
+scoreboard objectives add ncmc_bs_fl_51 dummy
+# Reputation loss for failing Fight.CompliantVelocity (Rage) 50
+scoreboard objectives add ncmc_bs_fl_52 dummy
+
+# Inventory.InstantBow
+# Reputation loss for failing Inventory.InstantBow (Common/HLC) 0
+scoreboard objectives add ncmc_bs_fl_53 dummy
+# Reputation loss for failing Inventory.InstantBow (Suspect) 15
+scoreboard objectives add ncmc_bs_fl_54 dummy
+# Reputation loss for failing FInventory.InstantBow (Rage) 15
+scoreboard objectives add ncmc_bs_fl_55 dummy
+
+
 
 # Fight.Reach
 # Reputation loss for failing Fight.Reach (Common/HLC) 0
@@ -403,6 +429,10 @@ scoreboard objectives add ncmc_nf_1 dummy
 # How many items the player is allowed to eat until the counter is resetted? 1
 scoreboard objectives add ncmc_ap_fc_1 dummy
 
+# InstantBow
+# How many ticks must pass between two bow shots? 4
+scoreboard objectives add ncmc_ib_1 dummy
+
 # Counter max length. 43
 scoreboard objectives add ncmc_ap_fc_2 dummy
 
@@ -411,6 +441,12 @@ scoreboard objectives add ncmc_ap_fc_2 dummy
 scoreboard objectives add ncmc_ap_go_1 dummy
 
 
+# Fight.CompliantVelocity
+# x Ticks + latency level to wait for velocity application after being hit 5
+scoreboard objectives add ncmc_cv_1 dummy
+
+# Should an additional latency check be performed before the actual check fail? Note: If yes, players with a latency level > 0 will no longer be able to fail the check. 1 
+scoreboard objectives add ncmc_cv_2 dummy
 
 
 # SurvivalFly (False Positives)
@@ -656,6 +692,13 @@ scoreboard objectives add ncmKillCount totalKillCount
 scoreboard objectives add ncmFCCFall dummy
 scoreboard objectives add ncmFCCMissingReq dummy
 
+
+# CompliantVelocity
+scoreboard objectives add ncmTicksUntilVelocityUsed dummy
+scoreboard objectives add ncmPlayerIsCollisionFree dummy
+scoreboard objectives add ncmTicksUntilVelocityMustBeUsed dummy
+scoreboard objectives add ncmVelocityStackingTest dummy
+
 # ---------------------------
 # Combined check objectives
 # ---------------------------
@@ -856,6 +899,10 @@ scoreboard objectives add ncmMightStillSprinting dummy
 # Inventory check objectives
 # --------------------------
 
+# InstantBow
+scoreboard objectives add ncmUsedBow minecraft.used:minecraft.bow
+scoreboard objectives add ncmUsedBowTimer dummy
+
 # Appropriate (FastConsume)
 scoreboard objectives add ncmConsume dummy
 scoreboard objectives add ncmConsumeC dummy
@@ -884,6 +931,8 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMTS 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_MVMNF 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FWT 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FCV 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_IIB 1
 execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

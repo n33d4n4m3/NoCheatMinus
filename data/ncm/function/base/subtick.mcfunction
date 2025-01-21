@@ -63,6 +63,8 @@ execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockpl
 execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
 execute if score DataHolder ncmcm_MVMTS matches 1 run function ncm:checks/movement/tickstride
 execute if score DataHolder ncmcm_FWT matches 1 run function ncm:checks/fight/wrongturn
+execute if score DataHolder ncmcm_FCV matches 1 run function ncm:checks/fight/compliantvelocity
+execute if score DataHolder ncmcm_IIB matches 1 run function ncm:checks/inventory/instantbow
 
 # Running util functions
 function ncm:checks/movement/util/sf_util

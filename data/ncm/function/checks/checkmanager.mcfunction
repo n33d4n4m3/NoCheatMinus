@@ -71,6 +71,25 @@ execute if score DataHolder ncmcm_toggle_FWT matches 2 run scoreboard players se
 execute if score DataHolder ncmcm_toggle_FWT matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FWT 0
 
 
+# Enable Fight.CompliantVelocity
+execute if score DataHolder ncmcm_toggle_FCV matches 1 run scoreboard players set DataHolder ncmcm_FCV 1
+execute if score DataHolder ncmcm_toggle_FCV matches 1 run advancement revoke @a only ncm:entity_hurt_player
+execute if score DataHolder ncmcm_toggle_FCV matches 1 run scoreboard players set @a ncmTicksUntilVelocityUsed 0
+# Disable Fight.CompliantVelocity
+execute if score DataHolder ncmcm_toggle_FCV matches 2 run scoreboard players set DataHolder ncmcm_FCV 0
+
+execute if score DataHolder ncmcm_toggle_FCV matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FCV 0
+
+# Enable Inventory.InstantBow
+execute if score DataHolder ncmcm_toggle_IIB matches 1 run scoreboard players set DataHolder ncmcm_IIB 1
+execute if score DataHolder ncmcm_toggle_IIB matches 1 run scoreboard players set @a ncmUsedBow 0
+execute if score DataHolder ncmcm_toggle_IIB matches 1 run scoreboard players set @a ncmUsedBowTimer 0
+# Disable Inventory.InstantBow
+execute if score DataHolder ncmcm_toggle_IIB matches 2 run scoreboard players set DataHolder ncmcm_IIB 0
+
+execute if score DataHolder ncmcm_toggle_IIB matches 1.. run scoreboard players set DataHolder ncmcm_toggle_IIB 0
+
+
 
 # Enable BlockPlace.Appropriate
 execute if score DataHolder ncmcm_toggle_BPAP matches 1 run scoreboard players set DataHolder ncmcm_BPAP 1

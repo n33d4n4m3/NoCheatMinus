@@ -60,71 +60,93 @@ execute as @a if score @s ncmChecks matches 31 run scoreboard players set DataHo
 execute as @a if score @s ncmChecks matches 32 run scoreboard players set DataHolder ncmcm_toggle_FWT 2
 execute as @a if score @s ncmChecks matches 33 run scoreboard players set DataHolder ncmcm_toggle_FWT 1
 
+execute as @a if score @s ncmChecks matches 34 run scoreboard players set DataHolder ncmcm_toggle_FCV 2
+execute as @a if score @s ncmChecks matches 35 run scoreboard players set DataHolder ncmcm_toggle_FCV 1
+
+execute as @a if score @s ncmChecks matches 36 run scoreboard players set DataHolder ncmcm_toggle_IIB 2
+execute as @a if score @s ncmChecks matches 37 run scoreboard players set DataHolder ncmcm_toggle_IIB 1
+
 execute as @a if score @s ncmChecks matches 2.. run function ncm:checks/checkmanager
 
 
 
-
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s ["",{"text":"\n\nNCM","color":"red"},": Here is a list of all available checks. Checks displayed in ",{"text":"red","color":"red"}," are currently disabled, and checks displayed in ",{"text":"green","color":"green"}," are currently enabled. Click on a check to toggle its status (enabled/disabled)\n"]
-
+execute as @a if score @s ncmcm_currentPage matches -2 if score @s ncmChecks matches 1 run scoreboard players set @s ncmcm_currentPage -1
 
 
+execute as @a if score @s ncmcm_currentPage matches 1 run scoreboard players set @s ncmChecks 1
+execute as @a if score @s ncmcm_currentPage matches 1 run scoreboard players set @s ncmcm_currentPage -1
+execute as @a if score @s ncmcm_currentPage matches 2 run scoreboard players set @s ncmChecks 1
+execute as @a if score @s ncmcm_currentPage matches 2 run scoreboard players set @s ncmcm_currentPage -2
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Movement","bold":true}
+execute as @a unless score @s ncmcm_currentPage matches -2..2 run scoreboard players set @s ncmcm_currentPage -1
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMSF matches 1 run tellraw @s ["","    -> ",{"text":"SurvivalFly [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMSF matches 0 run tellraw @s ["","    -> ",{"text":"SurvivalFly [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 3"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s ["",{"text":"\n\n\nNCM","color":"red"},": Here is a list of all available checks. Checks displayed in ",{"text":"red","color":"red"}," are currently disabled, and checks displayed in ",{"text":"green","color":"green"}," are currently enabled. Click on a check to toggle its status (enabled/disabled)\n"]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s [{"text":""},{"text":"Showing page 1 / 2."},{"text":" Next > ","color":"yellow","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmcm_currentPage 2"},"hoverEvent":{"action":"show_text","contents":[{"text":"/scoreboard players set @s ncmcm_currentPage 2"}]}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMTS matches 1 run tellraw @s ["","    -> ",{"text":"TickStride [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 28"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMTS matches 0 run tellraw @s ["","    -> ",{"text":"TickStride [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 29"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s {"text":"  Movement","bold":true}
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMNF matches 1 run tellraw @s ["","    -> ",{"text":"NoFall [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 30"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_MVMNF matches 0 run tellraw @s ["","    -> ",{"text":"NoFall [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 31"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMSF matches 1 run tellraw @s ["","    -> ",{"text":"SurvivalFly [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMSF matches 0 run tellraw @s ["","    -> ",{"text":"SurvivalFly [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 3"}}]
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Net","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMTS matches 1 run tellraw @s ["","    -> ",{"text":"TickStride [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 28"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMTS matches 0 run tellraw @s ["","    -> ",{"text":"TickStride [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 29"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_NETUP matches 1 run tellraw @s ["","    -> ",{"text":"UnfittingPacket [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 6"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_NETUP matches 0 run tellraw @s ["","    -> ",{"text":"UnfittingPacket [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 7"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMNF matches 1 run tellraw @s ["","    -> ",{"text":"NoFall [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 30"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_MVMNF matches 0 run tellraw @s ["","    -> ",{"text":"NoFall [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 31"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_NETAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 8"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_NETAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 9"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s {"text":"  Net","bold":true}
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Inventory","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_NETUP matches 1 run tellraw @s ["","    -> ",{"text":"UnfittingPacket [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 6"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_NETUP matches 0 run tellraw @s ["","    -> ",{"text":"UnfittingPacket [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 7"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_INVAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 10"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_INVAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 11"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_NETAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 8"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_NETAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 9"}}]
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Fight","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s {"text":"  Inventory","bold":true}
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FRC matches 1 run tellraw @s ["","    -> ",{"text":"Reach [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 14"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FRC matches 0 run tellraw @s ["","    -> ",{"text":"Reach [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 15"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_INVAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 10"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_INVAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 11"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FCR matches 1 run tellraw @s ["","    -> ",{"text":"Criticals [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 16"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FCR matches 0 run tellraw @s ["","    -> ",{"text":"Criticals [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 17"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_IIB matches 1 run tellraw @s ["","    -> ",{"text":"InstantBow [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 36"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 if score DataHolder ncmcm_IIB matches 0 run tellraw @s ["","    -> ",{"text":"InstantBow [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 37"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -1 run tellraw @s [{"text":""},{"text":"Showing page 1 / 2."},{"text":" Next > ","color":"yellow","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmcm_currentPage 2"},"hoverEvent":{"action":"show_text","contents":[{"text":"/scoreboard players set @s ncmcm_currentPage 2"}]}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FWT matches 1 run tellraw @s ["","    -> ",{"text":"WrongTurn [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 32"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_FWT matches 0 run tellraw @s ["","    -> ",{"text":"WrongTurn [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 33"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s [{"text":""},{"text":"\n\n\n\n\n\n\nShowing page 2 / 2."},{"text":" < Prev ","color":"yellow","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmcm_currentPage 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"/scoreboard players set @s ncmcm_currentPage 1"}]}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s {"text":"  Fight","bold":true}
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  Combined","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FRC matches 1 run tellraw @s ["","    -> ",{"text":"Reach [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 14"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FRC matches 0 run tellraw @s ["","    -> ",{"text":"Reach [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 15"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_COMBL matches 1 run tellraw @s ["","    -> ",{"text":"BedLeave [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 18"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_COMBL matches 0 run tellraw @s ["","    -> ",{"text":"BedLeave [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 19"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCR matches 1 run tellraw @s ["","    -> ",{"text":"Criticals [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 16"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCR matches 0 run tellraw @s ["","    -> ",{"text":"Criticals [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 17"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_COMMUN matches 1 run tellraw @s ["","    -> ",{"text":"Munchhausen [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 20"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_COMMUN matches 0 run tellraw @s ["","    -> ",{"text":"Munchhausen [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 21"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FWT matches 1 run tellraw @s ["","    -> ",{"text":"WrongTurn [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 32"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FWT matches 0 run tellraw @s ["","    -> ",{"text":"WrongTurn [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 33"}}]
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  BlockPlace","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCV matches 1 run tellraw @s ["","    -> ",{"text":"CompliantVelocity [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 34"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCV matches 0 run tellraw @s ["","    -> ",{"text":"CompliantVelocity [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 35"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_BPAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 24"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_BPAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 25"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s {"text":"  Combined","bold":true}
 
-execute as @a if score @s ncmChecks matches 1.. run tellraw @s {"text":"  BlockInteract","bold":true}
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMBL matches 1 run tellraw @s ["","    -> ",{"text":"BedLeave [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 18"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMBL matches 0 run tellraw @s ["","    -> ",{"text":"BedLeave [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 19"}}]
 
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_BIMB matches 1 run tellraw @s ["","    -> ",{"text":"MissingBlock [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 26"}}]
-execute as @a if score @s ncmChecks matches 1.. if score DataHolder ncmcm_BIMB matches 0 run tellraw @s ["","    -> ",{"text":"MissingBlock [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 27"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMMUN matches 1 run tellraw @s ["","    -> ",{"text":"Munchhausen [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 20"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMMUN matches 0 run tellraw @s ["","    -> ",{"text":"Munchhausen [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 21"}}]
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s {"text":"  BlockPlace","bold":true}
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_BPAP matches 1 run tellraw @s ["","    -> ",{"text":"Appropriate [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 24"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_BPAP matches 0 run tellraw @s ["","    -> ",{"text":"Appropriate [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 25"}}]
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s {"text":"  BlockInteract","bold":true}
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_BIMB matches 1 run tellraw @s ["","    -> ",{"text":"MissingBlock [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 26"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_BIMB matches 0 run tellraw @s ["","    -> ",{"text":"MissingBlock [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 27"}}]
 
 
 
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s [{"text":""},{"text":"Showing page 2 / 2."},{"text":" < Prev ","color":"yellow","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmcm_currentPage 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"/scoreboard players set @s ncmcm_currentPage 1"}]}}]
 
 
 
