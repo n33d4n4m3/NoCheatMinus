@@ -241,33 +241,155 @@ execute as @a if score @s ncmStepableNearby matches 1.. run scoreboard players r
 
 # Cobweb fix
 
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
 
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
 
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~-1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~ ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~-1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~ ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~-1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~ ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~-1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~ ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~1 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players add @s ncmCobwebNearby 1
 
 

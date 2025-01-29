@@ -1,10 +1,19 @@
 {
   "criteria": {
-    "consume_item": {
-      "trigger": "minecraft:entity_hurt_player"
+    "1": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:no_knockback",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
     }
-  },
-  "rewards": {
-
   }
 }

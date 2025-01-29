@@ -299,7 +299,7 @@ scoreboard players set DataHolder ncmc_ts_22 1000
 # (Reputation loss only) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_23 100
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 11 -> HORSE (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_24 120
+scoreboard players set DataHolder ncmc_ts_24 200
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 12 -> STRIDER (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_25 1000

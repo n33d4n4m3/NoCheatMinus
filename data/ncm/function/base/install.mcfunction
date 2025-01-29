@@ -892,7 +892,7 @@ scoreboard objectives add ncmAllowedDistanceByPackets dummy
 scoreboard objectives add ncmDistanceDifference dummy
 scoreboard objectives add ncmTimesStrideTooHighWithLatency dummy
 scoreboard objectives add ncmTSResetLatencyTimer dummy
-scoreboard objectives add ncmMightStillSprinting dummy
+scoreboard objectives add ncmInvalidateLostSprint dummy
 
 
 # --------------------------
