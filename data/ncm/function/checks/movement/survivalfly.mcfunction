@@ -16,6 +16,7 @@
 # Description:  This check monitors the player's motion.
 # Fail:         This check fails if the player's motion differs from the expected motion in Subcheck-defined situations.
 # Subchecks:    - LostGround
+#               - LiquidGravity
 #               - OffGroundTicks
 #               - Climb
 #               - ConstantClimbRate
@@ -68,6 +69,20 @@ execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivlrc >= DataHolder ncmc_sf_lg_2 run scoreboard players set @s ncmSFLG_ivl 0
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivlrc >= DataHolder ncmc_sf_lg_2 run scoreboard players set @s ncmSFLG_ivlrc 0
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_sf_lg_1 run scoreboard players set @s ncmSFLG_ivl 0
+
+# -----------------------
+# Subcheck: LiquidGravity
+# -----------------------
+
+execute as @a store result score @s ncmMVMSFWWMotionY run data get entity @s Motion[1] 1000
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ water if score @s ncmMVMSFWWMotionY matches ..-1000 run scoreboard players set @s ncmFailedMVMSF 5
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ water if score @s ncmMVMSFWWMotionY matches ..-1000 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LiquidGravity","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMSFWWMotionY"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ water if score @s ncmMVMSFWWMotionY matches ..-1000 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LiquidGravity","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMSFWWMotionY"},"color":"gray"},{"text":"}","color":"gray"}]
+
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ lava if score @s ncmMVMSFWWMotionY matches ..-1000 run scoreboard players set @s ncmFailedMVMSF 5
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ lava if score @s ncmMVMSFWWMotionY matches ..-1000 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LiquidGravity","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMSFWWMotionY"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a at @s unless score @s ncmLevitate matches 1.. if block ~ ~-0.01 ~ lava if score @s ncmMVMSFWWMotionY matches ..-1000 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LiquidGravity","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMSFWWMotionY"},"color":"gray"},{"text":"}","color":"gray"}]
+
 
 
 # ------------------------

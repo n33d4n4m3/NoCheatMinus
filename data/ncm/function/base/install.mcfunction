@@ -763,6 +763,9 @@ scoreboard objectives add ncmYMotion dummy
 scoreboard objectives add ncmSFLG_ivl dummy
 scoreboard objectives add ncmSFLG_ivlrc dummy
 
+# SurvivalFly (LiquidGravity)
+scoreboard objectives add ncmMVMSFWWMotionY dummy
+
 # SurvivalFly (OffGroundTicks)
 scoreboard objectives add ncmOffGrTicks dummy
 scoreboard objectives add ncmOffGrTicksC dummy

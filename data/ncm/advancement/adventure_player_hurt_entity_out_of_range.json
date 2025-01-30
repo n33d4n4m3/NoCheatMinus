@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "requirement": {
+    "1": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "player": {
@@ -8,13 +8,40 @@
         },
         "damage": {
           "type": {
-            "is_explosion": false,
-            "is_fire": false,
-            "is_magic": false,
-            "is_projectile": false,
-            "is_lightning": false,
-            "bypasses_invulnerability": false,
-            "bypasses_magic": false
+            "tags": [
+              {
+                "id": "minecraft:is_drowning",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_explosion",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_fall",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_fire",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_freezing",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_lightning",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_projectile",
+                "expected": false
+              },
+              {
+                "id": "minecraft:is_player_attack",
+                "expected": true
+              }
+            ]
           }
         },
         "entity": [
@@ -25,7 +52,7 @@
               "type": "#ncm:regularreach",
               "distance": {
                 "absolute": {
-                  "min": 5.0
+                  "min": 5
                 }
               }
             }
