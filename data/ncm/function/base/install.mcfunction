@@ -466,16 +466,16 @@ scoreboard objectives add ncmc_r_1 dummy
 # Measurement duration in ticks 600
 scoreboard objectives add ncmc_d_1 dummy
 
-# Minimum hit count required for evaluation 20
+# Minimum hit count required for evaluation 30
 scoreboard objectives add ncmc_d_2 dummy
 
 # Maximum hit count allowed for evaluation 30
 scoreboard objectives add ncmc_d_3 dummy
 
-# Fail Common/HLC if match rate is below ...% 30
+# Fail Common/HLC if match rate is below ...% 20
 scoreboard objectives add ncmc_d_4 dummy
 
-# Fail Suspect if match rate is below ...% 20
+# Fail Suspect if match rate is below ...% 15
 scoreboard objectives add ncmc_d_5 dummy
 
 # Fail Rage if match rate is below ...% 10

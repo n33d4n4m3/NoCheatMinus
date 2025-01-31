@@ -144,17 +144,17 @@ scoreboard players set DataHolder ncmc_r_1 1
 # Measurement duration in ticks 600
 scoreboard players set DataHolder ncmc_d_1 600
 
-# Minimum hit count required for evaluation 20
-scoreboard players set DataHolder ncmc_d_2 20
+# Minimum hit count required for evaluation 30
+scoreboard players set DataHolder ncmc_d_2 30
 
 # Maximum hit count allowed for evaluation 30
 scoreboard players set DataHolder ncmc_d_3 30
 
-# Fail Common/HLC if match rate is below ...% 30
-scoreboard players set DataHolder ncmc_d_4 30
+# Fail Common/HLC if match rate is below ...% 20
+scoreboard players set DataHolder ncmc_d_4 20
 
-# Fail Suspect if match rate is below ...% 20
-scoreboard players set DataHolder ncmc_d_5 20
+# Fail Suspect if match rate is below ...% 15
+scoreboard players set DataHolder ncmc_d_5 15
 
 # Fail Rage if match rate is below ...% 10
 scoreboard players set DataHolder ncmc_d_6 10
