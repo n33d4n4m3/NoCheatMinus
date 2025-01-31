@@ -66,6 +66,9 @@ execute as @a if score @s ncmChecks matches 35 run scoreboard players set DataHo
 execute as @a if score @s ncmChecks matches 36 run scoreboard players set DataHolder ncmcm_toggle_IIB 2
 execute as @a if score @s ncmChecks matches 37 run scoreboard players set DataHolder ncmcm_toggle_IIB 1
 
+execute as @a if score @s ncmChecks matches 38 run scoreboard players set DataHolder ncmcm_toggle_FD 2
+execute as @a if score @s ncmChecks matches 39 run scoreboard players set DataHolder ncmcm_toggle_FD 1
+
 execute as @a if score @s ncmChecks matches 2.. run function ncm:checks/checkmanager
 
 
@@ -116,6 +119,9 @@ execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage ma
 
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FRC matches 1 run tellraw @s ["","    -> ",{"text":"Reach [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 14"}}]
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FRC matches 0 run tellraw @s ["","    -> ",{"text":"Reach [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 15"}}]
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FD matches 1 run tellraw @s ["","    -> ",{"text":"Direction [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 38"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FD matches 0 run tellraw @s ["","    -> ",{"text":"Direction [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 39"}}]
 
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCR matches 1 run tellraw @s ["","    -> ",{"text":"Criticals [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 16"}}]
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_FCR matches 0 run tellraw @s ["","    -> ",{"text":"Criticals [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 17"}}]

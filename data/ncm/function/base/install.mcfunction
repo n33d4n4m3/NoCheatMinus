@@ -185,7 +185,7 @@ scoreboard objectives add ncmFailedMVMTS dummy
 scoreboard objectives add ncmFailedFWT dummy
 scoreboard objectives add ncmFailedFCV dummy
 scoreboard objectives add ncmFailedIIB dummy
-
+scoreboard objectives add ncmFailedFD dummy
 
 # --------------------
 # Pass
@@ -243,6 +243,8 @@ scoreboard objectives add ncmcm_toggle_FCV dummy
 scoreboard objectives add ncmcm_FCV dummy
 scoreboard objectives add ncmcm_toggle_IIB dummy
 scoreboard objectives add ncmcm_IIB dummy
+scoreboard objectives add ncmcm_toggle_FD dummy
+scoreboard objectives add ncmcm_FD dummy
 
 scoreboard objectives add ncmcm_currentPage dummy
 
@@ -422,6 +424,14 @@ scoreboard objectives add ncmc_bs_fl_48 dummy
 # Reputation loss for failing Fight.WrongTurn (Rage) 0
 scoreboard objectives add ncmc_bs_fl_49 dummy
 
+# Fight.Direction
+# Reputation loss for failing Fight.Direction (Common/HLC) 20
+scoreboard objectives add ncmc_bs_fl_56 dummy
+# Reputation loss for failing Fight.Direction (Suspect) 30
+scoreboard objectives add ncmc_bs_fl_57 dummy
+# Reputation loss for failing Fight.Direction (Rage) 50
+scoreboard objectives add ncmc_bs_fl_58 dummy
+
 # NoFall 269
 scoreboard objectives add ncmc_nf_1 dummy
 
@@ -447,6 +457,32 @@ scoreboard objectives add ncmc_cv_1 dummy
 
 # Should an additional latency check be performed before the actual check fail? Note: If yes, players with a latency level > 0 will no longer be able to fail the check. 1 
 scoreboard objectives add ncmc_cv_2 dummy
+
+# Fight.Reach
+# Exclude players with a latency level higher than ... 1
+scoreboard objectives add ncmc_r_1 dummy
+
+# Fight.Direction
+# Measurement duration in ticks 600
+scoreboard objectives add ncmc_d_1 dummy
+
+# Minimum hit count required for evaluation 20
+scoreboard objectives add ncmc_d_2 dummy
+
+# Maximum hit count allowed for evaluation 30
+scoreboard objectives add ncmc_d_3 dummy
+
+# Fail Common/HLC if match rate is below ...% 30
+scoreboard objectives add ncmc_d_4 dummy
+
+# Fail Suspect if match rate is below ...% 20
+scoreboard objectives add ncmc_d_5 dummy
+
+# Fail Rage if match rate is below ...% 10
+scoreboard objectives add ncmc_d_6 dummy
+
+# Exclude players with a latency level higher than ... 0
+scoreboard objectives add ncmc_d_7 dummy
 
 
 # SurvivalFly (False Positives)
@@ -692,6 +728,12 @@ scoreboard objectives add ncmKillCount totalKillCount
 scoreboard objectives add ncmFCCFall dummy
 scoreboard objectives add ncmFCCMissingReq dummy
 
+# Fight
+scoreboard objectives add ncmFDTimer dummy
+scoreboard objectives add ncmFDMatchCount dummy
+scoreboard objectives add ncmFDMissCount dummy
+scoreboard objectives add ncmFDMatchRate dummy
+scoreboard objectives add ncmFDHitCount dummy
 
 # CompliantVelocity
 scoreboard objectives add ncmTicksUntilVelocityUsed dummy
@@ -936,6 +978,7 @@ execute unless score DataHolder ncmInstalled matches 1 run scoreboard players se
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FWT 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FCV 1
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_IIB 1
+execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmcm_toggle_FD 1
 execute unless score DataHolder ncmInstalled matches 1 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": Admins, please use the command ","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}},{"text":"/scoreboard players set @s ncmOperator 1","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":["/scoreboard players set @s ncmOperator 1"]}}," to gain access to NoCheatMinus-commands."]
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

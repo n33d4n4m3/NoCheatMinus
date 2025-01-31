@@ -120,6 +120,11 @@ scoreboard players set DataHolder ncmc_bs_fl_53 0
 scoreboard players set DataHolder ncmc_bs_fl_54 15
 scoreboard players set DataHolder ncmc_bs_fl_55 15
 
+# Fight.Direction (20 / 30 / 50)
+scoreboard players set DataHolder ncmc_bs_fl_56 20
+scoreboard players set DataHolder ncmc_bs_fl_57 30
+scoreboard players set DataHolder ncmc_bs_fl_58 50
+
 # Penalize failed checks by resetting? 1
 scoreboard players set DataHolder ncmc_bs_fl_34 1
 
@@ -131,6 +136,31 @@ scoreboard players set DataHolder ncmc_cv_1 5
 # Should an additional latency check be performed before the actual check fail? Note: If yes, players with a latency level > 0 will no longer be able to fail the check. 1 
 scoreboard players set DataHolder ncmc_cv_2 1
 
+# Fight.Reach
+# Exclude players with a latency level higher than ... 1
+scoreboard players set DataHolder ncmc_r_1 1
+
+# Fight.Direction
+# Measurement duration in ticks 600
+scoreboard players set DataHolder ncmc_d_1 600
+
+# Minimum hit count required for evaluation 20
+scoreboard players set DataHolder ncmc_d_2 20
+
+# Maximum hit count allowed for evaluation 30
+scoreboard players set DataHolder ncmc_d_3 30
+
+# Fail Common/HLC if match rate is below ...% 30
+scoreboard players set DataHolder ncmc_d_4 30
+
+# Fail Suspect if match rate is below ...% 20
+scoreboard players set DataHolder ncmc_d_5 20
+
+# Fail Rage if match rate is below ...% 10
+scoreboard players set DataHolder ncmc_d_6 10
+
+# Exclude players with a latency level higher than ... 0
+scoreboard players set DataHolder ncmc_d_7 0
 
 # Appropriate (FastConsume)
 # How many items the player is allowed to eat until the counter is resetted? 1

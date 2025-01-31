@@ -3,9 +3,6 @@
     "1": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "player": {
-          "nbt": "{playerGameType:1}"
-        },
         "damage": {
           "type": {
             "tags": [
@@ -43,25 +40,8 @@
               }
             ]
           }
-        },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "#ncm:regularreach",
-              "distance": {
-                "absolute": {
-                  "min": 8
-                }
-              }
-            }
-          }
-        ]
+        }
       }
     }
-  },
-  "rewards": {
-    "function": "ncm:checks/fight/reach"
   }
 }

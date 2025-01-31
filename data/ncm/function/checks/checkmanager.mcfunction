@@ -91,6 +91,21 @@ execute if score DataHolder ncmcm_toggle_IIB matches 1.. run scoreboard players 
 
 
 
+# Enable Fight.Direction
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set DataHolder ncmcm_FD 1
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set @a ncmFDHitCount 0
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set @a ncmFDMatchCount 0
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set @a ncmFDMissCount 0
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set @a ncmFDMatchRate 0
+execute if score DataHolder ncmcm_toggle_FD matches 1 run scoreboard players set @a ncmFDTimer -1
+# Disable Fight.Direction
+execute if score DataHolder ncmcm_toggle_FD matches 2 run scoreboard players set DataHolder ncmcm_FD 0
+
+execute if score DataHolder ncmcm_toggle_FD matches 1.. run scoreboard players set DataHolder ncmcm_toggle_FD 0
+
+
+
+
 # Enable BlockPlace.Appropriate
 execute if score DataHolder ncmcm_toggle_BPAP matches 1 run scoreboard players set DataHolder ncmcm_BPAP 1
 # Disable BlockPlace.Appropriate

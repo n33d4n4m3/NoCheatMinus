@@ -24,6 +24,26 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmc_d_1
+scoreboard objectives remove ncmc_d_2
+scoreboard objectives remove ncmc_d_3
+scoreboard objectives remove ncmc_d_4
+scoreboard objectives remove ncmc_d_5
+scoreboard objectives remove ncmc_d_6
+scoreboard objectives remove ncmc_d_7
+scoreboard objectives remove ncmc_r_1
+scoreboard objectives remove ncmc_bs_fl_56
+scoreboard objectives remove ncmc_bs_fl_57
+scoreboard objectives remove ncmc_bs_fl_58
+scoreboard objectives remove ncmcm_FD
+scoreboard objectives remove ncmcm_toggle_FD
+scoreboard objectives remove ncmFailedFD
+scoreboard objectives remove ncmFDMatchCount
+scoreboard objectives remove ncmFDHitCount
+scoreboard objectives remove ncmFDMissCount
+scoreboard objectives remove ncmFDTimer
+scoreboard objectives remove ncmFDMatchRate
+
 scoreboard objectives remove ncmTicksUntilVelocityMustBeUsed
 scoreboard objectives remove ncmInvalidateLostSprint
 scoreboard objectives remove ncmMVMSFWWMotionY
