@@ -728,12 +728,13 @@ scoreboard objectives add ncmKillCount totalKillCount
 scoreboard objectives add ncmFCCFall dummy
 scoreboard objectives add ncmFCCMissingReq dummy
 
-# Fight
+# Direction
 scoreboard objectives add ncmFDTimer dummy
 scoreboard objectives add ncmFDMatchCount dummy
 scoreboard objectives add ncmFDMissCount dummy
 scoreboard objectives add ncmFDMatchRate dummy
 scoreboard objectives add ncmFDHitCount dummy
+scoreboard objectives add ncmFDRange dummy
 
 # CompliantVelocity
 scoreboard objectives add ncmTicksUntilVelocityUsed dummy

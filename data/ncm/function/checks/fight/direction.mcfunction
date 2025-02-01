@@ -28,10 +28,12 @@ execute as @a if score @s ncmFDTimer matches 0.. if score @s ncmLastLatencyLevel
 execute as @a if score @s ncmFDTimer matches 0.. if score @s ncmLastLatencyLevel > DataHolder ncmc_d_7 run scoreboard players set @s ncmFDTimer -1
 
 # Start the measurement.
-execute as @a[advancements={ncm:player_hurt_entity_direct=true}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 run scoreboard players add @s ncmFDHitCount 1
-execute as @a[advancements={ncm:player_hurt_entity_direct=true}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 at @s anchored eyes run function ncm:checks/fight/util/d_ray
-execute as @a[advancements={ncm:player_hurt_entity_direct=true}] unless score @s ncmFDTimer matches 0.. run scoreboard players operation @s ncmFDTimer = DataHolder ncmc_d_1
+execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 run scoreboard players add @s ncmFDHitCount 1
+execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 run scoreboard players set @s ncmFDRange 0
+execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 at @s anchored eyes run function ncm:checks/fight/util/d_ray
+execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] unless score @s ncmFDTimer matches 0.. run scoreboard players operation @s ncmFDTimer = DataHolder ncmc_d_1
 execute as @a[advancements={ncm:player_hurt_entity_direct=true}] run advancement revoke @s only ncm:player_hurt_entity_direct
+execute as @a[advancements={ncm:player_killed_entity_direction=true}] run advancement revoke @s only ncm:player_killed_entity_direction
 
 # If the maximum hit count is reached or time is up, terminate the measurement and begin evaluation.
 execute as @a if score @s ncmFDHitCount = DataHolder ncmc_d_3 run scoreboard players set @s ncmFDTimer 0
@@ -59,8 +61,8 @@ execute as @a if score @s ncmFDTimer matches 0 unless score @s ncmFDHitCount < D
 execute as @a if score @s ncmFDTimer matches 0 unless score @s ncmFDHitCount < DataHolder ncmc_d_2 if score @s ncmFDMatchRate < DataHolder ncmc_d_6 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Direction","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmFDMatchCount"},"color":"gray"},{"text":"/","color":"gray"},{"score":{"name":"@s","objective":"ncmFDHitCount"},"color":"gray"},{"text":" matched (","color":"gray"},{"score":{"name":"@s","objective":"ncmFDMatchRate"},"color":"gray"},{"text":"%), RAGE}","color":"gray"}]
 
 # Reset
-execute as @a if score @s ncmFDTimer matches 0 run scoreboard players set @s ncmFDMatchCount 0
-execute as @a if score @s ncmFDTimer matches 0 run scoreboard players set @s ncmFDMissCount 0
-execute as @a if score @s ncmFDTimer matches 0 run scoreboard players set @s ncmFDMatchRate 0
-execute as @a if score @s ncmFDTimer matches 0 run scoreboard players set @s ncmFDHitCount 0
+execute as @a unless score @s ncmFDTimer matches 1.. run scoreboard players set @s ncmFDMatchCount 0
+execute as @a unless score @s ncmFDTimer matches 1.. run scoreboard players set @s ncmFDMissCount 0
+execute as @a unless score @s ncmFDTimer matches 1.. run scoreboard players set @s ncmFDMatchRate 0
+execute as @a unless score @s ncmFDTimer matches 1.. run scoreboard players set @s ncmFDHitCount 0
 execute as @a if score @s ncmFDTimer matches 0.. run scoreboard players remove @s ncmFDTimer 1
