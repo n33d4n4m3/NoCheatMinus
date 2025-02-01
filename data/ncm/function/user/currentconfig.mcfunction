@@ -37,4 +37,4 @@ execute as @e[type=minecraft:player] if score DataHolder ncmCC matches 8 run fun
 execute as @e[type=minecraft:player] if score DataHolder ncmCC matches 9 run function ncm:user/configs/default
 # ...
 
-tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},{"text":"The configuration file in slot ","color":"white"},{"score":{"name":"DataHolder","objective":"ncmCC"}},{"text":" has been loaded successfully.","color":"white"}]
+tellraw @a[scores={ncmOperator=2}] [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"Loaded ","color":"gray"},{"text":"configuration file in slot ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmCC"},"color":"yellow"},{"text":".","color":"gray"}]

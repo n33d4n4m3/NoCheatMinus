@@ -66,9 +66,12 @@ execute as @e[type=minecraft:player] if score @s ncmRep <= DataHolder ncmc_bs_rp
 
 
 # Verbose
-execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},": ","Verbose logging is now enabled for player ",{"selector":"@a[scores={ncmVerbose=1}]"},"."]
+execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmOperator=2}] [{"text":""},{"text":"NCM","color":"red"},{"text":": Verbose logging is now enabled for player ","color":"gray"},{"selector":"@a[scores={ncmVerbose=1}]","color":"yellow"},{"text":".","color":"gray"}]
+execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmInputR=0}] [{"text":""},{"text":"NCM","color":"red"},{"text":": Currently, you don't see any check-fail notifications. If you want to see the check-fail notifications of players with enabled verbose-mode only, you have to change your input mode to 1 with ","color":"gray"},{"text":"/trigger ncmInput set 1","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmInput set 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmInput set 1"}]}}]
+execute as @a if score @s ncmVerbose matches 1 run tellraw @a[scores={ncmInputR=2}] [{"text":""},{"text":"NCM","color":"red"},{"text":": Currently, you see check-fail notifications of all players. If you want to see the check-fail notifications of players with enabled verbose-mode only, you have to change your input mode to 1 with ","color":"gray"},{"text":"/trigger ncmInput set 1","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmInput set 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmInput set 1"}]}}]
+
 execute as @a if score @s ncmVerbose matches 1 run scoreboard players set @s ncmVerbose 2
-execute as @a if score @s ncmVerbose matches 0 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"red"},": ","Verbose logging is now disabled for player ",{"selector":"@a[scores={ncmVerbose=0}]"},"."]
+execute as @a if score @s ncmVerbose matches 0 run tellraw @a[scores={ncmOperator=2}] [{"text":""},{"text":"NCM","color":"red"},{"text":": Verbose logging is now disabled for player ","color":"gray"},{"selector":"@a[scores={ncmVerbose=0}]","color":"yellow"},{"text":".","color":"gray"}]
 execute as @a if score @s ncmVerbose matches 0 run scoreboard players set @s ncmVerbose -1
 
 # Statistics

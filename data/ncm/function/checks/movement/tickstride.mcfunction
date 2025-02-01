@@ -225,7 +225,7 @@ execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTSInternalLogOnlyFails >= DataHolder ncmc_ts_34 if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"TickStride","color":"light_purple"},{"text":" {+Blatant Cancel}","color":"gray"}]
 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. run scoreboard players set @s ncmFailedMVMTS 9
-execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
+execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. if score DataHolder ncmBlockMode matches 1 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"TickStride.MorePackets","color":"light_purple"},{"text":" {...}","color":"gray"}]
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"TickStride.MorePackets","color":"light_purple"},{"text":" {...}","color":"gray"}]
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighWithLatency matches 3.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
@@ -234,7 +234,7 @@ execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTSInternalLogOnlyFails >= DataHolder ncmc_ts_34 run scoreboard players set @s ncmTSInternalLogOnlyFails 0
 
 
-execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
+execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighCancel >= DataHolder ncmc_ts_31 if score DataHolder ncmBlockMode matches 1 run scoreboard players set @s VE.PlayerMoveEvent.willModify 1
 
 
 execute as @e[type=minecraft:player] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmTimesStrideTooHighLog >= DataHolder ncmc_ts_31 run scoreboard players set @s ncmTimesStrideTooHighLog 0

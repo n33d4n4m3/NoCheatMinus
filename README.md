@@ -8,7 +8,7 @@
 0. First, you need to install the latest version of *VanillaEvents* in your world. *VanillaEvents* is installed in the same way as NoCheatMinus and can be downloaded [here](https://github.com/n33d4n4m3/VanillaEvents).
 1. Download the NoCheatMinus project as a .zip file, un-zip it and place the folder (which contains the "data"-folder) in your world's datapack folder.
 2. Restart your server or use `/reload` to reload the datapacks.
-3. Use the command `/scoreboard players set @s ncmOperator 1` to obtain operator rights in NoCheatMinus, which will allow you to execute commands that start with `/trigger ncm...`.
+3. Follow the instructions in the chat.
 
 ## Apply values from configuration files
 1. Paste your configuration files into the directory **NoCheatMinus/data/ncm/functions/user/configs/**

@@ -22,7 +22,8 @@
 function ncm:command/input
 function ncm:command/report
 function ncm:command/checks
-
+function ncm:command/tour
+function ncm:command/help
 
 # Running system routines
 

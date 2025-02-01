@@ -17,8 +17,6 @@
 # Author:       n33d4n4m3
 # ...
 
-execute as @a if score @s ncmOperator matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You are now a NoCheatMinus operator and have access to commands with the 'ncm'-prefix. Execute ","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 2"}},{"text":"/trigger ncmHelp","clickEvent":{"action":"run_command","value":"/trigger ncmHelp"},"hoverEvent":{"action":"show_text","contents":["/trigger ncmHelp"]}}," to get an overview of what you can do."]
-execute as @a if score @s ncmOperator matches 1 run trigger ncmInput set 2
+execute as @a if score @s ncmOperator matches 1 if score DataHolder ncmFinishedTour matches 1 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"You are now a NoCheatMinus operator and have access to commands with the 'ncm'-prefix. Execute","color":"gray"},{"text":" /trigger ncmHelp ","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmHelp"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmHelp"}]}},{"text":"to get an overview of what you can do.","color":"gray"}]
+execute as @a if score @s ncmOperator matches 1 unless score DataHolder ncmFinishedTour matches 1 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"You are now a NoCheatMinus operator. NoCheatMinus has been successfully installed but will remain inactive until you complete the setup tour. If you have time, you can start it anytime with","color":"gray"},{"text":" /trigger ncmTour","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmTour"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmTour"}]}},{"text":". It only takes a few minutes.","color":"gray"}]
 execute as @a if score @s ncmOperator matches 1 run scoreboard players set @s ncmOperator 2
-
-

@@ -24,6 +24,9 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmTour
+scoreboard objectives remove ncmBlockMode
+scoreboard objectives remove ncmFinishedTour
 scoreboard objectives remove ncmFDRange
 scoreboard objectives remove ncmc_d_1
 scoreboard objectives remove ncmc_d_2

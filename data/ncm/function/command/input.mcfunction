@@ -15,18 +15,18 @@
 # ...
 # Description:  This command allows the player to configure logging.
 # Usage:        /trigger ncmInput set 0/1/2
-#               0 - Hide all failed checks
-#               1 - Log self-failed checks
-#               2 - Log all failed checks.
+#               0 - Log no failed checks
+#               1 - Log failed checks of verbose-mode players
+#               2 - Log all failed checks
 # Author:       n33d4n4m3
 # ...
 
 execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @s ncmInput
 execute as @a if score @s ncmOperator matches 1 run scoreboard players set @s ncmInput 2
 
-execute as @a if score @s ncmInput matches 0 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Logging disabled.","color":"white"}]
-execute as @a if score @s ncmInput matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Logging enabled. (Failed checks of players with enabled verbose mode","color":"white"}]
-execute as @a if score @s ncmInput matches 2 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Logging enabled. (All failed checks)","color":"white"}]
+execute as @a if score @s ncmInput matches 0 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Disabled check fail notifications.","color":"gray"}]
+execute as @a if score @s ncmInput matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You will now receive notifications about failed checks from players with active verbose mode. Use ","color":"gray"},{"text":"/scoreboard players set PLAYERNAME ncmVerbose 1 ","color":"yellow"},{"text":"to enable the verbose mode for a player.","color":"gray"}]
+execute as @a if score @s ncmInput matches 2 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Enabled notifications for check fails of all players.","color":"gray"}]
 execute as @a if score @s ncmInput matches 0 run scoreboard players set @s ncmInputR 0
 execute as @a if score @s ncmInput matches 1 run scoreboard players set @s ncmInputR 1
 execute as @a if score @s ncmInput matches 2 run scoreboard players set @s ncmInputR 2
