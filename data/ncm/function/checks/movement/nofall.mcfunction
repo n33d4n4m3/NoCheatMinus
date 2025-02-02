@@ -269,10 +269,18 @@ execute as @e[type=minecraft:player] if score @s ncmPlayerHealth > @s ncmMVMNFCa
 #execute as @a run tellraw @s ["","[DEBUG] Health: ",{"score":{"name":"@s","objective":"ncmPlayerHealth"}}]
 
 
+
+
+
+
+
 execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run scoreboard players set @s ncmFailedMVMNF 5
 execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"NoFall","color":"light_purple"},{"text":" {~","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"},"color":"gray"},{"text":".","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"},"color":"gray"},{"text":" blocks, ","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"},"color":"gray"},{"text":" -> ","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"},"color":"gray"},{"text":" HP}","color":"gray"}]
 execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"NoFall","color":"light_purple"},{"text":" {~","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFBlocksFallDamage"},"color":"gray"},{"text":".","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFSubblocksFallDamage"},"color":"gray"},{"text":" blocks, ","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFStoreHlth"},"color":"gray"},{"text":" -> ","color":"gray"},{"score":{"name":"@s","objective":"ncmMVMNFCalcHlth"},"color":"gray"},{"text":" HP}","color":"gray"}]
 
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmNFFallDamageToApply = @s ncmMVMNFStoreHlth
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmNFFallDamageToApply -= @s ncmMVMNFCalcHlth
+execute as @e[type=minecraft:player] unless score @s ncmMVMNFFPSourceNearby matches 1.. unless score @s ncmMVMNFCalcHlth matches ..-1 if score @s ncmPlayerHealth > @s ncmMVMNFCalcFall if score @s ncmMVMNFField1 matches 3.. if score DataHolder ncmBlockMode matches 1 if score @s ncmNFFallDamageToApply matches 1.. run function ncm:checks/movement/util/nf_applyfalldamage
 
 # Calculating expected health drop
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFall matches 335.. if score @s ncmMVMNFField1 matches 1 run scoreboard players operation @s ncmMVMNFCalcFall = @s ncmMVMNFFall

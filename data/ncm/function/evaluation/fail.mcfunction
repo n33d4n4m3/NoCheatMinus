@@ -19,6 +19,18 @@
 
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
+
+# Apply weakness effect and gamemode
+
+execute as @a[gamemode=survival] if score @s ncmTicksInAdventureMode matches 2.. run gamemode adventure
+execute as @a[gamemode=adventure] if score @s ncmTicksInAdventureMode matches 1 run gamemode survival
+
+execute as @a if score @s ncmTicksWithWeaknessEffect matches 20.. run effect give @s minecraft:weakness 1 255 true
+
+
+
+execute as @a if score @s ncmTicksInAdventureMode matches 1.. run scoreboard players remove @s ncmTicksInAdventureMode 1
+execute as @a if score @s ncmTicksWithWeaknessEffect matches 1.. run scoreboard players remove @s ncmTicksWithWeaknessEffect 1
 # BlockInteract.MissingBlock
 execute as @e[type=minecraft:player] if score @s ncmFailedBIMB matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_1
 execute as @e[type=minecraft:player] if score @s ncmFailedBIMB matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_2
@@ -29,6 +41,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedBIMB matches 1.. run s
 
 # BlockPlace.Appropriate
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_4
+execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksInAdventureMode = DataHolder ncmc_bs_fl_61
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_5
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_6
 #execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1.. run kick @s[name=Yorb] NoCheatMinus: You placed too many blocks.
@@ -36,6 +49,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1.. run s
 
 # Fight.Criticals
 execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_28
+execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksWithWeaknessEffect = DataHolder ncmc_bs_fl_60
 execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_29
 execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_30
 #execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1.. run kick @s[name=Yorb] NoCheatMinus: You made a critical hit under unlegitimate conditions.
@@ -43,6 +57,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedFCC matches 1.. run sc
 
 # Fight.Reach
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_31
+execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksWithWeaknessEffect = DataHolder ncmc_bs_fl_60
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_32
 execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_33
 #execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 1.. run kick @s[name=Yorb] NoCheatMinus: You attacked an entity out of your legitimate range.
@@ -50,6 +65,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedFRNG matches 1.. run s
 
 # Fight.Direction
 execute as @e[type=minecraft:player] if score @s ncmFailedFD matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_56
+execute as @e[type=minecraft:player] if score @s ncmFailedFD matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksWithWeaknessEffect = DataHolder ncmc_bs_fl_60
 execute as @e[type=minecraft:player] if score @s ncmFailedFD matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_57
 execute as @e[type=minecraft:player] if score @s ncmFailedFD matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_58
 #execute as @e[type=minecraft:player] if score @s ncmFailedFD matches 1.. run kick @s[name=Yorb] NoCheatMinus: Insufficent hit matching.
@@ -66,6 +82,9 @@ execute as @e[type=minecraft:player] if score @s ncmFailedINVAP matches 1.. run 
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_19
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_20
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_21
+
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run scoreboard players set @s ncmTicksSinceLastMovementViolation 0
+
 execute as @e[type=minecraft:player] at @s if score DataHolder ncmBlockMode matches 1 if score @s ncmFailedMVMSF matches 5.. unless score DataHolder ncmOffGrCnclBusy matches 1 if score DataHolder ncmc_bs_fl_34 matches 1 run function ncm:base/cancel_offgroundmovement
 #execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run kick @s[name=Yorb] NoCheatMinus: Invalid movement.
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run scoreboard players set @s ncmFailedMVMSF 0
@@ -83,6 +102,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 1..4 run
 execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_23
 execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_24
 #execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 1.. run kick @s[name=Yorb] NoCheatMinus: Malicious network behavior. (NETAP)
+#execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 1.. if score DataHolder ncmBlockMode matches 1 run kill @s
 execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 1.. run scoreboard players set @s ncmFailedNETAP 0
 
 # Network.UnfittingPacket
@@ -90,6 +110,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1..4 run
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_26
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_27
 #execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run kick @s[name=Yorb] NoCheatMinus: Malicious network behavior. (NETUP)
+execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. if score DataHolder ncmBlockMode matches 1 run kill @s
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run scoreboard players set @s ncmFailedNETUP 0
 
 # Combined.Munchhausen
@@ -122,6 +143,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedFWT matches 1.. run sc
 
 # Fight.CompliantVelocity
 execute as @e[type=minecraft:player] if score @s ncmFailedFCV matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_50
+execute as @e[type=minecraft:player] if score @s ncmFailedFCV matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksWithWeaknessEffect = DataHolder ncmc_bs_fl_60
 execute as @e[type=minecraft:player] if score @s ncmFailedFCV matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_51
 execute as @e[type=minecraft:player] if score @s ncmFailedFCV matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_52
 #execute as @e[type=minecraft:player] if score @s ncmFailedFCV matches 1.. run kick @s[name=Yorb] NoCheatMinus: Your velocity is not compliant.

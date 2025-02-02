@@ -44,6 +44,17 @@ scoreboard players set DataHolder ncmc_bs_rp_11 36000
 scoreboard players set DataHolder ncmc_bs_ps_1 1
 scoreboard players set DataHolder ncmc_bs_ps_2 1200
 
+
+# Fail
+# How many ticks without movement violations should pass before the new setback coordinates are set? 40
+scoreboard players set DataHolder ncmc_bs_fl_59 40
+
+# How many ticks should the Weakness Effect last after failing a fight check? 60
+scoreboard players set DataHolder ncmc_bs_fl_60 60
+
+# How many ticks should the player be in adventure mode after failing a blockplace check? 60
+scoreboard players set DataHolder ncmc_bs_fl_61 60
+
 # Fail Reputation loss for failing a check (Common/HLC / Suspect / Rage)
 # BlockInteract.MissingBlock (0 / 0 / 0)
 scoreboard players set DataHolder ncmc_bs_fl_1 0
@@ -125,7 +136,7 @@ scoreboard players set DataHolder ncmc_bs_fl_56 20
 scoreboard players set DataHolder ncmc_bs_fl_57 30
 scoreboard players set DataHolder ncmc_bs_fl_58 50
 
-# Penalize failed checks by resetting? 1
+# Penalize failed SurvivalFly checks with a setback, when Block Mode is enabled? 1
 scoreboard players set DataHolder ncmc_bs_fl_34 1
 
 

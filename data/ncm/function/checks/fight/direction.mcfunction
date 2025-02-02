@@ -30,8 +30,8 @@ execute as @a if score @s ncmFDTimer matches 0.. if score @s ncmLastLatencyLevel
 # Start the measurement.
 execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 run scoreboard players add @s ncmFDHitCount 1
 execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 run scoreboard players set @s ncmFDRange 0
-execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 at @s anchored eyes run function ncm:checks/fight/util/d_ray
 execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] unless score @s ncmFDTimer matches 0.. run scoreboard players operation @s ncmFDTimer = DataHolder ncmc_d_1
+execute as @a[advancements={ncm:player_hurt_entity_direct=true,ncm:player_killed_entity_direction=false}] if score @s ncmLastLatencyLevel <= DataHolder ncmc_d_7 at @s anchored eyes run function ncm:checks/fight/util/d_ray
 execute as @a[advancements={ncm:player_hurt_entity_direct=true}] run advancement revoke @s only ncm:player_hurt_entity_direct
 execute as @a[advancements={ncm:player_killed_entity_direction=true}] run advancement revoke @s only ncm:player_killed_entity_direction
 
