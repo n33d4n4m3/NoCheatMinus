@@ -24,6 +24,7 @@ kill @e[type=armor_stand,scores={ncmIsSetback=1}]
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmFireTicks
 scoreboard objectives remove ncmTSSetbackX
 scoreboard objectives remove ncmTSSetbackY
 scoreboard objectives remove ncmTSSetbackZ

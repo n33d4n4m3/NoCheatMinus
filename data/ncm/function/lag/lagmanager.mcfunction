@@ -25,6 +25,7 @@ execute if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard player
 
 # Latency
 
+execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players reset @s ncmCheckPlayerLatency
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players reset @s ncmTicksUntilNextLatencyCheck
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players reset @s ncmTimesLatencyLevelMaintained
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players reset @s ncmLastMaximumPing

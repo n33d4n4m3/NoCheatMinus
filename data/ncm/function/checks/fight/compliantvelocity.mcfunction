@@ -38,9 +38,11 @@ execute as @a at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmP
 execute as @a if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 execute as @a if score @s ncmLiquidNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 
-execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players set @s ncmTicksUntilVelocityUsed 1
-execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players operation @s ncmTicksUntilVelocityMustBeUsed = DataHolder ncmc_cv_1
-execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players operation @s ncmTicksUntilVelocityMustBeUsed += @s ncmLastLatencyLevel
+execute as @a store result score @s ncmFireTicks run data get entity @s Fire
+
+execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmFireTicks matches -20 if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players set @s ncmTicksUntilVelocityUsed 1
+execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmFireTicks matches -20 if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players operation @s ncmTicksUntilVelocityMustBeUsed = DataHolder ncmc_cv_1
+execute as @a[advancements={ncm:entity_hurt_player=true}] if score @s ncmFireTicks matches -20 if score @s ncmPlayerIsCollisionFree matches 1 run scoreboard players operation @s ncmTicksUntilVelocityMustBeUsed += @s ncmLastLatencyLevel
 execute as @a[advancements={ncm:entity_hurt_player=true}] run advancement revoke @s only ncm:entity_hurt_player
 execute as @a if score @s ncmTicksUntilVelocityUsed matches 1.. run scoreboard players add @s ncmTicksUntilVelocityUsed 1
 execute as @a if score @s ncmPlayerIsCollisionFree matches 0 run scoreboard players set @s ncmTicksUntilVelocityUsed 0

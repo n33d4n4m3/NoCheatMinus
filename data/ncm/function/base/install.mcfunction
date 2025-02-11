@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 200
+scoreboard players set DataHolder ncmBuildNumber 205
 
 
 scoreboard objectives add ncm.100 dummy
@@ -759,6 +759,7 @@ scoreboard objectives add ncmTicksUntilVelocityUsed dummy
 scoreboard objectives add ncmPlayerIsCollisionFree dummy
 scoreboard objectives add ncmTicksUntilVelocityMustBeUsed dummy
 scoreboard objectives add ncmVelocityStackingTest dummy
+scoreboard objectives add ncmFireTicks dummy
 
 # ---------------------------
 # Combined check objectives

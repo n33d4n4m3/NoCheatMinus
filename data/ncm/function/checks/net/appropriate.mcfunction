@@ -40,9 +40,11 @@ execute as @e[type=minecraft:player] if score @s ncmDeaths matches 1.. run score
 # -------------------
 # Subcheck: DeathTime
 # -------------------
+scoreboard players set @a[scores={ncmLeaveGame=1..}] ncmDeathTimeC 0
 execute as @a store result score @s ncmDeathTime run data get entity @s DeathTime 1
 execute as @a if score @s ncmDeathTime matches 1.. run scoreboard players add @s ncmDeathTimeC 1
 execute as @a if score @s ncmDeathTime matches 0 run scoreboard players set @s ncmDeathTimeC 0
 execute as @a if score @s ncmDeathTime < @s ncmDeathTimeC run scoreboard players set @s ncmFailedNETAP 9
 execute as @a if score @s ncmDeathTime < @s ncmDeathTimeC if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Net","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Appropriate","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"DeathTime","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmDeathTime"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDeathTimeC"},"color":"gray"},{"text":"}","color":"gray"}]
 execute as @a if score @s ncmDeathTime < @s ncmDeathTimeC run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Net","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Appropriate","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"DeathTime","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmDeathTime"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmDeathTimeC"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmLeaveGame 0
