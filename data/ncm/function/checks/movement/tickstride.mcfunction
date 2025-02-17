@@ -197,6 +197,10 @@ execute as @a if score @s ncmTSResetTimer matches 0.. run scoreboard players rem
 execute as @a if score @s ncmTSResetTimer matches 0 run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @a if score @s ncmTSResetTimer matches 0 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
+execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
+execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighCancel 0

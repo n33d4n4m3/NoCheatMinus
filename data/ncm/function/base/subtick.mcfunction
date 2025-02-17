@@ -24,6 +24,7 @@ function ncm:command/report
 function ncm:command/checks
 function ncm:command/tour
 function ncm:command/help
+function ncm:command/replay
 
 # Running system routines
 
@@ -37,6 +38,8 @@ function ncm:base/permission
 
 function ncm:lag/lagmanager
 
+# Running replay system
+function ncm:replay/tick
 
 # Running listeners
 function ncm:checks/fight/fightlistener

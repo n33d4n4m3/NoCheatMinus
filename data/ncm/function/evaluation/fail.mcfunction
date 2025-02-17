@@ -84,7 +84,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 5..8 run
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_21
 
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run scoreboard players set @s ncmTicksSinceLastMovementViolation 0
-
+execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run scoreboard players set @s ncmReplayFlag 1
 execute as @e[type=minecraft:player] at @s if score DataHolder ncmBlockMode matches 1 if score @s ncmFailedMVMSF matches 5.. unless score DataHolder ncmOffGrCnclBusy matches 1 if score DataHolder ncmc_bs_fl_34 matches 1 run function ncm:base/cancel_offgroundmovement
 #execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run kick @s[name=Yorb] NoCheatMinus: Invalid movement.
 execute as @e[type=minecraft:player] if score @s ncmFailedMVMSF matches 1.. run scoreboard players set @s ncmFailedMVMSF 0

@@ -216,7 +216,7 @@ execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players set
 execute as @a if entity @s[nbt={flying:1b}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 
-
+# Experimental Godmode Patch: execute as @a[tag=VE.PlayerAttackEvent] if score @s ncmDeathTime > @s ncmLastLatencyLevel run say [Debug] Attacking while being dead?
 
 
 
