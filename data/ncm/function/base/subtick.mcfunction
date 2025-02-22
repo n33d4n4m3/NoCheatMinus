@@ -76,3 +76,5 @@ function ncm:checks/movement/util/sf_util
 
 # Reset all fired events
 function ncm:base/resetevents
+
+execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmLeaveGame 0

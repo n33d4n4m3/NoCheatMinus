@@ -37,7 +37,7 @@ NoCheatMinus operates in two different modes: **Silent Mode** and **Block Mode**
 ---
 
 ## 🎥 Replay System
-The **Replay System** automatically records movements for **5 seconds before and 5 seconds after** a suspicious action. These clips are compiled into a **10-second video** for review. Operators can analyze these clips and determine if the action was indeed suspicious.
+The **Replay System** automatically records movements for **5 seconds before and 5 seconds after** a suspicious action. These clips are compiled into a **10-second video** for review. Operators can analyze these clips and determine if the action was indeed suspicious. Only one replay clip can be saved per player at a time. No new clips will be recorded for that player until the existing one is deleted.
 
 👀 **To watch a replay:**
 ```

@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 210
+scoreboard players set DataHolder ncmBuildNumber 215
 
 
 scoreboard objectives add ncm.100 dummy
@@ -1673,9 +1673,9 @@ scoreboard objectives add ncmc_ts_9 dummy
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 5 -> CLIMBING (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_10 dummy
 
-# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Creative Mode) (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_11 dummy
-# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Creative Mode) (100 = 1 Block) x
 scoreboard objectives add ncmc_ts_12 dummy
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Survival/Adventure Mode) (100 = 1 Block) x
@@ -1878,6 +1878,8 @@ scoreboard objectives add ncmSFLG_ivlrc dummy
 
 # SurvivalFly (LiquidGravity)
 scoreboard objectives add ncmMVMSFWWMotionY dummy
+scoreboard objectives add ncmMVMSFWWFlagCount dummy
+scoreboard objectives add ncmMVMSFWWFlagCountRC dummy
 
 # SurvivalFly (OffGroundTicks)
 scoreboard objectives add ncmOffGrTicks dummy
@@ -2037,11 +2039,18 @@ execute if score DataHolder ncmFinishedTour matches 1 run tellraw @a [{"text":""
 
 scoreboard objectives add ncmBlockMode dummy
 scoreboard objectives add ncmFinishedTour dummy
+
+# Auto-disable Inventory.Appropriate
+scoreboard players set DataHolder ncmcm_toggle_INVAP 2
+
+
 # Auto-enable checks
 
 
 
 execute unless score DataHolder ncmFinishedTour matches 1 as @a unless score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.3-1.21.4 has been successfully installed but is currently inactive. Operators, please run","color":"gray"},{"text":" /scoreboard players set @s ncmOperator 1 ","color":"yellow","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmOperator 1"},"hoverEvent":{"action":"show_text","contents":[{"text":"/scoreboard players set @s ncmOperator 1"}]}},{"text":"to initiate the next steps.","color":"gray"}]
 execute unless score DataHolder ncmFinishedTour matches 1 as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.3-1.21.4 has been successfully installed but will remain inactive until you complete the setup tour. If you have time, you can start it anytime with","color":"gray"},{"text":" /trigger ncmTour","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmTour"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmTour"}]}},{"text":". It only takes a few minutes.","color":"gray"}]
+
+
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1

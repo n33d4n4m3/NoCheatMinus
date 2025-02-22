@@ -301,9 +301,9 @@ scoreboard players set DataHolder ncmc_ts_9 16
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 5 -> CLIMBING (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_10 24
 
-# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+# (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Creative Mode) (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_11 300
-# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Creative/Spectator Mode) (100 = 1 Block) x
+# (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 6 -> FLYING (Creative Mode) (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_12 115
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 6 -> FLYING (Survival/Adventure Mode) (100 = 1 Block) x

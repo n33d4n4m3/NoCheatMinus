@@ -41,6 +41,8 @@ data remove storage ncm:tpdata pitch
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmMVMSFWWFlagCount
+scoreboard objectives remove ncmMVMSFWWFlagCountRC
 scoreboard objectives remove ncmReplay
 scoreboard objectives remove ncmReplayTick
 scoreboard objectives remove ncmReplayState
