@@ -50,6 +50,35 @@ execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~-1 air run scor
 execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
 execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
 
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-0.1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+
+
+
 
 execute as @a if score DataHolder ncmBlockMode matches 1 run scoreboard players add @s ncmTicksSinceLastMovementViolation 1
 # Setback for TickStride
