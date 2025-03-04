@@ -53,6 +53,12 @@ The **Replay System** automatically records movements for **5 seconds before and
 2️⃣ Restart your server or use `/reload` to apply the changes.
 
 ---
+
+## 🗑️ Uninstall
+To uninstall the datapack, use `/function ncm:user/uninstall` followed by `/function ve:user/uninstall` if you also want to uninstall VanillaEvents.
+
+---
+
 ## 🛠️ Checks
 | Check | Description |
 | ----------------------- | ----------- |

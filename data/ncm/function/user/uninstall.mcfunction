@@ -41,6 +41,7 @@ data remove storage ncm:tpdata pitch
 
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmVEPlayerGameModeChangeEventRegistered
 scoreboard objectives remove ncmMVMSFWWFlagCount
 scoreboard objectives remove ncmMVMSFWWFlagCountRC
 scoreboard objectives remove ncmReplay
@@ -83,6 +84,23 @@ scoreboard objectives remove ncmReplayTimeInReplayMode
 scoreboard objectives remove ncmReplayModePlayers
 scoreboard objectives remove ncmReplaySlotsOccupied
 
+scoreboard objectives remove ncmMVMTSMaximumStrideLengthLog
+scoreboard objectives remove ncmMVMTSMaximumStrideLengthCancel
+scoreboard objectives remove ncmMVMTSMaximumStrideLengthLogConfig
+scoreboard objectives remove ncmMVMTSMaximumStrideLengthCancelConfig
+scoreboard objectives remove ncmMVMTSModifier
+scoreboard objectives remove ncmMVMTSAttributeSpeed
+scoreboard objectives remove ncmMVMTSEnvironmentCooldown
+scoreboard objectives remove ncmMVMTSEnvironmentData
+scoreboard objectives remove ncmPistonNearby
+scoreboard objectives remove ncmMVMTSWasInSweetBerryBush
+scoreboard objectives remove ncmMVMTSAttributeSpeedLower
+scoreboard objectives remove ncmMVMTSAttributeSpeedSave
+scoreboard objectives remove ncmMVMTSAttributeSpeedSaveTimer
+scoreboard objectives remove ncmMVMTSAttributeSpeedSaveTimerMax
+scoreboard objectives remove ncmMVMTSIgnoreNext
+scoreboard objectives remove ncmMVMTSSpeedEffectCooldownSet
+scoreboard objectives remove ncmMVMTSSpeedEffectCooldown
 
 scoreboard objectives remove ncmReplayX1
 scoreboard objectives remove ncmReplayY1

@@ -14,6 +14,7 @@
       "minecraft:sticky_piston",
       "minecraft:lantern",
       "minecraft:soul_lantern",
-      "minecraft:player_head"
+      "minecraft:player_head",
+      "minecraft:soul_sand"
     ]
   }

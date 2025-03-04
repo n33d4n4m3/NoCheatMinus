@@ -21,6 +21,7 @@
 scoreboard objectives add ncmVEPlayerAttackEventRegistered dummy
 scoreboard objectives add ncmVEPlayerMoveEventRegistered dummy
 scoreboard objectives add ncmVEPlayerMovementStateTransitionEventRegistered dummy
+scoreboard objectives add ncmVEPlayerGameModeChangeEventRegistered dummy
 scoreboard objectives add ncmRequiredVEBuild dummy
 scoreboard objectives add ncmTickReady dummy
 scoreboard objectives add VESys.Build dummy

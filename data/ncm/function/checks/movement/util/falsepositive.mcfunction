@@ -239,7 +239,7 @@ execute as @a if score @s ncmStepableNearby matches 1.. run scoreboard players r
 
 
 
-# Cobweb fix
+# Cobweb & Sweet Berry Bush fix
 
 execute as @a at @s if block ~-2 ~-2 ~-2 cobweb run scoreboard players set @s ncmCobwebNearby 1
 execute as @a at @s if block ~-2 ~-2 ~-1 cobweb run scoreboard players set @s ncmCobwebNearby 1
@@ -390,8 +390,462 @@ execute as @a at @s if block ~2 ~2 ~-1 cobweb run scoreboard players set @s ncmC
 execute as @a at @s if block ~2 ~2 ~ cobweb run scoreboard players set @s ncmCobwebNearby 1
 execute as @a at @s if block ~2 ~2 ~1 cobweb run scoreboard players set @s ncmCobwebNearby 1
 execute as @a at @s if block ~2 ~2 ~2 cobweb run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~-2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~-1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~-1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~ ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~ ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-2 ~2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-2 ~2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~-2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~-1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~-1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~ ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~ ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~-1 ~2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~-1 ~2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~-2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~-1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~-1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~ ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~ ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~ ~2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~ ~2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~-2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~-1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~-1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~ ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~ ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~1 ~2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~1 ~2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~-2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~-1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~-1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~ ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~ ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~1 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~1 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
+execute as @a at @s if block ~2 ~2 ~-2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~-1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~ sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~1 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+execute as @a at @s if block ~2 ~2 ~2 sweet_berry_bush run scoreboard players set @s ncmCobwebNearby 1
+
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players add @s ncmCobwebNearby 1
 
+
+
+# Piston fix
+scoreboard players set @a ncmPistonNearby 0
+execute as @a at @s if block ~-2 ~-2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~-1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~ ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~-2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~-1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~ ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~-2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~-1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~ ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~-2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~-1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~ ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~-2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~-1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~ ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~1 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~2 ~-2 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~-1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~ piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~1 piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~2 piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~-2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~-1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~-1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~ ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~ ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-2 ~2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-2 ~2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~-2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~-1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~-1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~ ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~ ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~-1 ~2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~-1 ~2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~-2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~-1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~-1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~ ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~ ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~ ~2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~ ~2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~-2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~-1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~-1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~ ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~ ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~1 ~2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~1 ~2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~-2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~-1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~-1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~ ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~ ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~1 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~1 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+
+execute as @a at @s if block ~2 ~2 ~-2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~-1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~ sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~1 sticky_piston run scoreboard players set @s ncmPistonNearby 1
+execute as @a at @s if block ~2 ~2 ~2 sticky_piston run scoreboard players set @s ncmPistonNearby 1
 
 
 # Liquid fix

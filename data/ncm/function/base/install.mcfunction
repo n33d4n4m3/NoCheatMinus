@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 215
+scoreboard players set DataHolder ncmBuildNumber 220
 
 
 scoreboard objectives add ncm.100 dummy
@@ -2015,6 +2015,26 @@ scoreboard objectives add ncmInvalidateLostSprint dummy
 scoreboard objectives add ncmTSSetbackX dummy
 scoreboard objectives add ncmTSSetbackY dummy
 scoreboard objectives add ncmTSSetbackZ dummy
+
+scoreboard objectives add ncmMVMTSMaximumStrideLengthLog dummy
+scoreboard objectives add ncmMVMTSMaximumStrideLengthCancel dummy
+scoreboard objectives add ncmMVMTSMaximumStrideLengthLogConfig dummy
+scoreboard objectives add ncmMVMTSMaximumStrideLengthCancelConfig dummy
+scoreboard objectives add ncmMVMTSModifier dummy
+scoreboard objectives add ncmMVMTSAttributeSpeed dummy
+scoreboard objectives add ncmMVMTSEnvironmentCooldown dummy
+scoreboard objectives add ncmMVMTSEnvironmentData dummy
+scoreboard objectives add ncmPistonNearby dummy
+scoreboard objectives add ncmMVMTSWasInSweetBerryBush dummy
+scoreboard objectives add ncmMVMTSAttributeSpeedLower dummy
+scoreboard objectives add ncmMVMTSAttributeSpeedSave dummy
+scoreboard objectives add ncmMVMTSAttributeSpeedSaveTimer dummy
+scoreboard objectives add ncmMVMTSAttributeSpeedSaveTimerMax dummy
+scoreboard objectives add ncmMVMTSIgnoreNext dummy
+scoreboard objectives add ncmMVMTSSpeedEffectCooldownSet dummy
+scoreboard objectives add ncmMVMTSSpeedEffectCooldown dummy
+
+
 
 # --------------------------
 # Inventory check objectives

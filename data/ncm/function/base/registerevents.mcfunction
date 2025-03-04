@@ -7,5 +7,8 @@ execute unless score DataHolder ncmVEPlayerMoveEventRegistered matches 1 run sco
 execute unless score DataHolder ncmVEPlayerMovementStateTransitionEventRegistered matches 1 run scoreboard players add $ VESys.PlayerMovementStateTransitionEvent 1
 execute unless score DataHolder ncmVEPlayerMovementStateTransitionEventRegistered matches 1 run scoreboard players set DataHolder ncmVEPlayerMovementStateTransitionEventRegistered 1
 
+execute unless score DataHolder ncmVEPlayerGameModeChangeEventRegistered matches 1 run scoreboard players add $ VESys.PlayerGameModeChangeEvent 1
+execute unless score DataHolder ncmVEPlayerGameModeChangeEventRegistered matches 1 run scoreboard players set DataHolder ncmVEPlayerGameModeChangeEventRegistered 1
+
 
 scoreboard players set DataHolder ncmTickReady 1
