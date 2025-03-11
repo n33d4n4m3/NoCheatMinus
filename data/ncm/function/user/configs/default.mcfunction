@@ -106,6 +106,11 @@ scoreboard players set DataHolder ncmc_bs_fl_38 0
 scoreboard players set DataHolder ncmc_bs_fl_39 0
 scoreboard players set DataHolder ncmc_bs_fl_40 0
 
+# Combined.Exploit (15 / 30 / 50)
+scoreboard players set DataHolder ncmc_bs_fl_62 15
+scoreboard players set DataHolder ncmc_bs_fl_63 30
+scoreboard players set DataHolder ncmc_bs_fl_64 1
+
 # Movement.TickStride (0 / 5 / 10)
 scoreboard players set DataHolder ncmc_bs_fl_41 0
 scoreboard players set DataHolder ncmc_bs_fl_42 5

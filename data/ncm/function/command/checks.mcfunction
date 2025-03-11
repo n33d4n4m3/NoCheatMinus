@@ -69,6 +69,9 @@ execute as @a if score @s ncmChecks matches 37 run scoreboard players set DataHo
 execute as @a if score @s ncmChecks matches 38 run scoreboard players set DataHolder ncmcm_toggle_FD 2
 execute as @a if score @s ncmChecks matches 39 run scoreboard players set DataHolder ncmcm_toggle_FD 1
 
+execute as @a if score @s ncmChecks matches 40 run scoreboard players set DataHolder ncmcm_toggle_COMEX 2
+execute as @a if score @s ncmChecks matches 41 run scoreboard players set DataHolder ncmcm_toggle_COMEX 1
+
 execute as @a if score @s ncmChecks matches 2.. run function ncm:checks/checkmanager
 
 
@@ -139,6 +142,9 @@ execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage ma
 
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMMUN matches 1 run tellraw @s ["","    -> ",{"text":"Munchhausen [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 20"}}]
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMMUN matches 0 run tellraw @s ["","    -> ",{"text":"Munchhausen [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 21"}}]
+
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMEX matches 1 run tellraw @s ["","    -> ",{"text":"Exploit [✓]","color":"green","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 40"}}]
+execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 if score DataHolder ncmcm_COMEX matches 0 run tellraw @s ["","    -> ",{"text":"Exploit [X]","color":"red","clickEvent":{"action":"run_command","value":"/scoreboard players set @s ncmChecks 41"}}]
 
 execute as @a if score @s ncmChecks matches 1.. if score @s ncmcm_currentPage matches -2 run tellraw @s {"text":"  BlockPlace","bold":true}
 

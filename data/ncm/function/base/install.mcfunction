@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 220
+scoreboard players set DataHolder ncmBuildNumber 225
 
 
 scoreboard objectives add ncm.100 dummy
@@ -52,6 +52,12 @@ scoreboard objectives add ncm.25 dummy
 scoreboard players set DataHolder ncm.25 25
 
 scoreboard objectives add ncmCalc dummy
+scoreboard players set $10 ncmCalc 10
+scoreboard players set $25 ncmCalc 25
+scoreboard players set $100 ncmCalc 100
+scoreboard players set $20 ncmCalc 20
+scoreboard players set $200 ncmCalc 200
+
 
 # -----------------
 # Listeners
@@ -63,6 +69,34 @@ scoreboard objectives add ncmLastRotXOnGrd dummy
 scoreboard objectives add ncmLastRotYOnGrd dummy
 scoreboard objectives add ncmPlayerIsInBed dummy
 
+
+# -----------------
+# Statistics
+# -----------------
+scoreboard objectives add ncmDoReset dummy
+scoreboard objectives add ncmPrintStats dummy
+scoreboard objectives add ncmPrintCheckStats dummy
+scoreboard objectives add ncmNewViolation dummy
+scoreboard objectives add ncmViolationTimer dummy
+scoreboard objectives add ncmReputationSummed dummy
+scoreboard objectives add ncmReputationSummedCount dummy
+scoreboard objectives add ncmAverageReputation dummy
+
+scoreboard objectives add ncmTimeBetweenFailsSummed dummy
+scoreboard objectives add ncmTimeBetweenFailsSummedCount dummy
+scoreboard objectives add ncmAverageTimeBetweenFails dummy
+scoreboard objectives add ncmAverageTimeBetweenFailsInSeconds dummy
+
+scoreboard objectives add ncmOldAvgTBV dummy
+scoreboard objectives add ncmViolationTimerScaled dummy
+
+scoreboard objectives add ncmOldAvgLL dummy
+scoreboard objectives add ncmLatencyLevelScaled dummy
+scoreboard objectives add ncmAveragePing dummy
+scoreboard objectives add ncmLatencyLevelsSummedCount dummy
+scoreboard objectives add ncmAverageLatencyLevel dummy
+
+scoreboard objectives add ncmViolationCount dummy
 
 
 # --------------
@@ -1175,9 +1209,21 @@ scoreboard objectives add ncmReplay trigger
 # Command: tour
 scoreboard objectives add ncmTour trigger
 
+# Command: stats
+scoreboard objectives add ncmStats trigger
+
+# Command: reset
+scoreboard objectives add ncmReset trigger
 
 
+# --------------------
+# Penalty
+# --------------------
 
+# Check if the Function Permission Level is high enough to execute /kick.
+scoreboard objectives add ncmPenaltyKickPossible dummy
+scoreboard players set DataHolder ncmPenaltyKickPossible 0
+function ncm:penalty/kick
 
 
 
@@ -1242,6 +1288,27 @@ scoreboard objectives add ncmFailedFWT dummy
 scoreboard objectives add ncmFailedFCV dummy
 scoreboard objectives add ncmFailedIIB dummy
 scoreboard objectives add ncmFailedFD dummy
+scoreboard objectives add ncmFailedCOMEX dummy
+
+scoreboard objectives add ncmFailCountBIMB dummy
+scoreboard objectives add ncmFailCountBPMB dummy
+scoreboard objectives add ncmFailCountBPAP dummy
+scoreboard objectives add ncmFailCountFCC dummy
+scoreboard objectives add ncmFailCountFRNG dummy
+scoreboard objectives add ncmFailCountINVAP dummy
+scoreboard objectives add ncmFailCountMVMSF dummy
+scoreboard objectives add ncmFailCountMVMNF dummy
+scoreboard objectives add ncmFailCountNETAP dummy
+scoreboard objectives add ncmFailCountNETUP dummy
+scoreboard objectives add ncmFailCountCMnchsn dummy
+scoreboard objectives add ncmFailCountCBedLv dummy
+scoreboard objectives add ncmFailCountMVMTS dummy
+scoreboard objectives add ncmFailCountFWT dummy
+scoreboard objectives add ncmFailCountFCV dummy
+scoreboard objectives add ncmFailCountIIB dummy
+scoreboard objectives add ncmFailCountFD dummy
+scoreboard objectives add ncmFailCountCOMEX dummy
+
 
 # --------------------
 # Pass
@@ -1301,6 +1368,8 @@ scoreboard objectives add ncmcm_toggle_IIB dummy
 scoreboard objectives add ncmcm_IIB dummy
 scoreboard objectives add ncmcm_toggle_FD dummy
 scoreboard objectives add ncmcm_FD dummy
+scoreboard objectives add ncmcm_toggle_COMEX dummy
+scoreboard objectives add ncmcm_COMEX dummy
 
 scoreboard objectives add ncmcm_currentPage dummy
 
@@ -1468,6 +1537,14 @@ scoreboard objectives add ncmc_bs_fl_39 dummy
 # Reputation loss for failing Combined.BedLeave (Rage) 0
 scoreboard objectives add ncmc_bs_fl_40 dummy
 
+# Combined.Exploit
+# Reputation loss for failing Combined.Exploit (Common/HLC) 15
+scoreboard objectives add ncmc_bs_fl_62 dummy
+# Reputation loss for failing Combined.Exploit (Suspect) 30
+scoreboard objectives add ncmc_bs_fl_63 dummy
+# Reputation loss for failing Combined.Exploit (Rage) 50
+scoreboard objectives add ncmc_bs_fl_64 dummy
+
 # Movement.TickStride
 # Reputation loss for failing Movement.TickStride (Common/HLC) 0
 scoreboard objectives add ncmc_bs_fl_41 dummy
@@ -1499,6 +1576,8 @@ scoreboard objectives add ncmc_bs_fl_56 dummy
 scoreboard objectives add ncmc_bs_fl_57 dummy
 # Reputation loss for failing Fight.Direction (Rage) 50
 scoreboard objectives add ncmc_bs_fl_58 dummy
+
+
 
 # NoFall 269
 scoreboard objectives add ncmc_nf_1 dummy
@@ -1818,6 +1897,11 @@ scoreboard objectives add ncmFireTicks dummy
 # BedLeave
 scoreboard objectives add ncmIsBedNearby dummy
 
+# Exploit
+
+scoreboard objectives add ncmCOMEXKicked dummy
+scoreboard objectives add ncmCOMEXTimeAlive dummy
+
 # --------------------
 # Net check objectives
 # --------------------
@@ -2055,6 +2139,9 @@ scoreboard players set DataHolder ncmCC 1
 
 
 execute if score DataHolder ncmFinishedTour matches 1 run tellraw @a [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.3-1.21.4 has been loaded successfully.","color":"gray"}]
+execute if score DataHolder ncmFinishedTour matches 1 if score DataHolder ncmBlockMode matches 1 if score DataHolder ncmPenaltyKickPossible matches 0 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"WARNING! ","bold":true,"color":"red"},{"text":"Block Mode is currently active, but the check ","color":"gray"},{"text":"Combined.Exploit ","color":"yellow"},{"text":"cannot kick players in case of a positive detection because additional configuration is required. If you want kicks to be enabled, set ","color":"gray"},{"text":"function-permission-level=4 ","color":"yellow"},{"text":"in the server.properties file and remove the _ from the filename of ","color":"gray"},{"text":"data/ncm/functions/penalty/kick._mcfunction","color":"yellow"}]
+
+
 # First install actions
 
 scoreboard objectives add ncmBlockMode dummy

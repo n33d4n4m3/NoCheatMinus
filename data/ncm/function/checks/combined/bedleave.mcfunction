@@ -20,6 +20,7 @@
 # Author:       n33d4n4m3
 # ...
 
+
 execute as @a at @s if block ~ ~ ~ #minecraft:beds unless score @s ncmIsBedNearby matches 10.. run scoreboard players add @s ncmIsBedNearby 1
 execute as @a unless data entity @s SleepingX unless score @s ncmIsBedNearby matches 1.. if score @s ncmPlayerIsInBed matches 1 run scoreboard players set @s ncmFailedCBedLv 1
 execute as @a unless data entity @s SleepingX unless score @s ncmIsBedNearby matches 1.. if score @s ncmPlayerIsInBed matches 1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Combined","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"BedLeave","color":"light_purple"}]

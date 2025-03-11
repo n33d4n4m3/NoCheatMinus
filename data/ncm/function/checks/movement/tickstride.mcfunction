@@ -161,7 +161,7 @@ execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSave
 
 
 
-scoreboard players set $10 ncmCalc 10
+
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog *= @s ncmMVMTSAttributeSpeed
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel *= @s ncmMVMTSAttributeSpeed
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog /= $10 ncmCalc
@@ -194,6 +194,7 @@ execute as @a if score @s ncmFPDamage matches -50..-1 unless score @s ncmMVMTSMo
 
 execute as @a if score @s ncmPistonNearby matches 1 unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
 
+execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 3 if predicate ncm:has_swift_sneak_armor unless score @s ncmMVMTSModifier matches 30.. run scoreboard players set @s ncmMVMTSModifier 30
 
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVMTSAttributeSpeedSave = @s ncmMVMTSAttributeSpeed
 

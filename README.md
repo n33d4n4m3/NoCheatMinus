@@ -30,8 +30,9 @@ NoCheatMinus operates in two different modes: **Silent Mode** and **Block Mode**
 - Works like Silent Mode but actively **prevents cheating**.
 - Cheaters may experience:
    - 🔄 **Rubberbanding** (being reset)
-   - ⛔ **Movement restrictions**
+   - ⚔️  **Retroactive application of illegitimately skipped damage**
    - 🛑 **Blocked invalid hits**
+   - 👢 **Disconnection** (requires additional configuration)
 - **Reputation Score** is still tracked, and operators receive alerts based on configuration.
 
 ---
@@ -53,12 +54,6 @@ The **Replay System** automatically records movements for **5 seconds before and
 2️⃣ Restart your server or use `/reload` to apply the changes.
 
 ---
-
-## 🗑️ Uninstall
-To uninstall the datapack, use `/function ncm:user/uninstall` followed by `/function ve:user/uninstall` if you also want to uninstall VanillaEvents.
-
----
-
 ## 🛠️ Checks
 | Check | Description |
 | ----------------------- | ----------- |
@@ -76,6 +71,7 @@ To uninstall the datapack, use `/function ncm:user/uninstall` followed by `/func
 | 🏃 **Fight.CompliantVelocity** | This check monitors the movement reaction of the player after being hit. |
 | 🛏️ **Combined.BedLeave** | NCM checks if the player sends BedLeave packets without being in a bed first. The small teleport after leaving a bed can be used by players with a cheat client for flying or speeding. |
 | 🎣 **Combined.Munchhausen** | According to the legend of Baron Munchausen's tall tales, players can pull themselves out of the swamp by their own hair. NCM checks if cheat-clients use this ability for flying/speeding. |
+| 🛠️ **Combined.Exploit** | This check monitors various impossible client states that may indicate the use of exploits. |
 | 🍗 **Inventory.Appropriate** | When the player consumes an Item, NCM will check the speed of consuming and compare it with the configurated appropriate values. |
 | 🏹 **Inventory.InstantBow** | This check monitors the player's arrow-shooting speed. |
 

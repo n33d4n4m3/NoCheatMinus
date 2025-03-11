@@ -129,6 +129,13 @@ execute if score DataHolder ncmcm_toggle_COMMUN matches 2 run scoreboard players
 
 execute if score DataHolder ncmcm_toggle_COMMUN matches 1.. run scoreboard players set DataHolder ncmcm_toggle_COMMUN 0
 
+# Enable Combined.Exploit
+execute if score DataHolder ncmcm_toggle_COMEX matches 1 run scoreboard players set DataHolder ncmcm_COMEX 1
+# Disable Combined.Exploit
+execute if score DataHolder ncmcm_toggle_COMEX matches 2 run scoreboard players set DataHolder ncmcm_COMEX 0
+
+execute if score DataHolder ncmcm_toggle_COMEX matches 1.. run scoreboard players set DataHolder ncmcm_toggle_COMEX 0
+
 
 # Enable Inventory.Appropriate
 execute if score DataHolder ncmcm_toggle_INVAP matches 1 run scoreboard players set DataHolder ncmcm_INVAP 1

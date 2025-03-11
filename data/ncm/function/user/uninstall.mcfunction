@@ -39,7 +39,73 @@ data remove storage ncm:tpdata z
 data remove storage ncm:tpdata yaw
 data remove storage ncm:tpdata pitch
 
+
+data remove storage ncm:stats name
+data remove storage ncm:stats checkname
+data remove storage ncm:stats reset
+
 # Remove all scoreboard objectives
+
+
+scoreboard objectives remove ncmCOMEXKicked
+scoreboard objectives remove ncmCOMEXTimeAlive
+scoreboard objectives remove ncmPenaltyKickPossible
+scoreboard objectives remove ncmcm_toggle_COMEX
+scoreboard objectives remove ncmcm_COMEX
+scoreboard objectives remove ncmDoReset
+scoreboard objectives remove ncmPrintStats
+scoreboard objectives remove ncmPrintCheckStats
+scoreboard objectives remove ncmNewViolation
+scoreboard objectives remove ncmViolationTimer
+scoreboard objectives remove ncmReputationSummed
+scoreboard objectives remove ncmReputationSummedCount
+scoreboard objectives remove ncmAverageReputation
+
+scoreboard objectives remove ncmStats
+scoreboard objectives remove ncmReset
+
+scoreboard objectives remove ncmc_bs_fl_62
+scoreboard objectives remove ncmc_bs_fl_63
+scoreboard objectives remove ncmc_bs_fl_64
+
+
+scoreboard objectives remove ncmTimeBetweenFailsSummed
+scoreboard objectives remove ncmTimeBetweenFailsSummedCount
+scoreboard objectives remove ncmAverageTimeBetweenFails
+scoreboard objectives remove ncmAverageTimeBetweenFailsInSeconds
+
+scoreboard objectives remove ncmOldAvgTBV
+scoreboard objectives remove ncmViolationTimerScaled
+
+scoreboard objectives remove ncmOldAvgLL
+scoreboard objectives remove ncmLatencyLevelScaled
+scoreboard objectives remove ncmAveragePing
+scoreboard objectives remove ncmLatencyLevelsSummedCount
+scoreboard objectives remove ncmAverageLatencyLevel
+
+scoreboard objectives remove ncmViolationCount
+
+scoreboard objectives remove ncmFailedCOMEX
+
+scoreboard objectives remove ncmFailCountBIMB
+scoreboard objectives remove ncmFailCountBPMB
+scoreboard objectives remove ncmFailCountBPAP
+scoreboard objectives remove ncmFailCountFCC
+scoreboard objectives remove ncmFailCountFRNG
+scoreboard objectives remove ncmFailCountINVAP
+scoreboard objectives remove ncmFailCountMVMSF
+scoreboard objectives remove ncmFailCountMVMNF
+scoreboard objectives remove ncmFailCountNETAP
+scoreboard objectives remove ncmFailCountNETUP
+scoreboard objectives remove ncmFailCountCMnchsn
+scoreboard objectives remove ncmFailCountCBedLv
+scoreboard objectives remove ncmFailCountMVMTS
+scoreboard objectives remove ncmFailCountFWT
+scoreboard objectives remove ncmFailCountFCV
+scoreboard objectives remove ncmFailCountIIB
+scoreboard objectives remove ncmFailCountFD
+scoreboard objectives remove ncmFailCountCOMEX
+
 
 scoreboard objectives remove ncmVEPlayerGameModeChangeEventRegistered
 scoreboard objectives remove ncmMVMSFWWFlagCount

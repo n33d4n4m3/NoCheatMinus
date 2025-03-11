@@ -25,6 +25,8 @@ function ncm:command/checks
 function ncm:command/tour
 function ncm:command/help
 function ncm:command/replay
+function ncm:command/stats
+function ncm:command/reset
 
 # Running system routines
 
@@ -65,11 +67,13 @@ execute if score DataHolder ncmcm_NETAP matches 1 run function ncm:checks/net/ap
 execute if score DataHolder ncmcm_BIMB matches 1 run function ncm:checks/blockinteract/missingblock
 execute if score DataHolder ncmcm_BPAP matches 1 run function ncm:checks/blockplace/appropriate
 execute if score DataHolder ncmcm_COMBL matches 1 run function ncm:checks/combined/bedleave
+execute if score DataHolder ncmcm_COMEX matches 1 run function ncm:checks/combined/exploit
 execute if score DataHolder ncmcm_MVMTS matches 1 run function ncm:checks/movement/tickstride
 execute if score DataHolder ncmcm_FWT matches 1 run function ncm:checks/fight/wrongturn
 execute if score DataHolder ncmcm_FCV matches 1 run function ncm:checks/fight/compliantvelocity
 execute if score DataHolder ncmcm_FD matches 1 run function ncm:checks/fight/direction
 execute if score DataHolder ncmcm_IIB matches 1 run function ncm:checks/inventory/instantbow
+
 
 # Running util functions
 function ncm:checks/movement/util/sf_util

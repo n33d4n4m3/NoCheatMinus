@@ -225,9 +225,9 @@ execute as @a at @s if entity @e[type=minecraft:camel,distance=..2] run scoreboa
 execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 execute as @a if entity @s[nbt={flying:1b}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
+execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 
-# Experimental Godmode Patch: execute as @a[tag=VE.PlayerAttackEvent] if score @s ncmDeathTime > @s ncmLastLatencyLevel run say [Debug] Attacking while being dead?
 
 
 
