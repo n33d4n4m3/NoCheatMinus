@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "1": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_projectile",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

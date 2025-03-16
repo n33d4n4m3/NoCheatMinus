@@ -117,7 +117,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedNETAP matches 1.. run 
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_25
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_26
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_27
-execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. if score DataHolder ncmBlockMode matches 1 run kill @s
+#execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. if score DataHolder ncmBlockMode matches 1 run kill @s
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run scoreboard players add @s ncmNewViolation 1
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run scoreboard players add @s ncmFailCountNETUP 1
 execute as @e[type=minecraft:player] if score @s ncmFailedNETUP matches 1.. run scoreboard players set @s ncmFailedNETUP 0

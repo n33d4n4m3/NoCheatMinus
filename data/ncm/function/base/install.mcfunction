@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 225
+scoreboard players set DataHolder ncmBuildNumber 230
 
 
 scoreboard objectives add ncm.100 dummy
@@ -102,6 +102,9 @@ scoreboard objectives add ncmViolationCount dummy
 # --------------
 # False Positves
 # --------------
+scoreboard objectives add ncmGoatHasRamCooldown dummy
+scoreboard objectives add ncmAngryWarden dummy
+scoreboard objectives add ncmFPBurst dummy
 scoreboard objectives add ncmWasOnGround dummy
 scoreboard objectives add ncmFPDamageReset minecraft.custom:minecraft.damage_taken
 
@@ -1696,6 +1699,9 @@ scoreboard objectives add ncmc_ap_bp_1 dummy
 # The timeframe 3
 scoreboard objectives add ncmc_ap_bp_2 dummy
 
+# Exclude players with a latency level higher than ... 0
+scoreboard objectives add ncmc_ap_bp_3 dummy
+
 
 # TickStride
 
@@ -2082,6 +2088,7 @@ scoreboard objectives add ncmAPSResetCSn dummy
 scoreboard objectives add ncmAPSLostWalkFP dummy
 
 # TickStride
+scoreboard objectives add ncmMVMTSKnockbackExempt dummy
 scoreboard objectives add ncmTimesStrideTooHighLog dummy
 scoreboard objectives add ncmTimesStrideTooHighCancel dummy
 scoreboard objectives add ncmTSIceTimeout dummy

@@ -39,7 +39,8 @@ execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 10 run sc
 
 
 
-
+execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players remove @s ncmMVMTSKnockbackExempt 1
+execute as @a at @s if items entity @s weapon *[enchantments~[{enchantments:"minecraft:knockback",levels:{min:3,max:255}}]] run scoreboard players set @a[distance=1..10] ncmMVMTSKnockbackExempt 10
 
 
 
@@ -194,7 +195,12 @@ execute as @a if score @s ncmFPDamage matches -50..-1 unless score @s ncmMVMTSMo
 
 execute as @a if score @s ncmPistonNearby matches 1 unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
 
+execute as @a at @s if score @s ncmFPBurst matches 1.. unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
+
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 3 if predicate ncm:has_swift_sneak_armor unless score @s ncmMVMTSModifier matches 30.. run scoreboard players set @s ncmMVMTSModifier 30
+
+
+
 
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVMTSAttributeSpeedSave = @s ncmMVMTSAttributeSpeed
 
@@ -261,6 +267,7 @@ execute as @a run scoreboard players operation @s ncmMVMTSSpeedEffectCooldownSet
 
 execute as @a[tag=VE.PlayerGameModeChangeEvent] run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a[tag=VE.PlayerMovementStateTransitionEvent] run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
+execute as @a if predicate ncm:has_swift_sneak_armor if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a[nbt={active_effects:[{id:"minecraft:speed"}]}] run scoreboard players operation @s ncmMVMTSSpeedEffectCooldown = @s ncmMVMTSSpeedEffectCooldownSet
 execute as @a if score @s ncmMVMTSSpeedEffectCooldown matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a if score @s ncmMVMTSSpeedEffectCooldown matches 1.. run scoreboard players remove @s ncmMVMTSSpeedEffectCooldown 1
@@ -359,6 +366,10 @@ execute as @a if score @s ncmTSResetTimer matches 0 run scoreboard players set @
 execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+
+execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
+execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighLog 0

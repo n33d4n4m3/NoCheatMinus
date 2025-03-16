@@ -22,60 +22,60 @@
 execute as @a if data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 1
 
 execute as @e[type=minecraft:player] run scoreboard players set @s ncmAirAround 1
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
-execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~ ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~-0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~ ~0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
-execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~ ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~-0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~1 ~0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~ air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-0.1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~1 air run scoreboard players set @s ncmAirAround 0
-execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~-1 air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~ #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~ ~-0.1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~-0.1 ~1 #air run scoreboard players set @s ncmAirAround 0
+execute as @e[type=minecraft:player] at @s unless block ~-1 ~0.1 ~-1 #air run scoreboard players set @s ncmAirAround 0
 
 
 

@@ -147,6 +147,7 @@ execute if score DataHolder ncmcm_toggle_INVAP matches 1.. run scoreboard player
 
 # Enable Net.Appropriate
 execute if score DataHolder ncmcm_toggle_NETAP matches 1 run scoreboard players set DataHolder ncmcm_NETAP 1
+execute if score DataHolder ncmcm_toggle_NETAP matches 1 run scoreboard players operation @a ncmGameOverScr = DataHolder ncmc_ap_go_1
 # Disable Net.Appropriate
 execute if score DataHolder ncmcm_toggle_NETAP matches 2 run scoreboard players set DataHolder ncmcm_NETAP 0
 

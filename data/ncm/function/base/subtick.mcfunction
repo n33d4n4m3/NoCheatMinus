@@ -82,3 +82,4 @@ function ncm:checks/movement/util/sf_util
 function ncm:base/resetevents
 
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmLeaveGame 0
+execute as @a if score @s ncmDeaths matches 1.. run scoreboard players set @s ncmDeaths 0

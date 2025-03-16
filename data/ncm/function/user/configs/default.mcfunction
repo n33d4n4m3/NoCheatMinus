@@ -375,3 +375,6 @@ scoreboard players set DataHolder ncmc_ap_bp_1 3
 
 # The timeframe 3
 scoreboard players set DataHolder ncmc_ap_bp_2 3
+
+# Exclude players with a latency level higher than ... 0
+scoreboard players set DataHolder ncmc_ap_bp_3 0

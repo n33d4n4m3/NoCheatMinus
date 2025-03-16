@@ -34,7 +34,71 @@ execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. ru
 execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 30.. run scoreboard players set @s ncmLadderNearby 0
 execute as @a if score @s ncmFPDecent matches 10.. run scoreboard players set @s ncmFPDecent 0
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
+execute as @a[nbt={OnGround:1b}] if score @s ncmFPBurst matches 1.. run scoreboard players remove @s ncmFPBurst 1
 
+# Reset GameOverGUI-Screentime
+scoreboard players operation @a[scores={ncmLeaveGame=1..}] ncmGameOverScr = DataHolder ncmc_ap_go_1
+
+# Burst Fix
+
+# Bowshot
+execute as @a[advancements={ncm:player_shot=true}] run scoreboard players set @s ncmFPBurst 5
+execute as @a[advancements={ncm:player_shot=true}] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_shot=true}] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a[advancements={ncm:player_shot=true}] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_shot=true}] run advancement revoke @s only ncm:player_shot
+
+# Camel Boost
+execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+
+# Wind Charge -> Movementstate Climbing
+execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 30
+execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+
+# Fishing Rod Player Pulling
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmFPBurst 5
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_fished_something=true}] run advancement revoke @s only ncm:player_fished_something
+
+# Goat Ram
+execute as @e[type=goat] at @s store success score @s ncmGoatHasRamCooldown run data get entity @s Brain.memories.minecraft:ram_cooldown_ticks.value
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players set @s ncmFPBurst 5
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+
+# Fireball
+execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+# Firework Rocket (Crossbow...)
+execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+
+
+# Wind Burst
+execute as @a if items entity @s weapon *[enchantments~[{enchantments:"minecraft:wind_burst",levels:{min:0,max:255}}]] run scoreboard players set @s ncmFPBurst 5
+execute as @a if items entity @s weapon *[enchantments~[{enchantments:"minecraft:wind_burst",levels:{min:0,max:255}}]] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+
+# End Crystal
+execute as @a at @s if entity @e[type=end_crystal,distance=..10] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=end_crystal,distance=..10] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+
+# Warden
+execute as @e[type=minecraft:warden] store success score @s ncmAngryWarden run data get entity @e[type=warden,limit=1] anger.suspects[0]
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players set @s ncmFPBurst 5
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+# Wind Charged
+execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmFPBurst 30
+execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
 
 # Iron Golem FP fix

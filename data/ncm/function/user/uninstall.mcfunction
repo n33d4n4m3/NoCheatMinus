@@ -46,7 +46,11 @@ data remove storage ncm:stats reset
 
 # Remove all scoreboard objectives
 
-
+scoreboard objectives remove ncmc_ap_bp_3
+scoreboard objectives remove ncmGoatHasRamCooldown
+scoreboard objectives remove ncmAngryWarden
+scoreboard objectives remove ncmFPBurst
+scoreboard objectives remove ncmMVMTSKnockbackExempt
 scoreboard objectives remove ncmCOMEXKicked
 scoreboard objectives remove ncmCOMEXTimeAlive
 scoreboard objectives remove ncmPenaltyKickPossible
