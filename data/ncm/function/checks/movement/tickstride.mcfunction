@@ -15,6 +15,8 @@
 # ...
 # Description:  This check evaluates fired PlayerMoveEvents based on distance and combines them into a 'movement chain' or 'stride sequence'.
 # Fail:         This check fails if the value x is exceeded y times in direct temporal succession within a movement state. Moreover, this check automatically terminates if there is any clientside or serverside lag. Depending on the magnitude of the deviation from x, the check failure is either logged (Reputation/Evaluation) or the event is canceled additionally (Setback).
+# Subchecks:    - (TickStride Main)
+#               - MorePackets
 # Author:       n33d4n4m3
 # ...
 
@@ -118,27 +120,34 @@ execute as @a[tag=VE.PlayerMoveEvent] at @s unless block ~ ~ ~ minecraft:cobweb 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 1..9 run scoreboard players add @s ncmMVMTSEnvironmentCooldown 1
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if score @s VEGbl.thePlayer.currentMovementState matches 1..2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 14
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 18
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 7
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~-0.01 ~ minecraft:slime_block if score @s VEGbl.thePlayer.currentMovementState matches 1..3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 7
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~-0.01 ~ minecraft:slime_block if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 9
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:honey_block if score @s VEGbl.thePlayer.currentMovementState matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 13
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:honey_block if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 14
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:honey_block if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 18
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s anchored feet if block ~ ~ ~ minecraft:honey_block if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 6
 
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 1..2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 8
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 9
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 11
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 4
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 1..2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 8
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 9
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 11
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:sweet_berry_bush if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 4
 
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 3
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 4
+execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 5
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~ ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 3
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 3
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 4
+execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 5
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBush matches 1.. if score @s ncmMVMTSEnvironmentCooldown matches 10.. at @s if block ~ ~1 ~ minecraft:cobweb if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmMVMTSMaximumStrideLengthLog 3
 
 

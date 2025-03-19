@@ -52,6 +52,11 @@ execute as @a[advancements={ncm:player_shot=true}] run advancement revoke @s onl
 execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
+# Ravager
+execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Wind Charge -> Movementstate Climbing
 execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 30
