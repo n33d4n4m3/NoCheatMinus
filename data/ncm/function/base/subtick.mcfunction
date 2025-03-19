@@ -81,5 +81,7 @@ function ncm:checks/movement/util/sf_util
 # Reset all fired events
 function ncm:base/resetevents
 
+# Make sure that this commands get executed last.
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmLeaveGame 0
 execute as @a if score @s ncmDeaths matches 1.. run scoreboard players set @s ncmDeaths 0
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmUsedEnderPearl 0

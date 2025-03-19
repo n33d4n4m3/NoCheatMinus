@@ -36,8 +36,165 @@ execute as @a if score @s ncmFPDecent matches 10.. run scoreboard players set @s
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
 execute as @a[nbt={OnGround:1b}] if score @s ncmFPBurst matches 1.. run scoreboard players remove @s ncmFPBurst 1
 
+
 # Reset GameOverGUI-Screentime
 scoreboard players operation @a[scores={ncmLeaveGame=1..}] ncmGameOverScr = DataHolder ncmc_ap_go_1
+
+
+# Dispenser
+
+scoreboard players set @a ncmDispenserNearby 0
+execute as @a at @s if block ~-2 ~-2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-2 ~-1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~-1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-2 ~ ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~ ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~ ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~ ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~ ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-2 ~1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-2 ~2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-2 ~2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-1 ~-2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-1 ~-1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~-1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-1 ~ ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~ ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~ ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~ ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~ ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-1 ~1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~-1 ~2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~-1 ~2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~ ~-2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~ ~-1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~-1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~ ~ ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~ ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~ ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~ ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~ ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~ ~1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~ ~2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~ ~2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~1 ~-2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~1 ~-1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~-1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~1 ~ ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~ ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~ ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~ ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~ ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~1 ~1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~1 ~2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~1 ~2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~2 ~-2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~2 ~-1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~-1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~2 ~ ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~ ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~ ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~ ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~ ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~2 ~1 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~1 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~1 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~1 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~1 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+execute as @a at @s if block ~2 ~2 ~-2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~2 ~-1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~2 ~ dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~2 ~1 dispenser run scoreboard players set @s ncmDispenserNearby 1
+execute as @a at @s if block ~2 ~2 ~2 dispenser run scoreboard players set @s ncmDispenserNearby 1
+
+
 
 # Burst Fix
 
@@ -51,6 +208,26 @@ execute as @a[advancements={ncm:player_shot=true}] run advancement revoke @s onl
 # Camel Boost
 execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=camel,distance=..2] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+# Shulker
+execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+# Dispenser
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmFPBurst 5
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 80
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+
+# EnderPearl
+
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmFPBurst 5
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Ravager
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmFPBurst 5
@@ -305,6 +482,310 @@ execute as @a at @s if block ~2 ~2 ~2 #ncm:stepable run scoreboard players set @
 execute as @a if score @s ncmStepableNearby matches 1.. run scoreboard players remove @s ncmStepableNearby 1
 
 
+# Ice Boat fix
+
+
+execute as @a at @s if block ~-2 ~-2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~-1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~ ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~-2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~-1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~ ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~-2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~-1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~ ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~-2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~-1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~ ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~-2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~-1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~ ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~1 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~2 ~-2 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~-1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~ ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~1 ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~2 ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~-2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~-1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~-1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~ ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~ ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-2 ~2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-2 ~2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~-2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~-1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~-1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~ ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~ ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~-1 ~2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~-1 ~2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~-2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~-1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~-1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~ ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~ ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~ ~2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~ ~2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~-2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~-1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~-1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~ ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~ ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~1 ~2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~1 ~2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~-2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~-1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~-1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~ ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~ ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~1 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~1 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a at @s if block ~2 ~2 ~-2 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~-1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~ packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~1 packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if block ~2 ~2 ~2 packed_ice run scoreboard players set @s ncmIceNearby 100
+
+execute as @a if score @s ncmIceNearby matches 1.. run scoreboard players remove @s ncmIceNearby 1
 
 
 

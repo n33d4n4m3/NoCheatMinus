@@ -107,6 +107,9 @@ scoreboard objectives add ncmAngryWarden dummy
 scoreboard objectives add ncmFPBurst dummy
 scoreboard objectives add ncmWasOnGround dummy
 scoreboard objectives add ncmFPDamageReset minecraft.custom:minecraft.damage_taken
+scoreboard objectives add ncmUsedEnderPearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add ncmIceNearby dummy
+scoreboard objectives add ncmDispenserNearby dummy
 
 # -----------------
 # Replay

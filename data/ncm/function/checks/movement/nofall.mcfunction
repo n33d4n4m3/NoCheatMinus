@@ -211,6 +211,7 @@ execute as @e[type=minecraft:player] at @s if entity @e[type=acacia_chest_boat,d
 execute as @e[type=minecraft:player] at @s if entity @e[type=jungle_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if entity @e[type=birch_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:minecarts,distance=..4] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
