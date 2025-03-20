@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 230
+scoreboard players set DataHolder ncmBuildNumber 235
 
 
 scoreboard objectives add ncm.100 dummy
