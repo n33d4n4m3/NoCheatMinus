@@ -283,6 +283,10 @@ execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run ex
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
 
+# Soul Speed + Soul Sand
+execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players set @s ncmMVMTSKnockbackExempt 30
+execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
 # Iron Golem FP fix
 
 execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearby run data get entity @e[type=minecraft:iron_golem,limit=1,distance=..5] AngerTime 1

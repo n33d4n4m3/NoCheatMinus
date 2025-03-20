@@ -1,0 +1,22 @@
+{
+  "condition": "minecraft:entity_properties",
+  "terms": [],
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "armor.*": {
+        "predicates": {
+          "minecraft:enchantments": [
+            {
+              "enchantments": "minecraft:soul_speed",
+              "levels": {
+                "min": 1,
+                "max": 255
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

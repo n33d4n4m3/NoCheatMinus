@@ -15,6 +15,10 @@
       "minecraft:lantern",
       "minecraft:soul_lantern",
       "minecraft:player_head",
+      "minecraft:repeater",
+      "minecraft:comparator",
+      "minecraft:sculk_sensor",
+      "minecraft:calibrated_sculk_sensor",
       "minecraft:soul_sand"
     ]
   }
