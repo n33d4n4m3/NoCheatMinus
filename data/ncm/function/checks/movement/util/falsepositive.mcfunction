@@ -281,6 +281,8 @@ execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 
 # Wind Charged
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmFPBurst 30
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 70
+execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 
 # Soul Speed + Soul Sand
