@@ -44,8 +44,17 @@ data remove storage ncm:stats name
 data remove storage ncm:stats checkname
 data remove storage ncm:stats reset
 
+
+# Unsubscribe from all VE events
+scoreboard players remove $ VESys.PlayerAttackEvent 1
+scoreboard players remove $ VESys.PlayerMoveEvent 1
+scoreboard players remove $ VESys.PlayerMovementStateTransitionEvent 1
+scoreboard players remove $ VESys.PlayerGameModeChangeEvent 1
+
 # Remove all scoreboard objectives
 
+scoreboard objectives remove ncmUsedChorusFruit
+scoreboard objectives remove ncmFPDismountExempt
 scoreboard objectives remove ncmUsedEnderPearl
 scoreboard objectives remove ncmIceNearby
 scoreboard objectives remove ncmDispenserNearby

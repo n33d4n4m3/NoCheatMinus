@@ -213,7 +213,8 @@ execute as @e[type=minecraft:player] at @s if entity @e[type=birch_chest_boat,di
 execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:minecarts,distance=..4] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if entity @e[type=wind_charge,distance=..8] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
+execute as @e[type=minecraft:player] at @s if score @s ncmUsedChorusFruit matches 1.. run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if score @s ncmUsedChorusFruit matches 1.. run scoreboard players set @s ncmUsedChorusFruit 0
 
 
 execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1

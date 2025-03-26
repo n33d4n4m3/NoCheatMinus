@@ -215,13 +215,6 @@ execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard playe
 execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
-# Dispenser
-execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmFPBurst 5
-execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 80
-execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
-
-
 # EnderPearl
 
 execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmFPBurst 5
@@ -235,22 +228,6 @@ execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard play
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
-# Wind Charge -> Movementstate Climbing
-execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 30
-execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
-
-
-# Fishing Rod Player Pulling
-execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmFPBurst 5
-execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
-execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
-execute as @a[advancements={ncm:player_fished_something=true}] run advancement revoke @s only ncm:player_fished_something
-
-# Goat Ram
-execute as @e[type=goat] at @s store success score @s ncmGoatHasRamCooldown run data get entity @s Brain.memories.minecraft:ram_cooldown_ticks.value
-execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players set @s ncmFPBurst 5
-execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
 # Fireball
 execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmFPBurst 5
@@ -262,6 +239,20 @@ execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard pla
 execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players set @s ncmFPBurst 5
 execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
+
+
+# Goat Ram
+execute as @e[type=goat] at @s store success score @s ncmGoatHasRamCooldown run data get entity @s Brain.memories.minecraft:ram_cooldown_ticks.value
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players set @s ncmFPBurst 5
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+
+
+# Fishing Rod Player Pulling
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmFPBurst 5
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a[advancements={ncm:player_fished_something=true}] at @s as @a[distance=1..50] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a[advancements={ncm:player_fished_something=true}] run advancement revoke @s only ncm:player_fished_something
 
 # Wind Burst
 execute as @a if items entity @s weapon *[enchantments~[{enchantments:"minecraft:wind_burst",levels:{min:0,max:255}}]] run scoreboard players set @s ncmFPBurst 5
@@ -278,16 +269,47 @@ execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 
 execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
+# Powder Snow
+execute as @a at @s if block ~ ~ ~ powder_snow run scoreboard players set @s ncmFPBurst 15
+execute as @a at @s if block ~ ~ ~ powder_snow run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if block ~ ~ ~ powder_snow run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if block ~ ~ ~ powder_snow run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+
+# Wind Charge -> Movementstate Climbing
+execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 30
+execute as @a at @s if entity @e[type=wind_charge,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+# Soul Speed + Soul Sand
+execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players set @s ncmMVMTSKnockbackExempt 30
+execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
+
+
+
+
+# Dismount
+execute as @a if score @s ncmFPDismountExempt matches 1.. run scoreboard players set @s ncmFPDismountExempt 2
+execute as @a on vehicle on passengers run scoreboard players set @s ncmFPDismountExempt 1
+execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players set @s ncmFPBurst 30
+execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players set @s ncmMVMTSKnockbackExempt 50
+execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players set @s ncmFPDismountExempt 0
+
+
 # Wind Charged
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmFPBurst 30
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 70
 execute as @e[nbt={active_effects:[{id:"minecraft:wind_charged"}]}] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
+# Dispenser
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmFPBurst 30
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 80
+execute as @a if score @s ncmDispenserNearby matches 1.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
-# Soul Speed + Soul Sand
-execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players set @s ncmMVMTSKnockbackExempt 30
-execute as @a at @s anchored feet if block ~ ~ ~ minecraft:soul_sand if predicate ncm:has_soulspeed_armor run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Iron Golem FP fix
 
@@ -1568,6 +1590,35 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 slime_block run sc
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 slime_block run scoreboard players set @s ncmLadderNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 slime_block run scoreboard players set @s ncmLadderNearby 1
+
+# Honey block
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 honey_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 honey_block run scoreboard players set @s ncmLadderNearby 1
 
 execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmLadderNearby 1
 

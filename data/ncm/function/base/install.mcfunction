@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 235
+scoreboard players set DataHolder ncmBuildNumber 240
 
 
 scoreboard objectives add ncm.100 dummy
@@ -2060,6 +2060,7 @@ scoreboard objectives add ncmMVMNFFPSourceNearby dummy
 scoreboard objectives add ncmMVMNFTimeAlive dummy
 scoreboard objectives add ncmMVMNFDeathCount deathCount
 scoreboard objectives add ncmNFFallDamageToApply dummy
+scoreboard objectives add ncmUsedChorusFruit minecraft.used:minecraft.chorus_fruit
 
 # Appropriate (Speed (General))
 scoreboard objectives add ncmAPSWalk minecraft.custom:minecraft.walk_one_cm
@@ -2128,6 +2129,7 @@ scoreboard objectives add ncmMVMTSIgnoreNext dummy
 scoreboard objectives add ncmMVMTSSpeedEffectCooldownSet dummy
 scoreboard objectives add ncmMVMTSSpeedEffectCooldown dummy
 
+scoreboard objectives add ncmFPDismountExempt dummy
 
 
 # --------------------------
