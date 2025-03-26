@@ -52,7 +52,7 @@ execute as @a at @s if items entity @s weapon *[enchantments~[{enchantments:"min
 execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 1 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_1
 execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 1 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_2
 # Account for issue MC-69459 (Invalidate Lost Sprint)
-execute as @a[tag=VE.PlayerMovementStateTransitionEvent,tag=VE.PlayerAttackEvent] if score @s VE.PlayerMovementStateTransitionEvent.priorMovementState matches 2 if score @s VE.PlayerMovementStateTransitionEvent.newMovementState matches 1 run scoreboard players set @s ncmInvalidateLostSprint 1
+execute as @a[tag=VE.PlayerAttackEvent] run scoreboard players set @s ncmInvalidateLostSprint 1
 execute as @a if score @s VEGbl.thePlayer.currentMovementState matches 2 run scoreboard players set @s ncmInvalidateLostSprint 0
 execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_3
 execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovementState matches 1 if score @s ncmInvalidateLostSprint matches 1 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_4
