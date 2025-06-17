@@ -19,11 +19,11 @@
 
 
 # Running command functions
-function ncm:command/input
-function ncm:command/report
-function ncm:command/checks
+execute as @a run function ncm:command/input
+function ncm:command/prereport
+execute as @a run function ncm:command/checks
 function ncm:command/tour
-function ncm:command/help
+execute as @a run function ncm:command/help
 function ncm:command/replay
 function ncm:command/stats
 function ncm:command/reset
@@ -36,7 +36,7 @@ function ncm:evaluation/fail
 
 function ncm:evaluation/pass
 
-function ncm:base/permission
+execute as @a if score @s ncmOperator matches 1 run function ncm:base/permission
 
 function ncm:lag/lagmanager
 

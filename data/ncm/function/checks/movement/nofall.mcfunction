@@ -27,121 +27,7 @@ execute as @a if score @s ncmMVMNFTimeAlive matches ..120 run scoreboard players
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFTimeAlive 0
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFDeathCount 0
 
-
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 water run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-
-
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 lava run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~ ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~1 ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~ slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~ ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+scoreboard players set @e[type=player,predicate=ncm:nearby/water_fluid] ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
@@ -199,6 +85,10 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 #ncm:fall_damage
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #ncm:fall_damage_exempt run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #ncm:fall_damage_exempt run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
+scoreboard players set @e[type=player,predicate=ncm:nearby/slime_block] ncmMVMNFFPSourceNearby 1
+scoreboard players set @e[type=player,predicate=ncm:nearby/lava_fluid] ncmMVMNFFPSourceNearby 1
+scoreboard players set @e[type=player,predicate=ncm:nearby/water_fluid] ncmMVMNFFPSourceNearby 1
+scoreboard players set @e[type=player,predicate=ncm:nearby/hay_block] ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player] at @s if entity @e[type=#minecraft:boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if entity @e[type=oak_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
@@ -221,9 +111,9 @@ execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players se
 execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if predicate ncm:has_featherfalling_armor run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if predicate ncm:has_protection_armor run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @a[nbt={active_effects:[{id:"minecraft:slow_falling"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @a[nbt={active_effects:[{id:"minecraft:resistance"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:slow_falling":{}}}} run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:resistance":{}}}} run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if items entity @s armor.chest elytra run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e on vehicle on passengers run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 
@@ -238,7 +128,7 @@ execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 
 
 
 
-execute as @a[nbt={OnGround:1b}] at @s unless score @s ncmAirAround matches 1.. store result score @s ncmNFLastYOnGrd run data get entity @s Pos[1] 100
+execute as @a if predicate ncm:is_on_ground at @s unless score @s ncmAirAround matches 1.. store result score @s ncmNFLastYOnGrd run data get entity @s Pos[1] 100
 
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmAirAround matches 1 unless score @s ncmMVMNFFall matches 1.. if score @s VE.PlayerMoveEvent.hasDescended matches 1 if score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallStartYCoord = @s ncmNFLastYOnGrd
 
@@ -248,7 +138,7 @@ execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 
 execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallStartYCoord 0
 execute as @a if score @s ncmMVMNFFallEndYCoord >= @s ncmMVMNFFallStartYCoord run scoreboard players set @s ncmMVMNFFallEndYCoord 0
 
-execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if data entity @s {OnGround:1b} unless score @s ncmAirAround matches 1 unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
+execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if predicate ncm:is_on_ground unless score @s ncmAirAround matches 1 unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
 #execute as @a at @s unless score @s ncmMVMNFFall matches 1.. if score @s ncmMVMNFFallEndYCoord matches 0 unless data entity @s {OnGround:0b} unless score @s ncmMVMNFFallStartYCoord matches 0 run scoreboard players operation @s ncmMVMNFFallEndYCoord = @s VE.PlayerMoveEvent.toY
 #execute  at @s unless score @s ncmAirAround matches 1 run scoreboard players set @s ncmMVMNFFallStartYCoord 0
 
@@ -308,4 +198,4 @@ execute as @e[type=minecraft:player] if score @s ncmMVMNFFall matches 1.. if sco
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFall matches 0 run scoreboard players set @s ncmMVMNFDebug 0
 execute as @e[type=minecraft:player] if score @s ncmMVMNFField1 matches 3.. run scoreboard players set @s ncmMVMNFField1 0
 execute as @e[type=minecraft:player] if score @s ncmMVMNFReset matches 5.. run scoreboard players set @s ncmMVMNFReset 0
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] if score @s ncmMVMNFFPSourceNearby matches 10.. run scoreboard players set @s ncmMVMNFFPSourceNearby 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground if score @s ncmMVMNFFPSourceNearby matches 10.. run scoreboard players set @s ncmMVMNFFPSourceNearby 0

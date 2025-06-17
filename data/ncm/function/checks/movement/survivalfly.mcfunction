@@ -40,9 +40,9 @@
 
 
 execute as @a if score @s ncmSpoofWaitLatencyTicks matches -1 run scoreboard players set @s ncmSpoofIsWaiting 0
-execute as @e[type=minecraft:player,nbt={OnGround:1b},gamemode=!spectator,gamemode=!creative] at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofWaitLatencyTicks 3
-execute as @e[type=minecraft:player,nbt={OnGround:1b},gamemode=!spectator,gamemode=!creative] at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players operation @s ncmSpoofWaitLatencyTicks += @s ncmLastLatencyLevel
-execute as @e[type=minecraft:player,nbt={OnGround:1b},gamemode=!spectator,gamemode=!creative] at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofIsWaiting 1
+execute as @e[type=minecraft:player,gamemode=!spectator,gamemode=!creative] if predicate ncm:is_on_ground at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofWaitLatencyTicks 3
+execute as @e[type=minecraft:player,gamemode=!spectator,gamemode=!creative] if predicate ncm:is_on_ground at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players operation @s ncmSpoofWaitLatencyTicks += @s ncmLastLatencyLevel
+execute as @e[type=minecraft:player,gamemode=!spectator,gamemode=!creative] if predicate ncm:is_on_ground at @s unless score @s ncmFPBurst matches 1.. unless entity @e[type=minecraft:bamboo_chest_raft,distance=..7] unless entity @e[type=#minecraft:boat,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..7] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmSpoofIsWaiting matches 1 if score @s ncmAirAround matches 1 run scoreboard players set @s ncmSpoofIsWaiting 1
 
 
 execute as @e[type=minecraft:player] if score @s ncmSpoofWaitLatencyTicks matches 0.. run scoreboard players remove @s ncmSpoofWaitLatencyTicks 1
@@ -64,7 +64,7 @@ execute as @e[type=minecraft:player] at @s unless score @s ncmOGJump matches 1..
 # Subcheck: LostGround
 # --------------------
 execute as @e[type=minecraft:player] store result score @s ncmYMotion run data get entity @s Motion[1] 1
-execute as @e[type=minecraft:player,nbt={OnGround:1b},gamemode=!creative,gamemode=!spectator] at @s unless score @s ncmFPBurst matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmYMotion matches -1 run scoreboard players add @s ncmSFLG_ivl 1
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] if predicate ncm:is_on_ground at @s unless score @s ncmFPBurst matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmYMotion matches -1 run scoreboard players add @s ncmSFLG_ivl 1
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl matches 1.. run scoreboard players add @s ncmSFLG_ivlrc 1
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_sf_lg_1 unless score @s ncmFPBurst matches 1.. unless score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmFailedMVMSF 5
 execute as @e[type=minecraft:player] if score @s ncmSFLG_ivl >= DataHolder ncmc_sf_lg_1 unless score @s ncmFPBurst matches 1.. unless score @s ncmCobwebNearby matches 1.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"LostGround","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"@s","objective":"ncmYMotion"},"color":"gray"},{"text":"}","color":"gray"}]
@@ -124,8 +124,8 @@ execute as @a if score @s ncmSFJCRC >= DataHolder ncmc_sf_jc_2 run scoreboard pl
 
 
 execute as @a if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmSFOGJoinGrace 601
-execute as @a if score @s[nbt={OnGround:0b}] ncmLeaveGame matches 1.. run scoreboard players set @s ncmSFOGJoinGrace 601
-execute as @a if score @s[nbt={OnGround:1b}] ncmSFOGJoinGrace matches 601 run scoreboard players set @s ncmSFOGJoinGrace 600
+execute as @a unless predicate ncm:is_on_ground if score @s ncmLeaveGame matches 1.. run scoreboard players set @s ncmSFOGJoinGrace 601
+execute as @a unless predicate ncm:is_on_ground if score @s ncmSFOGJoinGrace matches 601 run scoreboard players set @s ncmSFOGJoinGrace 600
 execute as @a if score @s ncmSFOGJoinGrace matches 1..600 run scoreboard players remove @s ncmSFOGJoinGrace 1
 
 
@@ -141,7 +141,7 @@ execute as @a if score @s ncmLastLatencyLevel matches 21.. run scoreboard player
 
 
 
-execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:0b}] at @s unless score @s ncmPistonNearby matches 1.. unless score @s ncmFPBurst matches 1.. unless score @s ncmCheckPlayerLatency matches 1.. unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmOGJump matches 1.. unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=#minecraft:boat,distance=..2] unless entity @e[type=minecart,distance=..2] unless entity @e[type=oak_chest_boat,distance=..2] unless entity @e[type=spruce_chest_boat,distance=..2] unless entity @e[type=cherry_chest_boat,distance=..2] unless entity @e[type=bamboo_chest_raft,distance=..2] unless entity @e[type=mangrove_chest_boat,distance=..2] unless entity @e[type=dark_oak_chest_boat,distance=..2] unless entity @e[type=acacia_chest_boat,distance=..2] unless entity @e[type=jungle_chest_boat,distance=..2] unless entity @e[type=birch_chest_boat,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s VE.PlayerMoveEvent.hasDescended matches 1 unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmLadderNearby matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 unless score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmOffGrTicks 1
+execute as @a[gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground at @s unless score @s ncmPistonNearby matches 1.. unless score @s ncmFPBurst matches 1.. unless score @s ncmCheckPlayerLatency matches 1.. unless score @s ncmSFPlayerLatencyFP matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmOGJump matches 1.. unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=#minecraft:boat,distance=..2] unless entity @e[type=minecart,distance=..2] unless entity @e[type=oak_chest_boat,distance=..2] unless entity @e[type=spruce_chest_boat,distance=..2] unless entity @e[type=cherry_chest_boat,distance=..2] unless entity @e[type=bamboo_chest_raft,distance=..2] unless entity @e[type=mangrove_chest_boat,distance=..2] unless entity @e[type=dark_oak_chest_boat,distance=..2] unless entity @e[type=acacia_chest_boat,distance=..2] unless entity @e[type=jungle_chest_boat,distance=..2] unless entity @e[type=birch_chest_boat,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless score @s ncmPlayerIsInBed matches 1 unless score @s ncmCobwebNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score @s ncmDeathTime matches 1.. unless score @s ncmAngryIGNearby matches 1.. unless score @s VE.PlayerMoveEvent.hasDescended matches 1 unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score @s ncmLadderNearby matches 1.. unless score @s VEGbl.thePlayer.currentMovementState matches 5 unless score @s ncmFPDamage matches -50..-1 run scoreboard players add @s ncmOffGrTicks 1
 
 execute as @a if score @s ncmOffGrTicks matches 1.. run scoreboard players add @s ncmOffGrTicksC 1
 
@@ -161,8 +161,8 @@ execute as @a if score @s ncmSFOGFailCountForLatencyBufferR matches 0 run scoreb
 execute as @a if score @s ncmSFOGFailCountForLatencyBuffer > @s ncmSFOGFailLatencyBuffer run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
 execute as @a if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
 execute as @a if score @s VE.PlayerMoveEvent.hasDescended matches 1 run scoreboard players set @s ncmSFOGFailCountForLatencyBufferR 0
-execute as @a if entity @s[nbt={OnGround:1b}] run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
-execute as @a if entity @s[nbt={OnGround:1b}] run scoreboard players set @s ncmSFOGFailCountForLatencyBufferR 0
+execute as @a if predicate ncm:is_on_ground run scoreboard players set @s ncmSFOGFailCountForLatencyBuffer 0
+execute as @a if predicate ncm:is_on_ground run scoreboard players set @s ncmSFOGFailCountForLatencyBufferR 0
 
 
 
@@ -180,8 +180,8 @@ execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboa
 execute as @a if score @s ncmOffGrTicksC >= DataHolder ncmc_sf_og_2 run scoreboard players set @s ncmOffGrTicksC 0
 
 #execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] if score @s ncmOffGrTicks matches 1.. run tellraw @s {"score":{"name":"@s","objective":"ncmOffGrTicks"}}
-execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players set @s ncmOffGrTicks 0
-execute as @a[gamemode=!creative,gamemode=!spectator,nbt={OnGround:1b}] run scoreboard players set @s ncmOffGrTicksC 0
+execute as @a[gamemode=!creative,gamemode=!spectator] if predicate ncm:is_on_ground run scoreboard players set @s ncmOffGrTicks 0
+execute as @a[gamemode=!creative,gamemode=!spectator] if predicate ncm:is_on_ground run scoreboard players set @s ncmOffGrTicksC 0
 
 
 
@@ -215,7 +215,7 @@ execute as @a if score @s ncmLadderNearby matches 1.. run scoreboard players set
 execute as @a if score @s ncmLiquidNearby matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score @s ncmCheckPlayerLatency matches 1 run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score @s ncmAviate matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
-execute as @a[nbt={Inventory:[{Slot:102b,id:"minecraft:elytra"}]}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
+execute as @a if items entity @s armor.chest elytra run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score @s ncmLevitate matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a at @s if entity @e[type=minecraft:strider,distance=..7] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a at @s if entity @e[type=minecraft:skeleton_horse,distance=..2] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
@@ -227,7 +227,7 @@ execute as @a if score @s ncmFPDamage matches -50..-1 run scoreboard players set
 execute as @a if score @s ncmFPBurst matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 
-execute as @a if entity @s[nbt={flying:1b}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
+execute as @a if entity @s[nbt={abilities:{flying:1b}}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 
@@ -274,7 +274,7 @@ execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. if score @s
 
 execute as @e[type=minecraft:player] if score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players add @s ncmSFClimbAviateGrace 1
 execute as @e[type=minecraft:player] unless score @s VEGbl.thePlayer.currentMovementState matches 10 run scoreboard players set @s ncmSFClimbAviateGrace 0
-execute as @a[nbt={SelectedItem:{id:"minecraft:firework_rocket"}}] run scoreboard players set @s ncmSFClimbAviateGrace 1
+execute as @a if items entity @s weapon firework_rocket run scoreboard players set @s ncmSFClimbAviateGrace 1
 #execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 80.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s VE.PlayerMoveEvent.hasXZChanged matches 0 run scoreboard players set @s ncmFailedMVMSF 9
 #execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 80.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s VE.PlayerMoveEvent.hasXZChanged matches 0 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Aviate}","color":"gray"}]
 #execute as @e[type=minecraft:player] if score @s ncmSFClimbAviateGrace matches 80.. if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s VE.PlayerMoveEvent.hasXZChanged matches 0 run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Climb","color":"light_purple"},{"text":" {Aviate}","color":"gray"}]
@@ -308,20 +308,20 @@ execute as @a[tag=VE.PlayerMoveEvent] if score @s VEGbl.thePlayer.currentMovemen
 
 
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative] run scoreboard players add @s ncmMaintainRC 1
+execute as @e[type=minecraft:player,gamemode=!creative] unless predicate ncm:is_on_ground run scoreboard players add @s ncmMaintainRC 1
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC matches 1 store result score @s ncmLastMaintainY run data get entity @s Pos[1] 100000
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC matches 3 store result score @s ncmMaintainY run data get entity @s Pos[1] 100000
 
 #execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY = @s ncmMaintainY run say Maintain whilst offground.
 #execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY < @s ncmMaintainY run say Climb whilst offground.
-execute as @e[type=minecraft:player,nbt={OnGround:0b}] if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY > @s ncmMaintainY run scoreboard players set @s ncmFPDecent 1
+execute as @e[type=minecraft:player] unless predicate ncm:is_on_ground if score @s ncmMaintainRC matches 3 if score @s ncmLastMaintainY > @s ncmMaintainY run scoreboard players set @s ncmFPDecent 1
 
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players operation @s ncmYSpeed = @s ncmMaintainY
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players operation @s ncmYSpeed -= @s ncmLastMaintainY
 
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players set @s ncmMaintainRC 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] at @s unless score @s ncmPistonNearby matches 1.. unless entity @e[type=#ncm:minecarts,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmLadderNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground at @s unless score @s ncmPistonNearby matches 1.. unless entity @e[type=#ncm:minecarts,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmLadderNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
 execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run scoreboard players operation @s ncmLastYSpeed = @s ncmYSpeed
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0
@@ -330,11 +330,11 @@ execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard pl
 
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmFailedMVMSF 9
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmFailedMVMSF 9
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
 
-execute as @e[type=minecraft:player,nbt={OnGround:0b},gamemode=!creative,gamemode=!spectator] unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground unless score @s ncmFPBurst matches 1.. unless score @s ncmYSpeed matches 0 if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 if score @s ncmLastYSpeed = @s ncmYSpeed unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Movement","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"SurvivalFly","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"ConstantClimbRate","color":"light_purple"},{"text":" {","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_sf_cr_2"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmYSpeed"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmMaintainY"},"color":"gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmLastMaintainY"},"color":"gray"},{"text":"}","color":"gray"}]
 execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC = DataHolder ncmc_sf_cr_2 run scoreboard players set @s ncmYSpMaintainRC 0
 
 
@@ -345,13 +345,13 @@ execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard 
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmLastYSpeed 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmYSpeed 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmLastMaintainY -1
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmMaintainY 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmLastMaintainY -1
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmMaintainY 0
 
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmMaintainRC 0
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmYSpMaintainRC 0
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmLastYSpeed 0
-execute as @e[type=minecraft:player,nbt={OnGround:1b}] run scoreboard players set @s ncmYSpeed 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmMaintainRC 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmLastYSpeed 0
+execute as @e[type=minecraft:player] if predicate ncm:is_on_ground run scoreboard players set @s ncmYSpeed 0
 
 
 
