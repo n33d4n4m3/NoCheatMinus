@@ -22,64 +22,64 @@
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 execute as @a at @s anchored eyes if score @s ncmChest matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmEChest matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmEChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmEChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBox matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmBox matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmBox matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBarrel matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmBarrel matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmBarrel matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmDispenser matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmDispenser matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmDispenser matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmDropper matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmDropper matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmDropper matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmHopper matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmHopper matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmHopper matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmAnvil matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmAnvil matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmAnvil matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBeacon matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmBeacon matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmBeacon matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBlastFurn matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmBlastFurn matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmBlastFurn matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBrewSt matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmBrewSt matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmBrewSt matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmCampf matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmCampf matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmCampf matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmCraftingT matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmCraftingT matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmCraftingT matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmFurn matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmFurn matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmFurn matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmGrindstone matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmGrindstone matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmGrindstone matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmLectern matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmLectern matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmLectern matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmLoom matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmLoom matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmLoom matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmSmith matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmSmith matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmSmith matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmSmk matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmSmk matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmSmk matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a at @s anchored eyes if score @s ncmStoneC matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a if score @s ncmStoneC matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 
 execute as @a if score @s ncmBIMBFire matches 1 store result score @s ncmBIMBThisF_x run data get entity @s Pos[0]

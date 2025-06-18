@@ -20,8 +20,7 @@
 # Statistics
 
 $execute unless score $(reset) ncmRep matches -999999999..999999999 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":": An operator attempted to reset the statistics and reputation of player ","color":"gray"},{"text":"$(reset)","color":"yellow"},{"text":", but their data isn't available.","color":"gray"}]
-$execute unless score $(reset) ncmRep matches -999999999..999999999 run data remove storage ncm:stats reset
-$execute unless score $(reset) ncmRep matches -999999999..999999999 run return fail
+$execute unless score $(reset) ncmRep matches -999999999..999999999 run return run data remove storage ncm:stats reset
 
 
 $scoreboard players operation $(reset) ncmRep = DataHolder ncmc_bs_rp_1

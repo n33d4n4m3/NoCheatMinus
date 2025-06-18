@@ -38,10 +38,10 @@ execute as @s[tag=VE.PlayerMoveEvent] if score @s VE.PlayerMoveEvent.hasDescende
 
 
 
-execute unless score @s ncmTimesLatencyLevelMaintained matches 1.. if score @s ncmCheckPlayerLatency matches 1 run execute store result score @s ncmTicksUntilNextLatencyCheck run random value 2000..4000
-execute if score @s ncmTimesLatencyLevelMaintained matches 1 if score @s ncmCheckPlayerLatency matches 1 run execute store result score @s ncmTicksUntilNextLatencyCheck run random value 4000..6000
-execute if score @s ncmTimesLatencyLevelMaintained matches 2 if score @s ncmCheckPlayerLatency matches 1 run execute store result score @s ncmTicksUntilNextLatencyCheck run random value 6000..8000
-execute if score @s ncmTimesLatencyLevelMaintained matches 3.. if score @s ncmCheckPlayerLatency matches 1 run execute store result score @s ncmTicksUntilNextLatencyCheck run random value 8000..10000
+execute unless score @s ncmTimesLatencyLevelMaintained matches 1.. if score @s ncmCheckPlayerLatency matches 1 store result score @s ncmTicksUntilNextLatencyCheck run random value 2000..4000
+execute if score @s ncmTimesLatencyLevelMaintained matches 1 if score @s ncmCheckPlayerLatency matches 1 store result score @s ncmTicksUntilNextLatencyCheck run random value 4000..6000
+execute if score @s ncmTimesLatencyLevelMaintained matches 2 if score @s ncmCheckPlayerLatency matches 1 store result score @s ncmTicksUntilNextLatencyCheck run random value 6000..8000
+execute if score @s ncmTimesLatencyLevelMaintained matches 3.. if score @s ncmCheckPlayerLatency matches 1 store result score @s ncmTicksUntilNextLatencyCheck run random value 8000..10000
 
 
 

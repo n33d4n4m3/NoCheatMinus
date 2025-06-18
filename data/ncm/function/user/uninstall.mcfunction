@@ -57,6 +57,7 @@ scoreboard objectives remove ncmUsedChorusFruit
 scoreboard objectives remove ncmFPDismountExempt
 scoreboard objectives remove ncmUsedEnderPearl
 scoreboard objectives remove ncmIceNearby
+scoreboard objectives remove ncmDispenserNearby
 scoreboard objectives remove ncmc_ap_bp_3
 scoreboard objectives remove ncmGoatHasRamCooldown
 scoreboard objectives remove ncmAngryWarden

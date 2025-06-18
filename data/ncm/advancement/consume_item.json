@@ -3,8 +3,5 @@
     "consume_item": {
       "trigger": "minecraft:consume_item"
     }
-  },
-  "rewards": {
-
   }
 }

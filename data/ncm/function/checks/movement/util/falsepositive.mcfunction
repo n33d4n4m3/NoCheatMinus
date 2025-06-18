@@ -87,8 +87,8 @@ execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboa
 
 # Goat Ram
 execute as @e[type=goat] at @s store success score @s ncmGoatHasRamCooldown run data get entity @s Brain.memories.minecraft:ram_cooldown_ticks.value
-execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players set @s ncmFPBurst 5
-execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 run execute as @a[distance=..20] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 as @a[distance=..20] at @s run scoreboard players set @s ncmFPBurst 5
+execute as @e[type=goat] at @s if score @s ncmGoatHasRamCooldown matches 0 as @a[distance=..20] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
 
 # Fishing Rod Player Pulling
@@ -108,10 +108,10 @@ execute as @a at @s if entity @e[type=end_crystal,distance=..10] run scoreboard 
 
 # Warden
 execute as @e[type=minecraft:warden] store success score @s ncmAngryWarden run data get entity @e[type=warden,limit=1] anger.suspects[0]
-execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players set @s ncmFPBurst 5
-execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 10
-execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 run execute as @a[distance=..25] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 as @a[distance=..25] at @s run scoreboard players set @s ncmFPBurst 5
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 as @a[distance=..25] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 as @a[distance=..25] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @e[type=minecraft:warden] at @s if score @s ncmAngryWarden matches 1 as @a[distance=..25] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Powder Snow
 execute as @a at @s if block ~ ~ ~ powder_snow run scoreboard players set @s ncmFPBurst 15
@@ -143,16 +143,16 @@ execute as @a if score @s ncmFPDismountExempt matches 2.. run scoreboard players
 
 
 # Wind Charged
-execute as @e[predicate=ncm:has_wind_charged_effect] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmFPBurst 30
-execute as @e[predicate=ncm:has_wind_charged_effect] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @e[predicate=ncm:has_wind_charged_effect] at @s run execute as @a[distance=..15] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 70
-execute as @e[predicate=ncm:has_wind_charged_effect] at @s run execute as @a[distance=..15] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @e[predicate=ncm:has_wind_charged_effect] at @s as @a[distance=..15] at @s run scoreboard players set @s ncmFPBurst 30
+execute as @e[predicate=ncm:has_wind_charged_effect] at @s as @a[distance=..15] at @s run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @e[predicate=ncm:has_wind_charged_effect] at @s as @a[distance=..15] at @s run scoreboard players set @s ncmMVMTSKnockbackExempt 70
+execute as @e[predicate=ncm:has_wind_charged_effect] at @s as @a[distance=..15] at @s run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Dispenser
-execute as @a if predicate ncm:nearby/dispenser run scoreboard players set @s ncmFPBurst 30
-execute as @a if predicate ncm:nearby/dispenser run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @a if predicate ncm:nearby/dispenser run scoreboard players set @s ncmMVMTSKnockbackExempt 80
-execute as @a if predicate ncm:nearby/dispenser run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a at @s if predicate ncm:nearby/dispenser run scoreboard players set @s ncmFPBurst 30
+execute as @a at @s if predicate ncm:nearby/dispenser run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if predicate ncm:nearby/dispenser run scoreboard players set @s ncmMVMTSKnockbackExempt 80
+execute as @a at @s if predicate ncm:nearby/dispenser run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 
 # Iron Golem FP fix
@@ -355,29 +355,29 @@ execute as @a if score @s ncmStepableNearby matches 1.. run scoreboard players r
 
 
 # Ice Boat fix
-scoreboard players set @a[predicate=ncm:nearby/ice] ncmIceNearby 100
-scoreboard players set @a[predicate=ncm:nearby/blue_ice] ncmIceNearby 100
-scoreboard players set @a[predicate=ncm:nearby/packed_ice] ncmIceNearby 100
-scoreboard players set @a[predicate=ncm:nearby/frosted_ice] ncmIceNearby 100
+execute as @a at @s if predicate ncm:nearby/ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if predicate ncm:nearby/blue_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if predicate ncm:nearby/packed_ice run scoreboard players set @s ncmIceNearby 100
+execute as @a at @s if predicate ncm:nearby/frosted_ice run scoreboard players set @s ncmIceNearby 100
 
 execute as @a if score @s ncmIceNearby matches 1.. run scoreboard players remove @s ncmIceNearby 1
 
 
 # Cobweb & Sweet Berry Bush fix
-scoreboard players set @a[predicate=ncm:nearby/cobweb] ncmCobwebNearby 100
-scoreboard players set @a[predicate=ncm:nearby/berry_bush] ncmCobwebNearby 100
+execute as @a at @s if predicate ncm:nearby/cobweb run scoreboard players set @s ncmCobwebNearby 100
+execute as @a at @s if predicate ncm:nearby/berry_bush run scoreboard players set @s ncmCobwebNearby 100
 
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players add @s ncmCobwebNearby 1
 
 
 # Piston fix
 scoreboard players set @a ncmPistonNearby 0
-scoreboard players set @a[predicate=ncm:nearby/piston] ncmPistonNearby 100
-scoreboard players set @a[predicate=ncm:nearby/sticky_piston] ncmPistonNearby 100
+execute as @a at @s if predicate ncm:nearby/piston run scoreboard players set @s ncmPistonNearby 100
+execute as @a at @s if predicate ncm:nearby/sticky_piston run scoreboard players set @s ncmPistonNearby 100
 
 # Liquid fix
-scoreboard players set @a[predicate=ncm:nearby/lava_fluid] ncmLiquidNearby 1
-scoreboard players set @a[predicate=ncm:nearby/water_fluid] ncmLiquidNearby 1
+execute as @a at @s if predicate ncm:nearby/lava_fluid run scoreboard players set @s ncmLiquidNearby 1
+execute as @a at @s if predicate ncm:nearby/water_fluid run scoreboard players set @s ncmLiquidNearby 1
 execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 1.. run scoreboard players add @s ncmLiquidNearby 1
 
 

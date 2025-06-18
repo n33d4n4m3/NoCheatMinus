@@ -26,8 +26,8 @@ execute as @a if score @s ncmReplay matches 1.. run scoreboard players set @s nc
 
 execute as @a if score @s ncmInReplayMode matches 2 run tag @s add ncm.replayMode
 execute as @a unless score @s ncmInReplayMode matches 2 run tag @s remove ncm.replayMode
-execute as @a[tag=ncm.replayMode] run execute as @a if score @s ncmInReplayMode matches 1 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": The operator ","color":"gray"},{"selector":"@a[tag=ncm.replayMode]","color":"yellow"},{"text":" is currently using the replay mode. Only one player can use the replay mode at a time.","color":"gray"}]
-execute as @a[tag=ncm.replayMode] run execute as @a if score @s ncmInReplayMode matches 1 run scoreboard players set @s ncmInReplayMode 0
+execute as @a[tag=ncm.replayMode] as @a if score @s ncmInReplayMode matches 1 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": The operator ","color":"gray"},{"selector":"@a[tag=ncm.replayMode]","color":"yellow"},{"text":" is currently using the replay mode. Only one player can use the replay mode at a time.","color":"gray"}]
+execute as @a[tag=ncm.replayMode] as @a if score @s ncmInReplayMode matches 1 run scoreboard players set @s ncmInReplayMode 0
 execute as @a if score @s ncmInReplayMode matches 1 run scoreboard players set @s ncmReplayTimeInReplayMode 0
 execute as @a if score @s ncmInReplayMode matches 1 run tag @s add ncm.replayMode
 execute as @a if score @s ncmInReplayMode matches 1 run scoreboard players set @s ncmInReplayMode 2

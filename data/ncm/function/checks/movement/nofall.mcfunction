@@ -85,36 +85,23 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~-1 #ncm:fall_damage
 execute as @e[type=minecraft:player] at @s if block ~-1 ~-1 ~1 #ncm:fall_damage_exempt run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #ncm:fall_damage_exempt run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
-scoreboard players set @e[type=player,predicate=ncm:nearby/slime_block] ncmMVMNFFPSourceNearby 1
-scoreboard players set @e[type=player,predicate=ncm:nearby/lava_fluid] ncmMVMNFFPSourceNearby 1
-scoreboard players set @e[type=player,predicate=ncm:nearby/water_fluid] ncmMVMNFFPSourceNearby 1
-scoreboard players set @e[type=player,predicate=ncm:nearby/hay_block] ncmMVMNFFPSourceNearby 1
+execute as @e[type=player] at @s if predicate ncm:nearby/slime_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=player] at @s if predicate ncm:nearby/lava_fluid run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=player] at @s if predicate ncm:nearby/water_fluid run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=player] at @s if predicate ncm:nearby/hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
-execute as @e[type=minecraft:player] at @s if entity @e[type=#minecraft:boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=oak_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=spruce_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=cherry_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=bamboo_chest_raft,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=mangrove_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=dark_oak_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=acacia_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=jungle_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=birch_chest_boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:minecarts,distance=..4] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
 execute as @e[type=minecraft:player] at @s if entity @e[type=wind_charge,distance=..8] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if score @s ncmUsedChorusFruit matches 1.. run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player] at @s if score @s ncmUsedChorusFruit matches 1.. run scoreboard players set @s ncmUsedChorusFruit 0
+execute as @e[type=minecraft:player] at @s if score @s ncmUsedChorusFruit matches 1.. store success score @s ncmMVMNFFPSourceNearby run scoreboard players set @s ncmUsedChorusFruit 0
 
-
-execute as @e[type=minecraft:player,gamemode=creative] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e[type=minecraft:player,gamemode=spectator] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+scoreboard players set @a[gamemode=!adventure,gamemode=!survival] ncmMVMNFFPSourceNearby 1
 execute as @a if predicate ncm:has_featherfalling_armor run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if predicate ncm:has_protection_armor run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:slow_falling":{}}}} run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:resistance":{}}}} run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:slow_falling":{}}}} store success score @s ncmMVMNFFPSourceNearby run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if items entity @s armor.chest elytra run scoreboard players set @s ncmMVMNFFPSourceNearby 1
-execute as @e on vehicle on passengers run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{vehicle:{}}} run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 
 execute as @e[type=minecraft:player] if score @s ncmMVMNFFPSourceNearby matches 1.. run scoreboard players add @s ncmMVMNFFPSourceNearby 1

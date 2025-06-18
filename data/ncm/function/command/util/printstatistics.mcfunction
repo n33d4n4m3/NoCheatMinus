@@ -21,8 +21,7 @@
 # Statistics
 
 $execute unless score $(name) ncmRep matches -999999999..999999999 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":": An operator attempted to retrieve the statistics of player ","color":"gray"},{"text":"$(name)","color":"yellow"},{"text":", but none are available.","color":"gray"}]
-$execute unless score $(name) ncmRep matches -999999999..999999999 run data remove storage ncm:stats name
-$execute unless score $(name) ncmRep matches -999999999..999999999 run return fail
+$execute unless score $(name) ncmRep matches -999999999..999999999 run return data remove storage ncm:stats name
 
 $tellraw @a[scores={ncmOperator=2}] ["",{"text":"===========================","color":"yellow"},"\n","NoCheatMinus Statistics","\n",{"text":"===========================","color":"yellow"},"\n","\n",{"text":"Player","color":"yellow"},": ",{"text":"$(name)"}]
 $execute if score $(name) ncmRep > DataHolder ncmc_bs_rp_5 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Reputation","color":"yellow"},": ","",{"score":{"name":"$(name)","objective":"ncmRep"},"color":"green"},{"text":" ✓","color":"green"}]

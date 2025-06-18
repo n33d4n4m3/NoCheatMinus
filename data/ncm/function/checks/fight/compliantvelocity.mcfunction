@@ -27,14 +27,7 @@
 
 
 scoreboard players set @a ncmPlayerIsCollisionFree 1
-execute as @a at @s unless block ~1 ~ ~ #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~-1 ~ ~ #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~ ~ ~1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~ ~ ~-1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~1 ~ ~1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~1 ~ ~-1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~-1 ~ ~-1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
-execute as @a at @s unless block ~-1 ~ ~1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
+execute as @a at @s if predicate ncm:nearby/air run scoreboard players set @s ncmPlayerIsCollisionFree 0
 execute as @a if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 execute as @a if score @s ncmLiquidNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 

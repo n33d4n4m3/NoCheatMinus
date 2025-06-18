@@ -22,8 +22,7 @@
 
 scoreboard players add @s ncmFDRange 1
 #execute as @e[dx=0,type=!minecraft:player] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] run playsound minecraft:block.note_block.flute player @p
-execute if score @s ncmFDRange matches 10.. as @e[dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] at @s run scoreboard players add @a[distance=0.1..7,scores={ncmFDTimer=0..}] ncmFDMatchCount 1
-execute if score @s ncmFDRange matches 10.. as @e[dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] run return fail
+execute if score @s ncmFDRange matches 10.. as @e[dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] at @s run return run scoreboard players add @a[distance=0.1..7,scores={ncmFDTimer=0..}] ncmFDMatchCount 1
 execute positioned ^ ^ ^0.1 if block ~ ~ ~ #air run function ncm:checks/fight/util/d_ray
 execute positioned ^ ^ ^0.1 if block ~ ~ ~ water run function ncm:checks/fight/util/d_ray
 execute positioned ^ ^ ^0.1 if block ~ ~ ~ lava run function ncm:checks/fight/util/d_ray

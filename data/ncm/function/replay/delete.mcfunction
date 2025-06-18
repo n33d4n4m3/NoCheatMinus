@@ -19,13 +19,11 @@
 
 
 $execute if entity @a[scores={ncmReplayStarted=1}] run tellraw @a[scores={ncmOperator=1..}] [{"text":""},{"text":"NCM","color":"red"},{"text":": An operator tried to delete the replay clip of player ","color":"gray"},{"text":"$(delete)","color":"yellow"},{"text":", but an operator is watching a clip currently.","color":"gray"}]
-execute if entity @a[scores={ncmReplayStarted=1}] run data remove storage ncm:replay delete
-execute if entity @a[scores={ncmReplayStarted=1}] run return fail
+execute if entity @a[scores={ncmReplayStarted=1}] run return run data remove storage ncm:replay delete
 
 
 $execute unless score $(delete) ncmHasSavedReplay matches 1 run tellraw @a[scores={ncmOperator=1..}] [{"text":""},{"text":"NCM","color":"red"},{"text":": An operator tried to delete the replay clip of player ","color":"gray"},{"text":"$(delete)","color":"yellow"},{"text":", but this player doesn't have a saved replay clip.","color":"gray"}]
-$execute unless score $(delete) ncmHasSavedReplay matches 1 run data remove storage ncm:replay delete
-$execute unless score $(delete) ncmHasSavedReplay matches 1 run return fail
+$execute unless score $(delete) ncmHasSavedReplay matches 1 run return run data remove storage ncm:replay delete
 
 # Delete
 $scoreboard players reset $(delete) ncmHasSavedReplay

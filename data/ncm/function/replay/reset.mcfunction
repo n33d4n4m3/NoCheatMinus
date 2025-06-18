@@ -25,11 +25,11 @@ scoreboard players reset @s ncmInReplayMode
 execute if score @s ncmReplayStarted matches 1 run bossbar remove ncm:replay
 execute if score @s ncmReplayStarted matches 1 run title @s title [{"text":""}]
 execute if score @s ncmReplayStarted matches 1 run title @s subtitle [{"text":""}]
-execute if score @s ncmReplayStarted matches 1 run execute store result storage ncm:tpdata x double 0.001 run scoreboard players get @s ncmReplayXBeforeStart
-execute if score @s ncmReplayStarted matches 1 run execute store result storage ncm:tpdata y double 0.001 run scoreboard players get @s ncmReplayYBeforeStart
-execute if score @s ncmReplayStarted matches 1 run execute store result storage ncm:tpdata z double 0.001 run scoreboard players get @s ncmReplayZBeforeStart
-execute if score @s ncmReplayStarted matches 1 run execute store result storage ncm:tpdata yaw double 0.001 run scoreboard players get @s ncmReplayYawBeforeStart
-execute if score @s ncmReplayStarted matches 1 run execute store result storage ncm:tpdata pitch double 0.001 run scoreboard players get @s ncmReplayPitchBeforeStart
+execute if score @s ncmReplayStarted matches 1 store result storage ncm:tpdata x double 0.001 run scoreboard players get @s ncmReplayXBeforeStart
+execute if score @s ncmReplayStarted matches 1 store result storage ncm:tpdata y double 0.001 run scoreboard players get @s ncmReplayYBeforeStart
+execute if score @s ncmReplayStarted matches 1 store result storage ncm:tpdata z double 0.001 run scoreboard players get @s ncmReplayZBeforeStart
+execute if score @s ncmReplayStarted matches 1 store result storage ncm:tpdata yaw double 0.001 run scoreboard players get @s ncmReplayYawBeforeStart
+execute if score @s ncmReplayStarted matches 1 store result storage ncm:tpdata pitch double 0.001 run scoreboard players get @s ncmReplayPitchBeforeStart
 execute if score @s ncmReplayStarted matches 1 run function ncm:replay/teleport with storage ncm:tpdata
 
 
