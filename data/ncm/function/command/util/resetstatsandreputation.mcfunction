@@ -52,5 +52,5 @@ $scoreboard players reset $(reset) ncmLatencyLevelsSummedCount
 $scoreboard players reset $(reset) ncmAverageTimeBetweenFails
 $scoreboard players reset $(reset) ncmAverageTimeBetweenFailsInSeconds
 
-$tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":":","color":"gray"},{"text":" An operator has reset the statistics and reputation of player ","color":"gray","clickEvent":{"action":"suggest_command","value":"/data modify storage ncm:stats name set value "}},{"text":"$(reset)","color":"yellow"},{"text":".","color":"gray"}]
+$tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":":","color":"gray"},{"text":" An operator has reset the statistics and reputation of player ","color":"gray","click_event":{"action":"suggest_command","command":"/data modify storage ncm:stats name set value "}},{"text":"$(reset)","color":"yellow"},{"text":".","color":"gray"}]
 data remove storage ncm:stats reset

@@ -18,4 +18,4 @@
 # ...
 
 # MovementListener
-execute as @a unless data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 0
+execute as @a unless data entity @s sleeping_pos run scoreboard players set @s ncmPlayerIsInBed 0

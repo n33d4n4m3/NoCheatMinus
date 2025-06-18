@@ -30,7 +30,7 @@ execute if score @s ncmReplayAfterFlagTick matches 0 run function ncm:replay/res
 
 
 execute if score @s ncmReplayAfterFlagTick matches 0 run scoreboard players set @s ncmReplayStarted 0
-$execute if score @s ncmReplayAfterFlagTick matches 0 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": That was the replay clip of player ","color":"gray"},{"text":"$(name)","color":"yellow"},{"text":".\n Click","color":"gray"},{"text":" here ","color":"red","clickEvent":{"action":"run_command","value":"/data modify storage ncm:replay delete set value $(name)"},"hoverEvent":{"action":"show_text","contents":[{"text":"/data modify storage ncm:replay delete set value $(name)"}]}},{"text":"to delete the clip.","color":"gray"}]
+$execute if score @s ncmReplayAfterFlagTick matches 0 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": That was the replay clip of player ","color":"gray"},{"text":"$(name)","color":"yellow"},{"text":".\n Click","color":"gray"},{"text":" here ","color":"red","click_event":{"action":"run_command","command":"/data modify storage ncm:replay delete set value $(name)"},"hover_event":{"action":"show_text","value":[{"text":"/data modify storage ncm:replay delete set value $(name)"}]}},{"text":"to delete the clip.","color":"gray"}]
 execute if score @s ncmReplayAfterFlagTick matches 0 run data remove storage ncm:replay name
 
 execute if score @s ncmReplayAfterFlagTick matches 2 run bossbar set ncm:replay value 51

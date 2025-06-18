@@ -64,5 +64,5 @@ execute unless score @s ncmReplaySlotSave matches 1.. if score DataHolder ncmRep
 
 kill @n[type=item]
 scoreboard players set @s ncmHasSavedReplay 1
-tellraw @a[scores={ncmOperator=1..}] [{"text":""},{"text":"NCM","color":"red"},{"text":": A replay clip has been recorded that may show suspicious activity of player ","color":"gray"},{"selector":"@s","color":"yellow"},{"text":". Use ","color":"gray"},{"text":"/trigger ncmReplay","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ncmReplay"},"hoverEvent":{"action":"show_text","contents":[{"text":"/trigger ncmReplay"}]}},{"text":" to see available replay clips.","color":"gray"}]
+tellraw @a[scores={ncmOperator=1..}] [{"text":""},{"text":"NCM","color":"red"},{"text":": A replay clip has been recorded that may show suspicious activity of player ","color":"gray"},{"selector":"@s","color":"yellow"},{"text":". Use ","color":"gray"},{"text":"/trigger ncmReplay","color":"yellow","click_event":{"action":"run_command","command":"/trigger ncmReplay"},"hover_event":{"action":"show_text","value":[{"text":"/trigger ncmReplay"}]}},{"text":" to see available replay clips.","color":"gray"}]
 scoreboard players set @s ncmReplayFlag 0

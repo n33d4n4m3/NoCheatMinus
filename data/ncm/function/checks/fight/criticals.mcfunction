@@ -32,7 +32,7 @@
 execute if items entity @s weapon mace run return fail
 
 # Did the player fall while making the critical hit? ncmFCCFall > 1 = True.
-execute store result score @s ncmFCCFall run data get entity @s FallDistance 10
+execute store result score @s ncmFCCFall run data get entity @s fall_distance 10
 execute unless score @s ncmFCCFall matches 1.. run scoreboard players add @s ncmFCCMissingReq 1
 
 # Did the player sprint while making the critical hit?

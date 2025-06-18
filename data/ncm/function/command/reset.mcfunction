@@ -22,7 +22,7 @@ execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @a
 execute as @a unless score @s ncmOperator matches 2 run trigger ncmReset set 0
 
 
-execute as @a if score @s ncmReset matches 1.. run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"Click this text, enter the name of the player whose statistics and reputation you want to reset, and then press Enter.","color":"red","clickEvent":{"action":"suggest_command","value":"/data modify storage ncm:stats reset set value "}}]
+execute as @a if score @s ncmReset matches 1.. run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"Click this text, enter the name of the player whose statistics and reputation you want to reset, and then press Enter.","color":"red","click_event":{"action":"suggest_command","command":"/data modify storage ncm:stats reset set value "}}]
 execute as @a if score @s ncmReset matches 1.. run scoreboard players set @s ncmReset 0
 
 

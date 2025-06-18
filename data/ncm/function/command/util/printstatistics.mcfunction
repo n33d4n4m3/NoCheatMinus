@@ -42,6 +42,6 @@ $execute if score $(name) ncmAverageTimeBetweenFailsInSeconds matches 2.. run te
 $execute unless score $(name) ncmAverageTimeBetweenFailsInSeconds matches 0.. run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Average time between violations: ","color":"yellow"},{"text":"/","color":"white"}]
 
 tellraw @a[scores={ncmOperator=2}] [""]
-$tellraw @a[scores={ncmOperator=2}] {"text":"Click this text to see the player's check fails.","color":"blue","clickEvent":{"action":"run_command","value":"/data modify storage ncm:stats checkname set value $(name)"},"hoverEvent":{"action":"show_text","contents":[{"text":"/data modify storage ncm:stats checkname set value $(name)"}]}}
+$tellraw @a[scores={ncmOperator=2}] {"text":"Click this text to see the player's check fails.","color":"blue","click_event":{"action":"run_command","command":"/data modify storage ncm:stats checkname set value $(name)"},"hover_event":{"action":"show_text","value":[{"text":"/data modify storage ncm:stats checkname set value $(name)"}]}}
 tellraw @a[scores={ncmOperator=2}] [""]
 data remove storage ncm:stats name

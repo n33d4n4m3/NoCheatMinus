@@ -22,7 +22,7 @@ execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @a
 execute as @a unless score @s ncmOperator matches 2 run trigger ncmStats set 0
 
 
-execute as @a if score @s ncmStats matches 1.. run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"Click this text, enter the name of the player whose statistics you want to view, and then press Enter.","color":"yellow","clickEvent":{"action":"suggest_command","value":"/data modify storage ncm:stats name set value "}}]
+execute as @a if score @s ncmStats matches 1.. run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"Click this text, enter the name of the player whose statistics you want to view, and then press Enter.","color":"yellow","click_event":{"action":"suggest_command","command":"/data modify storage ncm:stats name set value "}}]
 execute as @a if score @s ncmStats matches 1.. run scoreboard players set @s ncmStats 0
 
 
