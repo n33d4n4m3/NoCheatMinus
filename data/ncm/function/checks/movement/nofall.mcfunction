@@ -27,7 +27,7 @@ execute as @a if score @s ncmMVMNFTimeAlive matches ..120 run scoreboard players
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFTimeAlive 0
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFDeathCount 0
 
-scoreboard players set @e[type=player,predicate=ncm:nearby/water_fluid] ncmMVMNFFPSourceNearby 1
+execute as @e[type=player] at @s if predicate ncm:nearby/water_fluid run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1

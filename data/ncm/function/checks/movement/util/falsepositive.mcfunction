@@ -412,8 +412,8 @@ execute as @e[type=minecraft:player] at @s if block ~-1 ~1 ~-1 #climbable run sc
 
 
 # Slime & Honey block
-execute as @e[type=minecraft:player,predicate=ncm:nearby/slime_block] run scoreboard players set @s ncmLadderNearby 1
-execute as @e[type=minecraft:player,predicate=ncm:nearby/honey_block] run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if predicate ncm:nearby/slime_block run scoreboard players set @s ncmLadderNearby 1
+execute as @e[type=minecraft:player] at @s if predicate ncm:nearby/honey_block run scoreboard players set @s ncmLadderNearby 1
 
 execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 1.. run scoreboard players add @s ncmLadderNearby 1
 
