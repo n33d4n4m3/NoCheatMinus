@@ -22,6 +22,7 @@
 # ...
 
 execute if score @s ncmOperator matches 2 run scoreboard players enable @s ncmInput
+execute unless score @s ncmOperator matches 2 run trigger ncmInput set 0
 execute if score @s ncmOperator matches 1 run scoreboard players set @s ncmInput 2
 
 execute if score @s ncmInput matches 0 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Disabled check fail notifications.","color":"gray"}]

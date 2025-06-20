@@ -14,7 +14,7 @@
 #
 # ...
 # Description:  Subtick function for the replay system. Manages DataHolder
-# Author:       n33d4n4m3
+# Author:       EricristianBros
 # ...
 
 execute store success score DataHolder ncmReplaySlot1Occupied run data get storage ncm:replay slot1

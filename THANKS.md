@@ -6,4 +6,6 @@
 
 **xNelly**: For contributions to the code  
 
-**builderpepc**: For contributions to the code  
+**builderpepc**: For contributions to the code
+
+**EricristianBros**: For contributions to the code
