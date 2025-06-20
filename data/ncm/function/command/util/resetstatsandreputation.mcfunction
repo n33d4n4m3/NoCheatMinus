@@ -20,8 +20,7 @@
 # Statistics
 
 $execute unless score $(reset) ncmRep matches -999999999..999999999 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":": An operator attempted to reset the statistics and reputation of player ","color":"gray"},{"text":"$(reset)","color":"yellow"},{"text":", but their data isn't available.","color":"gray"}]
-$execute unless score $(reset) ncmRep matches -999999999..999999999 run data remove storage ncm:stats reset
-$execute unless score $(reset) ncmRep matches -999999999..999999999 run return fail
+$execute unless score $(reset) ncmRep matches -999999999..999999999 run return run data remove storage ncm:stats reset
 
 
 $scoreboard players operation $(reset) ncmRep = DataHolder ncmc_bs_rp_1
@@ -53,5 +52,5 @@ $scoreboard players reset $(reset) ncmLatencyLevelsSummedCount
 $scoreboard players reset $(reset) ncmAverageTimeBetweenFails
 $scoreboard players reset $(reset) ncmAverageTimeBetweenFailsInSeconds
 
-$tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":":","color":"gray"},{"text":" An operator has reset the statistics and reputation of player ","color":"gray","clickEvent":{"action":"suggest_command","value":"/data modify storage ncm:stats name set value "}},{"text":"$(reset)","color":"yellow"},{"text":".","color":"gray"}]
+$tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":":","color":"gray"},{"text":" An operator has reset the statistics and reputation of player ","color":"gray","click_event":{"action":"suggest_command","command":"/data modify storage ncm:stats name set value "}},{"text":"$(reset)","color":"yellow"},{"text":".","color":"gray"}]
 data remove storage ncm:stats reset

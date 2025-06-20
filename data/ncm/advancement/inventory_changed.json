@@ -1,8 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {}
+      "trigger": "minecraft:inventory_changed"
     }
   }
 }

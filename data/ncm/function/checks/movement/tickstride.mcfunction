@@ -99,9 +99,9 @@ execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players operation @s ncmMVM
 # Check if anything in the player’s environment restricts the maximum stride length further.
 
 
-execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s anchored feet if block ~ ~ ~ minecraft:soul_sand run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
-execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s anchored feet if block ~ ~-0.01 ~ minecraft:slime_block run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
-execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s anchored feet if block ~ ~ ~ minecraft:honey_block run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
+execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{stepping_on:{block:{blocks:"minecraft:soul_sand"}}}} run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
+execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{stepping_on:{block:{blocks:"minecraft:slime_block"}}}} run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
+execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{stepping_on:{block:{blocks:"minecraft:honey_block"}}}} run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if block ~ ~ ~ minecraft:sweet_berry_bush run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if block ~ ~1 ~ minecraft:sweet_berry_bush run scoreboard players set @s ncmMVMTSEnvironmentCooldown 1
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSEnvironmentCooldown matches 1.. at @s if block ~ ~ ~ minecraft:cobweb run scoreboard players set @s ncmMVMTSEnvironmentCooldown 8
@@ -277,7 +277,7 @@ execute as @a run scoreboard players operation @s ncmMVMTSSpeedEffectCooldownSet
 execute as @a[tag=VE.PlayerGameModeChangeEvent] run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a[tag=VE.PlayerMovementStateTransitionEvent] run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a if predicate ncm:has_swift_sneak_armor if score @s VEGbl.thePlayer.currentMovementState matches 3 run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
-execute as @a[nbt={active_effects:[{id:"minecraft:speed"}]}] run scoreboard players operation @s ncmMVMTSSpeedEffectCooldown = @s ncmMVMTSSpeedEffectCooldownSet
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{effects:{"minecraft:speed":{}}}} run scoreboard players operation @s ncmMVMTSSpeedEffectCooldown = @s ncmMVMTSSpeedEffectCooldownSet
 execute as @a if score @s ncmMVMTSSpeedEffectCooldown matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a if score @s ncmMVMTSSpeedEffectCooldown matches 1.. run scoreboard players remove @s ncmMVMTSSpeedEffectCooldown 1
 

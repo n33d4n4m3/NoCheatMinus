@@ -21,8 +21,7 @@
 # Statistics
 
 $execute unless score $(name) ncmRep matches -999999999..999999999 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":": An operator attempted to retrieve the statistics of player ","color":"gray"},{"text":"$(name)","color":"yellow"},{"text":", but none are available.","color":"gray"}]
-$execute unless score $(name) ncmRep matches -999999999..999999999 run data remove storage ncm:stats name
-$execute unless score $(name) ncmRep matches -999999999..999999999 run return fail
+$execute unless score $(name) ncmRep matches -999999999..999999999 run return data remove storage ncm:stats name
 
 $tellraw @a[scores={ncmOperator=2}] ["",{"text":"===========================","color":"yellow"},"\n","NoCheatMinus Statistics","\n",{"text":"===========================","color":"yellow"},"\n","\n",{"text":"Player","color":"yellow"},": ",{"text":"$(name)"}]
 $execute if score $(name) ncmRep > DataHolder ncmc_bs_rp_5 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Reputation","color":"yellow"},": ","",{"score":{"name":"$(name)","objective":"ncmRep"},"color":"green"},{"text":" ✓","color":"green"}]
@@ -43,6 +42,6 @@ $execute if score $(name) ncmAverageTimeBetweenFailsInSeconds matches 2.. run te
 $execute unless score $(name) ncmAverageTimeBetweenFailsInSeconds matches 0.. run tellraw @a[scores={ncmOperator=2}] ["",{"text":"Average time between violations: ","color":"yellow"},{"text":"/","color":"white"}]
 
 tellraw @a[scores={ncmOperator=2}] [""]
-$tellraw @a[scores={ncmOperator=2}] {"text":"Click this text to see the player's check fails.","color":"blue","clickEvent":{"action":"run_command","value":"/data modify storage ncm:stats checkname set value $(name)"},"hoverEvent":{"action":"show_text","contents":[{"text":"/data modify storage ncm:stats checkname set value $(name)"}]}}
+$tellraw @a[scores={ncmOperator=2}] {"text":"Click this text to see the player's check fails.","color":"blue","click_event":{"action":"run_command","command":"/data modify storage ncm:stats checkname set value $(name)"},"hover_event":{"action":"show_text","value":[{"text":"/data modify storage ncm:stats checkname set value $(name)"}]}}
 tellraw @a[scores={ncmOperator=2}] [""]
 data remove storage ncm:stats name

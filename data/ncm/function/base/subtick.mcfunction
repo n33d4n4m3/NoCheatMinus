@@ -19,11 +19,11 @@
 
 
 # Running command functions
-function ncm:command/input
-function ncm:command/report
-function ncm:command/checks
+execute as @a run function ncm:command/input
+function ncm:command/prereport
+execute as @a run function ncm:command/checks
 function ncm:command/tour
-function ncm:command/help
+execute as @a run function ncm:command/help
 function ncm:command/replay
 function ncm:command/stats
 function ncm:command/reset
@@ -34,9 +34,10 @@ function ncm:evaluation/reputation
 
 function ncm:evaluation/fail
 
-function ncm:evaluation/pass
+execute as @e[type=minecraft:player] if score DataHolder ncmc_bs_ps_2 matches 1.. if score DataHolder ncmc_bs_ps_2 matches 1.. if score @s ncmRepRegCounter >= DataHolder ncmc_bs_ps_2 run function ncm:evaluation/pass
+scoreboard players set @a ncmRepRegTotal 0
 
-function ncm:base/permission
+execute as @a if score @s ncmOperator matches 1 run function ncm:base/permission
 
 function ncm:lag/lagmanager
 

@@ -20,8 +20,7 @@
 # Statistics
 
 $execute unless score $(checkname) ncmRep matches -999999999..999999999 run tellraw @a[scores={ncmOperator=2}] ["",{"text":"NCM","color":"red"},{"text":": An operator attempted to retrieve the check-specific statistics of player ","color":"gray"},{"text":"$(checkname)","color":"yellow"},{"text":", but none are available.","color":"gray"}]
-$execute unless score $(checkname) ncmRep matches -999999999..999999999 run data remove storage ncm:stats checkname
-$execute unless score $(checkname) ncmRep matches -999999999..999999999 run return fail
+$execute unless score $(checkname) ncmRep matches -999999999..999999999 run return run data remove storage ncm:stats checkname
 
 $tellraw @a[scores={ncmOperator=2}] ["",{"text":"Showing check-specific statistics of player ","color":"blue"},{"text":"$(checkname)","color":"yellow"},{"text":":","color":"blue"}]
 

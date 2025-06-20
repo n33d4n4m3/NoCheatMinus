@@ -19,7 +19,7 @@
 # ...
 
 # Determine the last location where the player was onground.
-execute as @a if data entity @s SleepingX run scoreboard players set @s ncmPlayerIsInBed 1
+execute as @a if data entity @s sleeping_pos run scoreboard players set @s ncmPlayerIsInBed 1
 
 execute as @e[type=minecraft:player] run scoreboard players set @s ncmAirAround 1
 execute as @e[type=minecraft:player] at @s unless block ~ ~ ~ #air run scoreboard players set @s ncmAirAround 0
@@ -91,11 +91,11 @@ execute as @a unless score @s ncmTSSetbackZ matches -999999999..999999999 store 
 
 
 # Setback for SurvivalFly
-execute as @a[nbt={OnGround:1b}] if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
-execute as @a[nbt={OnGround:1b}] if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
-execute as @a[nbt={OnGround:1b}] if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastZOnGrd run data get entity @s Pos[2]
-execute as @a[nbt={OnGround:1b}] if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastRotYOnGrd run data get entity @s Rotation[0]
-execute as @a[nbt={OnGround:1b}] if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastRotXOnGrd run data get entity @s Rotation[1]
+execute as @a if predicate ncm:is_on_ground if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
+execute as @a if predicate ncm:is_on_ground if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
+execute as @a if predicate ncm:is_on_ground if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastZOnGrd run data get entity @s Pos[2]
+execute as @a if predicate ncm:is_on_ground if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastRotYOnGrd run data get entity @s Rotation[0]
+execute as @a if predicate ncm:is_on_ground if score @s ncmTicksSinceLastMovementViolation >= DataHolder ncmc_bs_fl_59 at @s unless score @s ncmAirAround matches 1.. if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastRotXOnGrd run data get entity @s Rotation[1]
 execute as @a unless score @s ncmLastXOnGrd matches -999999999..999999999 at @s if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastXOnGrd run data get entity @s Pos[0]
 execute as @a unless score @s ncmLastYOnGrd matches -999999999..999999999 at @s if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastYOnGrd run data get entity @s Pos[1]
 execute as @a unless score @s ncmLastZOnGrd matches -999999999..999999999 at @s if score DataHolder ncmBlockMode matches 1 store result score @s ncmLastZOnGrd run data get entity @s Pos[2]

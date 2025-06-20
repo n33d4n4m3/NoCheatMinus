@@ -4,7 +4,12 @@
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "player": {
-          "nbt": "{playerGameType:0}"
+          "type_specific": {
+            "type": "minecraft:player",
+            "gamemode": [
+              "survival"
+            ]
+          }
         },
         "damage": {
           "type": {

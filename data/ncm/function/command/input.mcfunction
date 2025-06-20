@@ -21,15 +21,15 @@
 # Author:       n33d4n4m3
 # ...
 
-execute as @a if score @s ncmOperator matches 2 run scoreboard players enable @s ncmInput
-execute as @a if score @s ncmOperator matches 1 run scoreboard players set @s ncmInput 2
+execute if score @s ncmOperator matches 2 run scoreboard players enable @s ncmInput
+execute if score @s ncmOperator matches 1 run scoreboard players set @s ncmInput 2
 
-execute as @a if score @s ncmInput matches 0 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Disabled check fail notifications.","color":"gray"}]
-execute as @a if score @s ncmInput matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You will now receive notifications about failed checks from players with active verbose mode. Use ","color":"gray"},{"text":"/scoreboard players set PLAYERNAME ncmVerbose 1 ","color":"yellow"},{"text":"to enable the verbose mode for a player.","color":"gray"}]
-execute as @a if score @s ncmInput matches 2 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Enabled notifications for check fails of all players.","color":"gray"}]
-execute as @a if score @s ncmInput matches 0 run scoreboard players set @s ncmInputR 0
-execute as @a if score @s ncmInput matches 1 run scoreboard players set @s ncmInputR 1
-execute as @a if score @s ncmInput matches 2 run scoreboard players set @s ncmInputR 2
-execute as @a if score @s ncmInput matches 0 run scoreboard players set @s ncmInput -1
-execute as @a if score @s ncmInput matches 1 run scoreboard players set @s ncmInput -1
-execute as @a if score @s ncmInput matches 2 run scoreboard players set @s ncmInput -1
+execute if score @s ncmInput matches 0 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Disabled check fail notifications.","color":"gray"}]
+execute if score @s ncmInput matches 1 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": You will now receive notifications about failed checks from players with active verbose mode. Use ","color":"gray"},{"text":"/scoreboard players set PLAYERNAME ncmVerbose 1 ","color":"yellow"},{"text":"to enable the verbose mode for a player.","color":"gray"}]
+execute if score @s ncmInput matches 2 run tellraw @s ["",{"text":"NCM","color":"red"},{"text":": Enabled notifications for check fails of all players.","color":"gray"}]
+execute if score @s ncmInput matches 0 run scoreboard players set @s ncmInputR 0
+execute if score @s ncmInput matches 1 run scoreboard players set @s ncmInputR 1
+execute if score @s ncmInput matches 2 run scoreboard players set @s ncmInputR 2
+execute if score @s ncmInput matches 0 run scoreboard players set @s ncmInput -1
+execute if score @s ncmInput matches 1 run scoreboard players set @s ncmInput -1
+execute if score @s ncmInput matches 2 run scoreboard players set @s ncmInput -1

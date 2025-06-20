@@ -1,0 +1,302 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"      
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": -1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 0,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 0,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetY": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 0,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 0,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": -1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": -1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 0,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 0,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetY": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "minecraft:hay_block"
+        }
+      }
+    }
+  ]
+}
