@@ -19,9 +19,7 @@
 # ...
 
 
-execute if score @s ncmPL matches 1 run scoreboard players add DataHolder ncmPLSuspectHLCT 1
-execute if score @s ncmPL matches 2 run scoreboard players add DataHolder ncmPLObserveT 1
-execute if score @s ncmPL matches 3 run scoreboard players add DataHolder ncmPLHighT 1
+
 
 
 execute if score @s ncmReport matches 1 run tellraw @s ["",{"text":"===========================","color":"yellow"},"\n","NoCheatMinus Evaluation Report","\n",{"text":"===========================","color":"yellow"},"\n"]

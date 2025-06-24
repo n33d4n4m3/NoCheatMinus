@@ -25,6 +25,10 @@ scoreboard players set DataHolder ncmPLSuspectHLCT 0
 scoreboard players set DataHolder ncmPLObserveT 0
 scoreboard players set DataHolder ncmPLHighT 0
 
+execute as @a if score @s ncmPL matches 1 run scoreboard players add DataHolder ncmPLSuspectHLCT 1
+execute as @a if score @s ncmPL matches 2 run scoreboard players add DataHolder ncmPLObserveT 1
+execute as @a if score @s ncmPL matches 3 run scoreboard players add DataHolder ncmPLHighT 1
+
 
 execute as @e[type=minecraft:player] run function ncm:command/report
 
