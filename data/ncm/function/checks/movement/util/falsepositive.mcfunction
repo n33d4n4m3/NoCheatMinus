@@ -72,6 +72,11 @@ execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard play
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
+# Happy Ghast (TODO: Harsher distance)
+execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Fireball
 execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmFPBurst 5
@@ -79,9 +84,9 @@ execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard pla
 execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
-# Firework Rocket (Crossbow...)
-execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players set @s ncmFPBurst 5
-execute as @a at @s if entity @e[type=firework_rocket,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+# Firework Rocket (Crossbow)
+execute as @a at @s if items entity @s weapon.* minecraft:crossbow if entity @e[type=firework_rocket,distance=..5] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if items entity @s weapon.* minecraft:crossbow if entity @e[type=firework_rocket,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
 
 
