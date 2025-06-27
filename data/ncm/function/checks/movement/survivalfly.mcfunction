@@ -321,12 +321,15 @@ execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc
 
 execute as @e[type=minecraft:player] if score @s ncmMaintainRC = DataHolder ncmc_sf_cr_1 run scoreboard players set @s ncmMaintainRC 0
 
-execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground at @s unless score @s ncmPistonNearby matches 1.. unless entity @e[type=#ncm:minecarts,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmLadderNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
+execute as @e[type=minecraft:player,gamemode=!creative,gamemode=!spectator] unless predicate ncm:is_on_ground at @s unless score @s ncmPistonNearby matches 1.. unless entity @e[type=#ncm:minecarts,distance=..7] unless entity @e[type=minecraft:donkey,distance=..2] unless entity @e[type=minecraft:skeleton_horse,distance=..2] unless entity @e[type=minecraft:strider,distance=..7] unless entity @e[type=minecraft:camel,distance=..2] unless entity @e[type=minecraft:pig,distance=..2] unless entity @e[type=minecraft:horse,distance=..2] unless score @s ncmLadderNearby matches 1.. unless score @s ncmLiquidNearby matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. unless score @s ncmAviate matches 1.. unless score @s ncmLevitate matches 1.. run scoreboard players add @s ncmYSpMaintainRC 1
 execute as @e[type=minecraft:player] if score @s ncmYSpMaintainRC matches 1 run scoreboard players operation @s ncmLastYSpeed = @s ncmYSpeed
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] if score @s ncmLadder matches 1.. run scoreboard players set @s ncmLadder 0
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ water run scoreboard players set @s ncmYSpMaintainRC 0
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ lava run scoreboard players set @s ncmYSpMaintainRC 0
+
+execute as @e[type=minecraft:player] if score @s ncmAviate matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
+execute as @e[type=minecraft:player] if score @s ncmLevitate matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 
 execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmYSpMaintainRC 0
 

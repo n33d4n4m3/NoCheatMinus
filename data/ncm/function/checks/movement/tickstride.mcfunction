@@ -158,6 +158,16 @@ execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBus
 
 
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. store result score @s ncmMVMTSAttributeSpeed run attribute @s minecraft:movement_speed get 100
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 9 run scoreboard players set @s ncmMVMTSAttributeSpeed 10
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 8 run scoreboard players set @s ncmMVMTSAttributeSpeed 9
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 7 run scoreboard players set @s ncmMVMTSAttributeSpeed 8
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 6 run scoreboard players set @s ncmMVMTSAttributeSpeed 7
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 5 run scoreboard players set @s ncmMVMTSAttributeSpeed 6
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 4 run scoreboard players set @s ncmMVMTSAttributeSpeed 5
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 3 run scoreboard players set @s ncmMVMTSAttributeSpeed 4
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 2 run scoreboard players set @s ncmMVMTSAttributeSpeed 3
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 1 run scoreboard players set @s ncmMVMTSAttributeSpeed 2
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 0 run scoreboard players set @s ncmMVMTSAttributeSpeed 2
 execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeedSave > @s ncmMVMTSAttributeSpeed run scoreboard players set @s ncmMVMTSAttributeSpeedLower 1
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSave > @s ncmMVMTSAttributeSpeed run scoreboard players set @s ncmMVMTSAttributeSpeedLower 0
 execute as @a[tag=VE.PlayerMoveEvent] run scoreboard players set @s ncmMVMTSAttributeSpeedSaveTimerMax 10
@@ -168,7 +178,16 @@ execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeedSaveTime
 execute as @a if score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. run scoreboard players remove @s ncmMVMTSAttributeSpeedSaveTimer 1
 
 execute as @a[tag=VE.PlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. store result score @s ncmMVMTSAttributeSpeed run attribute @s minecraft:movement_speed get 100
-
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 9 run scoreboard players set @s ncmMVMTSAttributeSpeed 10
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 8 run scoreboard players set @s ncmMVMTSAttributeSpeed 9
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 7 run scoreboard players set @s ncmMVMTSAttributeSpeed 8
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 6 run scoreboard players set @s ncmMVMTSAttributeSpeed 7
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 5 run scoreboard players set @s ncmMVMTSAttributeSpeed 6
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 4 run scoreboard players set @s ncmMVMTSAttributeSpeed 5
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 3 run scoreboard players set @s ncmMVMTSAttributeSpeed 4
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 2 run scoreboard players set @s ncmMVMTSAttributeSpeed 3
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 1 run scoreboard players set @s ncmMVMTSAttributeSpeed 2
+execute as @a[tag=VE.PlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 0 run scoreboard players set @s ncmMVMTSAttributeSpeed 2
 
 
 
@@ -184,7 +203,9 @@ execute as @a if score @s ncmMVMTSModifier matches 1.. run scoreboard players re
 
 
 
+execute as @a at @s if score @s ncmLadderNearby matches 1.. if score @s VEGbl.thePlayer.currentMovementState matches 1..3 run scoreboard players set @s ncmMVMTSModifier 10
 
+execute as @a at @s unless predicate ncm:is_on_ground if score @s ncmMVMTSAttributeSpeed matches ..9 run scoreboard players set @s ncmMVMTSModifier 25
 
 execute as @a at @s if block ~ ~-1 ~ minecraft:ice if score @s VEGbl.thePlayer.currentMovementState matches 6 run scoreboard players set @s ncmMVMTSModifier 60
 execute as @a at @s if block ~ ~-1 ~ minecraft:packed_ice if score @s VEGbl.thePlayer.currentMovementState matches 6 run scoreboard players set @s ncmMVMTSModifier 60
@@ -202,7 +223,7 @@ execute as @a[nbt={abilities:{flying:1b}}] unless score @s ncmMVMTSModifier matc
 
 execute as @a if score @s ncmFPDamage matches -50..-1 unless score @s ncmMVMTSModifier matches 70.. run scoreboard players set @s ncmMVMTSModifier 70
 
-execute as @a if score @s ncmPistonNearby matches 1 unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
+execute as @a if score @s ncmPistonNearby matches 1.. unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
 
 execute as @a at @s if score @s ncmFPBurst matches 1.. unless score @s ncmMVMTSModifier matches 80.. run scoreboard players set @s ncmMVMTSModifier 80
 
@@ -381,6 +402,9 @@ execute as @a if score @s ncmReplayStarted matches 1 run scoreboard players set 
 execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighLog 0
 execute as @a if score @s ncmMVMTSKnockbackExempt matches 1.. run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+
+
+
 
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighWithLatency 0
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmTimesStrideTooHighLog 0

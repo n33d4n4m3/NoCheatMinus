@@ -73,10 +73,10 @@ execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard play
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Happy Ghast (TODO: Harsher distance)
-execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players set @s ncmFPBurst 5
-execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
-execute as @a at @s if entity @e[type=happy_ghast,distance=..5] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Fireball
 execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard players set @s ncmFPBurst 5
@@ -376,9 +376,9 @@ execute as @e[type=minecraft:player] if score @s ncmCobwebNearby matches 1.. run
 
 
 # Piston fix
-scoreboard players set @a ncmPistonNearby 0
-execute as @a at @s if predicate ncm:nearby/piston run scoreboard players set @s ncmPistonNearby 100
-execute as @a at @s if predicate ncm:nearby/sticky_piston run scoreboard players set @s ncmPistonNearby 100
+execute as @a if score @s ncmPistonNearby matches 1.. run scoreboard players remove @a ncmPistonNearby 1
+execute as @a at @s if predicate ncm:nearby/piston run scoreboard players set @s ncmPistonNearby 20
+execute as @a at @s if predicate ncm:nearby/sticky_piston run scoreboard players set @s ncmPistonNearby 20
 
 # Liquid fix
 execute as @a at @s if predicate ncm:nearby/lava_fluid run scoreboard players set @s ncmLiquidNearby 1

@@ -90,6 +90,8 @@ execute as @e[type=player] at @s if predicate ncm:nearby/lava_fluid run scoreboa
 execute as @e[type=player] at @s if predicate ncm:nearby/water_fluid run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=player] at @s if predicate ncm:nearby/hay_block run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
+execute as @e[type=player] at @s if items entity @s weapon.* minecraft:totem_of_undying run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
 execute as @e[type=minecraft:player] at @s if entity @e[type=#ncm:boat,distance=..2] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player] at @s if entity @e[type=wind_charge,distance=..8] run scoreboard players set @s ncmMVMNFFPSourceNearby 1
