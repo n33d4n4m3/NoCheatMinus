@@ -42,7 +42,7 @@ execute as @e[type=minecraft:player] if score @s ncmFailedBIMB matches 1.. run s
 
 # BlockPlace.Appropriate
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1..4 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_4
-execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksInAdventureMode = DataHolder ncmc_bs_fl_61
+execute as @e[type=minecraft:player,gamemode=survival] if score @s ncmFailedBPAP matches 1.. if score DataHolder ncmBlockMode matches 1 run scoreboard players operation @s ncmTicksInAdventureMode = DataHolder ncmc_bs_fl_61
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 5..8 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_5
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 9..10 run scoreboard players operation @s ncmLowerRep = DataHolder ncmc_bs_fl_6
 execute as @e[type=minecraft:player] if score @s ncmFailedBPAP matches 1.. run scoreboard players add @s ncmNewViolation 1
