@@ -18,6 +18,17 @@
 # ...
 
 
+
+# Apply event modifications
+function ncm:event/modify
+
+# Reset event system
+function ncm:event/reset
+
+# Running event system
+function ncm:event/run
+
+
 # Running command functions
 execute as @a run function ncm:command/input
 function ncm:command/prereport

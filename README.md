@@ -8,13 +8,12 @@
 ---
 
 ## ⚙️ Setup
-1️⃣ Install the latest version of **VanillaEvents** in your world. *(Download [here](https://github.com/n33d4n4m3/VanillaEvents))*
 
-2️⃣ Download **NoCheatMinus** as a `.zip` file, extract it, and place the folder (which contains the `data` folder) in your world's datapack folder.
+1️⃣ Download **NoCheatMinus** as a `.zip` file, extract it, and place the folder (which contains the `data` folder) in your world's datapack folder.
 
-3️⃣ Restart your server or use `/reload` to activate the datapacks.
+2️⃣ Restart your server or use `/reload` to activate the datapacks.
 
-4️⃣ Follow the on-screen instructions in chat.
+3️⃣ Follow the on-screen instructions in chat.
 
 ---
 
@@ -56,7 +55,7 @@ The **Replay System** automatically records movements for **5 seconds before and
 ---
 
 ## 🗑️ Uninstall
-To uninstall the datapack, use `/function ncm:user/uninstall` followed by `/function ve:user/uninstall` if you also want to uninstall VanillaEvents.
+To uninstall the datapack, use `/function ncm:user/uninstall`.
 
 ---
 

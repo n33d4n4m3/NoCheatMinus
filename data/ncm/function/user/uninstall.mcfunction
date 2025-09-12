@@ -45,12 +45,6 @@ data remove storage ncm:stats checkname
 data remove storage ncm:stats reset
 
 
-# Unsubscribe from all VE events
-scoreboard players remove $ VESys.PlayerAttackEvent 1
-scoreboard players remove $ VESys.PlayerMoveEvent 1
-scoreboard players remove $ VESys.PlayerMovementStateTransitionEvent 1
-scoreboard players remove $ VESys.PlayerGameModeChangeEvent 1
-
 # Remove all scoreboard objectives
 
 scoreboard objectives remove ncmUsedChorusFruit
@@ -2216,6 +2210,7 @@ scoreboard objectives remove ncmBIMBThisF_z
 scoreboard objectives remove ncmBIMBxyzEqual
 scoreboard objectives remove ncmChest
 scoreboard objectives remove ncmEChest
+scoreboard objectives remove ncmChestEnder
 scoreboard objectives remove ncmBox
 scoreboard objectives remove ncmBarrel
 scoreboard objectives remove ncmDispenser
@@ -2539,7 +2534,7 @@ scoreboard objectives remove ncmBIMBThisF_y
 scoreboard objectives remove ncmBIMBThisF_z
 scoreboard objectives remove ncmBIMBxyzEqual
 scoreboard objectives remove ncmChest
-scoreboard objectives remove ncmEChest
+scoreboard objectives remove ncmChestEnder
 scoreboard objectives remove ncmBox
 scoreboard objectives remove ncmBarrel
 scoreboard objectives remove ncmDispenser
@@ -2658,12 +2653,99 @@ scoreboard objectives remove ncmFailedMVMNF
 scoreboard objectives remove ncmBuildNumber
 scoreboard objectives remove ncmFPDamage
 scoreboard objectives remove ncmSFClimbAviateGrace
-
+scoreboard objectives remove ncmeNumber
+scoreboard objectives remove ncmeutil.sqrt.input
+scoreboard objectives remove ncmeutil.sqrt.output
+scoreboard objectives remove ncmeutil.sqrt.field1
+scoreboard objectives remove ncmeutil.sqrt.field2
+scoreboard objectives remove ncmeutil.sqrt.field3
+scoreboard objectives remove ncmeutil.sqrt.tick
+scoreboard objectives remove ncmeCurrentMovementState
+scoreboard objectives remove ncme.aviateOneCm
+scoreboard objectives remove ncme.boatOneCm
+scoreboard objectives remove ncme.climbOneCm
+scoreboard objectives remove ncme.flyOneCm
+scoreboard objectives remove ncme.horseOneCm
+scoreboard objectives remove ncme.minecartOneCm
+scoreboard objectives remove ncme.pigOneCm
+scoreboard objectives remove ncme.striderOneCm
+scoreboard objectives remove ncme.swimOneCm
+scoreboard objectives remove ncme.walkOnWaterOneCm
+scoreboard objectives remove ncme.walkOneCm
+scoreboard objectives remove ncme.walkUnderWaterOneCm
+scoreboard objectives remove ncmePlayerGameModeChangeEvent.firstRunDone
+scoreboard objectives remove ncmePlayerGameModeChangeEvent.priorGameMode
+scoreboard objectives remove ncmePlayerGameModeChangeEvent.newGameMode
+scoreboard objectives remove ncmePlayerGameModeChangeEvent.willModify
+scoreboard objectives remove ncmePlayerGameModeChangeEvent.modGameMode
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.firstRunDone
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.priorHealth
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.newHealth
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.wasPositive
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.wasNegative
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.damageType
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.damageBypass
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.damageResisted
+scoreboard objectives remove ncmeEntityHealthUpdateEvent.difference
+scoreboard objectives remove ncmePlayerAttackEvent.damageDealt
+scoreboard objectives remove ncmePlayerAttackEvent.damageAbsorbed
+scoreboard objectives remove ncmePlayerAttackEvent.damageResisted
+scoreboard objectives remove ncmePlayerAttackEvent.opponentSurvived
+scoreboard objectives remove ncmePlayerAttackEvent.criticalHit
+scoreboard objectives remove ncmePlayerAttackEvent.attackDamage
+scoreboard objectives remove ncmePlayerAttackEvent.sharpnessLevel
+scoreboard objectives remove ncmePlayerAttackEvent.baneLevel
+scoreboard objectives remove ncmePlayerAttackEvent.smiteLevel
+scoreboard objectives remove ncmePlayerMoveEvent.firstRunDone
+scoreboard objectives remove ncmePlayerMoveEvent.awaitsModify
+scoreboard objectives remove ncmePlayerMoveEvent.fromX
+scoreboard objectives remove ncmePlayerMoveEvent.fromY
+scoreboard objectives remove ncmePlayerMoveEvent.fromZ
+scoreboard objectives remove ncmePlayerMoveEvent.fromYaw
+scoreboard objectives remove ncmePlayerMoveEvent.fromPitch
+scoreboard objectives remove ncmePlayerMoveEvent.toX
+scoreboard objectives remove ncmePlayerMoveEvent.toY
+scoreboard objectives remove ncmePlayerMoveEvent.toZ
+scoreboard objectives remove ncmePlayerMoveEvent.toYaw
+scoreboard objectives remove ncmePlayerMoveEvent.toPitch
+scoreboard objectives remove ncmePlayerMoveEvent.xDiff
+scoreboard objectives remove ncmePlayerMoveEvent.yDiff
+scoreboard objectives remove ncmePlayerMoveEvent.zDiff
+scoreboard objectives remove ncmePlayerMoveEvent.yawDiff
+scoreboard objectives remove ncmePlayerMoveEvent.pitchDiff
+scoreboard objectives remove ncmePlayerMoveEvent.distance3D
+scoreboard objectives remove ncmePlayerMoveEvent.distanceHorizontal
+scoreboard objectives remove ncmePlayerMoveEvent.distanceVertical
+scoreboard objectives remove ncmePlayerMoveEvent.hasPositionChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasRotationChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasXChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasYChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasZChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasXZChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasYawChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasPitchChanged
+scoreboard objectives remove ncmePlayerMoveEvent.hasClimbed
+scoreboard objectives remove ncmePlayerMoveEvent.hasMaintained
+scoreboard objectives remove ncmePlayerMoveEvent.hasDescended
+scoreboard objectives remove ncmePlayerMoveEvent.xDiffSqrd
+scoreboard objectives remove ncmePlayerMoveEvent.yDiffSqrd
+scoreboard objectives remove ncmePlayerMoveEvent.zDiffSqrd
+scoreboard objectives remove ncmePlayerMoveEvent.xzDiffSqrd
+scoreboard objectives remove ncmePlayerMoveEvent.xyzDiffSqrd
+scoreboard objectives remove ncmePlayerMoveEvent.willModify
+scoreboard objectives remove ncmePlayerMoveEvent.modX
+scoreboard objectives remove ncmePlayerMoveEvent.modY
+scoreboard objectives remove ncmePlayerMoveEvent.modZ
+scoreboard objectives remove ncmePlayerMoveEvent.modYaw
+scoreboard objectives remove ncmePlayerMoveEvent.modPitch
+scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.firstRunDone
+scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.priorMovementState
+scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.newMovementState
 
 
 
 # Send goodbye message
-tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"white"},"The NoCheatMinus datapack was successfully uninstalled. The developer would be very happy about feedback!"]
+tellraw @a ["",{"text":"NCM","color":"red"},{"text":": The NoCheatMinus datapack was successfully uninstalled. Please delete the NoCheatMinus datapack from the /datapacks/-folder next. After that, you should run /reload. The developer would be very happy about feedback!","color":"gray"}]
 
 # Disable datapack
 datapack disable "file/NoCheatMinus"

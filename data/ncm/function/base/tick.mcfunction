@@ -17,4 +17,4 @@
 # Author:       n33d4n4m3
 # ...
 
-execute if score DataHolder ncmTickReady matches 1 run function ncm:base/subtick
+function ncm:base/subtick

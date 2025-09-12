@@ -72,6 +72,12 @@ execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard play
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
 execute as @a at @s if entity @e[type=ravager,distance=..15] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
+# Ender Dragon
+execute as @a at @s if entity @e[type=ender_dragon,distance=..30] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if entity @e[type=ender_dragon,distance=..30] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if entity @e[type=ender_dragon,distance=..30] run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a at @s if entity @e[type=ender_dragon,distance=..30] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
+
 # Happy Ghast (TODO: Harsher distance)
 execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players set @s ncmFPBurst 5
 execute as @a at @s if entity @e[type=happy_ghast,distance=..6] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
@@ -183,7 +189,7 @@ execute as @e[type=minecraft:player] if score @s ncmAviate matches 1.. run score
 
 
 
-execute as @a[tag=VE.PlayerMoveEvent] unless predicate ncm:is_on_ground if score @s VE.PlayerMoveEvent.hasClimbed matches 1 if score @s ncmWasOnGround matches 1 run scoreboard players add @s ncmOGJumpR 3
+execute as @a[tag=ncmePlayerMoveEvent] unless predicate ncm:is_on_ground if score @s ncmePlayerMoveEvent.hasClimbed matches 1 if score @s ncmWasOnGround matches 1 run scoreboard players add @s ncmOGJumpR 3
 execute as @a if predicate ncm:is_on_ground run scoreboard players set @s ncmWasOnGround 1
 execute as @a unless predicate ncm:is_on_ground run scoreboard players set @s ncmWasOnGround 0
 execute as @a if score @s ncmOGJumpR matches 1.. run scoreboard players set @s ncmOGJump 1

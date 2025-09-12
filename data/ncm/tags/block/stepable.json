@@ -19,6 +19,8 @@
       "minecraft:comparator",
       "minecraft:sculk_sensor",
       "minecraft:calibrated_sculk_sensor",
-      "minecraft:soul_sand"
+      "minecraft:soul_sand",
+      "minecraft:farmland",
+      "minecraft:dirt_path"
     ]
   }

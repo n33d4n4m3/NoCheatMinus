@@ -24,8 +24,8 @@
 execute as @a at @s anchored eyes if score @s ncmChest matches 1.. run function ncm:checks/blockinteract/util/mb_ray
 execute as @a if score @s ncmChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
-execute as @a at @s anchored eyes if score @s ncmEChest matches 1.. run function ncm:checks/blockinteract/util/mb_ray
-execute as @a if score @s ncmEChest matches 1.. run scoreboard players set @s ncmBIMBFire 1
+execute as @a at @s anchored eyes if score @s ncmChestEnder matches 1.. run function ncm:checks/blockinteract/util/mb_ray
+execute as @a if score @s ncmChestEnder matches 1.. run scoreboard players set @s ncmBIMBFire 1
 
 execute as @a at @s anchored eyes if score @s ncmBox matches 1.. run function ncm:checks/blockinteract/util/mb_ray
 execute as @a if score @s ncmBox matches 1.. run scoreboard players set @s ncmBIMBFire 1
@@ -110,7 +110,7 @@ scoreboard players set @a ncmBIMBRange 0
 
 
 scoreboard players set @a ncmChest 0
-scoreboard players set @a ncmEChest 0
+scoreboard players set @a ncmChestEnder 0
 scoreboard players set @a ncmBox 0
 scoreboard players set @a ncmBarrel 0
 scoreboard players set @a ncmDispenser 0

@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "1": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  }
+}

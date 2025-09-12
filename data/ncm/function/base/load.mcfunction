@@ -18,4 +18,5 @@
 # ...
 
 # Check if NoCheatMinus is installed already. If it isn't, set up essential objectives.
-schedule function ncm:base/preloader 5s
+schedule function ncm:user/currentconfig 5s
+function ncm:base/install

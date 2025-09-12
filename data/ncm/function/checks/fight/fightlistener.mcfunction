@@ -14,9 +14,9 @@
 #
 # ...
 # For:      This listener waits for combat-related events and calls the associated functions.
-# Listens to / Calls: VE.PlayerAttackEvent / Fight.Criticals
+# Listens to / Calls: ncmePlayerAttackEvent / Fight.Criticals
 # Author:   n33d4n4m3
 # ...
 
 # PlayerAttackEvent
-execute if score DataHolder ncmcm_FCR matches 1 as @a[tag=VE.PlayerAttackEvent] if score @s VE.PlayerAttackEvent.criticalHit matches 1 run function ncm:checks/fight/criticals
+execute if score DataHolder ncmcm_FCR matches 1 as @a[tag=ncmePlayerAttackEvent] if score @s ncmePlayerAttackEvent.criticalHit matches 1 run function ncm:checks/fight/criticals

@@ -1,0 +1,8 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_hurt_entity"
+      }
+    }
+  }
+  

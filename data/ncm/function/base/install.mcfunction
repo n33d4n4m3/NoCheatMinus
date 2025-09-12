@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 251
+scoreboard players set DataHolder ncmBuildNumber 255
 
 
 scoreboard objectives add ncm.100 dummy
@@ -1154,8 +1154,122 @@ scoreboard objectives add ncmReplayAfterFlagZ100 dummy
 scoreboard objectives add ncmReplayAfterFlagYaw100 dummy
 scoreboard objectives add ncmReplayAfterFlagPitch100 dummy
 
+# -----------------
+# Event
+# -----------------
+
+scoreboard objectives add ncmeNumber dummy
+scoreboard players set -1 ncmeNumber -1
+scoreboard players set 2 ncmeNumber 2
+scoreboard players set 5 ncmeNumber 5
+scoreboard players set 10 ncmeNumber 10
+scoreboard players set 25 ncmeNumber 25
+
+# Utils
+# Square Root
+scoreboard objectives add ncmeutil.sqrt.input dummy
+scoreboard objectives add ncmeutil.sqrt.output dummy
+scoreboard objectives add ncmeutil.sqrt.field1 dummy
+scoreboard objectives add ncmeutil.sqrt.field2 dummy
+scoreboard objectives add ncmeutil.sqrt.field3 dummy
+scoreboard objectives add ncmeutil.sqrt.tick dummy
+
+# Globals
+# currentMovementState
+scoreboard objectives add ncmeCurrentMovementState dummy
+scoreboard objectives add ncme.aviateOneCm minecraft.custom:minecraft.aviate_one_cm
+scoreboard objectives add ncme.boatOneCm minecraft.custom:minecraft.boat_one_cm
+scoreboard objectives add ncme.climbOneCm minecraft.custom:minecraft.climb_one_cm
+scoreboard objectives add ncme.flyOneCm minecraft.custom:minecraft.fly_one_cm
+scoreboard objectives add ncme.horseOneCm minecraft.custom:minecraft.horse_one_cm
+scoreboard objectives add ncme.minecartOneCm minecraft.custom:minecraft.minecart_one_cm
+scoreboard objectives add ncme.pigOneCm minecraft.custom:minecraft.pig_one_cm
+scoreboard objectives add ncme.striderOneCm minecraft.custom:minecraft.strider_one_cm
+scoreboard objectives add ncme.swimOneCm minecraft.custom:minecraft.swim_one_cm
+scoreboard objectives add ncme.walkOnWaterOneCm minecraft.custom:minecraft.walk_on_water_one_cm
+scoreboard objectives add ncme.walkOneCm minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add ncme.walkUnderWaterOneCm minecraft.custom:minecraft.walk_under_water_one_cm
+
+# Events
+# PlayerGameModeChangeEvent
+scoreboard objectives add ncmePlayerGameModeChangeEvent.firstRunDone dummy
+scoreboard objectives add ncmePlayerGameModeChangeEvent.priorGameMode dummy
+scoreboard objectives add ncmePlayerGameModeChangeEvent.newGameMode dummy
+scoreboard objectives add ncmePlayerGameModeChangeEvent.willModify dummy
+scoreboard objectives add ncmePlayerGameModeChangeEvent.modGameMode dummy
+
+# EntityHealthUpdateEvent
+scoreboard objectives add ncmeEntityHealthUpdateEvent.firstRunDone dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.priorHealth dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.newHealth dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.wasPositive dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.wasNegative dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.damageType dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.damageBypass dummy
+scoreboard objectives add ncmeEntityHealthUpdateEvent.damageResisted minecraft.custom:damage_resisted
+scoreboard objectives add ncmeEntityHealthUpdateEvent.difference dummy
+
+# PlayerAttackEvent
+scoreboard objectives add ncmePlayerAttackEvent.damageDealt minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add ncmePlayerAttackEvent.damageAbsorbed minecraft.custom:minecraft.damage_dealt_absorbed
+scoreboard objectives add ncmePlayerAttackEvent.damageResisted minecraft.custom:minecraft.damage_dealt_resisted
+scoreboard objectives add ncmePlayerAttackEvent.opponentSurvived dummy
+scoreboard objectives add ncmePlayerAttackEvent.criticalHit dummy
+scoreboard objectives add ncmePlayerAttackEvent.attackDamage dummy
+scoreboard objectives add ncmePlayerAttackEvent.sharpnessLevel dummy
+scoreboard objectives add ncmePlayerAttackEvent.baneLevel dummy
+scoreboard objectives add ncmePlayerAttackEvent.smiteLevel dummy
 
 
+
+# PlayerMoveEvent
+scoreboard objectives add ncmePlayerMoveEvent.firstRunDone dummy
+scoreboard objectives add ncmePlayerMoveEvent.awaitsModify dummy
+scoreboard objectives add ncmePlayerMoveEvent.fromX dummy
+scoreboard objectives add ncmePlayerMoveEvent.fromY dummy
+scoreboard objectives add ncmePlayerMoveEvent.fromZ dummy
+scoreboard objectives add ncmePlayerMoveEvent.fromYaw dummy
+scoreboard objectives add ncmePlayerMoveEvent.fromPitch dummy
+scoreboard objectives add ncmePlayerMoveEvent.toX dummy
+scoreboard objectives add ncmePlayerMoveEvent.toY dummy
+scoreboard objectives add ncmePlayerMoveEvent.toZ dummy
+scoreboard objectives add ncmePlayerMoveEvent.toYaw dummy
+scoreboard objectives add ncmePlayerMoveEvent.toPitch dummy
+scoreboard objectives add ncmePlayerMoveEvent.xDiff dummy
+scoreboard objectives add ncmePlayerMoveEvent.yDiff dummy
+scoreboard objectives add ncmePlayerMoveEvent.zDiff dummy
+scoreboard objectives add ncmePlayerMoveEvent.yawDiff dummy
+scoreboard objectives add ncmePlayerMoveEvent.pitchDiff dummy
+scoreboard objectives add ncmePlayerMoveEvent.distance3D dummy
+scoreboard objectives add ncmePlayerMoveEvent.distanceHorizontal dummy
+scoreboard objectives add ncmePlayerMoveEvent.distanceVertical dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasPositionChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasRotationChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasXChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasYChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasZChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasXZChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasYawChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasPitchChanged dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasClimbed dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasMaintained dummy
+scoreboard objectives add ncmePlayerMoveEvent.hasDescended dummy
+scoreboard objectives add ncmePlayerMoveEvent.xDiffSqrd dummy
+scoreboard objectives add ncmePlayerMoveEvent.yDiffSqrd dummy
+scoreboard objectives add ncmePlayerMoveEvent.zDiffSqrd dummy
+scoreboard objectives add ncmePlayerMoveEvent.xzDiffSqrd dummy
+scoreboard objectives add ncmePlayerMoveEvent.xyzDiffSqrd dummy
+scoreboard objectives add ncmePlayerMoveEvent.willModify dummy
+scoreboard objectives add ncmePlayerMoveEvent.modX dummy
+scoreboard objectives add ncmePlayerMoveEvent.modY dummy
+scoreboard objectives add ncmePlayerMoveEvent.modZ dummy
+scoreboard objectives add ncmePlayerMoveEvent.modYaw dummy
+scoreboard objectives add ncmePlayerMoveEvent.modPitch dummy
+
+# PlayerMovementStateTransitionEvent
+scoreboard objectives add ncmePlayerMovementStateTransitionEvent.firstRunDone dummy
+scoreboard objectives add ncmePlayerMovementStateTransitionEvent.priorMovementState dummy
+scoreboard objectives add ncmePlayerMovementStateTransitionEvent.newMovementState dummy
 
 
 # -----------------
@@ -1852,7 +1966,7 @@ scoreboard objectives add ncmBIMBxyzEqual dummy
 
 # TODO: Use numeric item identifiers
 scoreboard objectives add ncmChest minecraft.custom:minecraft.open_chest
-scoreboard objectives add ncmEChest minecraft.custom:minecraft.open_enderchest
+scoreboard objectives add ncmChestEnder minecraft.custom:minecraft.open_enderchest
 scoreboard objectives add ncmBox minecraft.custom:minecraft.open_shulker_box
 scoreboard objectives add ncmBarrel minecraft.custom:minecraft.open_barrel
 scoreboard objectives add ncmDispenser minecraft.custom:minecraft.inspect_dispenser
@@ -2169,6 +2283,8 @@ scoreboard players set DataHolder ncmcm_toggle_INVAP 2
 execute unless score DataHolder ncmFinishedTour matches 1 as @a unless score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.6-1.21.8 has been successfully installed but is currently inactive. Operators, please run","color":"gray"},{"text":" /scoreboard players set @s ncmOperator 1 ","color":"yellow","click_event":{"action":"run_command","command":"/scoreboard players set @s ncmOperator 1"},"hover_event":{"action":"show_text","value":[{"text":"/scoreboard players set @s ncmOperator 1"}]}},{"text":"to initiate the next steps.","color":"gray"}]
 execute unless score DataHolder ncmFinishedTour matches 1 as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.6-1.21.8 has been successfully installed but will remain inactive until you complete the setup tour. If you have time, you can start it anytime with","color":"gray"},{"text":" /trigger ncmTour","color":"yellow","click_event":{"action":"run_command","command":"/trigger ncmTour"},"hover_event":{"action":"show_text","value":[{"text":"/trigger ncmTour"}]}},{"text":". It only takes a few minutes.","color":"gray"}]
 
+execute if score DataHolder ncmFinishedTour matches 1 if score $ VESys.Build matches 1.. as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":"######","color":"red"}]
+execute if score DataHolder ncmFinishedTour matches 1 if score $ VESys.Build matches 1.. as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": It looks like you still have VanillaEvents installed. It’s no longer needed for running NoCheatMinus. You can click ","color":"gray"},{"text":"here","color":"yellow","click_event":{"action":"run_command","command":"/function ncm:base/uninstall_ve"},"hover_event":{"action":"show_text","value":[{"text":"/function ncm:base/uninstall_ve"}]}},{"text":" to uninstall VanillaEvents.","color":"gray"}]
 
 
 execute unless score DataHolder ncmInstalled matches 1 run scoreboard players set DataHolder ncmInstalled 1
