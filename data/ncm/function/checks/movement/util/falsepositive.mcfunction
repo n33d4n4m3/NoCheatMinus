@@ -61,9 +61,9 @@ execute as @a at @s if entity @e[type=shulker,distance=..6] run scoreboard playe
 
 # EnderPearl
 
-execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmFPBurst 5
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmFPBurst 120
 execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
-execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 10
+execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players set @s ncmMVMTSKnockbackExempt 120
 execute as @a if score @s ncmUsedEnderPearl matches 1.. run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Ravager

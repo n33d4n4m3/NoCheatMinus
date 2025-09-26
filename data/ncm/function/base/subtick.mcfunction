@@ -18,7 +18,6 @@
 # ...
 
 
-
 # Apply event modifications
 function ncm:event/modify
 
