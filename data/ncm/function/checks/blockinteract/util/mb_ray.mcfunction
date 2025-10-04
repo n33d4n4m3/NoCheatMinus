@@ -19,8 +19,8 @@
 
 
 
-execute if block ~ ~ ~ minecraft:chest run scoreboard players set @s ncmChest 0
-execute if block ~ ~ ~ minecraft:ender_chest run scoreboard players set @s ncmChestEnder 0
+execute if block ~ ~ ~ #ncm:chests run scoreboard players set @s ncmChest 0
+execute if block ~ ~ ~ #ncm:chests run scoreboard players set @s ncmChestEnder 0
 execute if block ~ ~ ~ minecraft:shulker_box run scoreboard players set @s ncmBox 0
 execute if block ~ ~ ~ minecraft:barrel run scoreboard players set @s ncmBarrel 0
 execute if block ~ ~ ~ minecraft:dispenser run scoreboard players set @s ncmDispenser 0
