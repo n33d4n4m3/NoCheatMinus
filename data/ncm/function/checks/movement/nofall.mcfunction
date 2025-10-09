@@ -22,12 +22,16 @@
 
 
 # FP Elimination
+# TODO: Account for "Safe Fall Height" attribute manipulation. (>3 -> FP)
 execute as @a run scoreboard players add @s ncmMVMNFTimeAlive 1
 execute as @a if score @s ncmMVMNFTimeAlive matches ..120 run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFTimeAlive 0
 execute as @a if score @s ncmMVMNFDeathCount matches 1.. run scoreboard players set @s ncmMVMNFDeathCount 0
 
 execute as @e[type=player] at @s if predicate ncm:nearby/water_fluid run scoreboard players set @s ncmMVMNFFPSourceNearby 1
+
+execute as @a at @s store result score @s ncmFallDmgMultiplierAttribute run attribute @s minecraft:fall_damage_multiplier get 10
+execute as @e[type=minecraft:player] if score @s ncmFallDmgMultiplierAttribute matches ..9 run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 
 execute as @e[type=minecraft:player] at @s if block ~ ~ ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1
 execute as @e[type=minecraft:player] at @s if block ~ ~1 ~ #beds run scoreboard players set @s ncmMVMNFFPSourceNearby 1

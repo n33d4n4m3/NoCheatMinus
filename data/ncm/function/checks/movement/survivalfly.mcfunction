@@ -231,7 +231,8 @@ execute as @a if score @s ncmFPBurst matches 1.. run scoreboard players set @s n
 execute as @a if entity @s[nbt={abilities:{flying:1b}}] run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
-
+execute as @a at @s store result score @s ncmStepHightAttribute run attribute @s minecraft:step_height get 10
+execute as @a if score @s ncmStepHightAttribute matches 7.. run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 
 
 

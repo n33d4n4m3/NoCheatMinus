@@ -24,7 +24,7 @@
 
 
 
-
+execute as @a at @s store result score @s ncmKnockbackResAttribute run attribute @s minecraft:knockback_resistance get 10
 
 scoreboard players set @a ncmPlayerIsCollisionFree 1
 execute as @a at @s unless block ~1 ~ ~ #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
@@ -37,6 +37,7 @@ execute as @a at @s unless block ~-1 ~ ~-1 #air run scoreboard players set @s nc
 execute as @a at @s unless block ~-1 ~ ~1 #air run scoreboard players set @s ncmPlayerIsCollisionFree 0
 execute as @a if score @s ncmCobwebNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 execute as @a if score @s ncmLiquidNearby matches 1.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
+execute as @a if score @s ncmKnockbackResAttribute matches 9.. run scoreboard players set @s ncmPlayerIsCollisionFree 0
 
 execute as @a store result score @s ncmFireTicks run data get entity @s Fire
 

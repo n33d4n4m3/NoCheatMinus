@@ -2741,7 +2741,10 @@ scoreboard objectives remove ncmePlayerMoveEvent.modPitch
 scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.firstRunDone
 scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.priorMovementState
 scoreboard objectives remove ncmePlayerMovementStateTransitionEvent.newMovementState
-
+scoreboard objectives remove ncmKnockbackResAttribute
+scoreboard objectives remove ncmFallDmgMultiplierAttribute
+scoreboard objectives remove ncmStepHightAttribute
+scoreboard objectives remove ncmMVMTSAttributeSneakSpeed
 
 
 # Send goodbye message
