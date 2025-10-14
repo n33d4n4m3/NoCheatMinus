@@ -24,6 +24,10 @@
 scoreboard players set @s ncmReplayStarted 1
 
 
+
+
+
+
 execute unless score @s ncmReplayTick matches -100..200 run scoreboard players set @s ncmReplayTick 0
 
 
@@ -48,6 +52,1021 @@ execute if score @s ncmReplayTick matches 101 run scoreboard players set @s ncmR
 
 
 scoreboard players add @s ncmReplayCounter 1
+
+
+# Sprinting
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 2 run execute as @e[team=NCMReplay,limit=1] at @s anchored feet run particle block{block_state:{Name:stone}} ~ ~ ~ 0 0 0 0 1
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 2 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+
+
+
+
+
+
+
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayH1 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayF1 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 1 unless score $(name) ncmReplayF1 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 1 if score $(name) ncmReplayM1 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayH2 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayF2 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 2 unless score $(name) ncmReplayF2 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 2 if score $(name) ncmReplayM2 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayH3 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayF3 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 3 unless score $(name) ncmReplayF3 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 3 if score $(name) ncmReplayM3 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayH4 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayF4 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 4 unless score $(name) ncmReplayF4 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 4 if score $(name) ncmReplayM4 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayH5 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayF5 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 5 unless score $(name) ncmReplayF5 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 5 if score $(name) ncmReplayM5 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayH6 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayF6 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 6 unless score $(name) ncmReplayF6 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 6 if score $(name) ncmReplayM6 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayH7 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayF7 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 7 unless score $(name) ncmReplayF7 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 7 if score $(name) ncmReplayM7 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayH8 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayF8 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 8 unless score $(name) ncmReplayF8 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 8 if score $(name) ncmReplayM8 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayH9 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayF9 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 9 unless score $(name) ncmReplayF9 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 9 if score $(name) ncmReplayM9 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayH10 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayF10 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 10 unless score $(name) ncmReplayF10 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 10 if score $(name) ncmReplayM10 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayH11 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayF11 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 11 unless score $(name) ncmReplayF11 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 11 if score $(name) ncmReplayM11 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayH12 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayF12 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 12 unless score $(name) ncmReplayF12 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 12 if score $(name) ncmReplayM12 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayH13 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayF13 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 13 unless score $(name) ncmReplayF13 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 13 if score $(name) ncmReplayM13 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayH14 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayF14 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 14 unless score $(name) ncmReplayF14 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 14 if score $(name) ncmReplayM14 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayH15 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayF15 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 15 unless score $(name) ncmReplayF15 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 15 if score $(name) ncmReplayM15 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayH16 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayF16 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 16 unless score $(name) ncmReplayF16 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 16 if score $(name) ncmReplayM16 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayH17 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayF17 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 17 unless score $(name) ncmReplayF17 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 17 if score $(name) ncmReplayM17 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayH18 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayF18 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 18 unless score $(name) ncmReplayF18 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 18 if score $(name) ncmReplayM18 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayH19 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayF19 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 19 unless score $(name) ncmReplayF19 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 19 if score $(name) ncmReplayM19 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayH20 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayF20 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 20 unless score $(name) ncmReplayF20 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 20 if score $(name) ncmReplayM20 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayH21 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayF21 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 21 unless score $(name) ncmReplayF21 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 21 if score $(name) ncmReplayM21 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayH22 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayF22 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 22 unless score $(name) ncmReplayF22 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 22 if score $(name) ncmReplayM22 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayH23 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayF23 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 23 unless score $(name) ncmReplayF23 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 23 if score $(name) ncmReplayM23 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayH24 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayF24 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 24 unless score $(name) ncmReplayF24 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 24 if score $(name) ncmReplayM24 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayH25 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayF25 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 25 unless score $(name) ncmReplayF25 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 25 if score $(name) ncmReplayM25 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayH26 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayF26 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 26 unless score $(name) ncmReplayF26 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 26 if score $(name) ncmReplayM26 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayH27 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayF27 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 27 unless score $(name) ncmReplayF27 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 27 if score $(name) ncmReplayM27 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayH28 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayF28 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 28 unless score $(name) ncmReplayF28 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 28 if score $(name) ncmReplayM28 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayH29 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayF29 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 29 unless score $(name) ncmReplayF29 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 29 if score $(name) ncmReplayM29 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayH30 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayF30 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 30 unless score $(name) ncmReplayF30 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 30 if score $(name) ncmReplayM30 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayH31 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayF31 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 31 unless score $(name) ncmReplayF31 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 31 if score $(name) ncmReplayM31 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayH32 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayF32 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 32 unless score $(name) ncmReplayF32 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 32 if score $(name) ncmReplayM32 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayH33 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayF33 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 33 unless score $(name) ncmReplayF33 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 33 if score $(name) ncmReplayM33 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayH34 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayF34 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 34 unless score $(name) ncmReplayF34 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 34 if score $(name) ncmReplayM34 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayH35 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayF35 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 35 unless score $(name) ncmReplayF35 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 35 if score $(name) ncmReplayM35 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayH36 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayF36 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 36 unless score $(name) ncmReplayF36 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 36 if score $(name) ncmReplayM36 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayH37 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayF37 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 37 unless score $(name) ncmReplayF37 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 37 if score $(name) ncmReplayM37 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayH38 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayF38 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 38 unless score $(name) ncmReplayF38 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 38 if score $(name) ncmReplayM38 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayH39 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayF39 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 39 unless score $(name) ncmReplayF39 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 39 if score $(name) ncmReplayM39 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayH40 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayF40 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 40 unless score $(name) ncmReplayF40 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 40 if score $(name) ncmReplayM40 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayH41 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayF41 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 41 unless score $(name) ncmReplayF41 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 41 if score $(name) ncmReplayM41 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayH42 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayF42 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 42 unless score $(name) ncmReplayF42 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 42 if score $(name) ncmReplayM42 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayH43 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayF43 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 43 unless score $(name) ncmReplayF43 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 43 if score $(name) ncmReplayM43 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayH44 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayF44 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 44 unless score $(name) ncmReplayF44 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 44 if score $(name) ncmReplayM44 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayH45 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayF45 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 45 unless score $(name) ncmReplayF45 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 45 if score $(name) ncmReplayM45 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayH46 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayF46 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 46 unless score $(name) ncmReplayF46 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 46 if score $(name) ncmReplayM46 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayH47 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayF47 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 47 unless score $(name) ncmReplayF47 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 47 if score $(name) ncmReplayM47 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayH48 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayF48 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 48 unless score $(name) ncmReplayF48 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 48 if score $(name) ncmReplayM48 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayH49 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayF49 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 49 unless score $(name) ncmReplayF49 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 49 if score $(name) ncmReplayM49 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayH50 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayF50 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 50 unless score $(name) ncmReplayF50 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 50 if score $(name) ncmReplayM50 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayH51 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayF51 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 51 unless score $(name) ncmReplayF51 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 51 if score $(name) ncmReplayM51 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayH52 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayF52 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 52 unless score $(name) ncmReplayF52 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 52 if score $(name) ncmReplayM52 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayH53 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayF53 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 53 unless score $(name) ncmReplayF53 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 53 if score $(name) ncmReplayM53 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayH54 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayF54 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 54 unless score $(name) ncmReplayF54 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 54 if score $(name) ncmReplayM54 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayH55 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayF55 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 55 unless score $(name) ncmReplayF55 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 55 if score $(name) ncmReplayM55 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayH56 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayF56 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 56 unless score $(name) ncmReplayF56 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 56 if score $(name) ncmReplayM56 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayH57 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayF57 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 57 unless score $(name) ncmReplayF57 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 57 if score $(name) ncmReplayM57 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayH58 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayF58 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 58 unless score $(name) ncmReplayF58 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 58 if score $(name) ncmReplayM58 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayH59 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayF59 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 59 unless score $(name) ncmReplayF59 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 59 if score $(name) ncmReplayM59 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayH60 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayF60 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 60 unless score $(name) ncmReplayF60 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 60 if score $(name) ncmReplayM60 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayH61 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayF61 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 61 unless score $(name) ncmReplayF61 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 61 if score $(name) ncmReplayM61 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayH62 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayF62 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 62 unless score $(name) ncmReplayF62 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 62 if score $(name) ncmReplayM62 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayH63 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayF63 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 63 unless score $(name) ncmReplayF63 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 63 if score $(name) ncmReplayM63 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayH64 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayF64 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 64 unless score $(name) ncmReplayF64 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 64 if score $(name) ncmReplayM64 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayH65 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayF65 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 65 unless score $(name) ncmReplayF65 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 65 if score $(name) ncmReplayM65 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayH66 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayF66 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 66 unless score $(name) ncmReplayF66 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 66 if score $(name) ncmReplayM66 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayH67 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayF67 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 67 unless score $(name) ncmReplayF67 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 67 if score $(name) ncmReplayM67 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayH68 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayF68 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 68 unless score $(name) ncmReplayF68 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 68 if score $(name) ncmReplayM68 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayH69 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayF69 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 69 unless score $(name) ncmReplayF69 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 69 if score $(name) ncmReplayM69 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayH70 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayF70 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 70 unless score $(name) ncmReplayF70 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 70 if score $(name) ncmReplayM70 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayH71 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayF71 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 71 unless score $(name) ncmReplayF71 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 71 if score $(name) ncmReplayM71 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayH72 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayF72 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 72 unless score $(name) ncmReplayF72 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 72 if score $(name) ncmReplayM72 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayH73 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayF73 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 73 unless score $(name) ncmReplayF73 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 73 if score $(name) ncmReplayM73 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayH74 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayF74 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 74 unless score $(name) ncmReplayF74 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 74 if score $(name) ncmReplayM74 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayH75 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayF75 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 75 unless score $(name) ncmReplayF75 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 75 if score $(name) ncmReplayM75 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayH76 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayF76 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 76 unless score $(name) ncmReplayF76 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 76 if score $(name) ncmReplayM76 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayH77 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayF77 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 77 unless score $(name) ncmReplayF77 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 77 if score $(name) ncmReplayM77 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayH78 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayF78 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 78 unless score $(name) ncmReplayF78 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 78 if score $(name) ncmReplayM78 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayH79 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayF79 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 79 unless score $(name) ncmReplayF79 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 79 if score $(name) ncmReplayM79 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayH80 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayF80 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 80 unless score $(name) ncmReplayF80 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 80 if score $(name) ncmReplayM80 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayH81 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayF81 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 81 unless score $(name) ncmReplayF81 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 81 if score $(name) ncmReplayM81 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayH82 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayF82 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 82 unless score $(name) ncmReplayF82 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 82 if score $(name) ncmReplayM82 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayH83 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayF83 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 83 unless score $(name) ncmReplayF83 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 83 if score $(name) ncmReplayM83 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayH84 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayF84 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 84 unless score $(name) ncmReplayF84 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 84 if score $(name) ncmReplayM84 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayH85 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayF85 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 85 unless score $(name) ncmReplayF85 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 85 if score $(name) ncmReplayM85 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayH86 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayF86 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 86 unless score $(name) ncmReplayF86 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 86 if score $(name) ncmReplayM86 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayH87 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayF87 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 87 unless score $(name) ncmReplayF87 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 87 if score $(name) ncmReplayM87 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayH88 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayF88 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 88 unless score $(name) ncmReplayF88 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 88 if score $(name) ncmReplayM88 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayH89 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayF89 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 89 unless score $(name) ncmReplayF89 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 89 if score $(name) ncmReplayM89 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayH90 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayF90 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 90 unless score $(name) ncmReplayF90 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 90 if score $(name) ncmReplayM90 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayH91 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayF91 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 91 unless score $(name) ncmReplayF91 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 91 if score $(name) ncmReplayM91 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayH92 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayF92 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 92 unless score $(name) ncmReplayF92 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 92 if score $(name) ncmReplayM92 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayH93 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayF93 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 93 unless score $(name) ncmReplayF93 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 93 if score $(name) ncmReplayM93 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayH94 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayF94 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 94 unless score $(name) ncmReplayF94 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 94 if score $(name) ncmReplayM94 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayH95 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayF95 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 95 unless score $(name) ncmReplayF95 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 95 if score $(name) ncmReplayM95 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayH96 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayF96 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 96 unless score $(name) ncmReplayF96 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 96 if score $(name) ncmReplayM96 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayH97 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayF97 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 97 unless score $(name) ncmReplayF97 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 97 if score $(name) ncmReplayM97 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayH98 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayF98 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 98 unless score $(name) ncmReplayF98 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 98 if score $(name) ncmReplayM98 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayH99 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayF99 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 99 unless score $(name) ncmReplayF99 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 99 if score $(name) ncmReplayM99 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayH100 matches 1 run damage @e[team=NCMReplay,limit=1] 0
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayF100 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 1
+$execute if score @s ncmReplayTick matches 100 unless score $(name) ncmReplayF100 matches 1 run data modify entity @e[team=NCMReplay,limit=1] HasVisualFire set value 0
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 0 run data modify entity @e[team=NCMReplay,limit=1] pose set value standing
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 1 run data modify entity @e[team=NCMReplay,limit=1] pose set value crouching
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 3 run data modify entity @e[team=NCMReplay,limit=1] pose set value fall_flying
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 4 run data modify entity @e[team=NCMReplay,limit=1] pose set value swimming
+$execute if score @s ncmReplayTick matches 100 if score $(name) ncmReplayM100 matches 5 run data modify entity @e[team=NCMReplay,limit=1] pose set value sleeping
+
+
+
+
+
 $execute if score @s ncmReplayTick matches 1 run execute store result storage ncm:tpdata x double 0.001 run scoreboard players get $(name) ncmReplayX1
 $execute if score @s ncmReplayTick matches 1 run execute store result storage ncm:tpdata y double 0.001 run scoreboard players get $(name) ncmReplayY1
 $execute if score @s ncmReplayTick matches 1 run execute store result storage ncm:tpdata z double 0.001 run scoreboard players get $(name) ncmReplayZ1
@@ -557,7 +1576,7 @@ $execute if score @s ncmReplayTick matches 100 run execute store result storage 
 
 
 
-$execute if score @s ncmReplayCounter matches 1 run bossbar add ncm:replay [{"color":"yellow","text":"Replay of player $(name)"}]
+$execute if score @s ncmReplayCounter matches 1 run bossbar add ncm:replay [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:00/00:10"}]
 execute if score @s ncmReplayCounter matches 1 run bossbar set ncm:replay players @s
 execute if score @s ncmReplayCounter matches 1 run bossbar set ncm:replay visible true
 execute if score @s ncmReplayCounter matches 1 run bossbar set ncm:replay value 0
@@ -571,6 +1590,7 @@ execute if score @s ncmReplayCounter matches 14 run bossbar set ncm:replay value
 execute if score @s ncmReplayCounter matches 16 run bossbar set ncm:replay value 8
 execute if score @s ncmReplayCounter matches 18 run bossbar set ncm:replay value 9
 execute if score @s ncmReplayCounter matches 20 run bossbar set ncm:replay value 10
+$execute if score @s ncmReplayCounter matches 20 run bossbar set ncm:replay name [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:01/00:10"}]
 execute if score @s ncmReplayCounter matches 22 run bossbar set ncm:replay value 11
 execute if score @s ncmReplayCounter matches 24 run bossbar set ncm:replay value 12
 execute if score @s ncmReplayCounter matches 26 run bossbar set ncm:replay value 13
@@ -581,6 +1601,7 @@ execute if score @s ncmReplayCounter matches 34 run bossbar set ncm:replay value
 execute if score @s ncmReplayCounter matches 36 run bossbar set ncm:replay value 18
 execute if score @s ncmReplayCounter matches 38 run bossbar set ncm:replay value 19
 execute if score @s ncmReplayCounter matches 40 run bossbar set ncm:replay value 20
+$execute if score @s ncmReplayCounter matches 40 run bossbar set ncm:replay name [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:02/00:10"}]
 execute if score @s ncmReplayCounter matches 42 run bossbar set ncm:replay value 21
 execute if score @s ncmReplayCounter matches 44 run bossbar set ncm:replay value 22
 execute if score @s ncmReplayCounter matches 46 run bossbar set ncm:replay value 23
@@ -591,6 +1612,7 @@ execute if score @s ncmReplayCounter matches 54 run bossbar set ncm:replay value
 execute if score @s ncmReplayCounter matches 56 run bossbar set ncm:replay value 28
 execute if score @s ncmReplayCounter matches 58 run bossbar set ncm:replay value 29
 execute if score @s ncmReplayCounter matches 60 run bossbar set ncm:replay value 30
+$execute if score @s ncmReplayCounter matches 60 run bossbar set ncm:replay name [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:03/00:10"}]
 execute if score @s ncmReplayCounter matches 62 run bossbar set ncm:replay value 31
 execute if score @s ncmReplayCounter matches 64 run bossbar set ncm:replay value 32
 execute if score @s ncmReplayCounter matches 66 run bossbar set ncm:replay value 33
@@ -601,6 +1623,7 @@ execute if score @s ncmReplayCounter matches 74 run bossbar set ncm:replay value
 execute if score @s ncmReplayCounter matches 76 run bossbar set ncm:replay value 38
 execute if score @s ncmReplayCounter matches 78 run bossbar set ncm:replay value 39
 execute if score @s ncmReplayCounter matches 80 run bossbar set ncm:replay value 40
+$execute if score @s ncmReplayCounter matches 80 run bossbar set ncm:replay name [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:04/00:10"}]
 execute if score @s ncmReplayCounter matches 82 run bossbar set ncm:replay value 41
 execute if score @s ncmReplayCounter matches 84 run bossbar set ncm:replay value 42
 execute if score @s ncmReplayCounter matches 86 run bossbar set ncm:replay value 43
@@ -611,17 +1634,11 @@ execute if score @s ncmReplayCounter matches 94 run bossbar set ncm:replay value
 execute if score @s ncmReplayCounter matches 96 run bossbar set ncm:replay value 48
 execute if score @s ncmReplayCounter matches 98 run bossbar set ncm:replay value 49
 execute if score @s ncmReplayCounter matches 100 run bossbar set ncm:replay value 50
+$execute if score @s ncmReplayCounter matches 100 run bossbar set ncm:replay name [{"color":"yellow","text":"$(name)"},{"color":"dark_gray","text":" | "},{"color":"gray","text":"00:05/00:10"}]
 
 
 
-execute if score @s ncmReplayCounter matches 40 run title @s title [{"text":""}]
-execute if score @s ncmReplayCounter matches 40 run title @s subtitle [{"text":""},{"text":"Suspicious activity in ","color":"yellow"},{"text":"3","color":"red"},{"text":" seconds","color":"yellow"}]
-execute if score @s ncmReplayCounter matches 60 run title @s title [{"text":""}]
-execute if score @s ncmReplayCounter matches 60 run title @s subtitle [{"text":""},{"text":"Suspicious activity in ","color":"yellow"},{"text":"2","color":"red"},{"text":" seconds","color":"yellow"}]
-execute if score @s ncmReplayCounter matches 80 run title @s title [{"text":""}]
-execute if score @s ncmReplayCounter matches 80 run title @s subtitle [{"text":""},{"text":"Suspicious activity in ","color":"yellow"},{"text":"1","color":"red"},{"text":" second","color":"yellow"}]
-execute if score @s ncmReplayCounter matches 100 run title @s title [{"text":""}]
-execute if score @s ncmReplayCounter matches 100 run title @s subtitle [{"text":""},{"text":"Suspicious activity!","color":"red"}]
+
 
 execute if score @s ncmReplayCounter matches 101 run scoreboard players set @s ncmReplayCounter 0
 execute unless score @s ncmFirstRunFinished matches 1 run scoreboard players set @s ncmFirstRunFinished 1
@@ -634,4 +1651,4 @@ execute if score @s ncmReplayTick matches 0 run scoreboard players set @s ncmRep
 execute if score @s ncmReplayTick matches 0 run scoreboard players set @s ncmFirstRunFinished 0
 execute if score @s ncmReplayTick matches 0 run function ncm:replay/after_flag with storage ncm:replay
 
-execute unless score @s ncmReplayTick matches 0 run function ncm:replay/teleport with storage ncm:tpdata
+execute unless score @s ncmReplayTick matches 0 run function ncm:replay/teleport_npc with storage ncm:tpdata

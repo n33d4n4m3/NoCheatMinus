@@ -13,8 +13,8 @@
 #
 #
 # ...
-# Description:  Macro function for performing the player teleports during replay playback.
+# Description:  Macro function for performing the mannequin teleports during replay playback.
 # Author:       n33d4n4m3
 # ...
 
-$tp @s $(x) $(y) $(z) $(yaw) $(pitch)
+$tp @e[team=NCMReplay,type=mannequin] $(x) $(y) $(z) $(yaw) $(pitch)

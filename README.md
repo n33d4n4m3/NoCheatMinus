@@ -11,7 +11,7 @@
 
 1️⃣ Download **NoCheatMinus** as a `.zip` file, extract it, and place the folder (which contains the `data` folder) in your world's datapack folder.
 
-2️⃣ Restart your server or use `/reload` to activate the datapacks.
+2️⃣ Restart your server or use `/reload` to enable the datapack.
 
 3️⃣ Follow the on-screen instructions in chat.
 
@@ -44,7 +44,7 @@ The **Replay System** automatically records movements for **5 seconds before and
 /trigger ncmReplay
 ```
 
-🎥 **Watch a showcase of the replay system [here](https://www.youtube.com/watch?v=hd6jKuvOQZc)** 🎥
+🎥 **Watch a showcase of the replay system [here](https://www.youtube.com/watch?v=-T1ePdhudMs)** 🎥
 
 ---
 ## 🔄 Updating to a newer version
