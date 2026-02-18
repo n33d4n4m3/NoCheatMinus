@@ -18,7 +18,25 @@
 # Author:       xNelly
 # ...
 
+scoreboard objectives add ncmFWTRotDiff dummy
+scoreboard objectives add ncmFWTRotDiffSave dummy
+scoreboard objectives add ncmFWTRotDiffTooHigh dummy
 
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 run scoreboard players operation @s ncmFWTRotDiff = @s ncmePlayerMoveEvent.yawDiff
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 run scoreboard players operation @s ncmFWTRotDiffSave = @s ncmePlayerMoveEvent.pitchDiff
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 if score @s ncmFWTRotDiff matches ..0 run scoreboard players operation @s ncmFWTRotDiff *= DataHolder ncm.-1
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 if score @s ncmFWTRotDiffSave matches ..0 run scoreboard players operation @s ncmFWTRotDiffSave *= DataHolder ncm.-1
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 run scoreboard players operation @s ncmFWTRotDiff += @s ncmFWTRotDiffSave
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 if score @s ncmFWTRotDiff matches 1000.. run scoreboard players add @s ncmFWTRotDiffTooHigh 1
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] unless score @s ncmFWTRotDiff matches 1000.. run scoreboard players set @s ncmFWTRotDiffTooHigh 0
+#execute as @a[tag=ncmePlayerMoveEvent,tag=ncmePlayerAttackEvent] if score @s ncmePlayerMoveEvent.hasRotationChanged matches 1 run tellraw @s ["",{text:"Rotation difference on hit: "},{score:{name:"@s",objective:"ncmFWTRotDiff"}}]
+#execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmFWTRotDiffTooHigh matches 3.. if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"WrongTurn","color":"light_purple"},{"text":" {...}","color":"gray"}]
+#execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmFWTRotDiffTooHigh matches 3.. run tellraw @a[scores={ncmInputR=2}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Fight","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"WrongTurn","color":"light_purple"},{"text":" {...}","color":"gray"}]
+#execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmFWTRotDiffTooHigh matches 3.. run scoreboard players set @s ncmFWTRotDiffTooHigh 0
+
+
+#scoreboard players set @a ncmFWTRotDiff 0
+#scoreboard players set @a ncmFWTRotDiffSave 0
 
 
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmePlayerMoveEvent.toPitch matches 9001.. run scoreboard players set @s ncmFailedFWT 1

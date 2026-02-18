@@ -13,15 +13,14 @@
 #
 #
 # ...
-# Description:  Part of the TPS-Checker subroutine.
-# Author:       Frogster, 2mal3
+# Description:  Measures the current TPS value.
+# Author:       n33d4n4m3
 # ...
 
 
-scoreboard players set #tps_test_timer ncmTPS 0
+scoreboard players add DataHolder ncmTPSTickCounter 1
 
-execute store result score #worldborder ncmTPS run worldborder get
-scoreboard players remove #worldborder ncmTPS 1
-worldborder add -1 1
+execute if stopwatch ncm:tps 1.. run scoreboard players operation .TPS ncmTPS = DataHolder ncmTPSTickCounter
+execute if stopwatch ncm:tps 1.. run scoreboard players set DataHolder ncmTPSTickCounter 0
+execute if stopwatch ncm:tps 1.. run stopwatch restart ncm:tps
 
-schedule function ncm:lag/tps/loop 1t replace

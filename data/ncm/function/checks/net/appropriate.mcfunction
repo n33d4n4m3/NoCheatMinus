@@ -29,7 +29,7 @@
 # ---------------------
 
 
-execute store result score DataHolder ncmAllowImmResp run gamerule doImmediateRespawn
+execute store result score DataHolder ncmAllowImmResp run gamerule immediate_respawn
 scoreboard players add @a ncmGameOverScr 1
 execute as @e[type=minecraft:player] unless score DataHolder ncmAllowImmResp matches 1 if score @s ncmDeaths matches 1.. if score @s ncmGameOverScr < DataHolder ncmc_ap_go_1 run scoreboard players set @s ncmFailedNETAP 9
 execute as @e[type=minecraft:player] unless score DataHolder ncmAllowImmResp matches 1 if score @s ncmDeaths matches 1.. if score @s ncmGameOverScr < DataHolder ncmc_ap_go_1 if score @s ncmVerbose matches 2 run tellraw @a[scores={ncmInputR=1}] ["",{"text":"NCM","color":"dark_gray"},{"text":": ","color":"gray"},{"selector":"@s","color":"gray"},{"text":">> ","color":"gray"},{"text":"Net","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"Appropriate","color":"light_purple"},{"text":".","color":"light_purple"},{"text":"GameOverGUI","color":"light_purple"},{"text":" {","color":"gray"},{"text":"","color":"gray"},{"score":{"name":"DataHolder","objective":"ncmc_ap_go_1"},"color":"dark_gray"},{"text":", ","color":"gray"},{"score":{"name":"@s","objective":"ncmGameOverScr"},"color":"gray"},{"text":"}","color":"gray"}]

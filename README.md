@@ -1,7 +1,7 @@
 # 🃏 NoCheatMinus
-... is an AntiCheat Datapack for Minecraft 1.21.9-1.21.10. Its purpose is the detection of generic game modifications by checking and tracking movement, fight, and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
+... is an AntiCheat Datapack for Minecraft 1.21.11. Its purpose is the detection of generic game modifications by checking and tracking movement, fight, and network behavior of players constantly, followed by a configurable comparison of the collected data with the expected behavior.
 
-- 🌍 Visit the **NoCheatMinus Test Server** (1.21.10): `test.nocheatminus.org`
+- 🌍 Visit the **NoCheatMinus Test Server** (1.21.11): `test.nocheatminus.org`
 - 🎥 Watch a demonstration [here](https://www.youtube.com/watch?v=q0wzirmrWhI)
 - 💬 Join our **Discord** for questions & feedback: [Click here](https://discord.gg/PrW5FH25nn)
 

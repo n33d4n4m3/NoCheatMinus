@@ -49,7 +49,9 @@ data remove storage ncm:stats reset
 
 # Remove all scoreboard objectives
 
-
+scoreboard objectives remove ncmFWTRotDiff
+scoreboard objectives remove ncmFWTRotDiffSave
+scoreboard objectives remove ncmFWTRotDiffTooHigh
 
 scoreboard objectives remove ncmReplayDamageTaken
 scoreboard objectives remove ncmReplaySleepTimer
@@ -57,6 +59,8 @@ scoreboard objectives remove ncmReplayFallFlying
 scoreboard objectives remove ncmReplayFire
 scoreboard objectives remove ncmReplayStartCounter
 
+stopwatch remove ncm:tps
+scoreboard objectives remove ncmTPSTickCounter
 scoreboard objectives remove ncmReplayM1
 scoreboard objectives remove ncmReplayH1
 scoreboard objectives remove ncmReplayF1

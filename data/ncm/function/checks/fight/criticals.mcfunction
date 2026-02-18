@@ -28,8 +28,9 @@
 
 # Check the circumstances under which the critical hit was made. Store the number of missing requirements for a critical hit in ncmFCCMissingReq.
 
-# Abort check when player is holding a mace.
-execute if items entity @s weapon mace run return fail
+# Abort check when player is holding a mace or spear.
+execute if items entity @s weapon.* mace run return fail
+execute if items entity @s weapon.* #minecraft:spears run return fail
 
 # Did the player fall while making the critical hit? ncmFCCFall > 1 = True.
 execute store result score @s ncmFCCFall run data get entity @s fall_distance 10

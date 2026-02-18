@@ -146,7 +146,7 @@ execute as @a unless score @s ncmMVMNFFallEndYCoord matches 0 run scoreboard pla
 #execute as @a if score @s ncmMVMNFFallEndYCoord matches 1.. if score @s ncmMVMNFFallStartYCoord matches 1.. if score @s ncmMVMNFFall matches 1.. run tellraw @s ["","[DEBUG] Start: ",{"score":{"name":"@s","objective":"ncmMVMNFFallStartYCoord"}}," End: ",{"score":{"name":"@s","objective":"ncmMVMNFFallEndYCoord"}}," Distance: ",{"score":{"name":"@s","objective":"ncmMVMNFFall"}}]
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallEndYCoord 0
 execute as @a if score @s ncmMVMNFFall matches 1.. run scoreboard players set @s ncmMVMNFFallStartYCoord 0
-execute store result score DataHolder ncmMVMNFApplyFDmg run gamerule fallDamage
+execute store result score DataHolder ncmMVMNFApplyFDmg run gamerule fall_damage
 execute as @e[type=minecraft:player] if score DataHolder ncmMVMNFApplyFDmg matches 0 run scoreboard players set @s ncmMVMNFFall 0
 execute as @e[type=minecraft:player] if score @s ncmFPdeathTime matches ..10 run scoreboard players set @s ncmMVMNFFall 0
 execute as @e[type=minecraft:player] run scoreboard players add @s ncmMVMNFReset 1

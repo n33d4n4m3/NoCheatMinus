@@ -20,6 +20,7 @@
 # TODO (Code): Add many comments, which are explaining the subroutines.
 
 # TPS
+function ncm:lag/tps/measure
 execute if score .TPS ncmTPS < DataHolder ncmc_bs_lg_2 run scoreboard players operation DataHolder ncmMVMTSLagTimeout = DataHolder ncmc_bs_lg_1
 execute if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players remove DataHolder ncmMVMTSLagTimeout 1
 

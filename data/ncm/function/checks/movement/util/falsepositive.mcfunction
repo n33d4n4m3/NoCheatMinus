@@ -94,7 +94,11 @@ execute as @a at @s if entity @e[type=fireball,distance=..20] run scoreboard pla
 execute as @a at @s if items entity @s weapon.* minecraft:crossbow if entity @e[type=firework_rocket,distance=..5] run scoreboard players set @s ncmFPBurst 5
 execute as @a at @s if items entity @s weapon.* minecraft:crossbow if entity @e[type=firework_rocket,distance=..5] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
 
-
+# Speer with Lunge // TODO: Make this dependent on the actual usage of the item.
+execute as @a at @s if items entity @s weapon.* #minecraft:spears[minecraft:enchantments~[{"enchantment":"minecraft:lunge"}]] run scoreboard players set @s ncmFPBurst 5
+execute as @a at @s if items entity @s weapon.* #minecraft:spears[minecraft:enchantments~[{"enchantment":"minecraft:lunge"}]] run scoreboard players operation @s ncmFPBurst += @s ncmLastLatencyLevel
+execute as @a at @s if items entity @s weapon.* #minecraft:spears[minecraft:enchantments~[{"enchantment":"minecraft:lunge"}]] run scoreboard players set @s ncmMVMTSKnockbackExempt 20
+execute as @a at @s if items entity @s weapon.* #minecraft:spears[minecraft:enchantments~[{"enchantment":"minecraft:lunge"}]] run scoreboard players operation @s ncmMVMTSKnockbackExempt += @s ncmLastLatencyLevel
 
 # Goat Ram
 execute as @e[type=goat] at @s store success score @s ncmGoatHasRamCooldown run data get entity @s Brain.memories.minecraft:ram_cooldown_ticks.value
@@ -168,7 +172,7 @@ execute as @a at @s if predicate ncm:nearby/dispenser run scoreboard players ope
 
 # Iron Golem FP fix
 
-execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearby run data get entity @e[type=minecraft:iron_golem,limit=1,distance=..5] AngerTime 1
+execute as @e[type=minecraft:player] at @s store result score @s ncmAngryIGNearby run data get entity @e[type=minecraft:iron_golem,limit=1,distance=..5] anger_end_time
 
 # Aviate / Levitate FP fix
 
