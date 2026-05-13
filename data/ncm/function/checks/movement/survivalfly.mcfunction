@@ -238,6 +238,7 @@ execute as @a if score @s ncmStepHightAttribute matches 7.. run scoreboard playe
 
 
 execute as @a if score @s ncmClimbedWaitForLegitimation matches 1 run scoreboard players add @s ncmClimbFlagCount 1
+# execute as @a at @s if score @s ncmClimbedWaitForLegitimation matches 1 run playsound minecraft:block.note_block.basedrum
 execute as @a if score @s ncmClimbedWaitForLegitimation matches 1 run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmClimbFlagCount 0
 

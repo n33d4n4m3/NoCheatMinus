@@ -35,7 +35,7 @@ scoreboard objectives add ncmInputR dummy
 
 scoreboard objectives add ncmBuildNumber dummy
 
-scoreboard players set DataHolder ncmBuildNumber 270
+scoreboard players set DataHolder ncmBuildNumber 271
 
 
 scoreboard objectives add ncm.100 dummy
@@ -2879,7 +2879,7 @@ scoreboard players set DataHolder ncmCC 1
 # Send install notfication
 
 
-execute if score DataHolder ncmFinishedTour matches 1 run tellraw @a [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.11 has been loaded successfully.","color":"gray"}]
+execute if score DataHolder ncmFinishedTour matches 1 run tellraw @a [{"text":""},{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 26.1.2 has been loaded successfully.","color":"gray"}]
 execute if score DataHolder ncmFinishedTour matches 1 if score DataHolder ncmBlockMode matches 1 if score DataHolder ncmPenaltyKickPossible matches 0 run tellraw @a ["",{"text":"NCM","color":"red"},{"text":": ","color":"gray"},{"text":"WARNING! ","bold":true,"color":"red"},{"text":"Block Mode is currently active, but the check ","color":"gray"},{"text":"Combined.Exploit ","color":"yellow"},{"text":"cannot kick players in case of a positive detection because additional configuration is required. If you want kicks to be enabled, set ","color":"gray"},{"text":"function-permission-level=4 ","color":"yellow"},{"text":"in the server.properties file and remove the _ from the filename of ","color":"gray"},{"text":"data/ncm/functions/penalty/kick._mcfunction","color":"yellow"}]
 
 
@@ -2896,8 +2896,8 @@ scoreboard players set DataHolder ncmcm_toggle_INVAP 2
 
 
 
-execute unless score DataHolder ncmFinishedTour matches 1 as @a unless score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.11 has been successfully installed but is currently inactive. Operators, please run","color":"gray"},{"text":" /scoreboard players set @s ncmOperator 1 ","color":"yellow","click_event":{"action":"run_command","command":"/scoreboard players set @s ncmOperator 1"},"hover_event":{"action":"show_text","value":[{"text":"/scoreboard players set @s ncmOperator 1"}]}},{"text":"to initiate the next steps.","color":"gray"}]
-execute unless score DataHolder ncmFinishedTour matches 1 as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 1.21.11 has been successfully installed but will remain inactive until you complete the setup tour. If you have time, you can start it anytime with","color":"gray"},{"text":" /trigger ncmTour","color":"yellow","click_event":{"action":"run_command","command":"/trigger ncmTour"},"hover_event":{"action":"show_text","value":[{"text":"/trigger ncmTour"}]}},{"text":". It only takes a few minutes.","color":"gray"}]
+execute unless score DataHolder ncmFinishedTour matches 1 as @a unless score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 26.1.2 has been successfully installed but is currently inactive. Operators, please run","color":"gray"},{"text":" /scoreboard players set @s ncmOperator 1 ","color":"yellow","click_event":{"action":"run_command","command":"/scoreboard players set @s ncmOperator 1"},"hover_event":{"action":"show_text","value":[{"text":"/scoreboard players set @s ncmOperator 1"}]}},{"text":"to initiate the next steps.","color":"gray"}]
+execute unless score DataHolder ncmFinishedTour matches 1 as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": NoCheatMinus ","color":"gray"},{"text":"Build ","color":"yellow"},{"score":{"name":"DataHolder","objective":"ncmBuildNumber"},"color":"yellow"},{"text":" for Minecraft 26.1.2 has been successfully installed but will remain inactive until you complete the setup tour. If you have time, you can start it anytime with","color":"gray"},{"text":" /trigger ncmTour","color":"yellow","click_event":{"action":"run_command","command":"/trigger ncmTour"},"hover_event":{"action":"show_text","value":[{"text":"/trigger ncmTour"}]}},{"text":". It only takes a few minutes.","color":"gray"}]
 
 execute if score DataHolder ncmFinishedTour matches 1 if score $ VESys.Build matches 1.. as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":"######","color":"red"}]
 execute if score DataHolder ncmFinishedTour matches 1 if score $ VESys.Build matches 1.. as @a if score @s ncmOperator matches 2 run tellraw @s [{"text":""},{"text":"NCM","color":"red"},{"text":": It looks like you still have VanillaEvents installed. It’s no longer needed for running NoCheatMinus. You can click ","color":"gray"},{"text":"here","color":"yellow","click_event":{"action":"run_command","command":"/function ncm:base/uninstall_ve"},"hover_event":{"action":"show_text","value":[{"text":"/function ncm:base/uninstall_ve"}]}},{"text":" to uninstall VanillaEvents.","color":"gray"}]
