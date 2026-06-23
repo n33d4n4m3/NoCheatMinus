@@ -61,6 +61,8 @@ scoreboard objectives remove ncmReplayStartCounter
 
 stopwatch remove ncm:tps
 scoreboard objectives remove ncmTPSTickCounter
+scoreboard objectives remove ncmMVMTSDebug
+scoreboard objectives remove ncmMVMTSDepthStriderLevel
 scoreboard objectives remove ncmReplayM1
 scoreboard objectives remove ncmReplayH1
 scoreboard objectives remove ncmReplayF1

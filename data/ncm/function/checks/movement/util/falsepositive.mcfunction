@@ -34,6 +34,8 @@ execute as @e[type=minecraft:player] if score @s ncmLiquidNearby matches 10.. ru
 execute as @e[type=minecraft:player] if score @s ncmLadderNearby matches 30.. run scoreboard players set @s ncmLadderNearby 0
 execute as @a if score @s ncmFPDecent matches 10.. run scoreboard players set @s ncmFPDecent 0
 execute as @e[type=minecraft:player] if score @s ncmBoat matches 1.. run scoreboard players set @s ncmBoat 0
+# Experimental ncmFPBurst fade without OnGround condition:
+# execute as @a if score @s ncmFPBurst matches 1.. run scoreboard players remove @s ncmFPBurst 1
 execute as @a if predicate ncm:is_on_ground if score @s ncmFPBurst matches 1.. run scoreboard players remove @s ncmFPBurst 1
 
 

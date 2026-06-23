@@ -2820,6 +2820,7 @@ scoreboard objectives add ncmAPSResetCSn dummy
 scoreboard objectives add ncmAPSLostWalkFP dummy
 
 # TickStride
+scoreboard objectives add ncmMVMTSDebug dummy
 scoreboard objectives add ncmMVMTSKnockbackExempt dummy
 scoreboard objectives add ncmTimesStrideTooHighLog dummy
 scoreboard objectives add ncmTimesStrideTooHighCancel dummy
@@ -2835,6 +2836,7 @@ scoreboard objectives add ncmDistanceDifference dummy
 scoreboard objectives add ncmTimesStrideTooHighWithLatency dummy
 scoreboard objectives add ncmTSResetLatencyTimer dummy
 scoreboard objectives add ncmInvalidateLostSprint dummy
+scoreboard objectives add ncmMVMTSDepthStriderLevel dummy
 scoreboard objectives add ncmTSSetbackX dummy
 scoreboard objectives add ncmTSSetbackY dummy
 scoreboard objectives add ncmTSSetbackZ dummy

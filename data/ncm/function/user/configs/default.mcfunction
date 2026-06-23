@@ -297,9 +297,9 @@ scoreboard players set DataHolder ncmc_ts_5 12
 scoreboard players set DataHolder ncmc_ts_6 20
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 4 -> SWIMMING (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_7 1000
+scoreboard players set DataHolder ncmc_ts_7 20
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 4 -> SWIMMING (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_8 1000
+scoreboard players set DataHolder ncmc_ts_8 25
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 5 -> CLIMBING (100 = 1 Block) x
 scoreboard players set DataHolder ncmc_ts_9 16
@@ -353,14 +353,14 @@ scoreboard players set DataHolder ncmc_ts_25 1000
 scoreboard players set DataHolder ncmc_ts_26 1000
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 13 -> WALKING ON WATER (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_27 1000
+scoreboard players set DataHolder ncmc_ts_27 15
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 13 -> WALKING ON WATER (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_28 1000
+scoreboard players set DataHolder ncmc_ts_28 20
 
 # (Reputation loss only) Maximum stride length per tick for Movement State 14 -> WALKING UNDER WATER (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_29 1000
+scoreboard players set DataHolder ncmc_ts_29 15
 # (Reputation loss + Event cancel) Maximum stride length per tick for Movement State 14 -> WALKING UNDER WATER (100 = 1 Block) x
-scoreboard players set DataHolder ncmc_ts_30 1000
+scoreboard players set DataHolder ncmc_ts_30 20
 
 # BlockInteract (MissingBlock)
 # Maxiumum interaction distance in creative mode 11

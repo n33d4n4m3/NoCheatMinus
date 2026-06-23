@@ -71,6 +71,15 @@ execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matc
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 5 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_9
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 5 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_10
 
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 4 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_7
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 4 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_8
+
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 13 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_27
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 13 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_28
+
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 14 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_29
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmeCurrentMovementState matches 14 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_30
+
 execute as @a[tag=ncmePlayerMoveEvent,gamemode=!survival,gamemode=!adventure,gamemode=!spectator] if score @s ncmeCurrentMovementState matches 6 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog = DataHolder ncmc_ts_11
 execute as @a[tag=ncmePlayerMoveEvent,gamemode=!survival,gamemode=!adventure,gamemode=!spectator] if score @s ncmeCurrentMovementState matches 6 run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel = DataHolder ncmc_ts_12
 
@@ -156,8 +165,8 @@ execute as @a[tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSWasInSweetBerryBu
 
 
 
-
 execute as @a[tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. store result score @s ncmMVMTSAttributeSpeed run attribute @s minecraft:movement_speed get 100
+
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 9 run scoreboard players set @s ncmMVMTSAttributeSpeed 10
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 8 run scoreboard players set @s ncmMVMTSAttributeSpeed 9
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 7 run scoreboard players set @s ncmMVMTSAttributeSpeed 8
@@ -178,6 +187,7 @@ execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeedSaveTim
 execute as @a if score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. run scoreboard players remove @s ncmMVMTSAttributeSpeedSaveTimer 1
 
 execute as @a[tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSpeedSaveTimer matches 1.. store result score @s ncmMVMTSAttributeSpeed run attribute @s minecraft:movement_speed get 100
+
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 9 run scoreboard players set @s ncmMVMTSAttributeSpeed 10
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 8 run scoreboard players set @s ncmMVMTSAttributeSpeed 9
 execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matches 7 run scoreboard players set @s ncmMVMTSAttributeSpeed 8
@@ -191,6 +201,7 @@ execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSAttributeSpeed matche
 
 
 
+
 execute as @a[tag=ncmePlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog *= @s ncmMVMTSAttributeSpeed
 execute as @a[tag=ncmePlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthCancel *= @s ncmMVMTSAttributeSpeed
 execute as @a[tag=ncmePlayerMoveEvent] run scoreboard players operation @s ncmMVMTSMaximumStrideLengthLog /= $10 ncmCalc
@@ -201,11 +212,30 @@ execute as @a[tag=ncmePlayerMoveEvent] run scoreboard players operation @s ncmMV
 
 execute as @a if score @s ncmMVMTSModifier matches 1.. run scoreboard players remove @s ncmMVMTSModifier 1
 
+# Since there is no liquid speed attribute, account for Depth Strider enchantment
+# TODO: Account for Dolphin Grace effect
+execute as @a[tag=ncmePlayerMoveEvent] store result score @s ncmMVMTSDepthStriderLevel run data get entity @s equipment.feet.components."minecraft:enchantments"."minecraft:depth_strider"
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 1 if score @s ncmeCurrentMovementState matches 4 run scoreboard players set @s ncmMVMTSModifier 4
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 2 if score @s ncmeCurrentMovementState matches 4 run scoreboard players set @s ncmMVMTSModifier 8
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 3 if score @s ncmeCurrentMovementState matches 4 run scoreboard players set @s ncmMVMTSModifier 12
+
 
 
 execute as @a at @s if score @s ncmLadderNearby matches 1.. if score @s ncmeCurrentMovementState matches 1..3 run scoreboard players set @s ncmMVMTSModifier 10
 
+
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 1 if score @s ncmeCurrentMovementState matches 13..14 run scoreboard players set @s ncmMVMTSModifier 4
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 2 if score @s ncmeCurrentMovementState matches 13..14 run scoreboard players set @s ncmMVMTSModifier 8
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDepthStriderLevel matches 3 if score @s ncmeCurrentMovementState matches 13..14 run scoreboard players set @s ncmMVMTSModifier 12
+
+
 execute as @a at @s unless predicate ncm:is_on_ground if score @s ncmMVMTSAttributeSpeed matches ..9 run scoreboard players set @s ncmMVMTSModifier 25
+
+# Liquid entrance
+execute as @a[tag=ncmePlayerMovementStateTransitionEvent] unless score @s ncmMVMTSModifier matches 70.. if score @s ncmePlayerMovementStateTransitionEvent.priorMovementState matches 6 if score @s ncmePlayerMovementStateTransitionEvent.newMovementState matches 13..14 run scoreboard players set @s ncmMVMTSModifier 70
+
+
+
 
 execute as @a at @s if block ~ ~-1 ~ minecraft:ice if score @s ncmeCurrentMovementState matches 6 run scoreboard players set @s ncmMVMTSModifier 60
 execute as @a at @s if block ~ ~-1 ~ minecraft:packed_ice if score @s ncmeCurrentMovementState matches 6 run scoreboard players set @s ncmMVMTSModifier 60
@@ -246,7 +276,7 @@ execute as @a[tag=ncmePlayerMoveEvent] run scoreboard players operation @s ncmMV
 
 
 
-# execute as @a[tag=ncmePlayerMoveEvent,name=n33d4n4m3] if score DataHolder ncmMVMTSDebug matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 run tellraw @s [{"text":""},{"text":"[NCM DEBUG] "},{"score":{"name":"@s","objective":"ncmeCurrentMovementState"},"color":"dark_aqua"},{"text":" -> ","color":"white"},{"text":"maxConfig: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthLogConfig"}},{"text":" / "},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthCancelConfig"}},{"text":", "},{"text":"modifier: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSModifier"}},{"text":", "},{"text":"maxModified: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthLog"}},{"text":" / "},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthCancel"}},{"text":" -> ","color":"white"},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distanceHorizontal"},"color":"light_purple"},{"text":" / "},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distanceVertical"},"color":"light_purple"},{"text":" / "},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distance3D"},"color":"light_purple"}]
+execute as @a[tag=ncmePlayerMoveEvent] if score @s ncmMVMTSDebug matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 run tellraw @s [{"text":""},{"text":"[NCM DEBUG] "},{"score":{"name":"@s","objective":"ncmeCurrentMovementState"},"color":"dark_aqua"},{"text":" -> ","color":"white"},{"text":"maxConfig: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthLogConfig"}},{"text":" / "},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthCancelConfig"}},{"text":", "},{"text":"modifier: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSModifier"}},{"text":", "},{"text":"maxModified: ","color":"yellow"},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthLog"}},{"text":" / "},{"score":{"name":"@s","objective":"ncmMVMTSMaximumStrideLengthCancel"}},{"text":" -> ","color":"white"},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distanceHorizontal"},"color":"light_purple"},{"text":" / "},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distanceVertical"},"color":"light_purple"},{"text":" / "},{"score":{"name":"@s","objective":"ncmePlayerMoveEvent.distance3D"},"color":"light_purple"}]
 
 
 
@@ -328,10 +358,18 @@ execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder
 # Account for higher sneaking speed by attribute.
 execute as @a at @s store result score @s ncmMVMTSAttributeSneakSpeed run attribute @s minecraft:sneaking_speed get 10
 
-execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
-execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthLog run scoreboard players set @s ncmTimesStrideTooHighLog 0
-execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players add @s ncmTimesStrideTooHighCancel 1
-execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distance3D > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distance3D <= @s ncmMVMTSMaximumStrideLengthLog run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distance3D > @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players add @s ncmTimesStrideTooHighCancel 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSAttributeSneakSpeed matches 4.. if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 3 if score @s ncmePlayerMoveEvent.distance3D <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+
+# Movement State 4 -> SWIMMING
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 4 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 4 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthLog run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 4 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighCancel 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 4 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
+
+
 
 # Movement State 5 -> CLIMBING
 execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent,gamemode=!creative,gamemode=!spectator] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 5 if score @s ncmePlayerMoveEvent.distanceVertical > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
@@ -380,7 +418,17 @@ execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder
 execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 11 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players add @s ncmTimesStrideTooHighCancel 1
 execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 11 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
+# Movement State 13 -> WALKING_ON_WATER
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 13 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 13 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthLog run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 13 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighCancel 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 13 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
+# Movement State 14 -> WALKING_UNDER_WATER
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 14 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighLog 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 14 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthLog run scoreboard players set @s ncmTimesStrideTooHighLog 0
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] unless score @s ncmMVMTSIgnoreNext matches 1.. unless score @s ncmTSLevitationTimeout matches 1.. unless score @s ncmTicksNoMovementPacketsProcessed matches 1.. unless score @s ncmTimesStrideTooHighWithLatency matches 1.. unless score DataHolder ncmMVMTSLagTimeout matches 1.. if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 14 if score @s ncmePlayerMoveEvent.distanceHorizontal > @s ncmMVMTSMaximumStrideLengthLog run scoreboard players add @s ncmTimesStrideTooHighCancel 1
+execute as @e[type=minecraft:player,tag=ncmePlayerMoveEvent] if score DataHolder ncmc_ts_32 matches 1 if score @s ncmePlayerMoveEvent.hasPositionChanged matches 1 if score @s ncmeCurrentMovementState matches 14 if score @s ncmePlayerMoveEvent.distanceHorizontal <= @s ncmMVMTSMaximumStrideLengthCancel run scoreboard players set @s ncmTimesStrideTooHighCancel 0
 
 # Mid-reset.
 

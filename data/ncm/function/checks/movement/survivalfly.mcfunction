@@ -166,9 +166,6 @@ execute as @a if predicate ncm:is_on_ground run scoreboard players set @s ncmSFO
 
 
 
-#execute as @a at @s if score @s ncmOGJumpR matches 4.. run playsound minecraft:block.note_block.cow_bell
-#execute as @a at @s if score @s ncmOGJumpR matches 3 run playsound minecraft:block.note_block.guitar
-#execute as @a at @s if score @s ncmOGJumpR matches 1 run playsound minecraft:block.note_block.flute
 
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmOffGrTicks 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmOffGrTicksC 0
@@ -238,7 +235,6 @@ execute as @a if score @s ncmStepHightAttribute matches 7.. run scoreboard playe
 
 
 execute as @a if score @s ncmClimbedWaitForLegitimation matches 1 run scoreboard players add @s ncmClimbFlagCount 1
-# execute as @a at @s if score @s ncmClimbedWaitForLegitimation matches 1 run playsound minecraft:block.note_block.basedrum
 execute as @a if score @s ncmClimbedWaitForLegitimation matches 1 run scoreboard players set @s ncmClimbedWaitForLegitimation 0
 execute as @a if score DataHolder ncmMVMTSLagTimeout matches 1.. run scoreboard players set @s ncmClimbFlagCount 0
 
