@@ -32,6 +32,9 @@
 execute if items entity @s weapon.* mace run return fail
 execute if items entity @s weapon.* #minecraft:spears run return fail
 
+# Abort the check when the player is near liquids. (TODO: Find a stricter way to handle this.)
+execute if score @s ncmLiquidNearby matches 1.. run return fail
+
 # Did the player fall while making the critical hit? ncmFCCFall > 1 = True.
 execute store result score @s ncmFCCFall run data get entity @s fall_distance 10
 execute unless score @s ncmFCCFall matches 1.. run scoreboard players add @s ncmFCCMissingReq 1
